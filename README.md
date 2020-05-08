@@ -1,5 +1,7 @@
 # OpenGLFramework
 
+v.1.05 2008
+
 OpenGLFramework jest to prosty szablon, na podstawie którego możemy budować aplikacje (w tym gry) oparte na bibliotece OpenGL. I takie też było jego główne założenie. OpenGLFramework zawiera więc podstawowe funkcje związane chyba z każdą grą. Całą resztę, tj. funkcjonalność, mechanizm gry należy już wykonać we własnym zakresie, dokładając do opisywanego tu szablonu własne klasy/moduły.
 Na stan obecny OpenGLFramework zawiera:
 
@@ -26,3 +28,5 @@ Na stan obecny OpenGLFramework zawiera:
 * rysowanie billboard'ów (sprite'ów zawsze zwróconych przodem do widza),
 * możliwość zmiany, np. rozdzielczości, głębi kolorów, próbkowania dla antyaliasingu, itp. bez utraty aktualnego stanu gry,
 * możliwość tworzenia cieni metodą shadow volume.
+
+Więcej w pliku OpenGLFramework/Doc/Dokumentacja.pdf
