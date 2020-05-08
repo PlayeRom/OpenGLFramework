@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja pliku OpenGLFramework/Console.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja pliku OpenGLFramework/Console.h</h1><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Plik nagłówkowy dla klasy <a class="el" href="class_c_console.html" title="Klasa konsoli.">CConsole</a>. 
+<p>
+
+<p>
+<code>#include &quot;<a class="el" href="_r_menu_base_8h-source.html">RMenuBase.h</a>&quot;</code><br>
+
+<p>
+<div class="dynheader">
+Wykres zależności załączania dla Console.h:</div>
+<div class="dynsection">
+<p><center><img src="_console_8h__incl.png" border="0" usemap="#OpenGLFramework/Console.h_map" alt=""></center>
+<map name="OpenGLFramework/Console.h_map">
+<area shape="rect" href="_r_menu_base_8h.html" title="Plik nagłówkowy dla klasy CRMenuBase." alt="" coords="53,80,160,107"></map>
+</div>
+
+<p>
+<div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dynsection">
+<p><center><img src="_console_8h__dep__incl.png" border="0" usemap="#OpenGLFramework/Console.hdep_map" alt=""></center>
+<map name="OpenGLFramework/Console.hdep_map">
+<area shape="rect" href="_framework_8cpp.html" title="Moduł szkieletu (framework)." alt="" coords="5,80,240,107"></map>
+</div>
+
+<p>
+<a href="_console_8h-source.html">Idź do kodu źródłowego tego pliku.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html">CConsole</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Klasa konsoli.  <a href="class_c_console.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_console_1_1_s_console_line.html">CConsole::SConsoleLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca informację o pojedynczej linijce tekstu.  <a href="struct_c_console_1_1_s_console_line.html#_details">Więcej...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Definicje</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_console_8h.html#c721982d5d7ef6645b3ce7ad497e7cd0">CONSOLE_ADDTEXT</a>(type, msg,...)&nbsp;&nbsp;&nbsp;CGameControl::GetInstance()-&gt;GetConsole()-&gt;AddText( type, msg, __VA_ARGS__ )</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Makro dodające linijkę tekstu do konsoli w kodowaniu ASCII lub UNICODE.  <a href="#c721982d5d7ef6645b3ce7ad497e7cd0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_console_8h.html#6586c8063268ba4d92b4bcc8a40efe57">CONSOLE_ADDTEXT_NORMAL</a>(msg,...)&nbsp;&nbsp;&nbsp;CGameControl::GetInstance()-&gt;GetConsole()-&gt;AddText( msg, __VA_ARGS__ )</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Makro dodające linijkę tekstu do konsoli w kodowaniu ASCII lub UNICODE z typem ENormal.  <a href="#6586c8063268ba4d92b4bcc8a40efe57"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e3d3bdcd260654f34575b02ae956611b"></a><!-- doxytag: member="Console.h::MAX_ADDTEXT_BUFFER" ref="e3d3bdcd260654f34575b02ae956611b" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_console_8h.html#e3d3bdcd260654f34575b02ae956611b">MAX_ADDTEXT_BUFFER</a>&nbsp;&nbsp;&nbsp;256</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wielkość bufora tekstu pojedynczej linii tekstu. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja definicji</h2>
+<a class="anchor" name="c721982d5d7ef6645b3ce7ad497e7cd0"></a><!-- doxytag: member="Console.h::CONSOLE_ADDTEXT" ref="c721982d5d7ef6645b3ce7ad497e7cd0" args="(type, msg,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONSOLE_ADDTEXT          </td>
+          <td>(</td>
+          <td class="paramtype">type,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">msg,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"> <em>...</em>&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;CGameControl::GetInstance()-&gt;GetConsole()-&gt;AddText( type, msg, __VA_ARGS__ )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Makro dodające linijkę tekstu do konsoli w kodowaniu ASCII lub UNICODE. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>type</em>&nbsp;</td><td>Typ dodawanej informacji. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>msg</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić w konsoli. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6586c8063268ba4d92b4bcc8a40efe57"></a><!-- doxytag: member="Console.h::CONSOLE_ADDTEXT_NORMAL" ref="6586c8063268ba4d92b4bcc8a40efe57" args="(msg,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONSOLE_ADDTEXT_NORMAL          </td>
+          <td>(</td>
+          <td class="paramtype">msg,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"> <em>...</em>&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;CGameControl::GetInstance()-&gt;GetConsole()-&gt;AddText( msg, __VA_ARGS__ )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Makro dodające linijkę tekstu do konsoli w kodowaniu ASCII lub UNICODE z typem ENormal. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>msg</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić w konsoli. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:23 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

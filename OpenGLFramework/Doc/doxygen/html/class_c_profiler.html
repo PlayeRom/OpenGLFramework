@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CProfiler</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CProfiler</h1><!-- doxytag: class="CProfiler" --><code>#include &lt;<a class="el" href="_profiler_8h-source.html">Profiler.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram współpracy dla CProfiler:</div>
+<div class="dynsection">
+<p><center><img src="class_c_profiler__coll__graph.png" border="0" usemap="#_c_profiler__coll__map" alt="Collaboration graph"></center>
+<map name="_c_profiler__coll__map">
+<area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="7,5,79,32"><area shape="rect" title="m_pLogger" alt="" coords="39,28,47,36"><area shape="rect" title="m_pLogger" alt="" coords="39,92,47,100"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_profiler-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa profilera. 
+<p>
+Za pomocą profilera możemy zmierzyć czas wykonywania się poszczególnych funkcji. Dzięki temu możemy zdiagnozować, które metody spowalniają nam program i które należałoby zoptymalizować. Zadanie pomiaru czasu wykonywania się kodu spoczywa właśnie na klasie <a class="el" href="class_c_profiler.html" title="Klasa profilera.">CProfiler</a>. Klasa <a class="el" href="class_c_profiler.html" title="Klasa profilera.">CProfiler</a> jest singletonem, jej instancja jest już we frameworku tworzona i usuwana automatycznie, więc naszym zadaniem jest tylko wywoływanie pary metod <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a> oraz <a class="el" href="class_c_profiler.html#a9a5f0f0f1534dd28b9158e57c32cda8" title="Metoda kończąca pomiar czasu.">CProfiler::End</a>. Dla łatwego wyłączenia użycia profilera zaleca się wywoływać powyższe metody poprzez makra PROFILER_BEGIN oraz PROFILER_END po uprzednim zdefiniowaniu <a class="el" href="define_8h.html#61a59767fc73b6fe0d51ad4b267ddc11">_USE_PROFILER_</a> na 1. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#b2d0c139cdd0df815324b833ca419d8e">~CProfiler</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#b2d0c139cdd0df815324b833ca419d8e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05">Begin</a> (LPCTSTR lpComment)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rozpoczynająca pomiar czasu.  <a href="#0c5b932403ac810acb027b8e5fa1ee05"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#a9a5f0f0f1534dd28b9158e57c32cda8">End</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda kończąca pomiar czasu.  <a href="#a9a5f0f0f1534dd28b9158e57c32cda8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#510fdb18ff034c7a1eda600b04a0adc1">Flush</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Motoda zapisująca do pliku zebrane informacje.  <a href="#510fdb18ff034c7a1eda600b04a0adc1"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_c_profiler.html">CProfiler</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#cb3d7efb1ec618113ebc47eb523d39f9">GetInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda za pomocą, której pobieramy wskaźnik na obiekt klasy <a class="el" href="class_c_profiler.html" title="Klasa profilera.">CProfiler</a>.  <a href="#cb3d7efb1ec618113ebc47eb523d39f9"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#c5f62764abf21a7299cccfe83508a6c0">CProfiler</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#c5f62764abf21a7299cccfe83508a6c0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#3f29fb57e819c4a1ec40c8abcccca217">GetTimeInMs</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca aktualny czas w milisekundach.  <a href="#3f29fb57e819c4a1ec40c8abcccca217"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#fa52424623132e3d766680c269789984">GetBeginMsSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość elementów tablicy <a class="el" href="class_c_profiler.html#064cffa9acad6395abcfbe87452c682d" title="Tablica obiektów struktury SBegin.">CProfiler::m_aBeginMs</a>.  <a href="#fa52424623132e3d766680c269789984"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_c_logger.html">CLogger</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#38853d5bcae968ee474b1b5259a692da">m_pLogger</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>.  <a href="#38853d5bcae968ee474b1b5259a692da"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; <a class="el" href="struct_c_profiler_1_1_s_begin.html">SBegin</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#064cffa9acad6395abcfbe87452c682d">m_aBeginMs</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica obiektów struktury <a class="el" href="struct_c_profiler_1_1_s_begin.html" title="Struktura zapamiętująca wszelkie wywołania metody CProfiler::Begin.">SBegin</a>.  <a href="#064cffa9acad6395abcfbe87452c682d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c2bfe02eee1ba001a48df2fd2645c061"></a><!-- doxytag: member="CProfiler::m_iIndentCounter" ref="c2bfe02eee1ba001a48df2fd2645c061" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#c2bfe02eee1ba001a48df2fd2645c061">m_iIndentCounter</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna przechowująca aktualną ilość wcięć - dla formatowania loga. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; <a class="el" href="struct_c_profiler_1_1_s_save_to_log.html">SSaveToLog</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#0f51e448a61f08b2b83776111a361078">m_aSaveToLog</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica obiektów struktury <a class="el" href="struct_c_profiler_1_1_s_save_to_log.html" title="Struktura przechowująca wszelkie informacje jakie zostaną zapisaane do pliku.">SSaveToLog</a>.  <a href="#0f51e448a61f08b2b83776111a361078"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f7e264613a0aead5be931034d17802c5"></a><!-- doxytag: member="CProfiler::m_pProfiler" ref="f7e264613a0aead5be931034d17802c5" args="" -->
+static std::auto_ptr&lt; <a class="el" href="class_c_profiler.html">CProfiler</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_profiler.html#f7e264613a0aead5be931034d17802c5">m_pProfiler</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Instancja klasy. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_profiler_1_1_s_begin.html">SBegin</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura zapamiętująca wszelkie wywołania metody <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a>.  <a href="struct_c_profiler_1_1_s_begin.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_profiler_1_1_s_save_to_log.html">SSaveToLog</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca wszelkie informacje jakie zostaną zapisaane do pliku.  <a href="struct_c_profiler_1_1_s_save_to_log.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="b2d0c139cdd0df815324b833ca419d8e"></a><!-- doxytag: member="CProfiler::~CProfiler" ref="b2d0c139cdd0df815324b833ca419d8e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CProfiler::~CProfiler           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<a class="anchor" name="c5f62764abf21a7299cccfe83508a6c0"></a><!-- doxytag: member="CProfiler::CProfiler" ref="c5f62764abf21a7299cccfe83508a6c0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CProfiler::CProfiler           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="cb3d7efb1ec618113ebc47eb523d39f9"></a><!-- doxytag: member="CProfiler::GetInstance" ref="cb3d7efb1ec618113ebc47eb523d39f9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_profiler.html">CProfiler</a> * CProfiler::GetInstance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda za pomocą, której pobieramy wskaźnik na obiekt klasy <a class="el" href="class_c_profiler.html" title="Klasa profilera.">CProfiler</a>. 
+<p>
+Przy pierwszym wywołaniu tej metody, jednocześnie zostanie stworzony obiekt klasy. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt <a class="el" href="class_c_profiler.html" title="Klasa profilera.">CProfiler</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0c5b932403ac810acb027b8e5fa1ee05"></a><!-- doxytag: member="CProfiler::Begin" ref="0c5b932403ac810acb027b8e5fa1ee05" args="(LPCTSTR lpComment)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CProfiler::Begin           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpComment</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rozpoczynająca pomiar czasu. 
+<p>
+Wywołując tą metodę zawsze należy wywołać później metodę <a class="el" href="class_c_profiler.html#a9a5f0f0f1534dd28b9158e57c32cda8" title="Metoda kończąca pomiar czasu.">CProfiler::End</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpComment</em>&nbsp;</td><td>Komentarz jaki zostanie zapisany w logu profilera. Najlepiej jest podać tu nazwę funkcji, którą testujemy. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_profiler.html#a9a5f0f0f1534dd28b9158e57c32cda8" title="Metoda kończąca pomiar czasu.">End</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a9a5f0f0f1534dd28b9158e57c32cda8"></a><!-- doxytag: member="CProfiler::End" ref="a9a5f0f0f1534dd28b9158e57c32cda8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CProfiler::End           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda kończąca pomiar czasu. 
+<p>
+Wywołanie tej metody zawsze musi być poprzedzone wywołaniem metody <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a>. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">Begin</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="510fdb18ff034c7a1eda600b04a0adc1"></a><!-- doxytag: member="CProfiler::Flush" ref="510fdb18ff034c7a1eda600b04a0adc1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CProfiler::Flush           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Motoda zapisująca do pliku zebrane informacje. 
+<p>
+Metoda ta musi być wywołana zawsze co klatkę w głównej pętli gry. Zadniem tej metody jest zapisanie wszelkich zebranych informacji do pliku. 
+</div>
+</div><p>
+<a class="anchor" name="3f29fb57e819c4a1ec40c8abcccca217"></a><!-- doxytag: member="CProfiler::GetTimeInMs" ref="3f29fb57e819c4a1ec40c8abcccca217" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long CProfiler::GetTimeInMs           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca aktualny czas w milisekundach. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Aktualny czas (w milisekundach) jaki upłynął od uruchomienia systemu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fa52424623132e3d766680c269789984"></a><!-- doxytag: member="CProfiler::GetBeginMsSize" ref="fa52424623132e3d766680c269789984" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CProfiler::GetBeginMsSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość elementów tablicy <a class="el" href="class_c_profiler.html#064cffa9acad6395abcfbe87452c682d" title="Tablica obiektów struktury SBegin.">CProfiler::m_aBeginMs</a>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość elementów tablicy <a class="el" href="class_c_profiler.html#064cffa9acad6395abcfbe87452c682d" title="Tablica obiektów struktury SBegin.">CProfiler::m_aBeginMs</a>. </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="38853d5bcae968ee474b1b5259a692da"></a><!-- doxytag: member="CProfiler::m_pLogger" ref="38853d5bcae968ee474b1b5259a692da" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_logger.html">CLogger</a>* <a class="el" href="class_c_profiler.html#38853d5bcae968ee474b1b5259a692da">CProfiler::m_pLogger</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wskaźnik na obiekt klasy <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>. 
+<p>
+Obiekt za pomocą którego wykonywany jest zapis do pliku loga profilera. 
+</div>
+</div><p>
+<a class="anchor" name="064cffa9acad6395abcfbe87452c682d"></a><!-- doxytag: member="CProfiler::m_aBeginMs" ref="064cffa9acad6395abcfbe87452c682d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_c_profiler_1_1_s_begin.html">SBegin</a>&gt; <a class="el" href="class_c_profiler.html#064cffa9acad6395abcfbe87452c682d">CProfiler::m_aBeginMs</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tablica obiektów struktury <a class="el" href="struct_c_profiler_1_1_s_begin.html" title="Struktura zapamiętująca wszelkie wywołania metody CProfiler::Begin.">SBegin</a>. 
+<p>
+Tablica przechowująca czas wywołania każdej metody <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a>. 
+</div>
+</div><p>
+<a class="anchor" name="0f51e448a61f08b2b83776111a361078"></a><!-- doxytag: member="CProfiler::m_aSaveToLog" ref="0f51e448a61f08b2b83776111a361078" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_c_profiler_1_1_s_save_to_log.html">SSaveToLog</a>&gt; <a class="el" href="class_c_profiler.html#0f51e448a61f08b2b83776111a361078">CProfiler::m_aSaveToLog</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tablica obiektów struktury <a class="el" href="struct_c_profiler_1_1_s_save_to_log.html" title="Struktura przechowująca wszelkie informacje jakie zostaną zapisaane do pliku.">SSaveToLog</a>. 
+<p>
+Tablica przechowująca rekordy jakie zostaną zapisane do pliku. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>SpeedControl/<a class="el" href="_profiler_8h-source.html">Profiler.h</a><li>SpeedControl/Profiler.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:30 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

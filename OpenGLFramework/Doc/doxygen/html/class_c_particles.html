@@ -1,0 +1,720 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CParticles</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CParticles</h1><!-- doxytag: class="CParticles" --><code>#include &lt;<a class="el" href="_particles_8h-source.html">Particles.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram współpracy dla CParticles:</div>
+<div class="dynsection">
+<p><center><img src="class_c_particles__coll__graph.png" border="0" usemap="#_c_particles__coll__map" alt="Collaboration graph"></center>
+<map name="_c_particles__coll__map">
+<area shape="rect" href="class_c_game_control.html" title="Główna klasa zarządzająca grą." alt="" coords="1793,563,1903,589"><area shape="rect" title="m_pParticles" alt="" coords="1527,28,1535,36"><area shape="rect" title="m_pParticles" alt="" coords="1843,559,1851,567"><area shape="rect" title="m_pGameCtrl" alt="" coords="1844,559,1852,567"><area shape="rect" title="m_pGameCtrl" alt="" coords="1527,49,1535,57"><area shape="rect" href="class_c3_d_obj_manager.html" title="Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku 3DObj..." alt="" coords="2288,563,2411,589"><area shape="rect" title="m_pGameCtrl" alt="" coords="1889,559,1897,567"><area shape="rect" title="m_pGameCtrl" alt="" coords="2297,559,2305,567"><area shape="rect" href="class_c3_d_obj_file.html" title="Klasa zapisu i odczytu pliku 3DObj." alt="" coords="2051,563,2141,589"><area shape="rect" title="m_pGameCtrl" alt="" coords="1900,572,1908,580"><area shape="rect" title="m_pGameCtrl" alt="" coords="2047,572,2055,580"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CGameControl \&gt;" alt="" coords="1375,91,1604,117"><area shape="rect" href="class_c_emboss_bump.html" title="Klasa tworzenia efektu tłoczonego mapowania wybojów." alt="" coords="1235,145,1349,172"><area shape="rect" title="m_pEmbossBump" alt="" coords="1345,155,1353,163"><area shape="rect" title="m_pEmbossBump" alt="" coords="1844,559,1852,567"><area shape="rect" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="708,189,785,216"><area shape="rect" title="m_cLight" alt="" coords="781,193,789,201"><area shape="rect" title="m_cLight" alt="" coords="1231,159,1239,167"><area shape="rect" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku..." alt="" coords="939,204,1197,231"><area shape="rect" title="cLightPos" alt="" coords="781,203,789,211"><area shape="rect" title="cLightPos" alt="" coords="935,211,943,219"><area shape="rect" href="class_c_console.html" title="Klasa konsoli." alt="" coords="1449,533,1529,560"><area shape="rect" title="m_pConsole" alt="" coords="1525,545,1533,553"><area shape="rect" title="m_pConsole" alt="" coords="1789,568,1797,576"><area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="1016,483,1120,509"><area shape="rect" href="class_c_r_message_box.html" title="Klasa rysująca MessageBox&#45;a." alt="" coords="1431,473,1548,500"><area shape="rect" href="class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową." alt="" coords="1019,619,1117,645"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,624,1123,632"><area shape="rect" title="m_pBitmapFont" alt="" coords="1789,576,1797,584"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,620,1123,628"><area shape="rect" title="m_pBitmapFont" alt="" coords="1445,553,1453,561"><area shape="rect" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="1027,347,1109,373"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,353,1115,361"><area shape="rect" title="m_pSDLFont" alt="" coords="1836,559,1844,567"><area shape="rect" title="m_pSDLFont" alt="" coords="1087,369,1095,377"><area shape="rect" title="m_pSDLFont" alt="" coords="1445,532,1453,540"><area shape="rect" href="class_c_fps.html" title="Klasa zliczająca i wyświetlająca ilość generowanych klatek na sekundę." alt="" coords="1463,307,1516,333"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,352,1115,360"><area shape="rect" title="m_pSDLFont" alt="" coords="1459,319,1467,327"><area shape="rect" title="m_pSDLFontText" alt="" coords="1107,365,1115,373"><area shape="rect" title="m_pSDLFontText" alt="" coords="1459,469,1467,477"><area shape="rect" href="class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,271,800,297"><area shape="rect" title="m_pWin" alt="" coords="796,276,804,284"><area shape="rect" title="m_pWin" alt="" coords="1843,559,1851,567"><area shape="rect" title="m_pWinData" alt="" coords="793,293,801,301"><area shape="rect" title="m_pWinData" alt="" coords="1023,347,1031,355"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,169,520,196"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,220,472,247"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,235,476,243"><area shape="rect" title="m_pARBMultisample" alt="" coords="697,267,705,275"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,271,465,297"><area shape="rect" title="m_pMultiLang" alt="" coords="463,280,471,288"><area shape="rect" title="m_pMultiLang" alt="" coords="689,280,697,288"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,271,243,297"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,321,500,348"><area shape="rect" title="m_sSettingFile" alt="" coords="496,324,504,332"><area shape="rect" title="m_sSettingFile" alt="" coords="699,293,707,301"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,372,443,399"><area shape="rect" title="m_pLogger" alt="" coords="440,383,448,391"><area shape="rect" title="m_pLogger" alt="" coords="731,293,739,301"><area shape="rect" href="class_c_my_font.html" title="Klasa rysująca tekst." alt="" coords="1031,543,1105,569"><area shape="rect" title="m_pMyFont" alt="" coords="1103,552,1111,560"><area shape="rect" title="m_pMyFont" alt="" coords="1445,545,1453,553"><area shape="rect" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji." alt="" coords="1012,684,1124,711"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,692,1129,700"><area shape="rect" title="m_pSpeedControl" alt="" coords="1800,585,1808,593"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,692,1129,700"><area shape="rect" title="m_pSpeedControl" alt="" coords="1445,545,1453,553"><area shape="rect" href="class_c_matrix_operations.html" title="Klasa wspierająca obliczenia dla przekształceń dwu i trzywymiarowych." alt="" coords="1423,712,1556,739"><area shape="rect" title="m_pMatrixOp" alt="" coords="1552,731,1560,739"><area shape="rect" title="m_pMatrixOp" alt="" coords="1840,585,1848,593"><area shape="rect" title="m_pFps" alt="" coords="1513,311,1521,319"><area shape="rect" title="m_pFps" alt="" coords="1841,559,1849,567"><area shape="rect" href="class_c_stencil_shadow.html" title="Klasa wspomagająca rysowanie dynamicznych cieni shadow volume." alt="" coords="1429,205,1549,232"><area shape="rect" title="m_pStencilShadow" alt="" coords="1545,204,1553,212"><area shape="rect" title="m_pStencilShadow" alt="" coords="1843,559,1851,567"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1193,213,1201,221"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1425,215,1433,223"><area shape="rect" href="class_c_billboard.html" title="Klasa rysująca billboardy." alt="" coords="1448,763,1531,789"><area shape="rect" title="m_pBillboard" alt="" coords="1527,781,1535,789"><area shape="rect" title="m_pBillboard" alt="" coords="1843,585,1851,593"><area shape="rect" href="class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora..." alt="" coords="1407,813,1572,840"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1539,836,1547,844"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1841,585,1849,593"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWGLEXTSwapControl \&gt;" alt="" coords="927,813,1209,840"><area shape="rect" href="class_c_outline_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką konturową." alt="" coords="1439,864,1540,891"><area shape="rect" title="m_pOutlineFont" alt="" coords="1536,879,1544,887"><area shape="rect" title="m_pOutlineFont" alt="" coords="1843,585,1851,593"><area shape="rect" href="class_c_cursor.html" title="Klasa zarządzająca kursorami." alt="" coords="1453,915,1525,941"><area shape="rect" title="m_pCursor" alt="" coords="1521,933,1529,941"><area shape="rect" title="m_pCursor" alt="" coords="1843,585,1851,593"><area shape="rect" href="class_c_texture_font.html" title="Klasa umożliwiająca rysowanie tekstu za pomocą tekstury z czcionką." alt="" coords="1437,1029,1541,1056"><area shape="rect" title="m_pTextureFont" alt="" coords="1537,1051,1545,1059"><area shape="rect" title="m_pTextureFont" alt="" coords="1844,585,1852,593"><area shape="rect" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur." alt="" coords="1009,999,1127,1025"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,1004,1132,1012"><area shape="rect" title="m_pTextureLoader" alt="" coords="1843,585,1851,593"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,1012,1132,1020"><area shape="rect" title="m_pTextureLoader" alt="" coords="1433,1035,1441,1043"><area shape="rect" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing." alt="" coords="1419,1080,1560,1107"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1531,1103,1539,1111"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1843,585,1851,593"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CARBMultiTexturing \&gt;" alt="" coords="937,1080,1199,1107"><area shape="rect" title="m_p3DObjManager" alt="" coords="2297,585,2305,593"><area shape="rect" title="m_p3DObjManager" alt="" coords="1891,585,1899,593"><area shape="rect" title="m_p3DObjFile" alt="" coords="2137,572,2145,580"><area shape="rect" title="m_p3DObjFile" alt="" coords="2284,572,2292,580"><area shape="rect" title="m_pRMessageBox" alt="" coords="1545,489,1553,497"><area shape="rect" title="m_pRMessageBox" alt="" coords="1820,559,1828,567"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_particles-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa cząsteczek. 
+<p>
+Klasa ta zarządza tworzeniem i rysowaniem emiterów cząsteczek. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#26a7cad2b189d271f248dcdb38c75a37">CParticles</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#26a7cad2b189d271f248dcdb38c75a37"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#4699539107971b1f28ecb3e76ce27aba">~CParticles</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#4699539107971b1f28ecb3e76ce27aba"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#c40e45d1a2bad0fa311f84a71c930dfa">CreateEmitter</a> (const <a class="el" href="struct_c_particles_1_1_s_emitter.html">SEmitter</a> &amp;in_sEmitter)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca nowy emiter.  <a href="#c40e45d1a2bad0fa311f84a71c930dfa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#0089a2335ffb17da4bf274ae805df03f">CreateEmitter</a> (const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;in_cStartPos, GLuint uiTexture, const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;in_cDirection, const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;in_cDivergence, GLfloat fScale, GLfloat fLife, GLboolean bAlive, GLfloat fColorR, GLfloat fColorG, GLfloat fColorB, GLfloat fSpeedX, GLfloat fSpeedY, GLfloat fSpeedZ, GLint iMaxParticles, GLfloat fMoveSpeed=60.0f, GLint iRandSpeedRange1=60)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca nowy emiter.  <a href="#0089a2335ffb17da4bf274ae805df03f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#842f1f64d47f42306d4febc1445b89ca">SetMaxParticlesForEmitter</a> (GLint iIndex, GLint iMaxParticles)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca nową wartości ilości cząsteczek dla danego emitera.  <a href="#842f1f64d47f42306d4febc1445b89ca"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#80928ae29731156b3a1733d0607efd8a">GetMaxParticlesForEmitter</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca aktualną ilość cząsteczek danego emitera.  <a href="#80928ae29731156b3a1733d0607efd8a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#a23ca0623fe88d74792a6ab95e1d60ba">IsAliveParticleInEmitter</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy emiter zawiera przynajmniej jedną "żywą", tj. niewygasniętą cząsteczkę.  <a href="#a23ca0623fe88d74792a6ab95e1d60ba"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#39ca58f4346531385c72e746d31dfebb">SetParticleInEmitterAsLive</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przywracająca do "życia" wszytskie cząsteczki danego emitera.  <a href="#39ca58f4346531385c72e746d31dfebb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#44cbdc359a7afb4aad90a207f898755e">GetEmittersSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracajaca ilość stworzonych emiterów.  <a href="#44cbdc359a7afb4aad90a207f898755e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#b6c7f550fe3cb2a0994ecbbd2f698320">DrawEmitter</a> (GLint iIndex, const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;cPos=<a class="el" href="class_c_vector3.html">CVector3</a>())</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca cząsteczki danego emitera.  <a href="#b6c7f550fe3cb2a0994ecbbd2f698320"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#0f05d1cc665607d7b6e53f66f9212f8c">DeleteParticle</a> (GLint iIndex, GLint iIndexParticle)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca pojedynczą cząsteczkę z danego emitera.  <a href="#0f05d1cc665607d7b6e53f66f9212f8c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#f6e6328b82efe0fb6ec75e50a66c9f13">DeleteEmitter</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca stworzyny wcześniej emiter.  <a href="#f6e6328b82efe0fb6ec75e50a66c9f13"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#306ecbd11ad6663a4204def74e81736d">AddAndCreateEmitter</a> (const <a class="el" href="struct_c_particles_1_1_s_emitter.html">SEmitter</a> &amp;in_sEmitter)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca nowy emiter.  <a href="#306ecbd11ad6663a4204def74e81736d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#511fb808ff28086170a2dd88418a6f95">CreateParticles</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca cząsteczki dla danego emitera.  <a href="#511fb808ff28086170a2dd88418a6f95"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#53d8cb8df177aff2d0b3bd0df5bc59d3">AddParticles</a> (GLint iIndex, GLint iMaxParticles)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda dodająca nowe cząsteczki do już istniejących dla danego emitera.  <a href="#53d8cb8df177aff2d0b3bd0df5bc59d3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#a0320b6de049f31c5c883dd28c0d2ff9">SetAliveParticle</a> (GLint iEmitterIndex, GLint iParticleIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przywracająca do "życia" pojedynczą cząsteczkę.  <a href="#a0320b6de049f31c5c883dd28c0d2ff9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#1e91367cd74080ab0ea523523400ff69">GetFade</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca losową wartość dla szybkości wygasania cząsteczki.  <a href="#1e91367cd74080ab0ea523523400ff69"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="352946d98579b1a929099d9cf9a1e56a"></a><!-- doxytag: member="CParticles::m_pGameCtrl" ref="352946d98579b1a929099d9cf9a1e56a" args="" -->
+<a class="el" href="class_c_game_control.html">CGameControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#352946d98579b1a929099d9cf9a1e56a">m_pGameCtrl</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e0922ee43b45807a7baab60231cac464"></a><!-- doxytag: member="CParticles::m_aEmitters" ref="e0922ee43b45807a7baab60231cac464" args="" -->
+std::vector&lt; <a class="el" href="struct_c_particles_1_1_s_emitter.html">SEmitter</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#e0922ee43b45807a7baab60231cac464">m_aEmitters</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica emiterów. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="75553f0a49bfa1737b3f94fb39a922a8"></a><!-- doxytag: member="CParticles::m_fSlowDown" ref="75553f0a49bfa1737b3f94fb39a922a8" args="" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_particles.html#75553f0a49bfa1737b3f94fb39a922a8">m_fSlowDown</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna zwalniająca przemieszczanie się cząsteczek. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_particles_1_1_s_emitter.html">SEmitter</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura emitera cząsteczek.  <a href="struct_c_particles_1_1_s_emitter.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_particles_1_1_s_particle.html">SParticle</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura cząsteczki.  <a href="struct_c_particles_1_1_s_particle.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="26a7cad2b189d271f248dcdb38c75a37"></a><!-- doxytag: member="CParticles::CParticles" ref="26a7cad2b189d271f248dcdb38c75a37" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CParticles::CParticles           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="4699539107971b1f28ecb3e76ce27aba"></a><!-- doxytag: member="CParticles::~CParticles" ref="4699539107971b1f28ecb3e76ce27aba" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CParticles::~CParticles           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="c40e45d1a2bad0fa311f84a71c930dfa"></a><!-- doxytag: member="CParticles::CreateEmitter" ref="c40e45d1a2bad0fa311f84a71c930dfa" args="(const SEmitter &amp;in_sEmitter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CParticles::CreateEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_c_particles_1_1_s_emitter.html">SEmitter</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_sEmitter</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca nowy emiter. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_sEmitter</em>&nbsp;</td><td>Referencja na strukturę <a class="el" href="struct_c_particles_1_1_s_emitter.html" title="Struktura emitera cząsteczek.">CParticles::SEmitter</a>, z którego stworzony zostanie nowy emiter. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks nowego emitera. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0089a2335ffb17da4bf274ae805df03f"></a><!-- doxytag: member="CParticles::CreateEmitter" ref="0089a2335ffb17da4bf274ae805df03f" args="(const CVector3 &amp;in_cStartPos, GLuint uiTexture, const CVector3 &amp;in_cDirection, const CVector3 &amp;in_cDivergence, GLfloat fScale, GLfloat fLife, GLboolean bAlive, GLfloat fColorR, GLfloat fColorG, GLfloat fColorB, GLfloat fSpeedX, GLfloat fSpeedY, GLfloat fSpeedZ, GLint iMaxParticles, GLfloat fMoveSpeed=60.0f, GLint iRandSpeedRange1=60)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CParticles::CreateEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cStartPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cDirection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cDivergence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fLife</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bAlive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fColorR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fColorG</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fColorB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fSpeedX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fSpeedY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fSpeedZ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMaxParticles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fMoveSpeed</em> = <code>60.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iRandSpeedRange1</em> = <code>60</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca nowy emiter. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cStartPos</em>&nbsp;</td><td>Położenie emitera w przestrzeni 3D. Jest to także początkowe położenie każdej cząsteczki emitera. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiTexture</em>&nbsp;</td><td>Indeks tekstury obrazującej każdą cząsteczkę. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cDirection</em>&nbsp;</td><td>Wektor kierunku w jakim mają przesuwać się cząsteczki. Aktualnie nieużywane. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cDivergence</em>&nbsp;</td><td>Wektor odchylenia od kierunku poruszania się cząsteczek. Aktualnie nieużywane. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fScale</em>&nbsp;</td><td>Rozmiar cząsteczek. Zalecany rozmiar to <code>1.0f</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fLife</em>&nbsp;</td><td>Maksymalna wartość czasu życia każdej cząsteczki. Zalecana wartość to <code>1.0f</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bAlive</em>&nbsp;</td><td>Czy cząśteczki mogą ożywać po wygaśnięciu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fColorR</em>&nbsp;</td><td>Składowa koloru Red cząsteczek. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fColorG</em>&nbsp;</td><td>Składowa koloru Green cząsteczek. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fColorB</em>&nbsp;</td><td>Składowa koloru Blue cząsteczek. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fSpeedX</em>&nbsp;</td><td>Szybkość przemieszczania się cząsteczek po osi X. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fSpeedY</em>&nbsp;</td><td>Szybkość przemieszczania się cząsteczek po osi Y. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fSpeedZ</em>&nbsp;</td><td>Szybkość przemieszczania się cząsteczek po osi Z. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMaxParticles</em>&nbsp;</td><td>Maksymalna ilość cząsteczek wydawanych z emitera. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fMoveSpeed</em>&nbsp;</td><td>Maksymalna wartość szybkości przemieszczania się cząsteczek. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iRandSpeedRange1</em>&nbsp;</td><td>Pierwsza wartość zakresu losowości przemieszczania się cząsteczek. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks nowego emitera. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="842f1f64d47f42306d4febc1445b89ca"></a><!-- doxytag: member="CParticles::SetMaxParticlesForEmitter" ref="842f1f64d47f42306d4febc1445b89ca" args="(GLint iIndex, GLint iMaxParticles)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::SetMaxParticlesForEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMaxParticles</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca nową wartości ilości cząsteczek dla danego emitera. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, dla którego chcemy zmienić ilość cząsteczek. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMaxParticles</em>&nbsp;</td><td>Nowa wartość ilości cząsteczek dla danego emitera. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="80928ae29731156b3a1733d0607efd8a"></a><!-- doxytag: member="CParticles::GetMaxParticlesForEmitter" ref="80928ae29731156b3a1733d0607efd8a" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CParticles::GetMaxParticlesForEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca aktualną ilość cząsteczek danego emitera. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, z którego chcemy pobrać wartości ilosci cząsteczek. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca maksymalną ilość cząsteczek danego emitera. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a23ca0623fe88d74792a6ab95e1d60ba"></a><!-- doxytag: member="CParticles::IsAliveParticleInEmitter" ref="a23ca0623fe88d74792a6ab95e1d60ba" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CParticles::IsAliveParticleInEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy emiter zawiera przynajmniej jedną "żywą", tj. niewygasniętą cząsteczkę. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, którego chcemy poddać sprawdzeniu. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku gdy emiter zawiera przynajmniej jedną niewygaśniętą cząsteczkę. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="39ca58f4346531385c72e746d31dfebb"></a><!-- doxytag: member="CParticles::SetParticleInEmitterAsLive" ref="39ca58f4346531385c72e746d31dfebb" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::SetParticleInEmitterAsLive           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przywracająca do "życia" wszytskie cząsteczki danego emitera. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, którego cząsteczki chemy przywrócić do "życia". </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="44cbdc359a7afb4aad90a207f898755e"></a><!-- doxytag: member="CParticles::GetEmittersSize" ref="44cbdc359a7afb4aad90a207f898755e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CParticles::GetEmittersSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracajaca ilość stworzonych emiterów. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca ilość stworzonych emiterów. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b6c7f550fe3cb2a0994ecbbd2f698320"></a><!-- doxytag: member="CParticles::DrawEmitter" ref="b6c7f550fe3cb2a0994ecbbd2f698320" args="(GLint iIndex, const CVector3 &amp;cPos=CVector3())" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::DrawEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>cPos</em> = <code><a class="el" href="class_c_vector3.html">CVector3</a>()</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca cząsteczki danego emitera. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, którego cząsteczki chcemy rysować. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>cPos</em>&nbsp;</td><td>Pozycja położenia emitera w przestrzeni 3D. Jeżli pozostawimy wartość domyślną (czyli zerową), to użyta zostanie wartość położenia podana przy tworzeniu emitera. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0f05d1cc665607d7b6e53f66f9212f8c"></a><!-- doxytag: member="CParticles::DeleteParticle" ref="0f05d1cc665607d7b6e53f66f9212f8c" args="(GLint iIndex, GLint iIndexParticle)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::DeleteParticle           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexParticle</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca pojedynczą cząsteczkę z danego emitera. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, z którego chcemy usunąć cząsteczkę. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexParticle</em>&nbsp;</td><td>Indeks cząsteczki, którą chcemy usunąć. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f6e6328b82efe0fb6ec75e50a66c9f13"></a><!-- doxytag: member="CParticles::DeleteEmitter" ref="f6e6328b82efe0fb6ec75e50a66c9f13" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::DeleteEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca stworzyny wcześniej emiter. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera jaki chcemy usunąć. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="306ecbd11ad6663a4204def74e81736d"></a><!-- doxytag: member="CParticles::AddAndCreateEmitter" ref="306ecbd11ad6663a4204def74e81736d" args="(const SEmitter &amp;in_sEmitter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CParticles::AddAndCreateEmitter           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_c_particles_1_1_s_emitter.html">SEmitter</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_sEmitter</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca nowy emiter. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_sEmitter</em>&nbsp;</td><td>Referencja na strukturę <a class="el" href="struct_c_particles_1_1_s_emitter.html" title="Struktura emitera cząsteczek.">CParticles::SEmitter</a>, z którego stworzony zostanie nowy emiter. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks nowego emitera. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="511fb808ff28086170a2dd88418a6f95"></a><!-- doxytag: member="CParticles::CreateParticles" ref="511fb808ff28086170a2dd88418a6f95" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::CreateParticles           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca cząsteczki dla danego emitera. 
+<p>
+Metoda ta całkowicie na nowo tworzy wszystkie cząsteczki dla danego emitera. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, dla którego zostaną stworzone cząsteczki. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="53d8cb8df177aff2d0b3bd0df5bc59d3"></a><!-- doxytag: member="CParticles::AddParticles" ref="53d8cb8df177aff2d0b3bd0df5bc59d3" args="(GLint iIndex, GLint iMaxParticles)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::AddParticles           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMaxParticles</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda dodająca nowe cząsteczki do już istniejących dla danego emitera. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks emitera, dla którego zostaną dodane nowe cząsteczki. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMaxParticles</em>&nbsp;</td><td>Nowa wartość ilości cząsteczek dla danego emitera. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a0320b6de049f31c5c883dd28c0d2ff9"></a><!-- doxytag: member="CParticles::SetAliveParticle" ref="a0320b6de049f31c5c883dd28c0d2ff9" args="(GLint iEmitterIndex, GLint iParticleIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CParticles::SetAliveParticle           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iEmitterIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iParticleIndex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przywracająca do "życia" pojedynczą cząsteczkę. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iEmitterIndex</em>&nbsp;</td><td>Indeks emitera, którego cząsteczkę chcmy przywrócić do "życia". </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iParticleIndex</em>&nbsp;</td><td>Indeks cząsteczki, którą chcemy na nowo przywrócić do "życia". </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1e91367cd74080ab0ea523523400ff69"></a><!-- doxytag: member="CParticles::GetFade" ref="1e91367cd74080ab0ea523523400ff69" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat CParticles::GetFade           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca losową wartość dla szybkości wygasania cząsteczki. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba rzeczywista określająca losową wartość dla szybkości wygasania cząsteczki. </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Draw/<a class="el" href="_particles_8h-source.html">Particles.h</a><li>Draw/Particles.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:30 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

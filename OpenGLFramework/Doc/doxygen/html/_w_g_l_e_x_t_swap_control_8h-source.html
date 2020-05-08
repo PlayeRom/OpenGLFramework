@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Extensions/WGLEXTSwapControl.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Extensions/WGLEXTSwapControl.h</h1><a href="_w_g_l_e_x_t_swap_control_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#pragma once</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "../OpenGLFramework/SingletonBase.h"</span>
+<a name="l00008"></a>00008 
+<a name="l00010"></a>00010 
+<a name="l00012"></a><a class="code" href="class_c_w_g_l_e_x_t_swap_control.html">00012</a> <span class="keyword">class </span><a class="code" href="class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora...">CWGLEXTSwapControl</a> : <span class="keyword">public</span> <a class="code" href="class_c_singleton_base.html" title="Klasa szablonu singletonów.">CSingletonBase</a> &lt;CWGLEXTSwapControl&gt;
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014 <span class="keyword">public</span>:
+<a name="l00016"></a>00016 
+<a name="l00019"></a>00019         <span class="keyword">static</span> <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora...">CWGLEXTSwapControl</a>* <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#71f8d2ffab845575a663380f2c4c01e1" title="Statyczna metoda tworząca obiekt klasy CWGLEXTSwapControl.">Construct</a>();
+<a name="l00020"></a>00020 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023         <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#0f9250dcc4e2d132305bad7439021434" title="Destruktor.">~CWGLEXTSwapControl</a>();
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#ccc85c147ebf1709e9025b62479302f2">00027</a>         <span class="keyword">inline</span> GLboolean <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#ccc85c147ebf1709e9025b62479302f2" title="Metoda sprawdzająca czy WGL_EXT_swap_control jest wspierany.">IsSupported</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#b9e45c312f4799bc55482238d0cbb967" title="Flaga wskazująca czy WGL_EXT_swap_control jest wspierany.">m_bIsSupported</a>; }
+<a name="l00028"></a>00028 
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031         GLvoid <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#51341bca62c079ca9c97d9a335a6c014" title="Metoda włączająca / wyłączajaca synchronizację pionową wedle uznania.">SetSwapInterval</a>( GLint iInterval );
+<a name="l00032"></a>00032 
+<a name="l00034"></a>00034         GLvoid <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#635f437ea2dba17ce7643c382faf2a75" title="Metoda ustawiająca synchronizację pionową na domyślną.">DefaultVSync</a>();
+<a name="l00035"></a>00035 
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038         GLvoid <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#3981442d821a3b1e080ac828c209ad06" title="Metoda włączająca synchronizację pionową.">EnableVSync</a>();
+<a name="l00039"></a>00039 
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042         GLvoid <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#014405d8c6b32443fa12a29d6df71292" title="Metoda wyłączająca synchronizację pionową.">DisableVSync</a>();
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="keyword">private</span>:
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047         <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#184fe3fb2eb12fdf3a79da3cf62fc96a" title="Konstruktor.">CWGLEXTSwapControl</a>();
+<a name="l00048"></a>00048 
+<a name="l00050"></a>00050 
+<a name="l00052"></a>00052         GLboolean <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#7b9f4ad375ad2d9d3bab2a27ed179931" title="Metoda inicjalizująca WGL_EXT_swap_control.">InitSwapControl</a>();
+<a name="l00053"></a>00053 
+<a name="l00054"></a><a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#b9e45c312f4799bc55482238d0cbb967">00054</a>         GLboolean <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#b9e45c312f4799bc55482238d0cbb967" title="Flaga wskazująca czy WGL_EXT_swap_control jest wspierany.">m_bIsSupported</a>;                       
+<a name="l00055"></a><a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#602ca9586d68f33dd61006336c7b4641">00055</a>         GLint <a class="code" href="class_c_w_g_l_e_x_t_swap_control.html#602ca9586d68f33dd61006336c7b4641" title="Zmienna zapamiętująca domyślną wartość interwału.">m_iDefaultSwapInterval</a>;           
+<a name="l00056"></a>00056 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

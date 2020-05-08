@@ -1,0 +1,430 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - CGameControl</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Klasa CGameControl</H1>
+
+<p><b>Tworzenie singletonu</b></p>
+<p><a href="#Construct">Construct</a></p>
+
+<p><b>Konstruktor</b></p>
+<p><a href="#konstruktor">CGameControl</a></p>
+
+<p><b>Metody klasy - interfejs</b></p>
+
+<table border="1">
+<tr><td><a href="#Initialization">Initialization</a></td></tr>
+<tr><td><a href="#Exit">Exit</a></td></tr>
+<tr><td><a href="#RestartObjects">RestartObjects</a></td></tr>
+<tr><td><a href="#KeyDown">KeyDown</a></td></tr>
+<tr><td><a href="#KeyUp">KeyUp</a></td></tr>
+<tr><td><a href="#Keyboard">Keyboard</a></td></tr>
+<tr><td><a href="#MouseLButtonDown">MouseLButtonDown</a></td></tr>
+<tr><td><a href="#MouseRButtonDown">MouseRButtonDown</a></td></tr>
+<tr><td><a href="#MouseWheel">MouseWheel</a></td></tr>
+<tr><td><a href="#Draw">Draw</a></td></tr>
+<tr><td><a href="#Enable2D">Enable2D</a></td></tr>
+<tr><td><a href="#Disable2D">Disable2D</a></td></tr>
+<tr><td><a href="#Timer">Timer</a></td></tr>
+<tr><td><a href="#GetWinData">GetWinData</a></td></tr>
+<tr><td><a href="#GetSpeedCtrl">GetSpeedCtrl</a></td></tr>
+<tr><td><a href="#GetTextuteLoader">GetTextuteLoader</a></td></tr>
+<tr><td><a href="#GetBitmapFont">GetBitmapFont</a></td></tr>
+<tr><td><a href="#GetOutlineFont">GetOutlineFont</a></td></tr>
+<tr><td><a href="#GetConsole">GetConsole</a></td></tr>
+<tr><td><a href="#GetFps">GetFps</a></td></tr>
+<tr><td><a href="#GetSoundFMOD">GetSoundFMOD</a></td></tr>
+<tr><td><a href="#GetSDLFont">GetSDLFont</a></td></tr>
+<tr><td><a href="#GetMultiLang">GetMultiLang</a></td></tr>
+<tr><td><a href="#GetLighting">GetLighting</a></td></tr>
+<tr><td><a href="#GetTextureFont">GetTextureFont</a></td></tr>
+<tr><td><a href="#GetCursor">GetCursor</a></td></tr>
+</table>
+
+<p><b>Metody klasy - prywatne</b></p>
+
+<table border="1">
+<tr><td><a href="#CreateObjects">CreateObjects</a></td></tr>
+<tr><td><a href="#DeleteObjects">DeleteObjects</a></td></tr>
+<tr><td><a href="#SetLights">SetLights</a></td></tr>
+</table>
+
+<p><b>Pola klasy</b></p>
+<table border="1">
+<tr><td>POINT m_ptCursor;</td><td></td></tr>
+<tr><td>TCHAR m_cCharKey;</td><td>Znak naciśniętego klawisza pochodzącego z komunikatu WM_CHAR.</td></tr>
+<tr><td>GLUquadricObj *m_Quadric;</td><td>Kwadryka, którą możemy wykorzystać przy renderowaniu. Tworzenie kwadryki jest już zaimplementowane w metodzie <a href="#Initialization">Initialization</a>.</td></tr>
+<tr><td>GLboolean m_bKeys[256];</td><td>Tablica używana do obsługi klawiszy. Ustawiając daną wartość na GL_TRUE wiemy, że klawisz został naciśnięty. Patrz metody <a href="#KeyDown">KeyDown</a>, <a href="#KeyUp">KeyUp</a> oraz <a href="#Keyboard">Keyboard</a>.</td></tr>
+</table>
+
+<p><a name="Construct"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Construct</h3>
+<p>[public] <b>static CGameControl* Construct(const CWindowData *</b><i>objWin</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>objWin</i> - wskaźnik na obiekt klasy <a href="cwindowdata.html">CWindowData</a>. Należy wykorzystać
+globalny - <a href="cwindowdata.html">CWindowData</a> *g_objWin.</p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy CGameControl. Jeżeli obiekt już istnieje zwracany jest NULL.</p>
+<p><b>Uwagi</b></p>
+<p>Kalsa CGameControl jest singletonem. Oznacza to, że obiekt tej klasy
+może występowąć tylko w jednym egzemplarzu. Dlatego też obiekt klasy CGameControl
+tworzony jest poprzez statyczną metodę Construct.</p>
+
+<p><a name="konstruktor"></a></p>
+
+<hr/>
+
+<h3>CGameControl::CGameControl</h3>
+<p>[private] <b>CGameControl(const CWindowData *</b><i>objWin</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>objWin</i> - wskaźnik na obiekt klasy <a href="cwindowdata.html">CWindowData</a>. Należy wykorzystać
+globalny - <a href="cwindowdata.html">CWindowData</a> *g_objWin.</p>
+
+<p><a name="Initialization"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Initialization</h3>
+
+<p>Funkcja inicjalizująca parametry OpenGL związane z kalsą CGameControl.
+Metoda ta jest już wywoływana z globalnej funkcji
+<a href="openglframeworkcpp.html#InitalizationGL">InitalizationGL</a>.</p>
+
+<p>[public] <b>GLboolean Initialization();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli inicjalizacja zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="Exit"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Exit</h3>
+
+<p>Funkcja wymuszająca zakończenie działania aplikacji. Należy ją wywołać jeżeli
+chcemy zakończyć działanie aplikacji. Np. tworzymy klase z menu głównym
+gry gdzie mamy przycisk "Wyjście". Jeżeli, np. użytkownik kliknie na ten
+przycisk to należy wywołać tę funkcję.</p>
+
+<p>[public] <b>GLvoid Exit();</b></p>
+
+<p><a name="RestartObjects"></a></p>
+
+<hr/>
+
+<h3>CGameControl::RestartObjects</h3>
+
+<p>Metoda wywoływana jest gdy restartowane jest okno, np. podczas
+zmiany rozdzielczości.</p>
+
+<p>[public] <b>GLvoid RestartObjects();</b></p>
+
+<p><a name="KeyDown"></a></p>
+
+<hr/>
+
+<h3>CGameControl::KeyDown</h3>
+
+<p>Metoda wywoływana przy zdarzeniu naciśnięcia klawisza, przekazywane
+z <a href="openglframeworkcpp.html#WndProc">WndProc</a>.</p>
+
+<p>[public] <b>GLvoid KeyDown(GLuint </b><i>nKey</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>nKey</i> - wirtualny kod klawisza jaki został wciśnięty.</p>
+
+<p><b>Uwagi</b></p>
+<p>W funkcji tej należy dopisywać własną implementacje obsługi danych
+klawiszy. Możmy kalwisz przekazać dalej do innej klasy lub
+obsłużyć go w CGameControl - patrz funkcja <a href="#Keyboard">Keyboard</a>.</p>
+
+<p><b>Przykład</b></p>
+<p><font face="Courier New" size="2">
+GLvoid CGameControl::KeyDown(GLuint nKey)<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//przekazanie nKey innej klasie, która zajmie się jego obsługą<br />
+&nbsp;&nbsp;&nbsp;&nbsp;m_objMyClass->KeyDown(nKey);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//jeżeli klawisz ma być obsłużony w CGameControl,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//to wystarczy ustawić wartość tablicy o indeksie klawisza na GL_TRUE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//oraz zaimplementować jego obsługę w funkcji Keyboard:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;m_bKeys[nKey] = GL_TRUE;<br />
+}<br /><br />
+GLvoid CGameControl::Keyboard()<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;if(m_bKeys[VK_F1]){ //nacisnieto F1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_bKeys[VK_F1] = GL_FALSE;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//TODO: tutaj reakcja na naciśnięcie danego klawisza<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</font></p>
+
+<p><a name="KeyUp"></a></p>
+
+<hr/>
+
+<h3>CGameControl::KeyUp</h3>
+
+<p>Metoda wywoływana przy zdarzeniu zwolnienia klawisza, przekazywane
+z <a href="openglframeworkcpp.html#WndProc">WndProc</a>.</p>
+
+<p>[public] <b>GLvoid KeyUp(GLuint </b><i>nKey</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>nKey</i> - wirtualny kod klawisza jaki został zwolniony.</p>
+
+<p><b>Uwagi</b></p>
+<p>W funkcji tej należy dopisywać własną implementacje obsługi danych
+klawiszy analogicznie jak dla <a href="#KeyDown">KeyDown</a>. Przeważnie
+jednak dla zdarzenia puszczenia klawisza nie musimy niczego implementować,
+gdyż ważniejszym zdarzeniem jest rakcja na naciśnięcie.</p>
+
+<p><a name="Keyboard"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Keyboard</h3>
+
+<p>Metoda wywoływana cyklicznie z głównej pętli aplikacji. W metodze tej
+należy samodzielnie dopisać własną implementację reakcji na zdarzenia
+naciskania klawiszy.</p>
+
+<p>[public] <b>GLvoid Keyboard();</b></p>
+
+<p><b>Przykład</b></p>
+
+<p><font face="Courier New" size="2">
+GLvoid CGameControl::Keyboard()<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;if(m_bKeys[VK_F1]){ //nacisnieto F1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m_bKeys[VK_F1] = GL_FALSE;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//TODO: tutaj reakcja na naciśnięcie danego klawisza<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</font></p>
+
+<p><a name="MouseLButtonDown"></a></p>
+
+<hr/>
+
+<h3>CGameControl::MouseLButtonDown</h3>
+
+<p>Zdarzenie klinięcia lewym przyciskiem myszy, przekazywane z
+<a href="openglframeworkcpp.html#WndProc">WndProc</a>.</p>
+
+<p>[public] <b>GLvoid MouseLButtonDown(GLint </b><i>x</i><b>, GLint </b><i>y</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>x, y</i> - współrzędne punktu położenia kursora myszy w momencie kliknięcia.</p>
+
+<p><b>Uwagi</b></p>
+<p>Reakcje na zdarzenie kliknięcia należy zaimplemenowac we własnym zakresie.</p>
+
+<p><a name="MouseRButtonDown"></a></p>
+
+<hr/>
+
+<h3>CGameControl::MouseRButtonDown</h3>
+
+<p>Zdarzenie klinięcia prawym przyciskiem myszy, przekazywane z
+<a href="openglframeworkcpp.html#WndProc">WndProc</a>.</p>
+
+<p>[public] <b>GLvoid MouseRButtonDown(GLint </b><i>x</i><b>, GLint </b><i>y</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>x, y</i> - współrzędne punktu położenia kursora myszy w momencie kliknięcia.</p>
+
+<p><b>Uwagi</b></p>
+<p>Reakcje na zdarzenie kliknięcia należy zaimplemenowac we własnym zakresie.</p>
+
+<p><a name="MouseWheel"></a></p>
+
+<hr/>
+
+<h3>CGameControl::MouseWheel</h3>
+
+<p>Zdarzenie obrotu rolki myszy, przekazywane z
+<a href="openglframeworkcpp.html#WndProc">WndProc</a>.</p>
+
+<p>[public] <b>GLvoid MouseWheel(GLint </b><i>nScrollLines</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>nScrollLines</i> - ilość linii o jaką została obrócona rolka myszy. Gdy wartość jest ujemna to rolka została obrócona w stronę użytkownika (przewijanie w dół). Gdy wartość dodatnia - przewijanie w górę.</p>
+
+<p><b>Uwagi</b></p>
+<p>Reakcje na obrót rolki należy zaimplemenowac we własnym zakresie.</p>
+
+<p><a name="Draw"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Draw</h3>
+
+<p>Metoda, w której należy zaimplementować wysztko to co chcemy
+wyrysować na ekranie. Metoda ta jest już wywoływana z globalnej funkcji <a href="openglframeworkcpp.html#DrawGLScene">DrawGLScene</a>.</p>
+
+<p>[public] <b>GLvoid Draw();</b></p>
+
+<p><a name="Enable2D"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Enable2D</h3>
+
+<p>Za pomocą tej metody włączamy tryb grafiki 2D.</p>
+
+<p>[public] <b>GLvoid Enable2D();</b></p>
+
+<p><a name="Disable2D"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Disable2D</h3>
+
+<p>Za pomocą tej metody wyłączamy tryb grafiki 2D - powracamy do 3D.</p>
+
+<p>[public] <b>GLvoid Disable2D();</b></p>
+
+<p><a name="Timer"></a></p>
+
+<hr/>
+
+<h3>CGameControl::Timer</h3>
+
+<p>Metoda timera głownego okna aplikacji, wywoływana z
+<a href="openglframeworkcpp.html#WndProc">WndProc</a>. Metoda ta najczęściej
+wywołuje inne metody Timer() należące do różnych obiektów, kóre wymagają cyklicznych
+wywołań.</p>
+
+<p>[public] <b>GLvoid Timer();</b></p>
+
+<p><a name="GetWinData"></a></p>
+<hr/>
+<h3>CGameControl::GetWinData</h3>
+<p>[public] <b>inline CWindowData* GetWinData();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="cwindowdata.html">CWindowData</a>.</p>
+
+<p><a name="GetSpeedCtrl"></a></p>
+<hr/>
+<h3>CGameControl::GetSpeedCtrl</h3>
+<p>[public] <b>inline CSpeedControl* GetSpeedCtrl();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="cpreedcontrol.html">CSpeedControl</a>.</p>
+
+<p><a name="GetTextuteLoader"></a></p>
+<hr/>
+<h3>CGameControl::GetTextuteLoader</h3>
+<p>[public] <b>inline CTextureLoader* GetTextuteLoader();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="ctextureloader.html">CTextureLoader</a>.</p>
+
+<p><a name="GetBitmapFont"></a></p>
+<hr/>
+<h3>CGameControl::GetBitmapFont</h3>
+<p>[public] <b>inline CBitmapFont* GetBitmapFont();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="cbitmapfont.html">CBitmapFont</a>.</p>
+
+<p><a name="GetOutlineFont"></a></p>
+<hr/>
+<h3>CGameControl::GetOutlineFont</h3>
+<p>[public] <b>inline COutlineFont* GetOutlineFont();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="coutlinefont.html">COutlineFont</a>.</p>
+
+<p><a name="GetConsole"></a></p>
+<hr/>
+<h3>CGameControl::GetConsole</h3>
+<p>[public] <b>inline CConsole* GetConsole();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="cconsole.html">CConsole</a>.</p>
+
+<p><a name="GetFps"></a></p>
+<hr/>
+<h3>CGameControl::GetFps</h3>
+<p>[public] <b>inline CFps* GetFps();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="cfps.html">CFps</a>.</p>
+
+<p><a name="GetSoundFMOD"></a></p>
+<hr/>
+<h3>CGameControl::GetSoundFMOD</h3>
+<p>[public] <b>inline CSoundFMOD* GetSoundFMOD();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="csoundfmod.html">CSoundFMOD</a>.</p>
+
+<p><a name="GetSDLFont"></a></p>
+<hr/>
+<h3>CGameControl::GetSDLFont</h3>
+<p>[public] <b>inline CSDLFont* GetSDLFont();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="csdlfont.html">CSDLFont</a>.</p>
+
+<p><a name="GetMultiLang"></a></p>
+<hr/>
+<h3>CGameControl::GetMultiLang</h3>
+<p>[public] <b>inline CMultiLanguage* GetMultiLang();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="cmultilanguage.html">CMultiLanguage</a>.</p>
+
+<p><a name="GetLighting"></a></p>
+<hr/>
+<h3>CGameControl::GetLighting</h3>
+<p>[public] <b>inline CLighting* GetLighting();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="clighting.html">CLighting</a>.</p>
+
+<p><a name="GetTextureFont"></a></p>
+<hr/>
+<h3>CGameControl::GetTextureFont</h3>
+<p>[public] <b>inline CTextureFont* GetTextureFont();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="ctexturefont.html">CTextureFont</a>.</p>
+
+<p><a name="GetCursor"></a></p>
+<hr/>
+<h3>CGameControl::GetCursor</h3>
+<p>[public] <b>inline CCursor* GetCursor();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy <a href="ccursor.html">CCursor</a>.</p>
+
+<p><a name="CreateObjects"></a></p>
+
+<hr/>
+
+<h3>CGameControl::CreateObjects</h3>
+
+<p>Metoda tworząca wszelkie obiekty innych klas.</p>
+
+<p>[private] <b>GLvoid CreateObjects();</b></p>
+<p><b>Uwagi</b></p>
+<p>Tutaj należy we własnym zakresie dopisywać tworzenie nowych obiektów,
+własnych klas.</p>
+
+<p><a name="DeleteObjects"></a></p>
+
+<hr/>
+
+<h3>CGameControl::DeleteObjects</h3>
+
+<p>Metoda usuwająca wszelkie obiekty stworzone w <a href="#CreateObjects">CreateObjects</a>.</p>
+
+<p>[private] <b>GLvoid DeleteObjects();</b></p>
+<p><b>Uwagi</b></p>
+<p>Tutaj należy we własnym zakresie usuwać obiekty własnych klas.</p>
+
+<p><a name="SetLights"></a></p>
+
+<hr/>
+
+<h3>CGameControl::SetLights</h3>
+
+<p>Metoda, w której ustawiamy domyślne wartości dla oświetlenia.</p>
+
+<p>[private] <b>GLvoid SetLights();</b></p>
+
+<hr/>
+</BODY>
+</HTML>

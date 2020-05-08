@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja szablonu klasy CSingletonBase&lt; T &gt;</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja szablonu klasy CSingletonBase&lt; T &gt;</h1><!-- doxytag: class="CSingletonBase" --><code>#include &lt;<a class="el" href="_singleton_base_8h-source.html">SingletonBase.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_c_singleton_base-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+<h3>template&lt;typename T&gt;<br>
+ class CSingletonBase&lt; T &gt;</h3>
+
+Klasa szablonu singletonów. 
+<p>
+Wszelkie klasy mające być singletonami powinny dziedziczyć po tej klasie. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_singleton_base.html#cf47b36bf9aa2584f23ebc136ca4654f">~CSingletonBase</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#cf47b36bf9aa2584f23ebc136ca4654f"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_singleton_base.html#499628f8f54b9cafd1a4773e5cbb8040">GetInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda za pomocą, której pobieramy wskaźnik na obiekt klasy szablonu.  <a href="#499628f8f54b9cafd1a4773e5cbb8040"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne metody chronione</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static T *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_singleton_base.html#3b2fd706ab28275605ced2827094a5e1">Construct</a> (T *pInst)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda tworząca obiekt klasy szablonu.  <a href="#3b2fd706ab28275605ced2827094a5e1"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d8ea11dc7a038411ee15741df428d8c8"></a><!-- doxytag: member="CSingletonBase::m_pInst" ref="d8ea11dc7a038411ee15741df428d8c8" args="" -->
+static std::auto_ptr&lt; T &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_singleton_base.html#d8ea11dc7a038411ee15741df428d8c8">m_pInst</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Instancja klasy. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="cf47b36bf9aa2584f23ebc136ca4654f"></a><!-- doxytag: member="CSingletonBase::~CSingletonBase" ref="cf47b36bf9aa2584f23ebc136ca4654f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_c_singleton_base.html">CSingletonBase</a>&lt; T &gt;::~<a class="el" href="class_c_singleton_base.html">CSingletonBase</a>           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="499628f8f54b9cafd1a4773e5cbb8040"></a><!-- doxytag: member="CSingletonBase::GetInstance" ref="499628f8f54b9cafd1a4773e5cbb8040" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">static T* <a class="el" href="class_c_singleton_base.html">CSingletonBase</a>&lt; T &gt;::GetInstance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda za pomocą, której pobieramy wskaźnik na obiekt klasy szablonu. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt klasy szablonu. Jeżeli nie wywołamy wcześniej Construct to metoda GetInstance zwróci <code>NULL!</code> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3b2fd706ab28275605ced2827094a5e1"></a><!-- doxytag: member="CSingletonBase::Construct" ref="3b2fd706ab28275605ced2827094a5e1" args="(T *pInst)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">static T* <a class="el" href="class_c_singleton_base.html">CSingletonBase</a>&lt; T &gt;::Construct           </td>
+          <td>(</td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>pInst</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, static, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda tworząca obiekt klasy szablonu. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt klasy szablonu. </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li>OpenGLFramework/<a class="el" href="_singleton_base_8h-source.html">SingletonBase.h</a></ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

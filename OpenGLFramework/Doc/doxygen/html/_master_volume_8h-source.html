@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Sound/MasterVolume.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Sound/MasterVolume.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include "IVolume.h"</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include "../OpenGLFramework/SingletonBase.h"</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="keyword">class </span>CMasterVolume : <span class="keyword">public</span> <a class="code" href="class_c_singleton_base.html" title="Klasa szablonu singletonów.">CSingletonBase</a> &lt;CMasterVolume&gt;
+<a name="l00007"></a>00007 {
+<a name="l00008"></a>00008 <span class="keyword">public</span>:
+<a name="l00009"></a>00009         <span class="keyword">static</span> CMasterVolume* <a class="code" href="class_c_singleton_base.html#3b2fd706ab28275605ced2827094a5e1" title="Statyczna metoda tworząca obiekt klasy szablonu.">Construct</a>();
+<a name="l00010"></a>00010         ~CMasterVolume();
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012         GLvoid SetPercentVolume( GLuint uiPercent = 50 );
+<a name="l00013"></a>00013         GLuint GetPercentVolume();
+<a name="l00014"></a>00014         GLvoid IncreasePercentVolume( GLuint uiPercent = 10 ); <span class="comment">//co 10%</span>
+<a name="l00015"></a>00015         GLvoid DecreasePercentVolume( GLuint uiPercent = 10 ); <span class="comment">//co 10%</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017         GLvoid SetVolume( GLuint uiVolume ); <span class="comment">//max 65535</span>
+<a name="l00018"></a>00018         GLuint GetVolume();
+<a name="l00019"></a>00019         GLvoid IncreaseVolume( GLuint uiVolume = 4096 ); <span class="comment">//co 1/16</span>
+<a name="l00020"></a>00020         GLvoid DecreaseVolume( GLuint uiVolume = 4096 ); <span class="comment">//co 1/16</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">private</span>:
+<a name="l00023"></a>00023         CMasterVolume();
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025         IVolume                 *m_pMasterVolume;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027         GLuint m_uiOryginalVolume;
+<a name="l00028"></a>00028 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:20 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy C3DObjFile</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy C3DObjFile</h1><!-- doxytag: class="C3DObjFile" --><code>#include &lt;<a class="el" href="3_d_obj_file_8h-source.html">3DObjFile.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram współpracy dla C3DObjFile:</div>
+<div class="dynsection">
+<p><center><img src="class_c3_d_obj_file__coll__graph.png" border="0" usemap="#_c3_d_obj_file__coll__map" alt="Collaboration graph"></center>
+<map name="_c3_d_obj_file__coll__map">
+<area shape="rect" href="class_c3_d_obj_manager.html" title="Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku 3DObj..." alt="" coords="1428,59,1551,85"><area shape="rect" title="m_p3DObjFile" alt="" coords="1109,96,1117,104"><area shape="rect" title="m_p3DObjFile" alt="" coords="1424,72,1432,80"><area shape="rect" href="class_c_game_control.html" title="Główna klasa zarządzająca grą." alt="" coords="1793,593,1903,620"><area shape="rect" title="m_pGameCtrl" alt="" coords="1844,589,1852,597"><area shape="rect" title="m_pGameCtrl" alt="" coords="1109,101,1117,109"><area shape="rect" href="class_c_particles.html" title="Klasa cząsteczek." alt="" coords="2037,593,2120,620"><area shape="rect" title="m_pGameCtrl" alt="" coords="1900,603,1908,611"><area shape="rect" title="m_pGameCtrl" alt="" coords="2033,603,2041,611"><area shape="rect" title="m_pGameCtrl" alt="" coords="1843,589,1851,597"><area shape="rect" title="m_pGameCtrl" alt="" coords="1519,55,1527,63"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CGameControl \&gt;" alt="" coords="1375,173,1604,200"><area shape="rect" href="class_c_emboss_bump.html" title="Klasa tworzenia efektu tłoczonego mapowania wybojów." alt="" coords="1235,229,1349,256"><area shape="rect" title="m_pEmbossBump" alt="" coords="1345,233,1353,241"><area shape="rect" title="m_pEmbossBump" alt="" coords="1843,589,1851,597"><area shape="rect" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="708,271,785,297"><area shape="rect" title="m_cLight" alt="" coords="781,275,789,283"><area shape="rect" title="m_cLight" alt="" coords="1231,241,1239,249"><area shape="rect" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku..." alt="" coords="939,284,1197,311"><area shape="rect" title="cLightPos" alt="" coords="781,283,789,291"><area shape="rect" title="cLightPos" alt="" coords="935,291,943,299"><area shape="rect" href="class_c_console.html" title="Klasa konsoli." alt="" coords="1449,593,1529,620"><area shape="rect" title="m_pConsole" alt="" coords="1525,603,1533,611"><area shape="rect" title="m_pConsole" alt="" coords="1789,603,1797,611"><area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="1016,561,1120,588"><area shape="rect" href="class_c_r_message_box.html" title="Klasa rysująca MessageBox&#45;a." alt="" coords="1431,543,1548,569"><area shape="rect" href="class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową." alt="" coords="1019,697,1117,724"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,708,1123,716"><area shape="rect" title="m_pBitmapFont" alt="" coords="1791,616,1799,624"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,707,1123,715"><area shape="rect" title="m_pBitmapFont" alt="" coords="1445,608,1453,616"><area shape="rect" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="1027,415,1109,441"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,415,1115,423"><area shape="rect" title="m_pSDLFont" alt="" coords="1839,589,1847,597"><area shape="rect" title="m_pSDLFont" alt="" coords="1085,437,1093,445"><area shape="rect" title="m_pSDLFont" alt="" coords="1445,596,1453,604"><area shape="rect" href="class_c_fps.html" title="Klasa zliczająca i wyświetlająca ilość generowanych klatek na sekundę." alt="" coords="1463,472,1516,499"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,427,1115,435"><area shape="rect" title="m_pSDLFont" alt="" coords="1459,476,1467,484"><area shape="rect" title="m_pSDLFontText" alt="" coords="1105,437,1113,445"><area shape="rect" title="m_pSDLFontText" alt="" coords="1452,539,1460,547"><area shape="rect" href="class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,349,800,376"><area shape="rect" title="m_pWin" alt="" coords="796,352,804,360"><area shape="rect" title="m_pWin" alt="" coords="1841,589,1849,597"><area shape="rect" title="m_pWinData" alt="" coords="791,372,799,380"><area shape="rect" title="m_pWinData" alt="" coords="1023,417,1031,425"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,248,520,275"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,299,472,325"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,313,476,321"><area shape="rect" title="m_pARBMultisample" alt="" coords="697,345,705,353"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,349,465,376"><area shape="rect" title="m_pMultiLang" alt="" coords="463,359,471,367"><area shape="rect" title="m_pMultiLang" alt="" coords="689,359,697,367"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,349,243,376"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,400,500,427"><area shape="rect" title="m_sSettingFile" alt="" coords="496,403,504,411"><area shape="rect" title="m_sSettingFile" alt="" coords="699,372,707,380"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,451,443,477"><area shape="rect" title="m_pLogger" alt="" coords="440,461,448,469"><area shape="rect" title="m_pLogger" alt="" coords="731,372,739,380"><area shape="rect" href="class_c_my_font.html" title="Klasa rysująca tekst." alt="" coords="1031,621,1105,648"><area shape="rect" title="m_pMyFont" alt="" coords="1103,633,1111,641"><area shape="rect" title="m_pMyFont" alt="" coords="1445,613,1453,621"><area shape="rect" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji." alt="" coords="1012,763,1124,789"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,780,1129,788"><area shape="rect" title="m_pSpeedControl" alt="" coords="1828,616,1836,624"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,776,1129,784"><area shape="rect" title="m_pSpeedControl" alt="" coords="1445,604,1453,612"><area shape="rect" href="class_c_matrix_operations.html" title="Klasa wspierająca obliczenia dla przekształceń dwu i trzywymiarowych." alt="" coords="1423,772,1556,799"><area shape="rect" title="m_pMatrixOp" alt="" coords="1552,792,1560,800"><area shape="rect" title="m_pMatrixOp" alt="" coords="1841,616,1849,624"><area shape="rect" title="m_pFps" alt="" coords="1513,484,1521,492"><area shape="rect" title="m_pFps" alt="" coords="1828,589,1836,597"><area shape="rect" href="class_c_stencil_shadow.html" title="Klasa wspomagająca rysowanie dynamicznych cieni shadow volume." alt="" coords="1429,288,1549,315"><area shape="rect" title="m_pStencilShadow" alt="" coords="1545,287,1553,295"><area shape="rect" title="m_pStencilShadow" alt="" coords="1843,589,1851,597"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1193,295,1201,303"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1425,297,1433,305"><area shape="rect" href="class_c_billboard.html" title="Klasa rysująca billboardy." alt="" coords="1448,823,1531,849"><area shape="rect" title="m_pBillboard" alt="" coords="1527,841,1535,849"><area shape="rect" title="m_pBillboard" alt="" coords="1844,616,1852,624"><area shape="rect" href="class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora..." alt="" coords="1407,873,1572,900"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1535,896,1543,904"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1843,616,1851,624"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWGLEXTSwapControl \&gt;" alt="" coords="927,873,1209,900"><area shape="rect" href="class_c_outline_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką konturową." alt="" coords="1439,924,1540,951"><area shape="rect" title="m_pOutlineFont" alt="" coords="1536,940,1544,948"><area shape="rect" title="m_pOutlineFont" alt="" coords="1843,616,1851,624"><area shape="rect" href="class_c_cursor.html" title="Klasa zarządzająca kursorami." alt="" coords="1453,975,1525,1001"><area shape="rect" title="m_pCursor" alt="" coords="1521,993,1529,1001"><area shape="rect" title="m_pCursor" alt="" coords="1843,616,1851,624"><area shape="rect" title="m_pParticles" alt="" coords="2041,616,2049,624"><area shape="rect" title="m_pParticles" alt="" coords="1885,616,1893,624"><area shape="rect" href="class_c_texture_font.html" title="Klasa umożliwiająca rysowanie tekstu za pomocą tekstury z czcionką." alt="" coords="1437,1089,1541,1116"><area shape="rect" title="m_pTextureFont" alt="" coords="1537,1111,1545,1119"><area shape="rect" title="m_pTextureFont" alt="" coords="1844,616,1852,624"><area shape="rect" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur." alt="" coords="1009,1059,1127,1085"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,1064,1132,1072"><area shape="rect" title="m_pTextureLoader" alt="" coords="1844,616,1852,624"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,1072,1132,1080"><area shape="rect" title="m_pTextureLoader" alt="" coords="1433,1095,1441,1103"><area shape="rect" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing." alt="" coords="1419,1140,1560,1167"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1529,1163,1537,1171"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1843,616,1851,624"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CARBMultiTexturing \&gt;" alt="" coords="937,1140,1199,1167"><area shape="rect" title="m_p3DObjManager" alt="" coords="1547,73,1555,81"><area shape="rect" title="m_p3DObjManager" alt="" coords="1844,589,1852,597"><area shape="rect" title="m_pRMessageBox" alt="" coords="1545,556,1553,564"><area shape="rect" title="m_pRMessageBox" alt="" coords="1795,589,1803,597"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c3_d_obj_file-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa zapisu i odczytu pliku <em>3DObj</em>. 
+<p>
+Za pomocą tej klasy <a class="el" href="class_c3_d_obj_manager.html" title="Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku 3DObj...">C3DObjManager</a> wykonuje operacje wczytania i zapisu plików <em>3DObj</em>, reprezentujących trójwymiarowe obiekty. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#98f205b5bf928d30d61944098b136217">C3DObjFile</a> (LPCTSTR lpFileName=NULL)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#98f205b5bf928d30d61944098b136217"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#79735a309066a651c2d91b08c25cbddd">~C3DObjFile</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#79735a309066a651c2d91b08c25cbddd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#4690512bf29dcc43a5cea94ad63e1a51">LoadObject</a> (LPCTSTR lpFileName, GLboolean &amp;out_bIsElem)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca obiekt 3D z pliku <em>3DObj</em>.  <a href="#4690512bf29dcc43a5cea94ad63e1a51"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#f5423218f96f9ca65813121cbf2989f0">GetVerticesNum</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość wierzchołków ostatnio wczytanego pliku.  <a href="#f5423218f96f9ca65813121cbf2989f0"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#4e8b899c021600d4fa8bd4ea295e93a4">LoadHeader</a> (FILE *hFile, LPCTSTR lpFileName, GLboolean &amp;out_bIsElem)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca nagłówek pliku <em>3DObj</em>.  <a href="#4e8b899c021600d4fa8bd4ea295e93a4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#22e2c8ebc0490771c5d06e2f287bb4d4">LoadDataNoElem</a> (FILE *hFile)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca dane z pliku <em>3DObj</em> dla obiektu 3D bez indeksowania wierzchołków.  <a href="#22e2c8ebc0490771c5d06e2f287bb4d4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#75d95cc967c2ae405930893bdd0d64fd">LoadDataElem</a> (FILE *hFile)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca dane z pliku <em>3DObj</em> dla obiektu 3D z indeksowaniem wierzchołków.  <a href="#75d95cc967c2ae405930893bdd0d64fd"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b253287a416a83fa692c7b9f0a8f4c94"></a><!-- doxytag: member="C3DObjFile::m_pGameCtrl" ref="b253287a416a83fa692c7b9f0a8f4c94" args="" -->
+<a class="el" href="class_c_game_control.html">CGameControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#b253287a416a83fa692c7b9f0a8f4c94">m_pGameCtrl</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="739aa9b23d87702ea798f153fab33d41"></a><!-- doxytag: member="C3DObjFile::m_iVerticesNum" ref="739aa9b23d87702ea798f153fab33d41" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_file.html#739aa9b23d87702ea798f153fab33d41">m_iVerticesNum</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna przechowująca ilość wierzchołków jaką zawiera obiekt z ostatnio wczytanego pliku. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="98f205b5bf928d30d61944098b136217"></a><!-- doxytag: member="C3DObjFile::C3DObjFile" ref="98f205b5bf928d30d61944098b136217" args="(LPCTSTR lpFileName=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">C3DObjFile::C3DObjFile           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em> = <code>NULL</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku <em>3DObj</em> wraz ze ścieżką. Jeżeli podamy nazwę pliku, to plik ten od razu zostanie wczytany. Możemy także podać tutaj NULL, wówczas zostanie tylko stworzony obiekt klasy. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="79735a309066a651c2d91b08c25cbddd"></a><!-- doxytag: member="C3DObjFile::~C3DObjFile" ref="79735a309066a651c2d91b08c25cbddd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">C3DObjFile::~C3DObjFile           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="4690512bf29dcc43a5cea94ad63e1a51"></a><!-- doxytag: member="C3DObjFile::LoadObject" ref="4690512bf29dcc43a5cea94ad63e1a51" args="(LPCTSTR lpFileName, GLboolean &amp;out_bIsElem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean C3DObjFile::LoadObject           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_bIsElem</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca obiekt 3D z pliku <em>3DObj</em>. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku <em>3DObj</em> wraz ze ścieżką, który chcemy wczytać. </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_bIsElem</em>&nbsp;</td><td>Do zmiennej tej zostanie zapisana wartość <code>GL_TRUE</code> jeżeli wczytywany obiekt korzysta z indeksowania wierzchołków. Jeżeli nie, to zmienna ta zostanie ustawiona na <code>GL_FALSE</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku <em>3DObj</em>. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f5423218f96f9ca65813121cbf2989f0"></a><!-- doxytag: member="C3DObjFile::GetVerticesNum" ref="f5423218f96f9ca65813121cbf2989f0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint C3DObjFile::GetVerticesNum           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość wierzchołków ostatnio wczytanego pliku. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca ilość wierzchołków jaką zawiera obiekt z ostatnio wczytanego pliku <em>3DObj</em>. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c3_d_obj_file.html#4690512bf29dcc43a5cea94ad63e1a51" title="Metoda wczytująca obiekt 3D z pliku 3DObj.">LoadObject</a>, <a class="el" href="class_c3_d_obj_file.html#739aa9b23d87702ea798f153fab33d41" title="Zmienna przechowująca ilość wierzchołków jaką zawiera obiekt z ostatnio wczytanego...">m_iVerticesNum</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4e8b899c021600d4fa8bd4ea295e93a4"></a><!-- doxytag: member="C3DObjFile::LoadHeader" ref="4e8b899c021600d4fa8bd4ea295e93a4" args="(FILE *hFile, LPCTSTR lpFileName, GLboolean &amp;out_bIsElem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean C3DObjFile::LoadHeader           </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&nbsp;</td>
+          <td class="paramname"> <em>hFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_bIsElem</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca nagłówek pliku <em>3DObj</em>. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hFile</em>&nbsp;</td><td>Wskaźnik na uchwyt do wcześniej otwartego pliku <em>3DObj</em>. Nie może być NULL. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku <em>3DObj</em> wraz ze ścieżką, z którego chcemy wczytać nagłówek. </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_bIsElem</em>&nbsp;</td><td>Do zmiennej tej zostanie zapisana wartość <code>GL_TRUE</code> jeżeli wczytywany obiekt korzysta z indeksowania wierzchołków. Jeżeli nie, to zmienna ta zostanie ustawiona na <code>GL_FALSE</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania nagłówka. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="22e2c8ebc0490771c5d06e2f287bb4d4"></a><!-- doxytag: member="C3DObjFile::LoadDataNoElem" ref="22e2c8ebc0490771c5d06e2f287bb4d4" args="(FILE *hFile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean C3DObjFile::LoadDataNoElem           </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&nbsp;</td>
+          <td class="paramname"> <em>hFile</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca dane z pliku <em>3DObj</em> dla obiektu 3D bez indeksowania wierzchołków. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hFile</em>&nbsp;</td><td>Wskaźnik na uchwyt do wcześniej otwartego pliku <em>3DObj</em>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="75d95cc967c2ae405930893bdd0d64fd"></a><!-- doxytag: member="C3DObjFile::LoadDataElem" ref="75d95cc967c2ae405930893bdd0d64fd" args="(FILE *hFile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean C3DObjFile::LoadDataElem           </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&nbsp;</td>
+          <td class="paramname"> <em>hFile</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca dane z pliku <em>3DObj</em> dla obiektu 3D z indeksowaniem wierzchołków. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hFile</em>&nbsp;</td><td>Wskaźnik na uchwyt do wcześniej otwartego pliku <em>3DObj</em>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Draw/<a class="el" href="3_d_obj_file_8h-source.html">3DObjFile.h</a><li>Draw/3DObjFile.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:26 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - define.h</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Plik define.h</H1>
+
+<hr/>
+<table>
+<tr><td bgcolor="#C0C0C0">
+<font face="Courier New" size="2">
+#ifndef _DEFINE_H_<br />
+#define _DEFINE_H_<br />
+<br />
+<br />
+#define FRAME_NAME _T(" PlayeRom OpenGLFramework v.1.04 ")<br /><br />
+<font color="#008000">
+// Nazwa gry/programu oraz adres strony<br />
+</font>
+#define GAME_NAME _T("OpenGLFramework")<br />
+#define HOMEPAGE _T("www.your.homepage.com")<br />
+<br />
+<font color="#008000">
+// Wersja gry - każdy człon może być w zakresie od 0 do 255<br />
+</font>
+#define MAJOR_VERSION		0<br />
+#define MINOR_VERSION		1<br />
+#define RELEASE_VERSION		1<br />
+<br />
+<font color="#008000">
+// Wersja pliku konfiguracyjnego - każdy człon może być w zakresie od 0 do 255<br />
+</font>
+#define MAJOR_VERSION_FILE		0<br />
+#define MINOR_VERSION_FILE		1<br />
+#define RELEASE_VERSION_FILE	1<br />
+<br />
+<font color="#008000">
+// Pierwszy człon nazwy pliku logger'a - bez rozszerzenia<br />
+</font>
+#define LOG_FILE_NAME _T("Log")<br />
+<br />
+<font color="#008000">
+// Nazwa pliku konfiguracyjnego<br />
+</font>
+#define SETTING_FILE_NAME "setting.cfg"<br />
+<br />
+<br />
+<font color="#008000">
+// Stała PI<br />
+</font>
+#define PI 3.141592//6535897932384626433832795<br />
+<font color="#008000">
+// Makro przekształcenia stopni na radiany<br />
+</font>
+#define DEG2RAD(x) ((x*PI)/180.0f)<br />
+<br />
+<br />
+<font color="#008000">
+// UWAGA! Użycie, bądź nie UNICODE ustawiamy we właściwościach projektu:<br />
+// Alt+F7 -> Configuration Properties -> General -> Character set<br />
+<br />
+// Wykorzytsanie UNICODE, jeżeli nie zamierzasz wykorzystywać tego<br />
+// kodowania znaków to zaleca się usunąć tą definicję<br />
+//#define UNICODE</font><br />
+<br />
+<br />
+<font color="#008000">
+//################################################################<br />
+// Jakiej czcionki (sposobu rysowania) użyć w konsoli:<br />
+// jeżeli oba typy undefine to użyta zostajnie <a href="csdlfont.html">CSDLFont</a><br />
+// zalecane użycie <a href="csdlfont.html">CSDLFont</a><br />
+//#define _USE_CONSOLE_WITH_MY_FONT_<br />
+//#define _USE_CONSOLE_WITH_BITMAP_FONT_<br />
+//################################################################<br />
+</font>
+<br />
+<br />
+<font color="#008000">
+// Jeżeli define to program zapyta czy program uruchomić w trybie<br />
+// pełnoekranowym czy w oknie, jeżeli undefine to zawsze tryb pełnoekranowy<br />
+// bez możliwości zapytania<br />
+//#define _QUESTION_FULLSCREEN_<br />
+</font>
+<br />
+<br />
+<font color="#008000">
+// Jeżeli makro to jest zdefiniowane to w trakcie inicjalizacji okna, rozdzielczość<br />
+// i glębia kolorów zostaną pobrane z ustawien systemowych pulpitu.<br />
+// Jeżeli chcemy aby użyte były wartości zdefiniowane przez nas (patrz<br />
+// konstruktor klasy <a href="cwindowdata.html">CWindowData</a>), makro należy zakomentować<br />
+</font>
+#define _USE_SYSTEM_RES_AND_BITSPERPIXEL_<br />
+<br />
+<br />
+<font color="#008000">
+// Zdefiniuj poniższe makro jeżeli twoja gra używać ma jedynie trybu 2D.<br />
+// Jeżeli gra ma wykorzystywać grafikę 3D, definicję należy usunąć.<br />
+//#define _USE_2D_ONLY_<br />
+</font>
+<br />
+<br />
+<font color="#008000">
+// Wyłączenie warningów o niezgodności z ISO<br />
+</font>
+#define _CRT_SECURE_NO_DEPRECATE<br />
+#define _CRT_NON_CONFORMING_SWPRINTFS<br />
+<br />
+<font color="#008000">
+// Jeżeli zdefiniowane oba _USE_CONSOLE_WITH_MY_FONT_ i _USE_CONSOLE_WITH_BITMAP_FONT_<br />
+// to używamy CSDLFont</font><br />
+#ifdef _USE_CONSOLE_WITH_MY_FONT_<br />
+#ifdef _USE_CONSOLE_WITH_BITMAP_FONT_<br />
+#undef _USE_CONSOLE_WITH_MY_FONT_<br />
+#undef _USE_CONSOLE_WITH_BITMAP_FONT_<br />
+#endif<br />
+#endif<br />
+<br />
+#endif <font color="#008000">//_DEFINE_H_</font><br />
+</font>
+</td></tr>
+</table>
+<hr/>
+
+</BODY>
+</HTML>

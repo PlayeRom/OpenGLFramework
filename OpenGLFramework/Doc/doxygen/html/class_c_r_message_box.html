@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CRMessageBox</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CRMessageBox</h1><!-- doxytag: class="CRMessageBox" --><!-- doxytag: inherits="CRMenuBase" --><code>#include &lt;<a class="el" href="_r_message_box_8h-source.html">RMessageBox.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CRMessageBox</div>
+<div class="dynsection">
+<p><center><img src="class_c_r_message_box__inherit__graph.png" border="0" usemap="#_c_r_message_box__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_r_message_box__inherit__map">
+<area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="12,5,116,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagram współpracy dla CRMessageBox:</div>
+<div class="dynsection">
+<p><center><img src="class_c_r_message_box__coll__graph.png" border="0" usemap="#_c_r_message_box__coll__map" alt="Collaboration graph"></center>
+<map name="_c_r_message_box__coll__map">
+<area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="927,56,1031,83"><area shape="rect" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="937,107,1020,133"><area shape="rect" title="m_pSDLFontText" alt="" coords="1017,115,1025,123"><area shape="rect" title="m_pSDLFontText" alt="" coords="1184,99,1192,107"><area shape="rect" href="class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,107,800,133"><area shape="rect" title="m_pWinData" alt="" coords="796,116,804,124"><area shape="rect" title="m_pWinData" alt="" coords="933,116,941,124"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,5,520,32"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,56,472,83"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,71,476,79"><area shape="rect" title="m_pARBMultisample" alt="" coords="697,103,705,111"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,107,465,133"><area shape="rect" title="m_pMultiLang" alt="" coords="463,116,471,124"><area shape="rect" title="m_pMultiLang" alt="" coords="689,116,697,124"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,107,243,133"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,157,500,184"><area shape="rect" title="m_sSettingFile" alt="" coords="496,160,504,168"><area shape="rect" title="m_sSettingFile" alt="" coords="697,129,705,137"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,208,443,235"><area shape="rect" title="m_pLogger" alt="" coords="440,216,448,224"><area shape="rect" title="m_pLogger" alt="" coords="729,129,737,137"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_r_message_box-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa rysująca MessageBox-a. 
+<p>
+Za pomocą tej klasy możemy w danej chwili programu narysować planszę z MessageBox-em czyli modalnym oknem w celu powiadomienia użytkownika o jakiejś zaistaniałej sytuacji lub zapytania użytkownika o jakąś kwestię. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Typy publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1">EMsgType</a> { <a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1abfc529e0ec24f50a309b315fe87ba59">EMsgOK</a>, 
+<a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1e6815bf5026bafec781750b0ff304712">EMsgOKCancel</a>, 
+<a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1a621afaaa655e0d20dd2c06b50ceacec">EMsgYesNo</a>, 
+<a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1dc4d8ac2a3d7600b23c0b706c204b00a">EMsgYesNoCancel</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Typ wyliczeniowy określający jakiego typu ma myć MessageBox.  <a href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1">Więcej...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#6074a2d86375aac386879543e2315589">CRMessageBox</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#6074a2d86375aac386879543e2315589"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#733135627fe78321164544c6ee914b73">~CRMessageBox</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#733135627fe78321164544c6ee914b73"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#ea35fbffff67fe9cc099aaa1da410d3e">DoMessageBox</a> (LPCTSTR lpText, <a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1">EMsgType</a> eType, GLvoid(*in_lpFunc1)(GLvoid), GLvoid(*in_lpFunc2)(GLvoid))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda nakazująca rysowania MessageBox-a.  <a href="#ea35fbffff67fe9cc099aaa1da410d3e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#6b942ee58e20c11edd15c23a02257b9e">Draw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca planszę z MessageBox-em.  <a href="#6b942ee58e20c11edd15c23a02257b9e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#30c955db04a472bbf69c45958a5140d1">RestartObjects</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda restartująca ustawienie regionów reprezentujących planszę i przyciski MessageBox-a.  <a href="#30c955db04a472bbf69c45958a5140d1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#9193aa0d532559b145d1c2e3ce9e9b45">MouseLButtonDown</a> (GLint iX, GLint iY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie kliknięcia lewym przyciskiem myszy.  <a href="#9193aa0d532559b145d1c2e3ce9e9b45"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#326e3879e56ae96f0a440645f57f025a">KeyDown</a> (GLuint uiKeyCode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie naciśnięcia klawisza klawiatury.  <a href="#326e3879e56ae96f0a440645f57f025a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#e3bcb10840b7ef1ec73b814f08937f81">IsDraw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy MessageBox jest aktualnie rysowany.  <a href="#e3bcb10840b7ef1ec73b814f08937f81"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d8b3ce24a98613e5247db6ae0ab4f2fc"></a><!-- doxytag: member="CRMessageBox::SetRegions" ref="d8b3ce24a98613e5247db6ae0ab4f2fc" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#d8b3ce24a98613e5247db6ae0ab4f2fc">SetRegions</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca wspórzędne plansz i przycisków. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#f3eeba1c44cf5aa8a5fd78c655fad88e">DrawButtons</a> (RECT rc[3], GLint iSize)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca przyciski.  <a href="#f3eeba1c44cf5aa8a5fd78c655fad88e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#24440e379f41d1f1dc138c6f09b9addf">DrawFonts</a> (RECT rcRegions[3], RECT rcRegionsFont[3], GLint iSize)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca teksty.  <a href="#24440e379f41d1f1dc138c6f09b9addf"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ff62c49580bd3de81ad814c32680aecf"></a><!-- doxytag: member="CRMessageBox::m_pSDLFontText" ref="ff62c49580bd3de81ad814c32680aecf" args="" -->
+<a class="el" href="class_c_s_d_l_font.html">CSDLFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#ff62c49580bd3de81ad814c32680aecf">m_pSDLFontText</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#b2c238b9cd9470e4147ff81a5f22ac70">lpFunc1</a> )(void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na funkcję "zatwierdzającą".  <a href="#b2c238b9cd9470e4147ff81a5f22ac70"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#27f46e1401552b247eb5c5d46747b245">lpFunc2</a> )(void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na funkcję "odrzucającą".  <a href="#27f46e1401552b247eb5c5d46747b245"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c605b2a165b0ca562b16dba932c0107b"></a><!-- doxytag: member="CRMessageBox::m_eMsgType" ref="c605b2a165b0ca562b16dba932c0107b" args="" -->
+<a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1">EMsgType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#c605b2a165b0ca562b16dba932c0107b">m_eMsgType</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna pamiętająca typ MessageBox-a. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fa14f17eed7d5101e81b0c8dbaf1f392"></a><!-- doxytag: member="CRMessageBox::m_cText" ref="fa14f17eed7d5101e81b0c8dbaf1f392" args="[MSG_TEXT_LENGTH]" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#fa14f17eed7d5101e81b0c8dbaf1f392">m_cText</a> [MSG_TEXT_LENGTH]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna pamiętająca tekst rysowany na MessageBox-ie. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bc013c40de4f87fbb0abe92ef29096f4"></a><!-- doxytag: member="CRMessageBox::m_bDrawMsg" ref="bc013c40de4f87fbb0abe92ef29096f4" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#bc013c40de4f87fbb0abe92ef29096f4">m_bDrawMsg</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy MessageBox jest rysowany i czy moze się rysować. <br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Regiony prostokątów pod plansze i przyciski.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">RECT&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_message_box.html#ec0c0d4453732a5330b831ce692782e3">m_rRegionsBkg</a> [2]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica prostokątów-plansz.  <a href="#ec0c0d4453732a5330b831ce692782e3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e1d567dd5275319cacdff6b27f1e20b7"></a><!-- doxytag: member="CRMessageBox::m_rRegions1Button" ref="e1d567dd5275319cacdff6b27f1e20b7" args="[3]" -->
+RECT&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_rRegions1Button</b> [3]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a2a43ec7fa206489d091d03921c5a5d9"></a><!-- doxytag: member="CRMessageBox::m_rRegions2Button" ref="a2a43ec7fa206489d091d03921c5a5d9" args="[3]" -->
+RECT&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_rRegions2Button</b> [3]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ebe1516778ae7a166dd6af16a65d36a6"></a><!-- doxytag: member="CRMessageBox::m_rRegions3Button" ref="ebe1516778ae7a166dd6af16a65d36a6" args="[3]" -->
+RECT&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_rRegions3Button</b> [3]</td></tr>
+
+<tr><td colspan="2"><div class="groupHeader">Regiony prostokątów dla tekstów.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9c394171463445c86ca67cde071b136f"></a><!-- doxytag: member="CRMessageBox::m_rRegionsFont1Button" ref="9c394171463445c86ca67cde071b136f" args="[3]" -->
+RECT&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_rRegionsFont1Button</b> [3]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a2f6b52749bea2fbecdd05d9ca5aa242"></a><!-- doxytag: member="CRMessageBox::m_rRegionsFont2Button" ref="a2f6b52749bea2fbecdd05d9ca5aa242" args="[3]" -->
+RECT&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_rRegionsFont2Button</b> [3]</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bebb21836ef81572a9eaeb6c6e4542fc"></a><!-- doxytag: member="CRMessageBox::m_rRegionsFont3Button" ref="bebb21836ef81572a9eaeb6c6e4542fc" args="[3]" -->
+RECT&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_rRegionsFont3Button</b> [3]</td></tr>
+
+</table>
+<hr><h2>Dokumentacja składowych wyliczanych</h2>
+<a class="anchor" name="6c4b3856a3479e3bb6e1e3d907a1cbf1"></a><!-- doxytag: member="CRMessageBox::EMsgType" ref="6c4b3856a3479e3bb6e1e3d907a1cbf1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1">CRMessageBox::EMsgType</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Typ wyliczeniowy określający jakiego typu ma myć MessageBox. 
+<p>
+Konkretnie za pomocą tego typu wyliczeniowego definiujemy jakie przyciski mają się pojawić w Messagebox-ie. <dl compact><dt><b>Wartości wyliczeń: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="6c4b3856a3479e3bb6e1e3d907a1cbf1abfc529e0ec24f50a309b315fe87ba59"></a><!-- doxytag: member="EMsgOK" ref="6c4b3856a3479e3bb6e1e3d907a1cbf1abfc529e0ec24f50a309b315fe87ba59" args="" -->EMsgOK</em>&nbsp;</td><td>
+MessageBox z przyciskiem OK, do zwykłego informowania. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="6c4b3856a3479e3bb6e1e3d907a1cbf1e6815bf5026bafec781750b0ff304712"></a><!-- doxytag: member="EMsgOKCancel" ref="6c4b3856a3479e3bb6e1e3d907a1cbf1e6815bf5026bafec781750b0ff304712" args="" -->EMsgOKCancel</em>&nbsp;</td><td>
+MessageBox z przyciskami OK i Anuluj, do zatwierdzania i anulowania. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="6c4b3856a3479e3bb6e1e3d907a1cbf1a621afaaa655e0d20dd2c06b50ceacec"></a><!-- doxytag: member="EMsgYesNo" ref="6c4b3856a3479e3bb6e1e3d907a1cbf1a621afaaa655e0d20dd2c06b50ceacec" args="" -->EMsgYesNo</em>&nbsp;</td><td>
+MessageBox z przyciskami Tak i Nie, dla pytania rozstrzygającego. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="6c4b3856a3479e3bb6e1e3d907a1cbf1dc4d8ac2a3d7600b23c0b706c204b00a"></a><!-- doxytag: member="EMsgYesNoCancel" ref="6c4b3856a3479e3bb6e1e3d907a1cbf1dc4d8ac2a3d7600b23c0b706c204b00a" args="" -->EMsgYesNoCancel</em>&nbsp;</td><td>
+MessageBox z przyciskami Tak, Nie oraz Anuluj, dla pytania z możliwością anulowania. </td></tr>
+</table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="6074a2d86375aac386879543e2315589"></a><!-- doxytag: member="CRMessageBox::CRMessageBox" ref="6074a2d86375aac386879543e2315589" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRMessageBox::CRMessageBox           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="733135627fe78321164544c6ee914b73"></a><!-- doxytag: member="CRMessageBox::~CRMessageBox" ref="733135627fe78321164544c6ee914b73" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRMessageBox::~CRMessageBox           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="ea35fbffff67fe9cc099aaa1da410d3e"></a><!-- doxytag: member="CRMessageBox::DoMessageBox" ref="ea35fbffff67fe9cc099aaa1da410d3e" args="(LPCTSTR lpText, EMsgType eType, GLvoid(*in_lpFunc1)(GLvoid), GLvoid(*in_lpFunc2)(GLvoid))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMessageBox::DoMessageBox           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1">EMsgType</a>&nbsp;</td>
+          <td class="paramname"> <em>eType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLvoid(*)(GLvoid)&nbsp;</td>
+          <td class="paramname"> <em>in_lpFunc1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLvoid(*)(GLvoid)&nbsp;</td>
+          <td class="paramname"> <em>in_lpFunc2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda nakazująca rysowania MessageBox-a. 
+<p>
+Wywołanie tej metody w danym miejscu progamu spowoduje rysowanie planszy z MessageBox-em. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst (informacja, pytanie) jaki ma się wyświetlić w MessageBox-ie. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>eType</em>&nbsp;</td><td>Typ wyliczeniowy <a class="el" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1" title="Typ wyliczeniowy określający jakiego typu ma myć MessageBox.">CRMessageBox::EMsgType</a> określający zestaw przycisków jakie mają się wyświetlić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_lpFunc1</em>&nbsp;</td><td>Wskaźnik na funkcję "zatwierdzającą". Tutaj należy podać wskaźnik na funkcję, którą chcemy wywołać, jako reakcję na zatwierdzenie MessageBox-a. Zatwierdzie tj. kliknięcie przycisku OK lub Tak. Jeżeli nie chcemy wywoływąć żadnej funkcji zwrotnej należy podać NULL. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_lpFunc2</em>&nbsp;</td><td>Wskaźnik na funkcję "odrzucającą". Tutaj należy podać wskaźnik na funkcję, którą chcemy wywołać, jako reakcję na odrzucenie MessageBox-a. Odrzucenie tj. kliknięcie przycisku Nie lub Anuluj. Jeżeli nie chcemy wywoływąć żadnej funkcji zwrotnej należy podać NULL. W przypadku trzech przycisków, tj. Tak, Nie, Anuluj dla Anuluj nie będzie wywoływana żadna akcja. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6b942ee58e20c11edd15c23a02257b9e"></a><!-- doxytag: member="CRMessageBox::Draw" ref="6b942ee58e20c11edd15c23a02257b9e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMessageBox::Draw           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca planszę z MessageBox-em. 
+<p>
+Metoda ta rysuje MessageBox-a wedle parametrów jakie podaliśmy w funkcji <a class="el" href="class_c_r_message_box.html#ea35fbffff67fe9cc099aaa1da410d3e" title="Metoda nakazująca rysowania MessageBox-a.">CRMessageBox::DoMessageBox</a>. Metoda ta jest już wywoływana w odpowiednim miejscu, wewnątrz <a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f" title="Główna funkcja rysująca scenę.">CGameControl::Draw</a> i nie należy już jej powtórnie wywoływać. 
+</div>
+</div><p>
+<a class="anchor" name="30c955db04a472bbf69c45958a5140d1"></a><!-- doxytag: member="CRMessageBox::RestartObjects" ref="30c955db04a472bbf69c45958a5140d1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMessageBox::RestartObjects           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda restartująca ustawienie regionów reprezentujących planszę i przyciski MessageBox-a. 
+<p>
+Metoda ta jest już wywoływana w odpowiednim miejscu, wewnątrz <a class="el" href="class_c_game_control.html#65a5c9465fd2ee0231762b3ccb12d751" title="Metoda restartuje wszelkie obiekty utworzone w CGameControl::CreateObjects, które...">CGameControl::RestartObjects</a>. Metoda ta jest wywoływana gdy restartowane jest okno, np. pod wpływem zmiany rozdzielczości, próbkowania dla antyaliasingu, itp. 
+</div>
+</div><p>
+<a class="anchor" name="9193aa0d532559b145d1c2e3ce9e9b45"></a><!-- doxytag: member="CRMessageBox::MouseLButtonDown" ref="9193aa0d532559b145d1c2e3ce9e9b45" args="(GLint iX, GLint iY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CRMessageBox::MouseLButtonDown           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie kliknięcia lewym przyciskiem myszy. 
+<p>
+Metoda ta jest już wywoływana w odpowiednim miejscu, wewnątrz <a class="el" href="class_c_game_control.html#d3da7b6b8391553e8d3ac907d188a856" title="Zdarzenie kliknięcia lewym przyciskiem myszy, przekazywane z WndProc.">CGameControl::MouseLButtonDown</a> i nie należy już jej powtórnie wywoływać. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iX</em>&nbsp;</td><td>Współrzędna <em>X</em> położenia kursora w momencie kliknięcia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iY</em>&nbsp;</td><td>Współrzędna <em>Y</em> położenia kursora w momencie kliknięcia. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="326e3879e56ae96f0a440645f57f025a"></a><!-- doxytag: member="CRMessageBox::KeyDown" ref="326e3879e56ae96f0a440645f57f025a" args="(GLuint uiKeyCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CRMessageBox::KeyDown           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKeyCode</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie naciśnięcia klawisza klawiatury. 
+<p>
+Metoda ta jest już wywoływana w odpowiednim miejscu, wewnątrz <a class="el" href="class_c_game_control.html#2938bdf7ed88f7d1fd6b94f472581cf1" title="Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z WndProc.">CGameControl::KeyDown</a> i nie należy już jej powtórnie wywoływać. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKeyCode</em>&nbsp;</td><td>Wirtualny kod klawisza jaki został naciśnięty. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e3bcb10840b7ef1ec73b814f08937f81"></a><!-- doxytag: member="CRMessageBox::IsDraw" ref="e3bcb10840b7ef1ec73b814f08937f81" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CRMessageBox::IsDraw           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy MessageBox jest aktualnie rysowany. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> gdy MessageBox jest rysowany. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f3eeba1c44cf5aa8a5fd78c655fad88e"></a><!-- doxytag: member="CRMessageBox::DrawButtons" ref="f3eeba1c44cf5aa8a5fd78c655fad88e" args="(RECT rc[3], GLint iSize)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMessageBox::DrawButtons           </td>
+          <td>(</td>
+          <td class="paramtype">RECT&nbsp;</td>
+          <td class="paramname"> <em>rc</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iSize</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca przyciski. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rc</em>&nbsp;</td><td>Trzyelementowa tablica obiektów <code>RECT</code> ze współrzędnymi przycisków do narysowania. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iSize</em>&nbsp;</td><td>Ilość przycisków do narysowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="24440e379f41d1f1dc138c6f09b9addf"></a><!-- doxytag: member="CRMessageBox::DrawFonts" ref="24440e379f41d1f1dc138c6f09b9addf" args="(RECT rcRegions[3], RECT rcRegionsFont[3], GLint iSize)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMessageBox::DrawFonts           </td>
+          <td>(</td>
+          <td class="paramtype">RECT&nbsp;</td>
+          <td class="paramname"> <em>rcRegions</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RECT&nbsp;</td>
+          <td class="paramname"> <em>rcRegionsFont</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iSize</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca teksty. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rcRegions</em>&nbsp;</td><td>Trzyelementowa tablica obiektów <code>RECT</code> ze współrzędnymi przycisków. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rcRegionsFont</em>&nbsp;</td><td>Trzyelementowa tablica obiektów <code>RECT</code> ze współrzędnymi tekstów pod przyciski. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iSize</em>&nbsp;</td><td>Ilość przycisków do narysowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="b2c238b9cd9470e4147ff81a5f22ac70"></a><!-- doxytag: member="CRMessageBox::lpFunc1" ref="b2c238b9cd9470e4147ff81a5f22ac70" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void( * <a class="el" href="class_c_r_message_box.html#b2c238b9cd9470e4147ff81a5f22ac70">CRMessageBox::lpFunc1</a>)(void)<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wskaźnik na funkcję "zatwierdzającą". 
+<p>
+Wskaźnik na funkcję jaka ma się wywołać po zatwierdzeniu MessageBox-a przyciskami OK lub TAK. 
+</div>
+</div><p>
+<a class="anchor" name="27f46e1401552b247eb5c5d46747b245"></a><!-- doxytag: member="CRMessageBox::lpFunc2" ref="27f46e1401552b247eb5c5d46747b245" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void( * <a class="el" href="class_c_r_message_box.html#27f46e1401552b247eb5c5d46747b245">CRMessageBox::lpFunc2</a>)(void)<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wskaźnik na funkcję "odrzucającą". 
+<p>
+Wskaźnik na funkcję jaka ma się wywołać po odrzuceniu MessageBox-a przyciskami NIE lub ANULUJ. 
+</div>
+</div><p>
+<a class="anchor" name="ec0c0d4453732a5330b831ce692782e3"></a><!-- doxytag: member="CRMessageBox::m_rRegionsBkg" ref="ec0c0d4453732a5330b831ce692782e3" args="[2]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RECT <a class="el" href="class_c_r_message_box.html#ec0c0d4453732a5330b831ce692782e3">CRMessageBox::m_rRegionsBkg</a>[2]<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tablica prostokątów-plansz. 
+<p>
+Indeks 0 dla tła pełnoekranowego, indeks 1 jako ramka pod sam MessageBox. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>OpenGLFramework/<a class="el" href="_r_message_box_8h-source.html">RMessageBox.h</a><li>OpenGLFramework/RMessageBox.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:30 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

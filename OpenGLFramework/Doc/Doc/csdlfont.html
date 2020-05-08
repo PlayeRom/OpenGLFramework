@@ -1,0 +1,415 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - CSDLFont</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Klasa CSDLFont</H1>
+
+<p><b>Konstruktor</b></p>
+
+<p><a href="#konstruktor">CSDLFont</a></p>
+
+<p><b>Metody klasy - interface</b></p>
+
+<table border="1" summary="Metody klasy - interface">
+<tr><td><a href="#DrawText">DrawText</a></td></tr>
+<tr><td><a href="#DrawTextFormat">DrawTextFormat</a></td></tr>
+<tr><td><a href="#SetBkgText">SetBkgText</a></td></tr>
+<tr><td><a href="#GetHeightFont">GetHeightFont</a></td></tr>
+<tr><td><a href="#ClearStorageBuffer">ClearStorageBuffer</a></td></tr>
+<tr><td><a href="#IsStorageBuffer">IsStorageBuffer</a></td></tr>
+<tr><td><a href="#SetStorageBuffer">SetStorageBuffer</a></td></tr>
+<tr><td><a href="#Timer">Timer</a></td></tr>
+<tr><td><a href="#GetCompileVersionSLD_ttf">GetCompileVersionSLD_ttf</a></td></tr>
+<tr><td><a href="#GetLinkedVersionSLD_ttf">GetLinkedVersionSLD_ttf</a></td></tr>
+</table>
+
+<p><b>Metody klasy - prywatne</b></p>
+<table border="1" summary="Metody klasy - prywatne">
+<tr><td><a href="#RenderText">RenderText</a></td></tr>
+<tr><td><a href="#Round">Round</a></td></tr>
+<tr><td><a href="#NextPowerOfTwo">NextPowerOfTwo</a></td></tr>
+<tr><td><a href="#DeleteOneStorageBuffer">DeleteOneStorageBuffer</a></td></tr>
+<tr><td><a href="#DeleteOldStorageBuffer">DeleteOldStorageBuffer</a></td></tr>
+<tr><td><a href="#ScaleFont">ScaleFont</a></td></tr>
+<tr><td><a href="#MidScreenFont">MidScreenFont</a></td></tr>
+<tr><td><a href="#DrawBkgText">DrawBkgText</a></td></tr>
+<tr><td><a href="#DrawQuadText">DrawQuadText</a></td></tr>
+</table>
+
+<p><a name="konstruktor"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::CSDLFont</h3>
+
+<p>[public] <b>CSDLFont(const CGameControl *</b><i>objGameCtrl</i><b>, const char *</b><i>lpFontFile</i><b> = "fonts/FreeSansBold.ttf", GLint </b><i>iSizeFont</i><b> = 20, GLboolean </b><i>bUseStorageBuffer</i><b> = GL_TRUE);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>objGameCtrl</i></td></tr>
+<tr><td></td><td>Wskaźnik na obiekt klasy <a href="cgamecontrol.html">CGameControl</a>.</td></tr>
+
+<tr><td><i>lpFontFile</i></td></tr>
+<tr><td></td><td>Nazwa pliku z czcionką jakiej chcemy użyć (domyślnie
+<i>fonts/FreeSansBold.ttf</i>). OpenGLFramework zawiera własne darmowe czcionki -
+umieszczone są one w katalogu <i>fonts</i>. Można także wczytać pliki zawarte w katalogu
+<i>C:\Windows\Fonts</i>, należy jednak pamiętać, że musimy podać nazwę pliku a nie nazwę
+zarejestrowanej czcionki.</td></tr>
+
+<tr><td><i>iSizeFont</i></td></tr>
+<tr><td></td><td>Rozmiar czcionki.</td></tr>
+
+<tr><td><i>bUseStorageBuffer</i></td></tr>
+<tr><td></td><td>Ustawiając tę flagę na GL_TRUE, nakazujemy
+buforowania wyświetlanych tekstów, dzięki czemu, rendering teksu będzie
+wykonywany znacznie szybciej. Oznacza to także trochę większe absorbowanie
+pamięci. Ustawiając na GL_FALSE, każde to samo wywołanie rysowania tekstu,
+będzie renderowane od nowa.</td></tr>
+</table>
+</p>
+
+<p><a name="DrawText"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::DrawText</h3>
+
+<p>Za pomocą tej funkcji możemy wyświetlać napisy.</p>
+
+<p>[public] <b>GLvoid DrawText(GLint </b><i>iPosX</i><b>, GLint </b><i>iPosY</i><b>, GLubyte </b><i>r</i><b>, GLubyte </b><i>g</i><b>, GLubyte </b><i>b</i><b>, LPCTSTR </b><i>lpText</i><b>, GLboolean </b><i>bMidScreen</i><b> = GL_FALSE);</b></p>
+<p><b>Parametry</b></p>
+<p>
+
+<table border="0">
+<tr><td><i>iPosX</i>, <i>iPosY</i></td></tr>
+<tr><td></td><td>Pozycja tekstu względem ekranu. Punkt 0x0
+znajduje się w lewym górnym rogu ekranu (tekst jest rysowany "na płaszczyźnie
+ekranu"). Ważne jest aby rysować tekst tak jakby miał być rozmieszczony dla
+ekranu 1024x768 - wówczas będziemy mieli prawidłowe skalowanie tekstu względem
+rozdzielczości. Oznacza to, że jeżeli stosujemy rozdzielczość, np. 800x600 i
+chcemy wyświetlić tekst na samym spodzie okna, to nie ustawiamy <i>iPosY</i>
+na 600 tylko na 768!</td></tr>
+
+<tr><td><i>r</i>, <i>g</i>, <i>b</i></td></tr>
+<tr><td></td><td>Składowe koloru tekstu.</td></tr>
+
+<tr><td><i>lpText</i></td></tr>
+<tr><td></td><td>Tekst jaki chcemy wyświetlić.</td></tr>
+
+<tr><td><i>bMidScreen</i></td></tr>
+<tr><td></td><td>Czy tekst ma być wyrównany do środka. Jeżeli ustawimy tę
+wartość na GL_TRUE to tekst będzie wyrównany względem środka ekranu. Oznacza
+to, że wartość <i>iPosX</i> nie będzie brana pod uwagę, ponieważ program sam
+ją wyliczy. Gdy podamy GL_FALSE (wartość domyślna), wówczas tekst będzie
+pozycjonowany na podstawie <i>iPosX</i>.</td></tr>
+</table>
+</p>
+
+<p><a name="DrawTextFormat"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::DrawTextFormat</h3>
+
+<p>Za pomocą tej funkcji możemy wyświetlać napisy wraz z parametrami do
+formatowania. Jeżeli nie zamierzamy wyświetlać żadnych parametrów a
+jedynie sam tekst to zaleca się użyć metody <a href="#DrawText">DrawText</a>.</p>
+
+<p>[public] <b>GLvoid DrawTextFormat(GLint </b><i>iPosX</i><b>, GLint </b><i>iPosY</i><b>, GLboolean </b><i>bMidScreen</i><b>, GLubyte </b><i>r</i><b>, GLubyte </b><i>g</i><b>, GLubyte </b><i>b</i><b>, LPCTSTR </b><i>fmt</i><b>, </b><i>...</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+
+<table border="0">
+<tr><td><i>iPosX</i>, <i>iPosY</i></td></tr>
+<tr><td></td><td>Pozycja tekstu względem ekranu. Punkt 0x0
+znajduje się w lewym górnym rogu ekranu (tekst jest rysowany "na płaszczyźnie
+ekranu"). Ważne jest aby rysować tekst tak jakby miał być rozmieszczony dla
+ekranu 1024x768 - wówczas będziemy mieli prawidłowe skalowanie tekstu względem
+rozdzielczości. Oznacza to, że jeżeli stosujemy rozdzielczość, np. 800x600 i
+chcemy wyświetlić tekst na samym spodzie okna, to nie ustawiamy <i>iPosY</i>
+na 600 tylko na 768!</td></tr>
+
+<tr><td><i>bMidScreen</i></td></tr>
+<tr><td></td><td>Czy tekst ma być wyrównany do środka. Jeżeli ustawimy tę
+wartość na GL_TRUE to tekst będzie wyrównany względem środka ekranu. Oznacza
+to, że wartość <i>iPosX</i> nie będzie brana pod uwagę, ponieważ program sam
+ją wyliczy. Gdy podamy GL_FALSE (wartość domyślna), wówczas tekst będzie
+pozycjonowany na podstawie <i>iPosX</i>.</td></tr>
+
+<tr><td><i>r</i>, <i>g</i>, <i>b</i></td></tr>
+<tr><td></td><td>Składowe koloru tekstu.</td></tr>
+
+<tr><td><i>fmt</i></td></tr>
+<tr><td></td><td>Tekst jaki chcemy wyświetlić.</td></tr>
+
+<tr><td><i>...</i></td></tr>
+<tr><td></td><td>Opcjonalne parametry dla formatowania.</td></tr>
+</table>
+</p>
+
+<p><a name="SetBkgText"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::SetBkgText</h3>
+
+<p>Za pomocą tej funkcji możemy ustawić wyświetlanie tła pod tekstem.</p>
+
+<p>[public] <b>GLvoid SetBkgText(GLboolean </b><i>bDrawBkgText</i><b>, GLubyte </b><i>r</i><b> = 0, GLubyte </b><i>g</i><b> = 0, GLubyte </b><i>b</i><b> = 0);</b></p>
+<p><b>Parametry</b></p>
+<p>
+
+<table border="0">
+<tr><td><i>bDrawBkgText</i></td></tr>
+<tr><td></td><td>Jeżeli ustawimy na GL_TRUE to pod tekstem będzie wyświetlane tło.</td></tr>
+
+<tr><td><i>r</i>, <i>g</i>, <i>b</i></td></tr>
+<tr><td></td><td>Składowe koloru tła, brane pod uwagę tylko gdy <i>bDrawBkgText</i> ustawiony jest na GL_TRUE.</td></tr>
+</table>
+</p>
+
+<p><a name="GetHeightFont"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::GetHeightFont</h3>
+
+<p>Za pomocą tej funkcji możemy pobrać wysokość tekstu w pikselach.</p>
+
+<p>[public] <b>GLint GetHeightFont();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Liczba całkowita określająca wyskość tekstu w pikselach. W przypadku błędu funkcja zwróci -1.</p>
+
+<p><a name="ClearStorageBuffer"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::ClearStorageBuffer</h3>
+
+<p>Za pomocą tej funkcji czyścimy cały StorageBuffer dla danego obiektu.</p>
+
+<p>[public] <b>GLvoid ClearStorageBuffer(GLboolean </b><i>bLog</i><b> = GL_TRUE);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>bLog</i></td></tr>
+<tr><td></td><td>Dodatkowy parametr dla logowania (pomimo aktywność 
+<a href="clogger.html">CLogger'a</a>). Podająć GL_TRUE, program zapisze do pliku
+informację o ilości usuniętych pozycji bufora (ilość składowanych i usuniętych
+tekstów).</td></tr>
+</table>
+</p>
+
+<p><a name="IsStorageBuffer"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::IsStorageBuffer</h3>
+
+<p>Za pomocą tej funkcji sprawdzamy czy StorageBuffer jest aktywny.</p>
+
+<p>[public] <b>inline GLboolean IsStorageBuffer();</b></p>
+<p><b>Wartość zwaracana</b></p>
+<p>GL_TRUE jeżeli używany jest StorageBuffer, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="SetStorageBuffer"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::SetStorageBuffer</h3>
+
+<p>Za pomocą tej funkcji możemy włączyć lub wyłączyć użycie StorageBuffer
+w trakcie "życia" obiektu.</p>
+
+<p>[public] <b>inline GLvoid SetStorageBuffer(GLboolean </b><i>bParam</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>bParam</i></td></tr>
+<tr><td></td><td>Podając GL_TRUE uaktywniamy StorageBuffer, podając GL_FALSE wyłączamy go.</td></tr>
+</table>
+</p>
+
+<p><a name="Timer"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::Timer</h3>
+
+<p>Funkcja timera wywoływana cyklicznie (domyślnie co sekundę) przez metodę
+<a href="cgamecontrol.html">CGameControl</a>::<a href="cgamecontrol.html#Timer">Timer()</a>.
+W metodzie tej usuwane są stare, nieużywane teksty ze StorageBuffera.</p>
+<p>[public] <b>GLvoid Timer();</b></p>
+
+<p><a name="GetCompileVersionSLD_ttf"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::GetCompileVersionSLD_ttf</h3>
+
+<p>Funkcja zwraca kompilowaną wersję bibliotek SDL i SDL_ttf.</p>
+<p>[public] <b>LPTSTR GetCompileVersionSLD_ttf();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>
+Łańcych znaków zaiwerający następujące informacje: głowny numer wersji SDL,
+pomniejszy numer wersji SDL, numer łatki SDL, następnie mamy głowny numer
+wersji SDL_ttf, pomniejszy numer wersji SDL_ttf oraz numer łatki SDL_ttf.
+</p>
+
+<p><a name="GetLinkedVersionSLD_ttf"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::GetLinkedVersionSLD_ttf</h3>
+
+<p>Funkcja zwraca linkowaną wersję bibliotek SDL i SDL_ttf.</p>
+<p>[public] <b>LPTSTR GetLinkedVersionSLD_ttf();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>
+Łańcych znaków zaiwerający następujące informacje: głowny numer wersji SDL,
+pomniejszy numer wersji SDL, numer łatki SDL, następnie mamy głowny numer
+wersji SDL_ttf, pomniejszy numer wersji SDL_ttf oraz numer łatki SDL_ttf.
+</p>
+
+<p><a name="RenderText"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::RenderText</h3>
+
+<p>Główna funkcja rysująca tekst.</p>
+
+<p>[private] <b>GLvoid RenderText(LPCTSTR </b><i>lpText</i><b>, TTF_Font *</b><i>font</i><b>, SDL_Color </b><i>color</i><b>, SDL_Rect *</b><i>location</i><b>, GLboolean </b><i>bMidScreen</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+
+<table border="0">
+<tr><td><i>lpText</i></td></tr>
+<tr><td></td><td>Tekst do wyświetlenia.</td></tr>
+
+<tr><td><i>font</i></td></tr>
+<tr><td></td><td>Wskaźnik na strukturę TTF_Font reprezentującej czcionkę.</td></tr>
+
+<tr><td><i>color</i></td></tr>
+<tr><td></td><td>Obiekt struktury SDL_Color reprezentującą składowe koloru tekstu.</td></tr>
+
+<tr><td><i>location</i></td></tr>
+<tr><td></td><td>Wskaźnik na strukturę SDL_Rect reprezentującą położenie tekstu.</td></tr>
+
+<tr><td><i>bMidScreen</i></td></tr>
+<tr><td></td><td>Czy tekst ma być wyrównany do środka. Jeżeli ustawimy tę
+wartość na GL_TRUE to tekst będzie wyrównany względem środka ekranu.</td></tr>
+</table>
+</p>
+
+<p><a name="NextPowerOfTwo"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::NextPowerOfTwo</h3>
+
+<p>[private] <b>GLint NextPowerOfTwo(GLint </b><i>x</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>x</i></td></tr>
+<tr><td></td><td>Oryginalny rozmiar tekstury.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>Najbliższy rozmiar tekstury będący potęgą dwójki.</p>
+
+<p><a name="DeleteOneStorageBuffer"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::DeleteOneStorageBuffer</h3>
+
+<p>Funkcja do usuwania jednej, wskazanej pozycji ze StorageBuffer.</p>
+
+<p>[private] <b>GLvoid DeleteOneStorageBuffer(GLint </b><i>iIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>iIndex</i></td></tr>
+<tr><td></td><td>Pozycja do usunięcia.</td></tr>
+</table>
+</p>
+
+<p><a name="DeleteOldStorageBuffer"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::DeleteOldStorageBuffer</h3>
+<p>Funkcja do usuwania starych, nieużywanych pozycji ze StorageBuffer.</p>
+<p>[private] <b>GLvoid DeleteOldStorageBuffer();</b></p>
+
+<p><a name="ScaleFont"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::ScaleFont</h3>
+<p>Funkcja do skalowania tekstu względem rozdzielczości.</p>
+<p>[private] <b>GLvoid ScaleFont();</b></p>
+
+<p><a name="MidScreenFont"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::MidScreenFont</h3>
+<p>Funkcja do zmieny położenia tekstu względem środka ekranu.</p>
+<p>[private] <b>GLvoid MidScreenFont(SDL_Rect &amp;</b><i>location</i><b>, GLint </b><i>iIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>location</i></td></tr>
+<tr><td></td><td>Położenie tekstu.</td></tr>
+
+<tr><td><i>iIndex</i></td></tr>
+<tr><td></td><td>Pozycja danego tekstu w StorageBuffer.</td></tr>
+</table>
+</p>
+
+<p><a name="DrawBkgText"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::DrawBkgText</h3>
+<p>Funkcja rysująca zadane tło pod tekstem.</p>
+<p>[private] <b>GLvoid DrawBkgText(SDL_Rect &amp;</b><i>location</i><b>, GLint </b><i>iIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>location</i></td></tr>
+<tr><td></td><td>Położenie tekstu.</td></tr>
+
+<tr><td><i>iIndex</i></td></tr>
+<tr><td></td><td>Pozycja danego tekstu w StorageBuffer.</td></tr>
+</table>
+</p>
+
+<p><a name="DrawQuadText"></a></p>
+
+<hr/>
+
+<h3>CSDLFont::DrawQuadText</h3>
+<p>Funkcja rysująca tekst.</p>
+<p>[private] <b>GLvoid DrawQuadText(SDL_Rect &amp;</b><i>location</i><b>, GLint </b><i>iIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>location</i></td></tr>
+<tr><td></td><td>Położenie tekstu.</td></tr>
+
+<tr><td><i>iIndex</i></td></tr>
+<tr><td></td><td>Pozycja danego tekstu w StorageBuffer.</td></tr>
+</table>
+</p>
+
+<hr/>
+
+</BODY>
+</HTML>

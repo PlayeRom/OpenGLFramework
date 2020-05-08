@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CTextureFont</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CTextureFont</h1><!-- doxytag: class="CTextureFont" --><code>#include &lt;<a class="el" href="_texture_font_8h-source.html">TextureFont.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram współpracy dla CTextureFont:</div>
+<div class="dynsection">
+<p><center><img src="class_c_texture_font__coll__graph.png" border="0" usemap="#_c_texture_font__coll__map" alt="Collaboration graph"></center>
+<map name="_c_texture_font__coll__map">
+<area shape="rect" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur." alt="" coords="5,5,123,32"><area shape="rect" title="m_pTextureLoader" alt="" coords="60,28,68,36"><area shape="rect" title="m_pTextureLoader" alt="" coords="60,92,68,100"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_texture_font-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa umożliwiająca rysowanie tekstu za pomocą tekstury z czcionką. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_font.html#7a65491378c8ccc96ccc5630c6d4caa7">CTextureFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#7a65491378c8ccc96ccc5630c6d4caa7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_font.html#0a63e12840b978a029e2d603ed1b1dcf">~CTextureFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#0a63e12840b978a029e2d603ed1b1dcf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_font.html#1c21d8bcac1ea1fac1e97ed6ab858791">DrawTextFormat</a> (GLfloat fPosX, GLfloat fPosY, GLint iFont, GLfloat r, GLfloat g, GLfloat b, GLfloat fScale, LPCTSTR fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysjąca tekst z możliwością formatowania.  <a href="#1c21d8bcac1ea1fac1e97ed6ab858791"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_font.html#d95d6da08bc98a227489fadf2d045efe">DrawText</a> (GLfloat fPosX, GLfloat fPosY, LPCTSTR fmt, GLint iFont, GLfloat r=1.0f, GLfloat g=1.0f, GLfloat b=1.0f, GLfloat fScale=0.00002f)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysjąca tekst.  <a href="#d95d6da08bc98a227489fadf2d045efe"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e106efaf4d70abdeb93531459cccfddf"></a><!-- doxytag: member="CTextureFont::BuildFont" ref="e106efaf4d70abdeb93531459cccfddf" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_font.html#e106efaf4d70abdeb93531459cccfddf">BuildFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda budująca czcionkę rastrową. <br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="906e10490e64a0db3f0f509c9cf04276"></a><!-- doxytag: member="CTextureFont::m_pTextureLoader" ref="906e10490e64a0db3f0f509c9cf04276" args="" -->
+<a class="el" href="class_c_texture_loader.html">CTextureLoader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_font.html#906e10490e64a0db3f0f509c9cf04276">m_pTextureLoader</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur.">CTextureLoader</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1d733b386ea8c7d3bfe4fc02af45786a"></a><!-- doxytag: member="CTextureFont::m_uiBase" ref="1d733b386ea8c7d3bfe4fc02af45786a" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_font.html#1d733b386ea8c7d3bfe4fc02af45786a">m_uiBase</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Identyfikator list wyświetlania czcionki. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="7a65491378c8ccc96ccc5630c6d4caa7"></a><!-- doxytag: member="CTextureFont::CTextureFont" ref="7a65491378c8ccc96ccc5630c6d4caa7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextureFont::CTextureFont           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="0a63e12840b978a029e2d603ed1b1dcf"></a><!-- doxytag: member="CTextureFont::~CTextureFont" ref="0a63e12840b978a029e2d603ed1b1dcf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextureFont::~CTextureFont           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="1c21d8bcac1ea1fac1e97ed6ab858791"></a><!-- doxytag: member="CTextureFont::DrawTextFormat" ref="1c21d8bcac1ea1fac1e97ed6ab858791" args="(GLfloat fPosX, GLfloat fPosY, GLint iFont, GLfloat r, GLfloat g, GLfloat b, GLfloat fScale, LPCTSTR fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CTextureFont::DrawTextFormat           </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fPosX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fPosY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysjąca tekst z możliwością formatowania. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fPosX</em>&nbsp;</td><td>Współrzędna x pozycji tekstu w przestrzeni 3D. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fPosY</em>&nbsp;</td><td>Współrzędna y pozycji tekstu w przestrzeni 3D. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFont</em>&nbsp;</td><td>Rodzaj czcionki, do wyboru 0 i 1. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>r</em>&nbsp;</td><td>Składowa R koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>g</em>&nbsp;</td><td>Składowa G koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>b</em>&nbsp;</td><td>Składowa B koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fScale</em>&nbsp;</td><td>Wielkość wyświetlanej linijki tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d95d6da08bc98a227489fadf2d045efe"></a><!-- doxytag: member="CTextureFont::DrawText" ref="d95d6da08bc98a227489fadf2d045efe" args="(GLfloat fPosX, GLfloat fPosY, LPCTSTR fmt, GLint iFont, GLfloat r=1.0f, GLfloat g=1.0f, GLfloat b=1.0f, GLfloat fScale=0.00002f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CTextureFont::DrawText           </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fPosX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fPosY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>r</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>g</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>b</em> = <code>1.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fScale</em> = <code>0.00002f</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysjąca tekst. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fPosX</em>&nbsp;</td><td>Współrzędna x pozycji tekstu w przestrzeni 3D. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fPosY</em>&nbsp;</td><td>Współrzędna y pozycji tekstu w przestrzeni 3D. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFont</em>&nbsp;</td><td>Rodzaj czcionki, do wyboru 0 i 1. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>r</em>&nbsp;</td><td>Składowa R koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>g</em>&nbsp;</td><td>Składowa G koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>b</em>&nbsp;</td><td>Składowa B koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fScale</em>&nbsp;</td><td>Wielkość wyświetlanej linijki tekstu. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Fonts/<a class="el" href="_texture_font_8h-source.html">TextureFont.h</a><li>Fonts/TextureFont.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

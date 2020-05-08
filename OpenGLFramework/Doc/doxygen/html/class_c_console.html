@@ -1,0 +1,840 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CConsole</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CConsole</h1><!-- doxytag: class="CConsole" --><!-- doxytag: inherits="CRMenuBase" --><code>#include &lt;<a class="el" href="_console_8h-source.html">Console.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CConsole</div>
+<div class="dynsection">
+<p><center><img src="class_c_console__inherit__graph.png" border="0" usemap="#_c_console__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_console__inherit__map">
+<area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="5,5,109,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagram współpracy dla CConsole:</div>
+<div class="dynsection">
+<p><center><img src="class_c_console__coll__graph.png" border="0" usemap="#_c_console__coll__map" alt="Collaboration graph"></center>
+<map name="_c_console__coll__map">
+<area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="931,5,1035,32"><area shape="rect" href="class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową." alt="" coords="933,56,1032,83"><area shape="rect" title="m_pBitmapFont" alt="" coords="1029,71,1037,79"><area shape="rect" title="m_pBitmapFont" alt="" coords="1197,103,1205,111"><area shape="rect" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="941,107,1024,133"><area shape="rect" title="m_pSDLFont" alt="" coords="1021,116,1029,124"><area shape="rect" title="m_pSDLFont" alt="" coords="1193,116,1201,124"><area shape="rect" href="class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,107,800,133"><area shape="rect" title="m_pWinData" alt="" coords="796,116,804,124"><area shape="rect" title="m_pWinData" alt="" coords="937,116,945,124"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,5,520,32"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,56,472,83"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,69,476,77"><area shape="rect" title="m_pARBMultisample" alt="" coords="699,103,707,111"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,107,465,133"><area shape="rect" title="m_pMultiLang" alt="" coords="463,116,471,124"><area shape="rect" title="m_pMultiLang" alt="" coords="689,116,697,124"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,107,243,133"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,157,500,184"><area shape="rect" title="m_sSettingFile" alt="" coords="496,160,504,168"><area shape="rect" title="m_sSettingFile" alt="" coords="697,129,705,137"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,208,443,235"><area shape="rect" title="m_pLogger" alt="" coords="440,216,448,224"><area shape="rect" title="m_pLogger" alt="" coords="729,129,737,137"><area shape="rect" href="class_c_my_font.html" title="Klasa rysująca tekst." alt="" coords="945,157,1020,184"><area shape="rect" title="m_pMyFont" alt="" coords="1017,163,1025,171"><area shape="rect" title="m_pMyFont" alt="" coords="1196,129,1204,137"><area shape="rect" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji." alt="" coords="927,208,1039,235"><area shape="rect" title="m_pSpeedControl" alt="" coords="1036,213,1044,221"><area shape="rect" title="m_pSpeedControl" alt="" coords="1223,129,1231,137"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_console-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa konsoli. 
+<p>
+Klasa ta odpowiada za wyświetlanie oraz obsługę konsoli. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Typy publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a> { <a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8917043336dc948f0a1fed7a264c8b168">ENormal</a>, 
+<a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f82371234acda4df627efdcff3516058b6">EWarning</a>, 
+<a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8dff2a27dbf1543dbc39f9f6c70879f95">EError</a>, 
+<a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f81e70826705ec7cfa21d59f106a8f0b21">ESuccess</a>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Typ wyliczeniowy reprezentujący rodzaje wiadomości.  <a href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">Więcej...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#9ff3a14fd32fec13a98fd6064d26c861">CConsole</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#9ff3a14fd32fec13a98fd6064d26c861"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#1d1ecc48fc4de70bfe0f6530c9d3bfc5">~CConsole</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#1d1ecc48fc4de70bfe0f6530c9d3bfc5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#94a2f18c94421d9e108b2b03ba1b2165">RestartObjects</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda restartująca dane konsoli, które tego wymagają.  <a href="#94a2f18c94421d9e108b2b03ba1b2165"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#0946a8e115ed33b4f03ab5ac114b92ef">ShowConsole</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyświetlająca konsolę.  <a href="#0946a8e115ed33b4f03ab5ac114b92ef"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#01404d41e4cb9e45e3390ef21c8d09d8">HideConsole</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ukrywająca konsolę.  <a href="#01404d41e4cb9e45e3390ef21c8d09d8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#f875071695df0820d6e9a6ae3a992689">IsConsole</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy konsola jest rysowana.  <a href="#f875071695df0820d6e9a6ae3a992689"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#de8903e77fd8ed21945360623724fd64">AddText</a> (<a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a> eType, const char *fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda dodająca linijkę tekstu do konsoli w kodowaniu ASCII.  <a href="#de8903e77fd8ed21945360623724fd64"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#5d653bee8a490995e02875bf8b33cd34">AddText</a> (const char *fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda dodająca linijkę tekstu do konsoli w kodowaniu ASCII z typem ENormal.  <a href="#5d653bee8a490995e02875bf8b33cd34"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#b8f89ba9794ec8d9a8972180a3ce56d2">DrawConsoleWithSDLFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca konsolę.  <a href="#b8f89ba9794ec8d9a8972180a3ce56d2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#03f888bd62da50a66fed55417d49ae6f">KeyDown</a> (GLuint uiKeyCode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>.  <a href="#03f888bd62da50a66fed55417d49ae6f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#5a3a9a8dcbec8d5fae9db5e8886e9e17">KeyUp</a> (GLuint uiKeyCode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie zwolnienia klawisza klawiatury, przekazywane z <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>.  <a href="#5a3a9a8dcbec8d5fae9db5e8886e9e17"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#a330a264c58ba5722a9aa87054d46e51">MouseWheel</a> (GLint iScrollLines)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie przekręcenia kółka myszy, przekazywane z <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>.  <a href="#a330a264c58ba5722a9aa87054d46e51"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#92c7a2ebe8978b00bb5ee4d0d3664900">SetBlockConsole</a> (GLboolean bBlockConsole)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca blokadę na wyświetlanie konsoli.  <a href="#92c7a2ebe8978b00bb5ee4d0d3664900"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6059902a47ba7fe76ec58c0fd41fed2f"></a><!-- doxytag: member="CConsole::SetVariables" ref="6059902a47ba7fe76ec58c0fd41fed2f" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#6059902a47ba7fe76ec58c0fd41fed2f">SetVariables</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda inicjalizująca wszelkie niezbędne zmienne odpowiednimi wartościami. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="df00d191a488171e4645ac7bdb22f94d"></a><!-- doxytag: member="CConsole::CreateSpeedControl" ref="df00d191a488171e4645ac7bdb22f94d" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#df00d191a488171e4645ac7bdb22f94d">CreateSpeedControl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca obiekt klasy <a class="el" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji.">CSpeedControl</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#9b7c5cf8e7f510cf8cd09b95503a232a">GetLastCommandSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość zapamiętanych ostatnio wpisywanych komend.  <a href="#9b7c5cf8e7f510cf8cd09b95503a232a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#f2682e52bef3f2087469fb9660e49569">AddLastCommand</a> (LPCTSTR lpCommand)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapamietująca następną komendę.  <a href="#f2682e52bef3f2087469fb9660e49569"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e6c6d417d93360ad6d4c77b8a5b67f4b"></a><!-- doxytag: member="CConsole::DeleteLastCommands" ref="e6c6d417d93360ad6d4c77b8a5b67f4b" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#e6c6d417d93360ad6d4c77b8a5b67f4b">DeleteLastCommands</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca wszelkie pamiętane komendy. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#7cc3bdbd1eb4592f01502c4c494f0488">GetConsoleLineSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość skłądowanych linijek tekstu wyświetlanych w konsoli.  <a href="#7cc3bdbd1eb4592f01502c4c494f0488"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d05f9ff0afdcc2d8e326b879b1c3066f"></a><!-- doxytag: member="CConsole::DeleteConsoleLines" ref="d05f9ff0afdcc2d8e326b879b1c3066f" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#d05f9ff0afdcc2d8e326b879b1c3066f">DeleteConsoleLines</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca wszelkie linijki tekstu wyświetlane w konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#cad0eb08e17a0a84bb542b2034c12782">ExecuteCommand</a> (LPCTSTR lpCommand)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wykonująca podaną komendę.  <a href="#cad0eb08e17a0a84bb542b2034c12782"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0ed6f98eae651903b5c438e32d986531"></a><!-- doxytag: member="CConsole::SetStartEndLineOnEnd" ref="0ed6f98eae651903b5c438e32d986531" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#0ed6f98eae651903b5c438e32d986531">SetStartEndLineOnEnd</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca wyświetlanie w konsoli tak aby widoczna była ostatnia linijka. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#0f5639890a6db339ad6436ee46a9ca42">GetParameterCommand</a> (LPCTSTR lpCommand, LPTSTR lpParameter)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyciągająca parametr z komendy.  <a href="#0f5639890a6db339ad6436ee46a9ca42"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#ba77c7646184020b6a1a2c05026e8ecd">PrepareText</a> (<a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a> eType, const char *lpText)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przygotowująca tekst do wyświetlenia w konsoli.  <a href="#ba77c7646184020b6a1a2c05026e8ecd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#a9068596cccf81182037ac5478590a54">AddTextFinally</a> (<a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a> eType, LPCTSTR lpText, size_t uiLength)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Motoda dodającą linijkę tekstu do wyświetlenia w konsoli.  <a href="#a9068596cccf81182037ac5478590a54"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="45c97285fa25a9c1665e439c8d917ee3"></a><!-- doxytag: member="CConsole::LineScrollUp" ref="45c97285fa25a9c1665e439c8d917ee3" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#45c97285fa25a9c1665e439c8d917ee3">LineScrollUp</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda skrolująca tekst o jedną linijkę w górę. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d0b752aae495a5b32cd9adc19a93292b"></a><!-- doxytag: member="CConsole::LineScrollDown" ref="d0b752aae495a5b32cd9adc19a93292b" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#d0b752aae495a5b32cd9adc19a93292b">LineScrollDown</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda skrolująca tekst o jedną linijkę w dół. <br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="44cda83e74beefc90fcae233f22da9b0"></a><!-- doxytag: member="CConsole::m_pSpeedControl" ref="44cda83e74beefc90fcae233f22da9b0" args="" -->
+<a class="el" href="class_c_speed_control.html">CSpeedControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#44cda83e74beefc90fcae233f22da9b0">m_pSpeedControl</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji.">CSpeedControl</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0728310919f7c2e115835df660ed870e"></a><!-- doxytag: member="CConsole::m_pMyFont" ref="0728310919f7c2e115835df660ed870e" args="" -->
+<a class="el" href="class_c_my_font.html">CMyFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#0728310919f7c2e115835df660ed870e">m_pMyFont</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_my_font.html" title="Klasa rysująca tekst.">CMyFont</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3408b125d191978a7522235d3d89b355"></a><!-- doxytag: member="CConsole::m_pBitmapFont" ref="3408b125d191978a7522235d3d89b355" args="" -->
+<a class="el" href="class_c_bitmap_font.html">CBitmapFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#3408b125d191978a7522235d3d89b355">m_pBitmapFont</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową.">CBitmapFont</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ff84ae553235ba016e5c12c29b666d2a"></a><!-- doxytag: member="CConsole::m_pSDLFont" ref="ff84ae553235ba016e5c12c29b666d2a" args="" -->
+<a class="el" href="class_c_s_d_l_font.html">CSDLFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#ff84ae553235ba016e5c12c29b666d2a">m_pSDLFont</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7ce3dd2134e2ee223f91c1baf5ef65fb"></a><!-- doxytag: member="CConsole::m_iAnimCtrl1" ref="7ce3dd2134e2ee223f91c1baf5ef65fb" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#7ce3dd2134e2ee223f91c1baf5ef65fb">m_iAnimCtrl1</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indeks kontroli animacji wysuwania się konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c9070ecb5f6be3f40fd6521b5908ec9f"></a><!-- doxytag: member="CConsole::m_iAnimCtrl2" ref="c9070ecb5f6be3f40fd6521b5908ec9f" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#c9070ecb5f6be3f40fd6521b5908ec9f">m_iAnimCtrl2</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indeks kontroli animacji mrugania znaku zachęty w konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="44952cc9e0de91f380fa8561e82d9158"></a><!-- doxytag: member="CConsole::m_aLastCommand" ref="44952cc9e0de91f380fa8561e82d9158" args="" -->
+std::vector&lt; TCHAR * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#44952cc9e0de91f380fa8561e82d9158">m_aLastCommand</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica przechowująca ostatnio wpisywane komendy. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6b58d99a79631b7da3dc38a53fcb721e"></a><!-- doxytag: member="CConsole::m_iCurrentLastCommand" ref="6b58d99a79631b7da3dc38a53fcb721e" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#6b58d99a79631b7da3dc38a53fcb721e">m_iCurrentLastCommand</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna zapamiętująca indeks ostatnio zapamiętanej komendy. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="29fc9fa5f9847e65919ff8997b7344f9"></a><!-- doxytag: member="CConsole::m_aConsoleLine" ref="29fc9fa5f9847e65919ff8997b7344f9" args="" -->
+std::vector&lt; <a class="el" href="struct_c_console_1_1_s_console_line.html">SConsoleLine</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#29fc9fa5f9847e65919ff8997b7344f9">m_aConsoleLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica składująca linijki tekstu wyświetlane w konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b719736f63b47fc8a187344bf75e2b97"></a><!-- doxytag: member="CConsole::m_eFilter" ref="b719736f63b47fc8a187344bf75e2b97" args="" -->
+<a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#b719736f63b47fc8a187344bf75e2b97">m_eFilter</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna zapamietująca jakie typy wiadomości mają być wyświetlany w konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d73aeff46a3e5f48430f2534a888b48a"></a><!-- doxytag: member="CConsole::m_iStartLine" ref="d73aeff46a3e5f48430f2534a888b48a" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#d73aeff46a3e5f48430f2534a888b48a">m_iStartLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indeks linijki tekstu jaki ma być wyświetlany w pierwszej linijce konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b57558264776dfa42ed3f8a6173756ef"></a><!-- doxytag: member="CConsole::m_iEndLine" ref="b57558264776dfa42ed3f8a6173756ef" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#b57558264776dfa42ed3f8a6173756ef">m_iEndLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indeks linijki tekstu jaki ma być wyświetlany w ostatniej linijce konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="affa9453beb252878fc6704538748968"></a><!-- doxytag: member="CConsole::m_iPageCountLine" ref="affa9453beb252878fc6704538748968" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#affa9453beb252878fc6704538748968">m_iPageCountLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maksymalna ilość linijek tekstu wyświetlana aktualnie w konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="612ba069bb283bd047c94ade38b28183"></a><!-- doxytag: member="CConsole::m_fPosX" ref="612ba069bb283bd047c94ade38b28183" args="" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#612ba069bb283bd047c94ade38b28183">m_fPosX</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Współrzędna x pozycji tekstu w linijce. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="cc0a318d6d106b5736131717693743e5"></a><!-- doxytag: member="CConsole::m_fPosY" ref="cc0a318d6d106b5736131717693743e5" args="" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#cc0a318d6d106b5736131717693743e5">m_fPosY</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Współrzędna y pozycji tekstu w linijce. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="99602e2a539f8c766e22921a67830d27"></a><!-- doxytag: member="CConsole::m_fPosYConsole" ref="99602e2a539f8c766e22921a67830d27" args="" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#99602e2a539f8c766e22921a67830d27">m_fPosYConsole</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pozycja całego okna konsoli dla efektu wysuwania się. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="353c25fff71de91d119620a2d79a8b20"></a><!-- doxytag: member="CConsole::m_rcRegionBoard" ref="353c25fff71de91d119620a2d79a8b20" args="" -->
+RECT&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#353c25fff71de91d119620a2d79a8b20">m_rcRegionBoard</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Prostokąt określający połorzenie i rozmiar konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a299b6c81ff56905606400e346d23054"></a><!-- doxytag: member="CConsole::m_iPosYConsole" ref="a299b6c81ff56905606400e346d23054" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#a299b6c81ff56905606400e346d23054">m_iPosYConsole</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aktualna pozycja konsoli w osi Y dla efektu wysuwania się. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c1d7836e5b3a6fecc75a8af9477cd5ab"></a><!-- doxytag: member="CConsole::m_iRateYConsole" ref="c1d7836e5b3a6fecc75a8af9477cd5ab" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#c1d7836e5b3a6fecc75a8af9477cd5ab">m_iRateYConsole</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Skok wysuwania się konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="5275e3e26f034cf4426b99da1fdcb30f"></a><!-- doxytag: member="CConsole::m_bDrawCursor" ref="5275e3e26f034cf4426b99da1fdcb30f" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#5275e3e26f034cf4426b99da1fdcb30f">m_bDrawCursor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy w danej chili ma być wyświetlany znak zachęty. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="84495cffd408867fdd07f700c9e8a6af"></a><!-- doxytag: member="CConsole::m_bShowConsole" ref="84495cffd408867fdd07f700c9e8a6af" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#84495cffd408867fdd07f700c9e8a6af">m_bShowConsole</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy konsola jest rysowana. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4eb756aeaeb61e5ab5e6b8c04c2e80da"></a><!-- doxytag: member="CConsole::m_cLastLineConst" ref="4eb756aeaeb61e5ab5e6b8c04c2e80da" args="[8]" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#4eb756aeaeb61e5ab5e6b8c04c2e80da">m_cLastLineConst</a> [8]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Znak zachęty konsoli. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e3d51a6424bb98c971dac1666034126b"></a><!-- doxytag: member="CConsole::m_cLastLine" ref="e3d51a6424bb98c971dac1666034126b" args="[128]" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#e3d51a6424bb98c971dac1666034126b">m_cLastLine</a> [128]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aktualnie pisana linia w linii komend. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7f91e9572f2378b3c46e8d8a46f5847a"></a><!-- doxytag: member="CConsole::m_bBlockConsole" ref="7f91e9572f2378b3c46e8d8a46f5847a" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_console.html#7f91e9572f2378b3c46e8d8a46f5847a">m_bBlockConsole</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy wyświtlanie konsoli ma być blokowane. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_console_1_1_s_console_line.html">SConsoleLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca informację o pojedynczej linijce tekstu.  <a href="struct_c_console_1_1_s_console_line.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja składowych wyliczanych</h2>
+<a class="anchor" name="b50bdaea7e2930093eb557aca04475f8"></a><!-- doxytag: member="CConsole::EConsoleMsgType" ref="b50bdaea7e2930093eb557aca04475f8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">CConsole::EConsoleMsgType</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Typ wyliczeniowy reprezentujący rodzaje wiadomości. 
+<p>
+Każdą informację wyświetlaną w konsoli można określić danym typem przypisując jej odpowiedni kolor. <dl compact><dt><b>Wartości wyliczeń: </b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" name="b50bdaea7e2930093eb557aca04475f8917043336dc948f0a1fed7a264c8b168"></a><!-- doxytag: member="ENormal" ref="b50bdaea7e2930093eb557aca04475f8917043336dc948f0a1fed7a264c8b168" args="" -->ENormal</em>&nbsp;</td><td>
+Tekst normalny w kolorze białym. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="b50bdaea7e2930093eb557aca04475f82371234acda4df627efdcff3516058b6"></a><!-- doxytag: member="EWarning" ref="b50bdaea7e2930093eb557aca04475f82371234acda4df627efdcff3516058b6" args="" -->EWarning</em>&nbsp;</td><td>
+Ostrzeżenie w kolorze żółtym. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="b50bdaea7e2930093eb557aca04475f8dff2a27dbf1543dbc39f9f6c70879f95"></a><!-- doxytag: member="EError" ref="b50bdaea7e2930093eb557aca04475f8dff2a27dbf1543dbc39f9f6c70879f95" args="" -->EError</em>&nbsp;</td><td>
+Błąd w kolorze czerwonym. </td></tr>
+<tr><td valign="top"><em><a class="anchor" name="b50bdaea7e2930093eb557aca04475f81e70826705ec7cfa21d59f106a8f0b21"></a><!-- doxytag: member="ESuccess" ref="b50bdaea7e2930093eb557aca04475f81e70826705ec7cfa21d59f106a8f0b21" args="" -->ESuccess</em>&nbsp;</td><td>
+Sukces w kolorze zielonym. </td></tr>
+</table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="9ff3a14fd32fec13a98fd6064d26c861"></a><!-- doxytag: member="CConsole::CConsole" ref="9ff3a14fd32fec13a98fd6064d26c861" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CConsole::CConsole           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="1d1ecc48fc4de70bfe0f6530c9d3bfc5"></a><!-- doxytag: member="CConsole::~CConsole" ref="1d1ecc48fc4de70bfe0f6530c9d3bfc5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CConsole::~CConsole           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="94a2f18c94421d9e108b2b03ba1b2165"></a><!-- doxytag: member="CConsole::RestartObjects" ref="94a2f18c94421d9e108b2b03ba1b2165" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::RestartObjects           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda restartująca dane konsoli, które tego wymagają. 
+<p>
+Metoda ta jest wywoływana gdy restartowane jest okno, np. pod wpływem zmiany rozdzielczości, próbkowania dla antyaliasingu, itp. 
+</div>
+</div><p>
+<a class="anchor" name="0946a8e115ed33b4f03ab5ac114b92ef"></a><!-- doxytag: member="CConsole::ShowConsole" ref="0946a8e115ed33b4f03ab5ac114b92ef" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::ShowConsole           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyświetlająca konsolę. 
+<p>
+Należy wywołać tę metodą aby konsola była rysowana. 
+</div>
+</div><p>
+<a class="anchor" name="01404d41e4cb9e45e3390ef21c8d09d8"></a><!-- doxytag: member="CConsole::HideConsole" ref="01404d41e4cb9e45e3390ef21c8d09d8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::HideConsole           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ukrywająca konsolę. 
+<p>
+Należy wywołać tę metodę aby zaprzestać rysowania konsoli. 
+</div>
+</div><p>
+<a class="anchor" name="f875071695df0820d6e9a6ae3a992689"></a><!-- doxytag: member="CConsole::IsConsole" ref="f875071695df0820d6e9a6ae3a992689" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CConsole::IsConsole           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy konsola jest rysowana. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli konsola jest rysowana. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="de8903e77fd8ed21945360623724fd64"></a><!-- doxytag: member="CConsole::AddText" ref="de8903e77fd8ed21945360623724fd64" args="(EConsoleMsgType eType, const char *fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::AddText           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a>&nbsp;</td>
+          <td class="paramname"> <em>eType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda dodająca linijkę tekstu do konsoli w kodowaniu ASCII. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>eType</em>&nbsp;</td><td>Typ dodawanej informacji. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić w konsoli. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5d653bee8a490995e02875bf8b33cd34"></a><!-- doxytag: member="CConsole::AddText" ref="5d653bee8a490995e02875bf8b33cd34" args="(const char *fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::AddText           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda dodająca linijkę tekstu do konsoli w kodowaniu ASCII z typem ENormal. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić w konsoli. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b8f89ba9794ec8d9a8972180a3ce56d2"></a><!-- doxytag: member="CConsole::DrawConsoleWithSDLFont" ref="b8f89ba9794ec8d9a8972180a3ce56d2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::DrawConsoleWithSDLFont           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca konsolę. 
+<p>
+Metoda rysuje konsolę z wykorzystaniem klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. 
+</div>
+</div><p>
+<a class="anchor" name="03f888bd62da50a66fed55417d49ae6f"></a><!-- doxytag: member="CConsole::KeyDown" ref="03f888bd62da50a66fed55417d49ae6f" args="(GLuint uiKeyCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CConsole::KeyDown           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKeyCode</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKeyCode</em>&nbsp;</td><td>Wirtualny kod klawisza jaki został naciśnięty. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5a3a9a8dcbec8d5fae9db5e8886e9e17"></a><!-- doxytag: member="CConsole::KeyUp" ref="5a3a9a8dcbec8d5fae9db5e8886e9e17" args="(GLuint uiKeyCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CConsole::KeyUp           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKeyCode</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie zwolnienia klawisza klawiatury, przekazywane z <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKeyCode</em>&nbsp;</td><td>Wirtualny kod klawisza jaki został zwolniony. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a330a264c58ba5722a9aa87054d46e51"></a><!-- doxytag: member="CConsole::MouseWheel" ref="a330a264c58ba5722a9aa87054d46e51" args="(GLint iScrollLines)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CConsole::MouseWheel           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iScrollLines</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie przekręcenia kółka myszy, przekazywane z <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iScrollLines</em>&nbsp;</td><td>Mowi nam o ile linii i w która stronę wykonano obrót, wartość ujemna - w dól, wartość dodatnia - w górę. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="92c7a2ebe8978b00bb5ee4d0d3664900"></a><!-- doxytag: member="CConsole::SetBlockConsole" ref="92c7a2ebe8978b00bb5ee4d0d3664900" args="(GLboolean bBlockConsole)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::SetBlockConsole           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bBlockConsole</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca blokadę na wyświetlanie konsoli. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bBlockConsole</em>&nbsp;</td><td>Podając <code>GL_TRUE</code> zablokujemy wyświetlanie konsoli. Podając <code>GL_FALSE</code> odblokujemy. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9b7c5cf8e7f510cf8cd09b95503a232a"></a><!-- doxytag: member="CConsole::GetLastCommandSize" ref="9b7c5cf8e7f510cf8cd09b95503a232a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CConsole::GetLastCommandSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość zapamiętanych ostatnio wpisywanych komend. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca ilość zapamiętanych komend. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f2682e52bef3f2087469fb9660e49569"></a><!-- doxytag: member="CConsole::AddLastCommand" ref="f2682e52bef3f2087469fb9660e49569" args="(LPCTSTR lpCommand)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::AddLastCommand           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpCommand</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapamietująca następną komendę. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpCommand</em>&nbsp;</td><td>Tekst ostatnio wpisanej komendy. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7cc3bdbd1eb4592f01502c4c494f0488"></a><!-- doxytag: member="CConsole::GetConsoleLineSize" ref="7cc3bdbd1eb4592f01502c4c494f0488" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CConsole::GetConsoleLineSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość skłądowanych linijek tekstu wyświetlanych w konsoli. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita reprezentująca ilość linijek tekstu wyświetlanych w konsoli. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cad0eb08e17a0a84bb542b2034c12782"></a><!-- doxytag: member="CConsole::ExecuteCommand" ref="cad0eb08e17a0a84bb542b2034c12782" args="(LPCTSTR lpCommand)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::ExecuteCommand           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpCommand</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wykonująca podaną komendę. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpCommand</em>&nbsp;</td><td>Komenda do przeanalizowania i wykonania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0f5639890a6db339ad6436ee46a9ca42"></a><!-- doxytag: member="CConsole::GetParameterCommand" ref="0f5639890a6db339ad6436ee46a9ca42" args="(LPCTSTR lpCommand, LPTSTR lpParameter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CConsole::GetParameterCommand           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpCommand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpParameter</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyciągająca parametr z komendy. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpCommand</em>&nbsp;</td><td>Komenda do przeanalizowania. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpParameter</em>&nbsp;</td><td>Zwracany rezultat w postaci parametru komendy. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wyciągnięcia parametru. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ba77c7646184020b6a1a2c05026e8ecd"></a><!-- doxytag: member="CConsole::PrepareText" ref="ba77c7646184020b6a1a2c05026e8ecd" args="(EConsoleMsgType eType, const char *lpText)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::PrepareText           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a>&nbsp;</td>
+          <td class="paramname"> <em>eType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>lpText</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przygotowująca tekst do wyświetlenia w konsoli. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>eType</em>&nbsp;</td><td>Typ wiadomości. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst wiadomości. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a9068596cccf81182037ac5478590a54"></a><!-- doxytag: member="CConsole::AddTextFinally" ref="a9068596cccf81182037ac5478590a54" args="(EConsoleMsgType eType, LPCTSTR lpText, size_t uiLength)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CConsole::AddTextFinally           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_console.html#b50bdaea7e2930093eb557aca04475f8">EConsoleMsgType</a>&nbsp;</td>
+          <td class="paramname"> <em>eType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>uiLength</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Motoda dodającą linijkę tekstu do wyświetlenia w konsoli. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>eType</em>&nbsp;</td><td>Typ wiadomości. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst wiadomości. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>uiLength</em>&nbsp;</td><td>Długość tekstu. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>OpenGLFramework/<a class="el" href="_console_8h-source.html">Console.h</a><li>OpenGLFramework/Console.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:28 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,819 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CStencilShadow</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CStencilShadow</h1><!-- doxytag: class="CStencilShadow" --><code>#include &lt;<a class="el" href="_stencil_shadow_8h-source.html">StencilShadow.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram współpracy dla CStencilShadow:</div>
+<div class="dynsection">
+<p><center><img src="class_c_stencil_shadow__coll__graph.png" border="0" usemap="#_c_stencil_shadow__coll__map" alt="Collaboration graph"></center>
+<map name="_c_stencil_shadow__coll__map">
+<area shape="rect" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku..." alt="" coords="5,96,264,123"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="131,119,139,127"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="131,183,139,191"><area shape="rect" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="96,5,173,32"><area shape="rect" title="cLightPos" alt="" coords="131,28,139,36"><area shape="rect" title="cLightPos" alt="" coords="131,92,139,100"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_stencil_shadow-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa wspomagająca rysowanie dynamicznych cieni shadow volume. 
+<p>
+Klasa udostępnia metody rysujące cień w oparciu o bufor szablonowy. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#7ced061e50bc5e6aacc50efc03cf7ce4">CStencilShadow</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#7ced061e50bc5e6aacc50efc03cf7ce4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#a53e702bc164f46a912eab46fc873f3b">~CStencilShadow</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#a53e702bc164f46a912eab46fc873f3b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#f1118b5ced6532063ae70f4448f4c6e7">RestartObjects</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda restartująca wszelkie niezbędne dane.  <a href="#f1118b5ced6532063ae70f4448f4c6e7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#8347c67991bcea29666262f9a38abcbf">CreateFaceEquation</a> (GLint iIndexObj, GLint iFirstVertex, GLsizei iCountVertices)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda obliczająca równanie płaszczyzny dla danego obiektu 3D bez indeksowania wierzchołków.  <a href="#8347c67991bcea29666262f9a38abcbf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#54766deffed640e1d5a37a76ce2a9246">CreateFaceEquationElem</a> (GLint iIndexObj, GLsizei iCountVertices)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda obliczająca równanie płaszczyzny dla danego obiektu 3D z indeksowaniem wierzchołków.  <a href="#54766deffed640e1d5a37a76ce2a9246"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_c_vector4.html">CVector4</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a">GetLightPos</a> (const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;in_cLightPos=<a class="el" href="class_c_vector4.html">CVector4</a>(0.0f, 0.0f, 0.0f, 1.0f))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.  <a href="#aa9c8b922769a28df87c1b0de87c360a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#8ecc682213a32643f03a497919a9a3b1">DrawShadowForObj</a> (GLint iIndexObj, const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;in_cLightPos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca cień dla danego obiektu 3D.  <a href="#8ecc682213a32643f03a497919a9a3b1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#23a18e9f878b7d47b1a5f9622ca7d90b">DrawShadowForObjects</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca cienie dla kilku obiektów na raz.  <a href="#23a18e9f878b7d47b1a5f9622ca7d90b"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Zestaw metod do rysowania cieni dla kilku obiektów na raz.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406">Begin_ObjTransfInfo</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla kilku obiektów 3D.  <a href="#452724541f576128a4c26579f0928406"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#0f11a0059168b878e5cdc737610ee8bc">Set_ObjTransfInfo</a> (GLint iIndexObj, const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;in_cLightPos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca indeks obiektu 3D oraz pozycję światła.  <a href="#0f11a0059168b878e5cdc737610ee8bc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#a16fa8ed213be8a40eafba9736b24eab">Translate_ObjTransfInfo</a> (const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;in_cTranslate)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapamietująca pojedynczą oprację translacji.  <a href="#a16fa8ed213be8a40eafba9736b24eab"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#f6db18edde7f3473d7465aaeda524c1d">Rotate_ObjTransfInfo</a> (GLfloat fAngle, const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;in_cAxesRot)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapamietująca pojedynczą oprację rotacji.  <a href="#f6db18edde7f3473d7465aaeda524c1d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#9d67d15b74bd11a9d591a531d72a86ae">Scale_ObjTransfInfo</a> (const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;in_cScale)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapamietująca pojedynczą oprację skalowania.  <a href="#9d67d15b74bd11a9d591a531d72a86ae"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#7c6acdd3d26945a18974571deadcdf6b">End_ObjTransfInfo</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metod zamykajaca zbieranie informacji o przekształceniach macierzy widoku dla kilku obiektów 3D.  <a href="#7c6acdd3d26945a18974571deadcdf6b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e40ea2383979b6f5e2a3132097c66b36"></a><!-- doxytag: member="CStencilShadow::ClearObjTransformInfo" ref="e40ea2383979b6f5e2a3132097c66b36" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#e40ea2383979b6f5e2a3132097c66b36">ClearObjTransformInfo</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda czyszcząca wszelkie tablice związane ze zbieraniem informacji o przekształceniach macierzy widoku dla kilku obiektów 3D. <br></td></tr>
+<tr><td colspan="2"><br><h2>Typy prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#f47d3981b2b718dbde9f0b838b01ff9c">ETrnasformMode</a> { <b>ETransfTranslate</b>, 
+<b>ETransfRotate</b>, 
+<b>ETransfScale</b>
+ }</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Typ wyliczeniowy rodzajów przekształceń macierzy widoku. <br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#0e359e0b3e24453726d99f4d88a6a16a">GetObjFacesSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość elementów tablicy <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a>.  <a href="#0e359e0b3e24453726d99f4d88a6a16a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#75772d56c446232428f2017b9ca2ec4f">GetFaceArraySize</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca ilość trójkątów danego obiektu 3D.  <a href="#75772d56c446232428f2017b9ca2ec4f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="34314997d811d1a32ddbbd706e9a4c55"></a><!-- doxytag: member="CStencilShadow::ClearObjFaces" ref="34314997d811d1a32ddbbd706e9a4c55" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#34314997d811d1a32ddbbd706e9a4c55">ClearObjFaces</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda czyszcząca tablicę <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a> i jego podtablice. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#d0707d33c322c89af4949f2ca45c6f91">GetObjTransformInfoSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracajaca wielkość tablicy <a class="el" href="class_c_stencil_shadow.html#0dd662a583e757f2aa51bbdb09d69318" title="Tablica przechowująca informacje o wszelkch przekształceniach macierzy widoku.">CStencilShadow::m_aObjTransformInfo</a>.  <a href="#d0707d33c322c89af4949f2ca45c6f91"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#62f03a28d8e55949aab6ac45f48cc139">CalculateNeighbours</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyszująca sąsiadujące trójkaty.  <a href="#62f03a28d8e55949aab6ac45f48cc139"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#4ffeada124fb4fa968230f43ad67d97e">DoDrawShadowForObjElem</a> (GLint iIndexObj, const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;in_cLightPos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca cień dla obiektu 3D z indeksowaniem wierzchołków.  <a href="#4ffeada124fb4fa968230f43ad67d97e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#f1e13bd967475fb70cc24fad0f072daa">DoDrawShadowForObjNoElem</a> (GLint iIndexObj, const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;in_cLightPos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca cień dla obiektu 3D bez indeksowania wierzchołków.  <a href="#f1e13bd967475fb70cc24fad0f072daa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#9733e8cc6f409b46af8f9b03621d0b80">VMatMult</a> (GLfloat M[16], <a class="el" href="class_c_vector4.html">CVector4</a> &amp;in_out_cLightPos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda mnożąca wektor pozycji światłą przez macierz.  <a href="#9733e8cc6f409b46af8f9b03621d0b80"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#6fe95d6da913aa5d226b3f82459ca6b2">SetVisibleFaces</a> (GLint iIndexObj, const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;in_cLightPos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyznaczajaca czy dany trójką obiektu 3D jest oświetlony przez światło.  <a href="#6fe95d6da913aa5d226b3f82459ca6b2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b67ebf522ff154a3f2ba61bc4b71607e"></a><!-- doxytag: member="CStencilShadow::StartStencil" ref="b67ebf522ff154a3f2ba61bc4b71607e" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#b67ebf522ff154a3f2ba61bc4b71607e">StartStencil</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda aktywująca użycie bufora szablonowego. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="02967b145d72ff26cc8d7ede296f114f"></a><!-- doxytag: member="CStencilShadow::FinishStencil" ref="02967b145d72ff26cc8d7ede296f114f" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#02967b145d72ff26cc8d7ede296f114f">FinishStencil</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda dezaktywująca użycie bufora szablonowego oraz ostatecznie rysująca prostokąt z cieniem. <br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3875aabd86a86ed8d79c439c54018028"></a><!-- doxytag: member="CStencilShadow::m_aObjFaces" ref="3875aabd86a86ed8d79c439c54018028" args="" -->
+std::vector&lt; <a class="el" href="struct_c_stencil_shadow_1_1_s_obj_faces.html">SObjFaces</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028">m_aObjFaces</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica trójkątów dla danego obiektu 3D. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="664c8f0b0cea8d3b300bd2b4e4c8f776"></a><!-- doxytag: member="CStencilShadow::m_sObjTransfInfo" ref="664c8f0b0cea8d3b300bd2b4e4c8f776" args="" -->
+<a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html">SObjectTransformInfo</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#664c8f0b0cea8d3b300bd2b4e4c8f776">m_sObjTransfInfo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obiekt struktury <a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku...">CStencilShadow::SObjectTransformInfo</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0dd662a583e757f2aa51bbdb09d69318"></a><!-- doxytag: member="CStencilShadow::m_aObjTransformInfo" ref="0dd662a583e757f2aa51bbdb09d69318" args="" -->
+std::vector&lt; <a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html">SObjectTransformInfo</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#0dd662a583e757f2aa51bbdb09d69318">m_aObjTransformInfo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica przechowująca informacje o wszelkch przekształceniach macierzy widoku. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8b2c8e48e55ab8fecf25f43ab40dac62"></a><!-- doxytag: member="CStencilShadow::m_bIsGL_EXT_stencil_wrap" ref="8b2c8e48e55ab8fecf25f43ab40dac62" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_stencil_shadow.html#8b2c8e48e55ab8fecf25f43ab40dac62">m_bIsGL_EXT_stencil_wrap</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy karta graficzna obsługuje rozszerzenie "GL_EXT_stencil_wrap". <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_face_equation.html">SFaceEquation</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura równania płaszczyzny.  <a href="struct_c_stencil_shadow_1_1_s_face_equation.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html">SObjectTransformInfo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku.  <a href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_obj_faces.html">SObjFaces</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura trójkatów obiektu 3D.  <a href="struct_c_stencil_shadow_1_1_s_obj_faces.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_transform.html">STransform</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca pojedynczą informację o przekształceniach macierzy widoku.  <a href="struct_c_stencil_shadow_1_1_s_transform.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="7ced061e50bc5e6aacc50efc03cf7ce4"></a><!-- doxytag: member="CStencilShadow::CStencilShadow" ref="7ced061e50bc5e6aacc50efc03cf7ce4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CStencilShadow::CStencilShadow           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="a53e702bc164f46a912eab46fc873f3b"></a><!-- doxytag: member="CStencilShadow::~CStencilShadow" ref="a53e702bc164f46a912eab46fc873f3b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CStencilShadow::~CStencilShadow           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="f1118b5ced6532063ae70f4448f4c6e7"></a><!-- doxytag: member="CStencilShadow::RestartObjects" ref="f1118b5ced6532063ae70f4448f4c6e7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::RestartObjects           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda restartująca wszelkie niezbędne dane. 
+<p>
+Metoda ta jest już wywoływana w trakcie restartowania okna aplikacji. 
+</div>
+</div><p>
+<a class="anchor" name="8347c67991bcea29666262f9a38abcbf"></a><!-- doxytag: member="CStencilShadow::CreateFaceEquation" ref="8347c67991bcea29666262f9a38abcbf" args="(GLint iIndexObj, GLint iFirstVertex, GLsizei iCountVertices)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::CreateFaceEquation           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFirstVertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&nbsp;</td>
+          <td class="paramname"> <em>iCountVertices</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda obliczająca równanie płaszczyzny dla danego obiektu 3D bez indeksowania wierzchołków. 
+<p>
+Metoda ta dla każdego trójąta obiektu 3D, oblicza równanie płaszczyzny. Wyniki obliczeń zapisywane są w dynamicznie tworzonej tablicy <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a>. Metoda ta jest już wywoływana dla każdego wczytywanego obiektu w <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexObj</em>&nbsp;</td><td>Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFirstVertex</em>&nbsp;</td><td>Indeks pierwszego wierzchołka obiektu 3D z tablicy wierzchołków CVertexArray. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iCountVertices</em>&nbsp;</td><td>Ilość wierzchołków jaką zawiera obiekt 3D. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="54766deffed640e1d5a37a76ce2a9246"></a><!-- doxytag: member="CStencilShadow::CreateFaceEquationElem" ref="54766deffed640e1d5a37a76ce2a9246" args="(GLint iIndexObj, GLsizei iCountVertices)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::CreateFaceEquationElem           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&nbsp;</td>
+          <td class="paramname"> <em>iCountVertices</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda obliczająca równanie płaszczyzny dla danego obiektu 3D z indeksowaniem wierzchołków. 
+<p>
+Metoda ta dla każdego trójąta obiektu 3D, oblicza równanie płaszczyzny. Wyniki obliczeń zapisywane są w dynamicznie tworzonej tablicy <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a>. Metoda ta jest już wywoływana dla każdego wczytywanego obiektu w <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexObj</em>&nbsp;</td><td>Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iCountVertices</em>&nbsp;</td><td>Ilość wierzchołków jaką zawiera obiekt 3D. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="aa9c8b922769a28df87c1b0de87c360a"></a><!-- doxytag: member="CStencilShadow::GetLightPos" ref="aa9c8b922769a28df87c1b0de87c360a" args="(const CVector4 &amp;in_cLightPos=CVector4(0.0f, 0.0f, 0.0f, 1.0f))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_vector4.html">CVector4</a> CStencilShadow::GetLightPos           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cLightPos</em> = <code><a class="el" href="class_c_vector4.html">CVector4</a>(&nbsp;0.0f,&nbsp;0.0f,&nbsp;0.0f,&nbsp;1.0f&nbsp;)</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia. 
+<p>
+Metodę tą należy wywołać po przekształceniu macierzy widoku w całkowicie odwrotny sposób od tego jak byśmy przekształcali dla normalnego rysowania obiektu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cLightPos</em>&nbsp;</td><td>Oryginalna pozycja światła w przestrzeni 3D. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Nowa pozycja światła wyliczona z odróconej macierzy widoku. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8ecc682213a32643f03a497919a9a3b1"></a><!-- doxytag: member="CStencilShadow::DrawShadowForObj" ref="8ecc682213a32643f03a497919a9a3b1" args="(GLint iIndexObj, const CVector4 &amp;in_cLightPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::DrawShadowForObj           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cLightPos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca cień dla danego obiektu 3D. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexObj</em>&nbsp;</td><td>Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cLightPos</em>&nbsp;</td><td>Pozycja światła wyliczona metodą <a class="el" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a" title="Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.">CStencilShadow::GetLightPos</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="23a18e9f878b7d47b1a5f9622ca7d90b"></a><!-- doxytag: member="CStencilShadow::DrawShadowForObjects" ref="23a18e9f878b7d47b1a5f9622ca7d90b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::DrawShadowForObjects           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca cienie dla kilku obiektów na raz. 
+<p>
+Aby skorzystać z tej metody należy uprzednio, odpowiednio wywołać serię metod <em></em>..._ObjTransfInfo. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406" title="Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla...">Begin_ObjTransfInfo</a>, <a class="el" href="class_c_stencil_shadow.html#0f11a0059168b878e5cdc737610ee8bc" title="Metoda ustawiająca indeks obiektu 3D oraz pozycję światła.">Set_ObjTransfInfo</a>, <a class="el" href="class_c_stencil_shadow.html#a16fa8ed213be8a40eafba9736b24eab" title="Metoda zapamietująca pojedynczą oprację translacji.">Translate_ObjTransfInfo</a>, <a class="el" href="class_c_stencil_shadow.html#f6db18edde7f3473d7465aaeda524c1d" title="Metoda zapamietująca pojedynczą oprację rotacji.">Rotate_ObjTransfInfo</a>, <a class="el" href="class_c_stencil_shadow.html#7c6acdd3d26945a18974571deadcdf6b" title="Metod zamykajaca zbieranie informacji o przekształceniach macierzy widoku dla kilku...">End_ObjTransfInfo</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="452724541f576128a4c26579f0928406"></a><!-- doxytag: member="CStencilShadow::Begin_ObjTransfInfo" ref="452724541f576128a4c26579f0928406" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::Begin_ObjTransfInfo           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla kilku obiektów 3D. 
+<p>
+Metodę tą należy wywołać na samym początku rysowania danych obiektów 3D, które mają rzucać cień. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_stencil_shadow.html#7c6acdd3d26945a18974571deadcdf6b" title="Metod zamykajaca zbieranie informacji o przekształceniach macierzy widoku dla kilku...">End_ObjTransfInfo</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0f11a0059168b878e5cdc737610ee8bc"></a><!-- doxytag: member="CStencilShadow::Set_ObjTransfInfo" ref="0f11a0059168b878e5cdc737610ee8bc" args="(GLint iIndexObj, const CVector4 &amp;in_cLightPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::Set_ObjTransfInfo           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cLightPos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca indeks obiektu 3D oraz pozycję światła. 
+<p>
+Przed wywyołaniem tej metody należy uprzednio wywołać <a class="el" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406" title="Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla...">CStencilShadow::Begin_ObjTransfInfo</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexObj</em>&nbsp;</td><td>Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>, który będzie rzucał cień. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cLightPos</em>&nbsp;</td><td>Pozycja światła wyliczona z odwonie przekształconej macierzy widoku. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a" title="Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.">GetLightPos</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a16fa8ed213be8a40eafba9736b24eab"></a><!-- doxytag: member="CStencilShadow::Translate_ObjTransfInfo" ref="a16fa8ed213be8a40eafba9736b24eab" args="(const CVector3 &amp;in_cTranslate)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::Translate_ObjTransfInfo           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cTranslate</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapamietująca pojedynczą oprację translacji. 
+<p>
+Przed wywyołaniem tej metody należy uprzednio wywołać <a class="el" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406" title="Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla...">CStencilShadow::Begin_ObjTransfInfo</a>. Metodę tę należy wywołać zawsze wraz z wykonaniem operacji glTranslate podczas normalnego rysowania obiektu 3D. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cTranslate</em>&nbsp;</td><td>Wektor o jaki zostanie wykonane przesunięcie, zgodnie z glTranslate. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f6db18edde7f3473d7465aaeda524c1d"></a><!-- doxytag: member="CStencilShadow::Rotate_ObjTransfInfo" ref="f6db18edde7f3473d7465aaeda524c1d" args="(GLfloat fAngle, const CVector3 &amp;in_cAxesRot)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::Rotate_ObjTransfInfo           </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cAxesRot</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapamietująca pojedynczą oprację rotacji. 
+<p>
+Przed wywyołaniem tej metody należy uprzednio wywołać <a class="el" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406" title="Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla...">CStencilShadow::Begin_ObjTransfInfo</a>. Metodę tę należy wywołać zawsze wraz z wykonaniem operacji glRotate podczas normalnego rysowania obiektu 3D. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fAngle</em>&nbsp;</td><td>Kąt o jaki zostanie wykonany obrót, zgodnie z glRotate. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cAxesRot</em>&nbsp;</td><td>Wektor wskazujący, wokół których osi zostanie wykonany obrót - zgodnie z tym co podajemy w glRotate. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9d67d15b74bd11a9d591a531d72a86ae"></a><!-- doxytag: member="CStencilShadow::Scale_ObjTransfInfo" ref="9d67d15b74bd11a9d591a531d72a86ae" args="(const CVector3 &amp;in_cScale)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::Scale_ObjTransfInfo           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_vector3.html">CVector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cScale</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapamietująca pojedynczą oprację skalowania. 
+<p>
+Przed wywyołaniem tej metody należy uprzednio wywołać <a class="el" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406" title="Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla...">CStencilShadow::Begin_ObjTransfInfo</a>. Metodę tę należy wywołać zawsze wraz z wykonaniem operacji glScale podczas normalnego rysowania obiektu 3D. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cScale</em>&nbsp;</td><td>Wektor o jaki zostanie wykonane skalowanie, zgodnie z glScale. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7c6acdd3d26945a18974571deadcdf6b"></a><!-- doxytag: member="CStencilShadow::End_ObjTransfInfo" ref="7c6acdd3d26945a18974571deadcdf6b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::End_ObjTransfInfo           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metod zamykajaca zbieranie informacji o przekształceniach macierzy widoku dla kilku obiektów 3D. 
+<p>
+Metodę tą należy wywołać na samym końcu rysowania danych obiektów 3D, które mają rzucać cień. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406" title="Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla...">Begin_ObjTransfInfo</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0e359e0b3e24453726d99f4d88a6a16a"></a><!-- doxytag: member="CStencilShadow::GetObjFacesSize" ref="0e359e0b3e24453726d99f4d88a6a16a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CStencilShadow::GetObjFacesSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość elementów tablicy <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca ilość elementów tablicy <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="75772d56c446232428f2017b9ca2ec4f"></a><!-- doxytag: member="CStencilShadow::GetFaceArraySize" ref="75772d56c446232428f2017b9ca2ec4f" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CStencilShadow::GetFaceArraySize           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca ilość trójkątów danego obiektu 3D. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a> z którego chcemy pobtać ilość trójkatów. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d0707d33c322c89af4949f2ca45c6f91"></a><!-- doxytag: member="CStencilShadow::GetObjTransformInfoSize" ref="d0707d33c322c89af4949f2ca45c6f91" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CStencilShadow::GetObjTransformInfoSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracajaca wielkość tablicy <a class="el" href="class_c_stencil_shadow.html#0dd662a583e757f2aa51bbdb09d69318" title="Tablica przechowująca informacje o wszelkch przekształceniach macierzy widoku.">CStencilShadow::m_aObjTransformInfo</a>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca ilość elementów tablicy <a class="el" href="class_c_stencil_shadow.html#0dd662a583e757f2aa51bbdb09d69318" title="Tablica przechowująca informacje o wszelkch przekształceniach macierzy widoku.">CStencilShadow::m_aObjTransformInfo</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="62f03a28d8e55949aab6ac45f48cc139"></a><!-- doxytag: member="CStencilShadow::CalculateNeighbours" ref="62f03a28d8e55949aab6ac45f48cc139" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::CalculateNeighbours           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyszująca sąsiadujące trójkaty. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy <a class="el" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">CStencilShadow::m_aObjFaces</a> obiektu 3D, dla którego trójkatów będą wyszukiwanie sąsiaduące trójkąty. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4ffeada124fb4fa968230f43ad67d97e"></a><!-- doxytag: member="CStencilShadow::DoDrawShadowForObjElem" ref="4ffeada124fb4fa968230f43ad67d97e" args="(GLint iIndexObj, const CVector4 &amp;in_cLightPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::DoDrawShadowForObjElem           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cLightPos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca cień dla obiektu 3D z indeksowaniem wierzchołków. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexObj</em>&nbsp;</td><td>Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cLightPos</em>&nbsp;</td><td>Pozycja światła wyliczona metodą <a class="el" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a" title="Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.">CStencilShadow::GetLightPos</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f1e13bd967475fb70cc24fad0f072daa"></a><!-- doxytag: member="CStencilShadow::DoDrawShadowForObjNoElem" ref="f1e13bd967475fb70cc24fad0f072daa" args="(GLint iIndexObj, const CVector4 &amp;in_cLightPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::DoDrawShadowForObjNoElem           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cLightPos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca cień dla obiektu 3D bez indeksowania wierzchołków. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexObj</em>&nbsp;</td><td>Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cLightPos</em>&nbsp;</td><td>Pozycja światła wyliczona metodą <a class="el" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a" title="Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.">CStencilShadow::GetLightPos</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9733e8cc6f409b46af8f9b03621d0b80"></a><!-- doxytag: member="CStencilShadow::VMatMult" ref="9733e8cc6f409b46af8f9b03621d0b80" args="(GLfloat M[16], CVector4 &amp;in_out_cLightPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::VMatMult           </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>M</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_vector4.html">CVector4</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_out_cLightPos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda mnożąca wektor pozycji światłą przez macierz. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>M</em>&nbsp;</td><td>Tablica opisująca macierz 4x4. </td></tr>
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>in_out_cLightPos</em>&nbsp;</td><td>Oryginalna pozycja światła w przestrzeni 3D. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6fe95d6da913aa5d226b3f82459ca6b2"></a><!-- doxytag: member="CStencilShadow::SetVisibleFaces" ref="6fe95d6da913aa5d226b3f82459ca6b2" args="(GLint iIndexObj, const CVector4 &amp;in_cLightPos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CStencilShadow::SetVisibleFaces           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_c_vector4.html">CVector4</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_cLightPos</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyznaczajaca czy dany trójką obiektu 3D jest oświetlony przez światło. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexObj</em>&nbsp;</td><td>Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_cLightPos</em>&nbsp;</td><td>Pozycja światła wyliczona metodą <a class="el" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a" title="Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.">CStencilShadow::GetLightPos</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Draw/<a class="el" href="_stencil_shadow_8h-source.html">StencilShadow.h</a><li>Draw/StencilShadow.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

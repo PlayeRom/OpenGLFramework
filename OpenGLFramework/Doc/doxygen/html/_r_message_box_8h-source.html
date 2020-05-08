@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy OpenGLFramework/RMessageBox.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework/RMessageBox.h</h1><a href="_r_message_box_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include "<a class="code" href="_r_menu_base_8h.html" title="Plik nagłówkowy dla klasy CRMenuBase.">RMenuBase.h</a>"</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="keyword">class </span><a class="code" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>;
+<a name="l00009"></a>00009 
+<a name="l00011"></a><a class="code" href="_r_message_box_8h.html#b7ec6bb30e90d912723f54f7d299568b">00011</a> <span class="preprocessor">#define MSG_TEXT_LENGTH 512</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 
+<a name="l00017"></a><a class="code" href="class_c_r_message_box.html">00017</a> <span class="keyword">class </span><a class="code" href="class_c_r_message_box.html" title="Klasa rysująca MessageBox-a.">CRMessageBox</a> : <span class="keyword">public</span> <a class="code" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami.">CRMenuBase</a>
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019 <span class="keyword">public</span>:
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022         <a class="code" href="class_c_r_message_box.html#6074a2d86375aac386879543e2315589" title="Konstruktor.">CRMessageBox</a>();
+<a name="l00023"></a>00023 
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026         <a class="code" href="class_c_r_message_box.html#733135627fe78321164544c6ee914b73" title="Destruktor.">~CRMessageBox</a>();
+<a name="l00027"></a>00027 
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1">00030</a>         <span class="keyword">enum</span> <a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1" title="Typ wyliczeniowy określający jakiego typu ma myć MessageBox.">EMsgType</a>
+<a name="l00031"></a>00031         {
+<a name="l00032"></a><a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1abfc529e0ec24f50a309b315fe87ba59">00032</a>                 <a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1abfc529e0ec24f50a309b315fe87ba59" title="MessageBox z przyciskiem OK, do zwykłego informowania.">EMsgOK</a>,                         
+<a name="l00033"></a><a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1e6815bf5026bafec781750b0ff304712">00033</a>                 <a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1e6815bf5026bafec781750b0ff304712" title="MessageBox z przyciskami OK i Anuluj, do zatwierdzania i anulowania.">EMsgOKCancel</a>,           
+<a name="l00034"></a><a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1a621afaaa655e0d20dd2c06b50ceacec">00034</a>                 <a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1a621afaaa655e0d20dd2c06b50ceacec" title="MessageBox z przyciskami Tak i Nie, dla pytania rozstrzygającego.">EMsgYesNo</a>,                      
+<a name="l00035"></a><a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1dc4d8ac2a3d7600b23c0b706c204b00a">00035</a>                 <a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1dc4d8ac2a3d7600b23c0b706c204b00a" title="MessageBox z przyciskami Tak, Nie oraz Anuluj, dla pytania z możliwością anulowania...">EMsgYesNoCancel</a>         
+<a name="l00036"></a>00036         };
+<a name="l00037"></a>00037 
+<a name="l00039"></a>00039 
+<a name="l00049"></a>00049         GLvoid <a class="code" href="class_c_r_message_box.html#ea35fbffff67fe9cc099aaa1da410d3e" title="Metoda nakazująca rysowania MessageBox-a.">DoMessageBox</a>( LPCTSTR lpText, <a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1" title="Typ wyliczeniowy określający jakiego typu ma myć MessageBox.">EMsgType</a> eType, GLvoid( *in_lpFunc1 )( GLvoid ), GLvoid( *in_lpFunc2 )( GLvoid ) );
+<a name="l00050"></a>00050 
+<a name="l00052"></a>00052 
+<a name="l00055"></a>00055         GLvoid <a class="code" href="class_c_r_message_box.html#6b942ee58e20c11edd15c23a02257b9e" title="Metoda rysująca planszę z MessageBox-em.">Draw</a>();
+<a name="l00056"></a>00056 
+<a name="l00058"></a>00058 
+<a name="l00060"></a>00060         GLvoid <a class="code" href="class_c_r_message_box.html#30c955db04a472bbf69c45958a5140d1" title="Metoda restartująca ustawienie regionów reprezentujących planszę i przyciski...">RestartObjects</a>();
+<a name="l00061"></a>00061 
+<a name="l00063"></a>00063 
+<a name="l00068"></a>00068         GLboolean <a class="code" href="class_c_r_message_box.html#9193aa0d532559b145d1c2e3ce9e9b45" title="Zdarzenie kliknięcia lewym przyciskiem myszy.">MouseLButtonDown</a>( GLint iX, GLint iY );
+<a name="l00069"></a>00069 
+<a name="l00071"></a>00071 
+<a name="l00075"></a>00075         GLboolean <a class="code" href="class_c_r_message_box.html#326e3879e56ae96f0a440645f57f025a" title="Zdarzenie naciśnięcia klawisza klawiatury.">KeyDown</a>( GLuint uiKeyCode );
+<a name="l00076"></a>00076 
+<a name="l00078"></a>00078 
+<a name="l00079"></a><a class="code" href="class_c_r_message_box.html#e3bcb10840b7ef1ec73b814f08937f81">00079</a>         <span class="keyword">inline</span> GLboolean <a class="code" href="class_c_r_message_box.html#e3bcb10840b7ef1ec73b814f08937f81" title="Metoda sprawdzająca czy MessageBox jest aktualnie rysowany.">IsDraw</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_r_message_box.html#bc013c40de4f87fbb0abe92ef29096f4" title="Flaga wskazująca czy MessageBox jest rysowany i czy moze się rysować.">m_bDrawMsg</a>; }
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="keyword">private</span>:
+<a name="l00082"></a><a class="code" href="class_c_r_message_box.html#ff62c49580bd3de81ad814c32680aecf">00082</a>         <a class="code" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>                *<a class="code" href="class_c_r_message_box.html#ff62c49580bd3de81ad814c32680aecf" title="Wskaźnik na obiekt klasy CSDLFont.">m_pSDLFontText</a>;                
+<a name="l00083"></a>00083 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086         void( *<a class="code" href="class_c_r_message_box.html#b2c238b9cd9470e4147ff81a5f22ac70" title="Wskaźnik na funkcję &amp;quot;zatwierdzającą&amp;quot;.">lpFunc1</a> )( void );
+<a name="l00087"></a>00087 
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         void( *<a class="code" href="class_c_r_message_box.html#27f46e1401552b247eb5c5d46747b245" title="Wskaźnik na funkcję &amp;quot;odrzucającą&amp;quot;.">lpFunc2</a> )( void );
+<a name="l00091"></a>00091 
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="class_c_r_message_box.html#ec0c0d4453732a5330b831ce692782e3">00097</a>         RECT <a class="code" href="class_c_r_message_box.html#ec0c0d4453732a5330b831ce692782e3" title="Tablica prostokątów-plansz.">m_rRegionsBkg</a>[ 2 ];
+<a name="l00098"></a>00098         RECT m_rRegions1Button[ 3 ];
+<a name="l00099"></a>00099         RECT m_rRegions2Button[ 3 ];
+<a name="l00100"></a>00100         RECT m_rRegions3Button[ 3 ];
+<a name="l00102"></a>00102 
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105         RECT m_rRegionsFont1Button[ 3 ];
+<a name="l00106"></a>00106         RECT m_rRegionsFont2Button[ 3 ];
+<a name="l00107"></a>00107         RECT m_rRegionsFont3Button[ 3 ];
+<a name="l00109"></a>00109 
+<a name="l00111"></a>00111         GLvoid <a class="code" href="class_c_r_message_box.html#d8b3ce24a98613e5247db6ae0ab4f2fc" title="Metoda ustawiająca wspórzędne plansz i przycisków.">SetRegions</a>();
+<a name="l00112"></a>00112 
+<a name="l00114"></a>00114 
+<a name="l00116"></a>00116         GLvoid <a class="code" href="class_c_r_message_box.html#f3eeba1c44cf5aa8a5fd78c655fad88e" title="Metoda rysująca przyciski.">DrawButtons</a>( RECT rc[ 3 ], GLint iSize );
+<a name="l00117"></a>00117 
+<a name="l00119"></a>00119 
+<a name="l00122"></a>00122         GLvoid <a class="code" href="class_c_r_message_box.html#24440e379f41d1f1dc138c6f09b9addf" title="Metoda rysująca teksty.">DrawFonts</a>( RECT rcRegions[ 3 ], RECT rcRegionsFont[ 3 ], GLint iSize );
+<a name="l00123"></a>00123 
+<a name="l00124"></a><a class="code" href="class_c_r_message_box.html#c605b2a165b0ca562b16dba932c0107b">00124</a>         <a class="code" href="class_c_r_message_box.html#6c4b3856a3479e3bb6e1e3d907a1cbf1" title="Typ wyliczeniowy określający jakiego typu ma myć MessageBox.">EMsgType</a> <a class="code" href="class_c_r_message_box.html#c605b2a165b0ca562b16dba932c0107b" title="Zmienna pamiętająca typ MessageBox-a.">m_eMsgType</a>;                            
+<a name="l00125"></a><a class="code" href="class_c_r_message_box.html#fa14f17eed7d5101e81b0c8dbaf1f392">00125</a>         TCHAR <a class="code" href="class_c_r_message_box.html#fa14f17eed7d5101e81b0c8dbaf1f392" title="Zmienna pamiętająca tekst rysowany na MessageBox-ie.">m_cText</a>[ <a class="code" href="_r_message_box_8h.html#b7ec6bb30e90d912723f54f7d299568b" title="Stała definiująca maksymalną długość tektu pisanego w MessageBox-ie.">MSG_TEXT_LENGTH</a> ];       
+<a name="l00126"></a><a class="code" href="class_c_r_message_box.html#bc013c40de4f87fbb0abe92ef29096f4">00126</a>         GLboolean <a class="code" href="class_c_r_message_box.html#bc013c40de4f87fbb0abe92ef29096f4" title="Flaga wskazująca czy MessageBox jest rysowany i czy moze się rysować.">m_bDrawMsg</a>;                           
+<a name="l00127"></a>00127 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:20 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

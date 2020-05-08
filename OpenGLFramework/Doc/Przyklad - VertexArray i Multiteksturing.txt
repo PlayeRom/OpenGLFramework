@@ -1,0 +1,21 @@
+Przykład rysowania z multiteksturami i VerexArray:
+
+GLboolean CGameControl::Initialization()
+{
+	m_objVertexArrays->AddFullVertex(-1.0f,-1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	m_objVertexArrays->AddFullVertex( 1.0f,-1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	m_objVertexArrays->AddFullVertex( 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f);
+	m_objVertexArrays->AddFullVertex(-1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f);
+
+	m_objVertexArrays->InitialArrays();
+}
+
+GLboolean CGameControl::Draw()
+{
+	m_objVertexArrays->EnableTextureCoordsMultiTex(2); //2 = ilosc jednostek teksturujących, czyli ilosc tekstur
+	m_objARBMultiTexturing->BindMultiTextures(4, 2); //4 = indeks pierwszej tekstury, 2 = ilosc tekstur
+	//glLockArraysEXT
+	glDrawArrays(GL_QUADS, 0, 4);
+	//glUnlockArraysEXT
+	m_objARBMultiTexturing->DisableMultiteksturing(); //uaktywniamy tylko pierwsza jednostke teksturujaca
+}

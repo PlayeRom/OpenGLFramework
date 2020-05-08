@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CBrightness</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CBrightness</h1><!-- doxytag: class="CBrightness" --><!-- doxytag: inherits="CSingletonBase&lt; CBrightness &gt;" --><code>#include &lt;<a class="el" href="_brightness_8h-source.html">Brightness.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CBrightness</div>
+<div class="dynsection">
+<p><center><img src="class_c_brightness__inherit__graph.png" border="0" usemap="#_c_brightness__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_brightness__inherit__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CBrightness \&gt;" alt="" coords="5,5,219,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagram współpracy dla CBrightness:</div>
+<div class="dynsection">
+<p><center><img src="class_c_brightness__coll__graph.png" border="0" usemap="#_c_brightness__coll__map" alt="Collaboration graph"></center>
+<map name="_c_brightness__coll__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CBrightness \&gt;" alt="" coords="5,5,219,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_brightness-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa kontroli jasności ekranu. 
+<p>
+Zadaniem tej klasy jest rysowanie prostokąta na całym ekranie z odpowienio ustawioną przezroczystością oraz kolorem dla uzyskania efektu rozjaśnienia lub przyciemnienie ekranu. Obiekt tej klasy jest już tworzony w <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a> oraz „rysowanie jasności” także jest już wywoływane w <a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f" title="Główna funkcja rysująca scenę.">CGameControl::Draw</a>. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#a5ed9f69fd2a7139bb22819dbb401197">~CBrightness</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#a5ed9f69fd2a7139bb22819dbb401197"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#f87f0e7d2ec58f495c089d411a2ebe33">SetBrightness</a> (GLint iBrightness=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca wartość jasności ekranu.  <a href="#f87f0e7d2ec58f495c089d411a2ebe33"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#6378d9d4755303e9d959c681f316cb87">GetBrightness</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca aktualnie ustawioną wartość jasności ekranu.  <a href="#6378d9d4755303e9d959c681f316cb87"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#00fb9d02d75d642999ec88dd5e416a97">Draw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca "prostokąt jasności".  <a href="#00fb9d02d75d642999ec88dd5e416a97"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_c_brightness.html">CBrightness</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#5b3aac851f07b366cd98d29291bf899e">Construct</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_brightness.html" title="Klasa kontroli jasności ekranu.">CBrightness</a>.  <a href="#5b3aac851f07b366cd98d29291bf899e"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#eddb552f75fb350e38f8d29931cd6c16">CBrightness</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#eddb552f75fb350e38f8d29931cd6c16"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#ac99ad15496ce409b7c20b273a0eb3ae">m_iBrightness</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna przechowująca aktualną wartość jasności.  <a href="#ac99ad15496ce409b7c20b273a0eb3ae"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLubyte&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_brightness.html#7e60f32a5ec28411e28e85047f6ef631">m_ubBrightness</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna przechowująca aktualną wartość przezroczystości dla rysowania.  <a href="#7e60f32a5ec28411e28e85047f6ef631"></a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="a5ed9f69fd2a7139bb22819dbb401197"></a><!-- doxytag: member="CBrightness::~CBrightness" ref="a5ed9f69fd2a7139bb22819dbb401197" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CBrightness::~CBrightness           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<a class="anchor" name="eddb552f75fb350e38f8d29931cd6c16"></a><!-- doxytag: member="CBrightness::CBrightness" ref="eddb552f75fb350e38f8d29931cd6c16" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CBrightness::CBrightness           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="5b3aac851f07b366cd98d29291bf899e"></a><!-- doxytag: member="CBrightness::Construct" ref="5b3aac851f07b366cd98d29291bf899e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_brightness.html">CBrightness</a> * CBrightness::Construct           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_brightness.html" title="Klasa kontroli jasności ekranu.">CBrightness</a>. 
+<p>
+<a class="el" href="class_c_brightness.html" title="Klasa kontroli jasności ekranu.">CBrightness</a> jest singletonem, więc jeżeli wywołamy tę metodę po raz drugi to zwróci ona wskaźnik na obiekt już istniejący, utworzony wcześniej. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt <a class="el" href="class_c_brightness.html" title="Klasa kontroli jasności ekranu.">CBrightness</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f87f0e7d2ec58f495c089d411a2ebe33"></a><!-- doxytag: member="CBrightness::SetBrightness" ref="f87f0e7d2ec58f495c089d411a2ebe33" args="(GLint iBrightness=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CBrightness::SetBrightness           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iBrightness</em> = <code>0</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca wartość jasności ekranu. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iBrightness</em>&nbsp;</td><td>Wartość jasności od <code>-255</code> do <code>255</code>, gdzie <code>-255</code> to całkowite przyciemnienie (obraz będzie czarny) a <code>255</code> to całkowite rozjaśnienie (obraz będzie biały). Podając <code>0</code> (wartość domyślna) obraz będzie rysowany w oryginalnej jasności. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6378d9d4755303e9d959c681f316cb87"></a><!-- doxytag: member="CBrightness::GetBrightness" ref="6378d9d4755303e9d959c681f316cb87" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CBrightness::GetBrightness           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca aktualnie ustawioną wartość jasności ekranu. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita z przedziału od <code>-255</code> do <code>255</code> określająca aktualną wartość jasności ekranu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="00fb9d02d75d642999ec88dd5e416a97"></a><!-- doxytag: member="CBrightness::Draw" ref="00fb9d02d75d642999ec88dd5e416a97" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CBrightness::Draw           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca "prostokąt jasności". 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f" title="Główna funkcja rysująca scenę.">CGameControl::Draw</a>. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="ac99ad15496ce409b7c20b273a0eb3ae"></a><!-- doxytag: member="CBrightness::m_iBrightness" ref="ac99ad15496ce409b7c20b273a0eb3ae" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint <a class="el" href="class_c_brightness.html#ac99ad15496ce409b7c20b273a0eb3ae">CBrightness::m_iBrightness</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zmienna przechowująca aktualną wartość jasności. 
+<p>
+Wartość jasności od <code>-255</code> do <code>255</code>, gdzie <code>-255</code> to całkowite przyciemnienie (obraz będzie czarny) a <code>255</code> to całkowite rozjaśnienie (obraz będzie biały). W zmiennej ten ustotna jest możliwość usawienia wartości ujemnej, która wskazuje na przyciemnienie obrazu. 
+</div>
+</div><p>
+<a class="anchor" name="7e60f32a5ec28411e28e85047f6ef631"></a><!-- doxytag: member="CBrightness::m_ubBrightness" ref="7e60f32a5ec28411e28e85047f6ef631" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLubyte <a class="el" href="class_c_brightness.html#7e60f32a5ec28411e28e85047f6ef631">CBrightness::m_ubBrightness</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zmienna przechowująca aktualną wartość przezroczystości dla rysowania. 
+<p>
+Wartość przeroczystości od <code>0</code> do <code>255</code>, gdzie <code>0</code> to całkowita przezroczystość (jasność bez z mian) a <code>255</code> to całkowite rozjaśnienie lub przyciemnienie. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Draw/<a class="el" href="_brightness_8h-source.html">Brightness.h</a><li>Draw/Brightness.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:27 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,977 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CTextureLoader</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CTextureLoader</h1><!-- doxytag: class="CTextureLoader" --><code>#include &lt;<a class="el" href="_texture_loader_8h-source.html">TextureLoader.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_c_texture_loader-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa odpowiedzialana za wczytywanie tekstur. 
+<p>
+Zadaniem tej klasy jest wczytywanie plików graficznych BMP, TGA oraz JEH i sporządzenie z nich tekstur gotowych do renderingu. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#8aa537fe7ffdf982dc200d67a9639dd5">CTextureLoader</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#8aa537fe7ffdf982dc200d67a9639dd5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#e8a06a362e9a96eea99b990e357e3733">~CTextureLoader</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#e8a06a362e9a96eea99b990e357e3733"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#30966e5a6b8a5c8259843c429213ba52">LoadTexMipmaps</a> (LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę typu mipmap.  <a href="#30966e5a6b8a5c8259843c429213ba52"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#53d47454d1289542b035473b804bc6a0">LoadTex</a> (LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę typu linear.  <a href="#53d47454d1289542b035473b804bc6a0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#8d7a24f8e5d5a00f048e547c63f3bb44">LoadTexLowQuality</a> (LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę typu nearest.  <a href="#8d7a24f8e5d5a00f048e547c63f3bb44"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#127cbd716168587a234989fe956dea8f">LoadMultiTexMaskMipmaps</a> (LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę mipmap-ową z maską wczytywaną z pliku.  <a href="#127cbd716168587a234989fe956dea8f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#0def5746bde8c20e046d6ad0af6d3115">LoadMultiTexMaskMipmaps</a> (LPCTSTR lpFileNameMask, COLORREF crColor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę mipmap-ową z maską wczytywaną z pliku.  <a href="#0def5746bde8c20e046d6ad0af6d3115"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#5c0286b80e07c0bc64eb42c7ba718bb1">LoadMultiTexMask</a> (LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę linear z maską wczytywaną z pliku.  <a href="#5c0286b80e07c0bc64eb42c7ba718bb1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#1166aaee06dfdf2aa2d9c82e5cd5060c">LoadMultiTexMask</a> (LPCTSTR lpFileNameMask, COLORREF crColor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę linear z maską wczytywaną z pliku.  <a href="#1166aaee06dfdf2aa2d9c82e5cd5060c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#adc2d97da7c496b3d087343d44e55fc1">LoadMultiTexMaskLowQuality</a> (LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę nearest z maską wczytywaną z pliku.  <a href="#adc2d97da7c496b3d087343d44e55fc1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#8dc92edca1e5fb937f693766975790cb">LoadMultiTexMaskLowQuality</a> (LPCTSTR lpFileNameMask, COLORREF crColor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę nearest z maską wczytywaną z pliku.  <a href="#8dc92edca1e5fb937f693766975790cb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#2db6cb797fd4f2324b0048a9f7115b2c">LoadEmbossBump</a> (LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca teksturę dla efektu emboss bump.  <a href="#2db6cb797fd4f2324b0048a9f7115b2c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#00f41dc44ce4b25c563439b4eb4dc647">SetTexture</a> (GLint iIndex=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca teksturę dla aktualnie ustawionej jednostki teksturującej.  <a href="#00f41dc44ce4b25c563439b4eb4dc647"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#8a16ef37de31ebeead0d068992411d2f">SetMultiTextures</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca multi-teksturę dla aktualnie ustawionej jednostki teksturującej.  <a href="#8a16ef37de31ebeead0d068992411d2f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="02e0a02a884d70782feb13cd0e28ba5c"></a><!-- doxytag: member="CTextureLoader::DisplayIDTextureName" ref="02e0a02a884d70782feb13cd0e28ba5c" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#02e0a02a884d70782feb13cd0e28ba5c">DisplayIDTextureName</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyświetlająca identyfikatory i przypisane im nazwy tekstur. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#27e19a54a90b03f42e58ba7db7bff151">GetTextureSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca liczbę określajacą ilość wczytanych tekstur.  <a href="#27e19a54a90b03f42e58ba7db7bff151"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#9b76fe8fb1949e93a82b44cbdbb4969a">DeleteTexture</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca wskazaną teksturę.  <a href="#9b76fe8fb1949e93a82b44cbdbb4969a"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#8a62a34c6d0780c8a70786e5ca213ad0">CheckExtension</a> (LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca rozszerzenie pliku.  <a href="#8a62a34c6d0780c8a70786e5ca213ad0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#4910b7e765d2f9664c9edf829c45bd7e">LoadGLTex</a> (LPCTSTR lpFileName, GLint iMode=0, GLint iFormat=0, GLboolean bEmbossBump=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytując oraz tworząca normalną teksturę.  <a href="#4910b7e765d2f9664c9edf829c45bd7e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#77ca8f83ac06b406f574a77434ed573c">LoadGLMultiTexMask</a> (LPCTSTR lpFileName1, LPCTSTR lpFileName2, GLint iMode=0, GLint iFormat1=0, GLint iFormat2=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytując oraz tworząca multi-teksturę z maską wczytaną z pliku.  <a href="#77ca8f83ac06b406f574a77434ed573c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#b43a19370eda820d1363f7ba01fbfec9">LoadGLMultiTexMask</a> (LPCTSTR lpFileNameMask, COLORREF crColor, GLint iMode=0, GLint iFormat=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytując oraz tworząca multi-teksturę z maską wczytaną z pliku.  <a href="#b43a19370eda820d1363f7ba01fbfec9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#0f589df7d28e3d8c5c37c50734cdad81">CreateEmbossBumpTexture</a> (GLint iIndex, <a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;texTexture, GLint iMode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca teksturę dla efektu emboss bump.  <a href="#0f589df7d28e3d8c5c37c50734cdad81"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#e7e81a500ad81641e3138fe72f319f57">LoadBMP</a> (<a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;out_sTexture, LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik BMP.  <a href="#e7e81a500ad81641e3138fe72f319f57"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#7e7a92b970af9129ecda4b97a3deb01a">LoadTGA</a> (<a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;out_sTexture, LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik TGA.  <a href="#7e7a92b970af9129ecda4b97a3deb01a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#18a62fdcede34a54b4cbebaa7d806ea0">LoadJEH</a> (<a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;out_sTexture, LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik JEH.  <a href="#18a62fdcede34a54b4cbebaa7d806ea0"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9fa9ec879b6510827ba18043b8ccdfe1"></a><!-- doxytag: member="CTextureLoader::m_iCounterTexture" ref="9fa9ec879b6510827ba18043b8ccdfe1" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#9fa9ec879b6510827ba18043b8ccdfe1">m_iCounterTexture</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Licznik kontrolny, ilości wczytywanych tekstur. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ddf2d90b481f5df92b017d6feb17468e"></a><!-- doxytag: member="CTextureLoader::m_aTexture" ref="ddf2d90b481f5df92b017d6feb17468e" args="" -->
+std::vector&lt; <a class="el" href="struct_c_texture_loader_1_1_s_texture_data.html">STextureData</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_texture_loader.html#ddf2d90b481f5df92b017d6feb17468e">m_aTexture</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica przechowująca identyfikatory wszytskich wczytanych tekstur. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_texture_loader_1_1_s_header_j_e_h.html">SHeaderJEH</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura reprezentująca nagłówek pliku JEH.  <a href="struct_c_texture_loader_1_1_s_header_j_e_h.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktua pomocnicza, przechowująca dane obrazu.  <a href="struct_c_texture_loader_1_1_s_texture.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_texture_loader_1_1_s_texture_data.html">STextureData</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca identyfikatory wczytanych tekstur.  <a href="struct_c_texture_loader_1_1_s_texture_data.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_texture_loader_1_1_s_t_g_a_file.html">STGAFile</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura pomocnicza przy wczytywaniu pliku TGA.  <a href="struct_c_texture_loader_1_1_s_t_g_a_file.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="8aa537fe7ffdf982dc200d67a9639dd5"></a><!-- doxytag: member="CTextureLoader::CTextureLoader" ref="8aa537fe7ffdf982dc200d67a9639dd5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextureLoader::CTextureLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="e8a06a362e9a96eea99b990e357e3733"></a><!-- doxytag: member="CTextureLoader::~CTextureLoader" ref="e8a06a362e9a96eea99b990e357e3733" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextureLoader::~CTextureLoader           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="30966e5a6b8a5c8259843c429213ba52"></a><!-- doxytag: member="CTextureLoader::LoadTexMipmaps" ref="30966e5a6b8a5c8259843c429213ba52" args="(LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadTexMipmaps           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę typu mipmap. 
+<p>
+Metoda ta utworzy najlepiej wyglądającą teksturę mipmap-ową. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, który chcemy wczytać. Obsługiwane formaty pliku to BMP, TGA oraz JEH. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="53d47454d1289542b035473b804bc6a0"></a><!-- doxytag: member="CTextureLoader::LoadTex" ref="53d47454d1289542b035473b804bc6a0" args="(LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadTex           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę typu linear. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, który chcemy wczytać. Obsługiwane formaty pliku to BMP, TGA oraz JEH. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8d7a24f8e5d5a00f048e547c63f3bb44"></a><!-- doxytag: member="CTextureLoader::LoadTexLowQuality" ref="8d7a24f8e5d5a00f048e547c63f3bb44" args="(LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadTexLowQuality           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę typu nearest. 
+<p>
+Metoda ta utworzy najgorzej wyglądającą teksturę nearest. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, który chcemy wczytać. Obsługiwane formaty pliku to BMP, TGA oraz JEH. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="127cbd716168587a234989fe956dea8f"></a><!-- doxytag: member="CTextureLoader::LoadMultiTexMaskMipmaps" ref="127cbd716168587a234989fe956dea8f" args="(LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadMultiTexMaskMipmaps           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameRGB</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę mipmap-ową z maską wczytywaną z pliku. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameMask</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameRGB</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, w którym zosytanie wycięta maska. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0def5746bde8c20e046d6ad0af6d3115"></a><!-- doxytag: member="CTextureLoader::LoadMultiTexMaskMipmaps" ref="0def5746bde8c20e046d6ad0af6d3115" args="(LPCTSTR lpFileNameMask, COLORREF crColor)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadMultiTexMaskMipmaps           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę mipmap-ową z maską wczytywaną z pliku. 
+<p>
+Odmiana powyższej metody, ale tutaj zamiast drugiej tekstury podajemy kolor RGB. Używamy tej metody, gdy druga, kolorowa tekstura, ma jednolity kolor. Wtedy nie musimy tworzyć zbędnej tektury, tylko od razu podajemy ten kolor jako COLORREF. Dzieki temu zaoszczędzamy pamięć i miejsce na dysku. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameMask</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Kolor, w którym zostanie wycięta maska. Podajemy w makrze RGB. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5c0286b80e07c0bc64eb42c7ba718bb1"></a><!-- doxytag: member="CTextureLoader::LoadMultiTexMask" ref="5c0286b80e07c0bc64eb42c7ba718bb1" args="(LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadMultiTexMask           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameRGB</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę linear z maską wczytywaną z pliku. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameMask</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameRGB</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, w którym zosytanie wycięta maska. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1166aaee06dfdf2aa2d9c82e5cd5060c"></a><!-- doxytag: member="CTextureLoader::LoadMultiTexMask" ref="1166aaee06dfdf2aa2d9c82e5cd5060c" args="(LPCTSTR lpFileNameMask, COLORREF crColor)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadMultiTexMask           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę linear z maską wczytywaną z pliku. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameMask</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Kolor, w którym zostanie wycięta maska. Podajemy w makrze RGB. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="adc2d97da7c496b3d087343d44e55fc1"></a><!-- doxytag: member="CTextureLoader::LoadMultiTexMaskLowQuality" ref="adc2d97da7c496b3d087343d44e55fc1" args="(LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadMultiTexMaskLowQuality           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameRGB</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę nearest z maską wczytywaną z pliku. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameMask</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameRGB</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, w którym zosytanie wycięta maska. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8dc92edca1e5fb937f693766975790cb"></a><!-- doxytag: member="CTextureLoader::LoadMultiTexMaskLowQuality" ref="8dc92edca1e5fb937f693766975790cb" args="(LPCTSTR lpFileNameMask, COLORREF crColor)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadMultiTexMaskLowQuality           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę nearest z maską wczytywaną z pliku. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameMask</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Kolor, w którym zostanie wycięta maska. Podajemy w makrze RGB. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2db6cb797fd4f2324b0048a9f7115b2c"></a><!-- doxytag: member="CTextureLoader::LoadEmbossBump" ref="2db6cb797fd4f2324b0048a9f7115b2c" args="(LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadEmbossBump           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca teksturę dla efektu emboss bump. 
+<p>
+Tekstura emboss bump zawsze jest tworozna jako mipmapa. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Pełna nazwa pliku bump wraz ze ścieżką i rozszerzeniem. Obraz bump musi być w odcienich szarości. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="00f41dc44ce4b25c563439b4eb4dc647"></a><!-- doxytag: member="CTextureLoader::SetTexture" ref="00f41dc44ce4b25c563439b4eb4dc647" args="(GLint iIndex=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CTextureLoader::SetTexture           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em> = <code>0</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca teksturę dla aktualnie ustawionej jednostki teksturującej. 
+<p>
+Metodę tę należy wywołać w celu rysowania obiektu z nałożoną daną teksturą. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tekstury jaką chcemy uczynić aktywną. Należy podać tu indeks zwrócony przez takie matody jak: <a class="el" href="class_c_texture_loader.html#30966e5a6b8a5c8259843c429213ba52" title="Metoda tworząca teksturę typu mipmap.">CTextureLoader::LoadTexMipmaps</a>, <a class="el" href="class_c_texture_loader.html#53d47454d1289542b035473b804bc6a0" title="Metoda tworząca teksturę typu linear.">CTextureLoader::LoadTex</a>, <a class="el" href="class_c_texture_loader.html#8d7a24f8e5d5a00f048e547c63f3bb44" title="Metoda tworząca teksturę typu nearest.">CTextureLoader::LoadTexLowQuality</a>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia ustawienia tekstury. <code>GL_FALSE</code> w przypadku niepowodzenia, tj. podania błędnego indeksu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8a16ef37de31ebeead0d068992411d2f"></a><!-- doxytag: member="CTextureLoader::SetMultiTextures" ref="8a16ef37de31ebeead0d068992411d2f" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CTextureLoader::SetMultiTextures           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca multi-teksturę dla aktualnie ustawionej jednostki teksturującej. 
+<p>
+Metodę tę należy wywołać w celu rysowania obiektu z nałożoną multi-teksturą. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tekstury jaką chcemy uczynić aktywną. Należy podać tu indeks zwrócony przez takie matody jak: <a class="el" href="class_c_texture_loader.html#127cbd716168587a234989fe956dea8f" title="Metoda tworząca teksturę mipmap-ową z maską wczytywaną z pliku.">CTextureLoader::LoadMultiTexMaskMipmaps</a>, <a class="el" href="class_c_texture_loader.html#5c0286b80e07c0bc64eb42c7ba718bb1" title="Metoda tworząca teksturę linear z maską wczytywaną z pliku.">CTextureLoader::LoadMultiTexMask</a>, <a class="el" href="class_c_texture_loader.html#adc2d97da7c496b3d087343d44e55fc1" title="Metoda tworząca teksturę nearest z maską wczytywaną z pliku.">CTextureLoader::LoadMultiTexMaskLowQuality</a>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia ustawienia tekstury. <code>GL_FALSE</code> w przypadku niepowodzenia, tj. podania błędnego indeksu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="27e19a54a90b03f42e58ba7db7bff151"></a><!-- doxytag: member="CTextureLoader::GetTextureSize" ref="27e19a54a90b03f42e58ba7db7bff151" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::GetTextureSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca liczbę określajacą ilość wczytanych tekstur. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca ilość wczytanych tekstur. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9b76fe8fb1949e93a82b44cbdbb4969a"></a><!-- doxytag: member="CTextureLoader::DeleteTexture" ref="9b76fe8fb1949e93a82b44cbdbb4969a" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CTextureLoader::DeleteTexture           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca wskazaną teksturę. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tekstury, którą chcemy usunąć. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8a62a34c6d0780c8a70786e5ca213ad0"></a><!-- doxytag: member="CTextureLoader::CheckExtension" ref="8a62a34c6d0780c8a70786e5ca213ad0" args="(LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::CheckExtension           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca rozszerzenie pliku. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Pełna nazwa pliku wraz z rozszerzeniem, którą chcemy sprawdzić. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca rozszerzenie pliku, gdzie <code>0</code> to BMP, <code>1</code> TGA, <code>2</code> JEH. W przypadku innego, nie rozpoznawalnego rozszerzenia zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4910b7e765d2f9664c9edf829c45bd7e"></a><!-- doxytag: member="CTextureLoader::LoadGLTex" ref="4910b7e765d2f9664c9edf829c45bd7e" args="(LPCTSTR lpFileName, GLint iMode=0, GLint iFormat=0, GLboolean bEmbossBump=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadGLTex           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMode</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFormat</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bEmbossBump</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytując oraz tworząca normalną teksturę. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, który chcemy wczytać. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMode</em>&nbsp;</td><td>Typ tekstury, gdzie <code>0</code> - mipmapa, <code>1</code> - linear, <code>2</code> - nearest. W przypadku podania nieobsługiwanego typu, przyjęte zostanie <code>0</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFormat</em>&nbsp;</td><td>Format pliku podanego w <em>lpFileName</em>. Możliwe wartości: <code>0</code> - BMP, <code>1</code> - TGA oraz <code>2</code> - JEH. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bEmbossBump</em>&nbsp;</td><td>Flaga wskazująca czy utworzona ma być tekstura emboss bump. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="77ca8f83ac06b406f574a77434ed573c"></a><!-- doxytag: member="CTextureLoader::LoadGLMultiTexMask" ref="77ca8f83ac06b406f574a77434ed573c" args="(LPCTSTR lpFileName1, LPCTSTR lpFileName2, GLint iMode=0, GLint iFormat1=0, GLint iFormat2=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadGLMultiTexMask           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMode</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFormat1</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFormat2</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytując oraz tworząca multi-teksturę z maską wczytaną z pliku. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName1</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName2</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką i rozszerzeniem, w którym zosytanie wycięta maska. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMode</em>&nbsp;</td><td>Typ tekstury, gdzie <code>0</code> - mipmapa, <code>1</code> - linear, <code>2</code> - nearest. W przypadku podania nieobsługiwanego typu, przyjęte zostanie <code>0</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFormat1</em>&nbsp;</td><td>Format pliku podanego w <em>lpFileName1</em>. Możliwe wartości: <code>0</code> - BMP, <code>1</code> - TGA oraz <code>2</code> - JEH. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFormat2</em>&nbsp;</td><td>Format pliku podanego w <em>lpFileName2</em>. Możliwe wartości: <code>0</code> - BMP, <code>1</code> - TGA oraz <code>2</code> - JEH. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b43a19370eda820d1363f7ba01fbfec9"></a><!-- doxytag: member="CTextureLoader::LoadGLMultiTexMask" ref="b43a19370eda820d1363f7ba01fbfec9" args="(LPCTSTR lpFileNameMask, COLORREF crColor, GLint iMode=0, GLint iFormat=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::LoadGLMultiTexMask           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileNameMask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMode</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFormat</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytując oraz tworząca multi-teksturę z maską wczytaną z pliku. 
+<p>
+Odmiana powyższej metody, ale tutaj zamiast drugiej tekstury podajemy kolor RGB. Używamy tej metody, gdy druga, kolorowa tekstura, ma jednolity kolor. Wtedy nie musimy tworzyć zbędnej tektury, tylko od razu podajemy ten kolor jako COLORREF. Dzieki temu zaoszczędzamy pamięć i miejsce na dysku. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileNameMask</em>&nbsp;</td><td>Pełna nazwa pliku maski wraz ze ścieżką i rozszerzeniem. Obraz maski musi być w odcienich szarości, im ciemniejszy kolor tym mniej widoczny, gdzie czarny zupełnie przezroczysty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Kolor, w którym zostanie wycięta maska. Podajemy w makrze RGB. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMode</em>&nbsp;</td><td>Typ tekstury, gdzie <code>0</code> - mipmapa, <code>1</code> - linear, <code>2</code> - nearest. W przypadku podania nieobsługiwanego typu, przyjęte zostanie <code>0</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFormat</em>&nbsp;</td><td>Format pliku podanego w <em>lpFileNameMask</em>. Możliwe wartości: <code>0</code> - BMP, <code>1</code> - TGA oraz <code>2</code> - JEH. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0f589df7d28e3d8c5c37c50734cdad81"></a><!-- doxytag: member="CTextureLoader::CreateEmbossBumpTexture" ref="0f589df7d28e3d8c5c37c50734cdad81" args="(GLint iIndex, STexture &amp;texTexture, GLint iMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CTextureLoader::CreateEmbossBumpTexture           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>texTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca teksturę dla efektu emboss bump. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy <a class="el" href="class_c_texture_loader.html#ddf2d90b481f5df92b017d6feb17468e" title="Tablica przechowująca identyfikatory wszytskich wczytanych tekstur.">CTextureLoader::m_aTexture</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>texTexture</em>&nbsp;</td><td>Referencja na obiekt typu <a class="el" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">CTextureLoader::STexture</a>, gdzie przechowywane są dane obrazu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMode</em>&nbsp;</td><td>Typ tekstury, gdzie <code>0</code> - mipmapa, <code>1</code> - linear, <code>2</code> - nearest. W przypadku podania nieobsługiwanego typu, przyjęte zostanie <code>0</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks utworzonej tekstury licząc od <code>0</code>. W przypadku błędu zwraca <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e7e81a500ad81641e3138fe72f319f57"></a><!-- doxytag: member="CTextureLoader::LoadBMP" ref="e7e81a500ad81641e3138fe72f319f57" args="(STexture &amp;out_sTexture, LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CTextureLoader::LoadBMP           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_sTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik BMP. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_sTexture</em>&nbsp;</td><td>Referencja na obiekt typu <a class="el" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">CTextureLoader::STexture</a>, przez który zwracane są dane dotyczące wczytanego obrazu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku, który zostanie wczytany. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7e7a92b970af9129ecda4b97a3deb01a"></a><!-- doxytag: member="CTextureLoader::LoadTGA" ref="7e7a92b970af9129ecda4b97a3deb01a" args="(STexture &amp;out_sTexture, LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CTextureLoader::LoadTGA           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_sTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik TGA. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_sTexture</em>&nbsp;</td><td>Referencja na obiekt typu <a class="el" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">CTextureLoader::STexture</a>, przez który zwracane są dane dotyczące wczytanego obrazu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku, który zostanie wczytany. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="18a62fdcede34a54b4cbebaa7d806ea0"></a><!-- doxytag: member="CTextureLoader::LoadJEH" ref="18a62fdcede34a54b4cbebaa7d806ea0" args="(STexture &amp;out_sTexture, LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CTextureLoader::LoadJEH           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_c_texture_loader_1_1_s_texture.html">STexture</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_sTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik JEH. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_sTexture</em>&nbsp;</td><td>Referencja na obiekt typu <a class="el" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">CTextureLoader::STexture</a>, przez który zwracane są dane dotyczące wczytanego obrazu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku, który zostanie wczytany. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Draw/<a class="el" href="_texture_loader_8h-source.html">TextureLoader.h</a><li>Draw/TextureLoader.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

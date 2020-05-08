@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy OpenGLFramework/UnicodeHelperFunc.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework/UnicodeHelperFunc.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="comment">/*</span>
+<a name="l00003"></a>00003 <span class="comment">  Globalne funkcje wspierające operacje na łańcuchach tekstu, ze względu na makro UNICODE</span>
+<a name="l00004"></a>00004 <span class="comment">*/</span>
+<a name="l00005"></a>00005 <span class="keywordtype">size_t</span> GetStringLength( LPCTSTR lpString );
+<a name="l00006"></a>00006 errno_t CopyStringToString( LPTSTR lpDest, rsize_t uiDestSize, LPCTSTR lpSrc );
+<a name="l00007"></a>00007 errno_t AppendStringToString( LPTSTR lpDest, rsize_t uiDestSize, LPCTSTR lpSrc );
+<a name="l00008"></a>00008 LPCTSTR SearchStringInString( LPCTSTR lpStr, LPCTSTR lpSubStr ); 
+<a name="l00009"></a>00009 LPTSTR SearchStringInString( LPTSTR lpStr, LPCTSTR lpSubStr ); 
+<a name="l00010"></a>00010 <span class="keywordtype">int</span> CompareStrings( LPCTSTR lpString1, LPCTSTR lpString2 );
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 errno_t OpenFile( FILE** ppFile, LPCTSTR lpFileName, LPCTSTR lpMode );
+<a name="l00013"></a>00013 LPTSTR GetStringLineFromFile( LPTSTR lpDest, <span class="keywordtype">int</span> iSizeInWords, FILE *pFile );
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keywordtype">int</span> StringToInt( LPCTSTR lpStr );
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="keywordtype">int</span> VSPrintf( LPTSTR lpBuffer, <span class="keywordtype">size_t</span> uiSizeInBytes, LPCTSTR lpFormat, va_list argptr );
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keywordtype">void</span> ConvertCharToWchar( <span class="keywordtype">wchar_t</span> *wcharText, <span class="keywordtype">int</span> iWcharLen, <span class="keyword">const</span> <span class="keywordtype">char</span> *charText );
+<a name="l00020"></a>00020 <span class="keywordtype">wchar_t</span>* ConvertCharToWchar( <span class="keyword">const</span> <span class="keywordtype">char</span> *charText, <span class="keywordtype">int</span> iCharLen);
+<a name="l00021"></a>00021 <span class="keywordtype">void</span> ConvertWcharToChar( <span class="keywordtype">char</span> *charText, <span class="keywordtype">int</span> iCharLen, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *wcharText );
+<a name="l00022"></a>00022 <span class="keywordtype">char</span>* ConvertWcharToChar( <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *wcharText, <span class="keywordtype">int</span> iWcharLen );
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:20 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

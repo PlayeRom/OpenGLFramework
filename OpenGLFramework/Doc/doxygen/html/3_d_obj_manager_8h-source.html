@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Draw/3DObjManager.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Draw/3DObjManager.h</h1><a href="3_d_obj_manager_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00006"></a>00006 <span class="keyword">class </span><a class="code" href="class_c3_d_obj_file.html" title="Klasa zapisu i odczytu pliku 3DObj.">C3DObjFile</a>;
+<a name="l00007"></a>00007 <span class="keyword">class </span><a class="code" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>;
+<a name="l00008"></a>00008 <span class="keyword">class </span><a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a>;
+<a name="l00009"></a>00009 
+<a name="l00011"></a>00011 
+<a name="l00013"></a><a class="code" href="class_c3_d_obj_manager.html">00013</a> <span class="keyword">class </span><a class="code" href="class_c3_d_obj_manager.html" title="Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku 3DObj...">C3DObjManager</a>
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015 <span class="keyword">public</span>:
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018         <a class="code" href="class_c3_d_obj_manager.html#bf029ccb14e8272ddf9d5daa765cd428" title="Konstruktor.">C3DObjManager</a>();
+<a name="l00019"></a>00019 
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022         <a class="code" href="class_c3_d_obj_manager.html#75e725b4d8c27665df4c075de4116265" title="Destruktor.">~C3DObjManager</a>();
+<a name="l00023"></a>00023 
+<a name="l00025"></a>00025 
+<a name="l00027"></a>00027         GLvoid <a class="code" href="class_c3_d_obj_manager.html#ff496eaf1b8de50ac90e935fb9891757" title="Metoda inicjalizująca ustawienia 3D Object Manager-a.">Initialization</a>();
+<a name="l00028"></a>00028 
+<a name="l00030"></a>00030 
+<a name="l00046"></a>00046         GLint <a class="code" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">Create3DObject</a>( LPCTSTR lpFileName, GLint iTextureFirst, GLint iTextureCount = -1, GLint iTextureEmbossBump = -1 );
+<a name="l00047"></a>00047         
+<a name="l00049"></a>00049 
+<a name="l00061"></a>00061         GLvoid <a class="code" href="class_c3_d_obj_manager.html#eb9c534b5dfb89a0003a93213ea015e4" title="Metoda rysująca pojedynczy obiekt.">Draw3DObject</a>( GLint iIndex, GLboolean bUseEmbossBump = GL_FALSE, GLuint uiLight = GL_LIGHT0 );
+<a name="l00062"></a>00062 
+<a name="l00064"></a>00064 
+<a name="l00077"></a>00077         GLvoid <a class="code" href="class_c3_d_obj_manager.html#e59051abc5026ca3d478124f703e4d97" title="Metoda rysująca pojedynczy obiekt.">Draw3DObject_Lists</a>( GLint iIndex, GLboolean bUseEmbossBump = GL_FALSE, GLuint uiLight = GL_LIGHT0 );
+<a name="l00078"></a>00078 
+<a name="l00080"></a>00080         GLboolean SaveObject( <span class="keyword">const</span> <a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a> &amp;in_cScale, <span class="keyword">const</span> <a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a> &amp;in_cVector, <span class="keyword">const</span> <a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a> &amp;in_cRot90, GLboolean bSmoothNormal );
+<a name="l00081"></a>00081         GLboolean SaveObjectElem( GLboolean bSmoothNormal );
+<a name="l00083"></a>00083 
+<a name="l00085"></a>00085 
+<a name="l00089"></a>00089         GLint <a class="code" href="class_c3_d_obj_manager.html#7cdb1bdb3f24bbda7ecb8f8152b41f37">GetTextureFirstIndex</a>( GLint iIndex );
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="keyword">private</span>:
+<a name="l00092"></a>00092 
+<a name="l00094"></a>00094 
+<a name="l00096"></a><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html">00096</a>         <span class="keyword">struct </span><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html" title="Struktura przechowująca niezbędne informacje dla każdego obiektu.">S3DObject</a>
+<a name="l00097"></a>00097         {
+<a name="l00098"></a><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#39d51dd64e2332f656fbeb1ced4d5e52">00098</a>                 GLint <a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#39d51dd64e2332f656fbeb1ced4d5e52" title="Pierwszy indeks z tablicy wierzchołków dla danego obiektu.">iIndexStart</a>;                      
+<a name="l00099"></a><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#1de0cf671830bb543133e9ce6e063930">00099</a>                 GLint <a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#1de0cf671830bb543133e9ce6e063930" title="Ostatni indeks z tablicy wierzchołków dla danego obiektu.">iIndexEnd</a>;                        
+<a name="l00100"></a><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#51174b0e10793bbb3b608f20e596e7ef">00100</a>                 GLint iTextureFirst;            
+<a name="l00101"></a><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#829a050bba1d4d877b273c553d3ea45a">00101</a>                 GLint <a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#829a050bba1d4d877b273c553d3ea45a" title="Ilość kolejnych tekstur jakie będą nakłądane na obiekt.">iTextureCount</a>;            
+<a name="l00102"></a><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#e953d96eaa15110bde1ec0310dc924ed">00102</a>                 GLint <a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#e953d96eaa15110bde1ec0310dc924ed" title="Indeks tekstury emboss bump.">iTextureEmbossBump</a>;       
+<a name="l00103"></a><a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#30fe211f09d8d722c48ce14324b17ccd">00103</a>                 GLboolean <a class="code" href="struct_c3_d_obj_manager_1_1_s3_d_object.html#30fe211f09d8d722c48ce14324b17ccd" title="Flaga wskazująca czy wierzchołki obiektu są indeksowane.">bIsElem</a>;                      
+<a name="l00104"></a>00104         };
+<a name="l00105"></a>00105 
+<a name="l00106"></a><a class="code" href="class_c3_d_obj_manager.html#7837956296e31599afc7305b80236b9f">00106</a>         <a class="code" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>    *<a class="code" href="class_c3_d_obj_manager.html#7837956296e31599afc7305b80236b9f" title="Wskaźnik na obiekt klasy singletonu CGameControl.">m_pGameCtrl</a>;           
+<a name="l00107"></a><a class="code" href="class_c3_d_obj_manager.html#281f7483365841b7adbb45b72691d114">00107</a>         <a class="code" href="class_c3_d_obj_file.html" title="Klasa zapisu i odczytu pliku 3DObj.">C3DObjFile</a>              *<a class="code" href="class_c3_d_obj_manager.html#281f7483365841b7adbb45b72691d114" title="Wskaźnik na obiekt klasy C3DObjFile.">m_p3DObjFile</a>;  
+<a name="l00108"></a><a class="code" href="class_c3_d_obj_manager.html#d0b7056f9231046ac1d34c9abccce8de">00108</a>         std::vector&lt;S3DObject&gt; <a class="code" href="class_c3_d_obj_manager.html#d0b7056f9231046ac1d34c9abccce8de" title="Dynamiczna tablica obiektów C3DObjManager::S3DObject.">m_a3DObject</a>; 
+<a name="l00109"></a>00109         
+<a name="l00111"></a>00111 
+<a name="l00112"></a><a class="code" href="class_c3_d_obj_manager.html#b54dc9351602043fe4fd3c7877215821">00112</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c3_d_obj_manager.html#b54dc9351602043fe4fd3c7877215821" title="Metoda zwracająca wielkość tablicy C3DObjManager::m_a3DObject.">Get3DObjectSize</a>() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c3_d_obj_manager.html#d0b7056f9231046ac1d34c9abccce8de" title="Dynamiczna tablica obiektów C3DObjManager::S3DObject.">m_a3DObject</a>.size() ); }
+<a name="l00113"></a>00113 
+<a name="l00115"></a>00115 
+<a name="l00126"></a>00126         GLvoid <a class="code" href="class_c3_d_obj_manager.html#3b5391da8cd7934ddf56bf4abf9da7c0" title="Metoda rysująca pojedynczy obiekt.">Draw3DObjectNoElem</a>( GLint iIndex, GLboolean bUseEmbossBump = GL_FALSE, GLuint uiLight = GL_LIGHT0 );
+<a name="l00127"></a>00127 
+<a name="l00129"></a>00129 
+<a name="l00140"></a>00140         GLvoid <a class="code" href="class_c3_d_obj_manager.html#cbbd1ac7750a7d1df9c2c98bdbcf3835" title="Metoda rysująca pojedynczy obiekt.">Draw3DObjectElem</a>( GLint iIndex, GLboolean bUseEmbossBump = GL_FALSE, GLuint uiLight = GL_LIGHT0 );
+<a name="l00141"></a>00141 
+<a name="l00143"></a>00143 
+<a name="l00146"></a>00146         GLvoid <a class="code" href="class_c3_d_obj_manager.html#9080e06a17ceedd2d4b593bfe3ee39cb" title="Metoda tworząca listy wyświetlania.">CreateLists</a>();
+<a name="l00147"></a>00147 
+<a name="l00149"></a>00149 
+<a name="l00154"></a>00154         GLvoid <a class="code" href="class_c3_d_obj_manager.html#24a8e50630cfc0bba732367286314964" title="Metoda tworząca listy wyświetlania z efektem bump.">CreateListsBump</a>( GLint iMaxLights = 8 );
+<a name="l00155"></a>00155 
+<a name="l00157"></a>00157 
+<a name="l00159"></a>00159         GLvoid <a class="code" href="class_c3_d_obj_manager.html#91a9e5a77ab9d5668ce28d6ced028bb6" title="Metoda usuwająca wszelkie listy wyświetlania.">DeleteLists</a>();
+<a name="l00160"></a>00160         
+<a name="l00161"></a><a class="code" href="class_c3_d_obj_manager.html#b08b6cd6f1bfdc88d9a06617640cf72c">00161</a>         GLuint <a class="code" href="class_c3_d_obj_manager.html#b08b6cd6f1bfdc88d9a06617640cf72c" title="Identyfikator przylegających do siebie list wyświetlania stworzonych metodą C3DObjManager::Create...">m_ui3DObjLists</a>;  
+<a name="l00162"></a>00162 
+<a name="l00164"></a>00164 
+<a name="l00167"></a><a class="code" href="class_c3_d_obj_manager.html#043f52e4d89c395635205c1a2081f9e0">00167</a>         GLuint <a class="code" href="class_c3_d_obj_manager.html#043f52e4d89c395635205c1a2081f9e0" title="Tablica identyfikatorów przylegających do siebie list wyświetlania.">m_ui3DObjListsBump</a>[ 8 ];
+<a name="l00168"></a>00168         
+<a name="l00169"></a><a class="code" href="class_c3_d_obj_manager.html#b352fb09b9be53b7ec05786fd8cd750b">00169</a>         GLint <a class="code" href="class_c3_d_obj_manager.html#b352fb09b9be53b7ec05786fd8cd750b" title="Parametr iMaxLights pochodzący z metody C3DObjManager::CreateListsBump.">m_iMaxLightsForLists</a>; 
+<a name="l00170"></a>00170 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:18 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

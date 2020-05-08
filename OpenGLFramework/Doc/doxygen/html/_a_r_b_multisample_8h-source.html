@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Extensions/ARBMultisample.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Extensions/ARBMultisample.h</h1><a href="_a_r_b_multisample_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="comment">/*====================================</span>
+<a name="l00006"></a>00006 <span class="comment">        Name: ARB_multisample.h</span>
+<a name="l00007"></a>00007 <span class="comment">        Author: Colt "MainRoach" McAnlis</span>
+<a name="l00008"></a>00008 <span class="comment">        Modification: PlayeRom</span>
+<a name="l00009"></a>00009 <span class="comment">        Date: 4/29/04</span>
+<a name="l00010"></a>00010 <span class="comment">        Desc:</span>
+<a name="l00011"></a>00011 <span class="comment">                This file contains our external items</span>
+<a name="l00012"></a>00012 <span class="comment"></span>
+<a name="l00013"></a>00013 <span class="comment">====================================*/</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="preprocessor">#pragma once</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span>
+<a name="l00017"></a>00017 <span class="comment">// Declairations We'll Use</span>
+<a name="l00018"></a>00018 <span class="comment">//#define WGL_SAMPLE_BUFFERS_ARB                 0x2041</span>
+<a name="l00019"></a>00019 <span class="comment">//#define WGL_SAMPLES_ARB                            0x2042</span>
+<a name="l00020"></a>00020 
+<a name="l00022"></a>00022 
+<a name="l00023"></a><a class="code" href="class_c_a_r_b_multisample.html">00023</a> <span class="keyword">class </span><a class="code" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing.">CARBMultisample</a>  
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025 <span class="keyword">public</span>:
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028         <a class="code" href="class_c_a_r_b_multisample.html#755f03530c383d9404aebaf7cd81ba5d" title="Konstruktor.">CARBMultisample</a>();
+<a name="l00029"></a>00029 
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032         <span class="keyword">virtual</span> <a class="code" href="class_c_a_r_b_multisample.html#a4bae46bbd0c05209a2e194b74d76b6a" title="Destruktor.">~CARBMultisample</a>();
+<a name="l00033"></a>00033 
+<a name="l00035"></a>00035 
+<a name="l00039"></a>00039         GLboolean <a class="code" href="class_c_a_r_b_multisample.html#61ea88529921e3301a643479c307325e" title="Inicjalizacja antyaliasingu.">InitMultisample</a>( HWND hWnd );
+<a name="l00040"></a>00040 
+<a name="l00042"></a>00042 
+<a name="l00044"></a><a class="code" href="class_c_a_r_b_multisample.html#6ed3045f194f46a58d52a67f0158ecf8">00044</a>         <span class="keyword">inline</span> GLboolean <a class="code" href="class_c_a_r_b_multisample.html#6ed3045f194f46a58d52a67f0158ecf8" title="Metoda sprawdzająca czy antyaliasing jest wspierany.">IsSupported</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_a_r_b_multisample.html#23335257f55acb0347d7ced8e56a1789" title="Czy pełnoekranowy antyaliasing jest wspierany?">m_bMultisampleSupported</a>; }
+<a name="l00045"></a>00045 
+<a name="l00047"></a>00047 
+<a name="l00049"></a><a class="code" href="class_c_a_r_b_multisample.html#2e68f1eb8637492f26acdd61f68a2079">00049</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_a_r_b_multisample.html#2e68f1eb8637492f26acdd61f68a2079" title="Ustawienie flagi oznaczającej wspieranie antyaliasingu.">SetSupported</a>( GLboolean bSupported ) { <a class="code" href="class_c_a_r_b_multisample.html#23335257f55acb0347d7ced8e56a1789" title="Czy pełnoekranowy antyaliasing jest wspierany?">m_bMultisampleSupported</a> = bSupported; }
+<a name="l00050"></a>00050 
+<a name="l00052"></a>00052 
+<a name="l00054"></a><a class="code" href="class_c_a_r_b_multisample.html#7231627ad11a82e096d93f6ba398335c">00054</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_a_r_b_multisample.html#7231627ad11a82e096d93f6ba398335c" title="Ustawienie próbkowania dla antyaliasingu.">SetSamples</a>( GLint iSamples ) { <a class="code" href="class_c_a_r_b_multisample.html#cf8d3983d70cee9e0e87e3cc2771a5e9" title="Przechowuje aktualną ilość próbek dla antyaliasingu.">m_iAntialiasingSamples</a> = iSamples; }
+<a name="l00055"></a>00055 
+<a name="l00057"></a>00057 
+<a name="l00059"></a><a class="code" href="class_c_a_r_b_multisample.html#4e50362b5f26a9877efff869ef21afc3">00059</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_a_r_b_multisample.html#4e50362b5f26a9877efff869ef21afc3" title="Pobranie aktualnie ustawionej ilości próbek dla antyaliasingu.">GetSamples</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_a_r_b_multisample.html#cf8d3983d70cee9e0e87e3cc2771a5e9" title="Przechowuje aktualną ilość próbek dla antyaliasingu.">m_iAntialiasingSamples</a>; }
+<a name="l00060"></a>00060 
+<a name="l00062"></a>00062 
+<a name="l00065"></a><a class="code" href="class_c_a_r_b_multisample.html#f57c0f414978725d797dfac25f0d4636">00065</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_a_r_b_multisample.html#f57c0f414978725d797dfac25f0d4636" title="Pobranie formatu piksela z ustawionym antyaliasingiem.">GetFormat</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_a_r_b_multisample.html#c8d51266c5f36ea1bd5d2f71fae947da" title="Przechowuje format piksela z antyaliasingiem.">m_iMultisampleFormat</a>; }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">private</span>:
+<a name="l00069"></a>00069 
+<a name="l00071"></a>00071         GLboolean <a class="code" href="class_c_a_r_b_multisample.html#0d18caf3e4062e009b191d19a1747586" title="Metoda sprawdzająca czy dana karta graficzna wspiera dane rozszerzenie.">WGLisExtensionSupported</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> *lpExtension );
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="class_c_a_r_b_multisample.html#c8d51266c5f36ea1bd5d2f71fae947da">00073</a>         GLint           <a class="code" href="class_c_a_r_b_multisample.html#c8d51266c5f36ea1bd5d2f71fae947da" title="Przechowuje format piksela z antyaliasingiem.">m_iMultisampleFormat</a>;           
+<a name="l00074"></a><a class="code" href="class_c_a_r_b_multisample.html#23335257f55acb0347d7ced8e56a1789">00074</a>         GLboolean       <a class="code" href="class_c_a_r_b_multisample.html#23335257f55acb0347d7ced8e56a1789" title="Czy pełnoekranowy antyaliasing jest wspierany?">m_bMultisampleSupported</a>;        
+<a name="l00075"></a><a class="code" href="class_c_a_r_b_multisample.html#cf8d3983d70cee9e0e87e3cc2771a5e9">00075</a>         GLint           <a class="code" href="class_c_a_r_b_multisample.html#cf8d3983d70cee9e0e87e3cc2771a5e9" title="Przechowuje aktualną ilość próbek dla antyaliasingu.">m_iAntialiasingSamples</a>;         
+<a name="l00076"></a>00076 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

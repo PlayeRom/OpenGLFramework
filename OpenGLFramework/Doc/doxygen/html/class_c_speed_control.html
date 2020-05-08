@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CSpeedControl</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CSpeedControl</h1><!-- doxytag: class="CSpeedControl" --><code>#include &lt;<a class="el" href="_speed_control_8h-source.html">SpeedControl.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_c_speed_control-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa kontroli szybkości animacji. 
+<p>
+Klasa ta dostarcza szereg opcji związanych z kontrolą prędkości animacji. Dzięki temu wszelkie animacje będą uniezależnione od prędkości renderowania sceny. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#81a7535d908ffb61a9d903f2c9e34b74">CSpeedControl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#81a7535d908ffb61a9d903f2c9e34b74"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#ac742378afdcb7461e0bc2a4683c4d02">~CSpeedControl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#ac742378afdcb7461e0bc2a4683c4d02"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#eedef67d334a80fd4d1e2f659df010d9">RefreshTime</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda odświeżająca aktualny czas dla kontroli prędkości animacji.  <a href="#eedef67d334a80fd4d1e2f659df010d9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#573ec3783cedbd830ddf9be91c752a27">GetMultiplier</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca mnożnik dla wszelkich animacji.  <a href="#573ec3783cedbd830ddf9be91c752a27"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#559c9721bb70e285facec0dc8b774dd0">SetPause</a> (GLboolean bPause)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca pauzę.  <a href="#559c9721bb70e285facec0dc8b774dd0"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Zestaw metod kontroli animacji.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#f59292a4fe9a781fec59c62e27aee0fa">CreateAnimationControl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca nezależną instancję kontroli animacji.  <a href="#f59292a4fe9a781fec59c62e27aee0fa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#22c351e81ad2583dd0dd012995ada682">CheckAnimationTime</a> (unsigned long ulMs, GLint iIndex, GLboolean bUpdateIfPause=GL_TRUE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy minął zadany czas dla danej animacji.  <a href="#22c351e81ad2583dd0dd012995ada682"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#eee7b598ba617573d2fa36b324c58a44">GetActualAnimationTime</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracajaca aktualny czas jaki upłynął dla dnaje instancji animacji.  <a href="#eee7b598ba617573d2fa36b324c58a44"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#7695daadad0588d2cf1322b9f042c19e">UpdateAnimationTime</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda aktualizująca czas dla danej instancji animacji.  <a href="#7695daadad0588d2cf1322b9f042c19e"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="254cc46de4dbfdb52c69e5afce14e73e"></a><!-- doxytag: member="CSpeedControl::GetAnimationSize" ref="254cc46de4dbfdb52c69e5afce14e73e" args="()" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#254cc46de4dbfdb52c69e5afce14e73e">GetAnimationSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość instancji animacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#eb1a1a34b6ab6af3f86bee3a98053131">GetTimeInMs</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca aktualny czas w milisekundach.  <a href="#eb1a1a34b6ab6af3f86bee3a98053131"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b">m_fMultiplier</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mnożnik dla wszelkiego ruchu animacji w renderingu.  <a href="#d9a93dad72fbbf6908858007d274356b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6adb7a6544de96af98fd442e1ae4ab77"></a><!-- doxytag: member="CSpeedControl::m_fTimeLastFrame" ref="6adb7a6544de96af98fd442e1ae4ab77" args="" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#6adb7a6544de96af98fd442e1ae4ab77">m_fTimeLastFrame</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna pomocnicza przy obliczaniu aktualnego czasu dla <a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b" title="Mnożnik dla wszelkiego ruchu animacji w renderingu.">CSpeedControl::m_fMultiplier</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#1747930b01345300565a82dc0e65eb54">m_fRegulationSpeed</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna pomocnicza przy obliczaniu aktualnego czasu dla <a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b" title="Mnożnik dla wszelkiego ruchu animacji w renderingu.">CSpeedControl::m_fMultiplier</a>.  <a href="#1747930b01345300565a82dc0e65eb54"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6506bc80c4455c7f8ba46bae07152565"></a><!-- doxytag: member="CSpeedControl::m_aAnimation" ref="6506bc80c4455c7f8ba46bae07152565" args="" -->
+std::vector&lt; unsigned long &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#6506bc80c4455c7f8ba46bae07152565">m_aAnimation</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica przechowująca aktualne czasy (w milisekundach) dla danych instancji animacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="243d94d384513f7bd3ef051f4ece630d"></a><!-- doxytag: member="CSpeedControl::m_bPause" ref="243d94d384513f7bd3ef051f4ece630d" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_speed_control.html#243d94d384513f7bd3ef051f4ece630d">m_bPause</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy aktywna jest pauza. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="81a7535d908ffb61a9d903f2c9e34b74"></a><!-- doxytag: member="CSpeedControl::CSpeedControl" ref="81a7535d908ffb61a9d903f2c9e34b74" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSpeedControl::CSpeedControl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="ac742378afdcb7461e0bc2a4683c4d02"></a><!-- doxytag: member="CSpeedControl::~CSpeedControl" ref="ac742378afdcb7461e0bc2a4683c4d02" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSpeedControl::~CSpeedControl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="eedef67d334a80fd4d1e2f659df010d9"></a><!-- doxytag: member="CSpeedControl::RefreshTime" ref="eedef67d334a80fd4d1e2f659df010d9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSpeedControl::RefreshTime           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda odświeżająca aktualny czas dla kontroli prędkości animacji. 
+<p>
+Metoda ta jest już wywoływana co klatkę w metodzie <a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f" title="Główna funkcja rysująca scenę.">CGameControl::Draw</a>. Głownym zadaniem tej metody jest ustawienie zmiennej <a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b" title="Mnożnik dla wszelkiego ruchu animacji w renderingu.">CSpeedControl::m_fMultiplier</a>. 
+</div>
+</div><p>
+<a class="anchor" name="573ec3783cedbd830ddf9be91c752a27"></a><!-- doxytag: member="CSpeedControl::GetMultiplier" ref="573ec3783cedbd830ddf9be91c752a27" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat CSpeedControl::GetMultiplier           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca mnożnik dla wszelkich animacji. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Funkcja ta zwróci nam wartość <code>float</code>. Wartość tą należy mnożyć przez wszelkie zmienne wykorzystywane do animacji obiektów, tj. przesuwania, obracania, itp. Dzięki temu uzykamy szybkość animacji niezależną od ilości FPS. Jeżeli aktywujemy pauzę to metoda ta zawsze zwróci <code>0.0f</code>. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_speed_control.html#eedef67d334a80fd4d1e2f659df010d9" title="Metoda odświeżająca aktualny czas dla kontroli prędkości animacji.">RefreshTime</a>, <a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b" title="Mnożnik dla wszelkiego ruchu animacji w renderingu.">m_fMultiplier</a>, <a class="el" href="class_c_speed_control.html#559c9721bb70e285facec0dc8b774dd0" title="Metoda ustawiająca pauzę.">SetPause</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="559c9721bb70e285facec0dc8b774dd0"></a><!-- doxytag: member="CSpeedControl::SetPause" ref="559c9721bb70e285facec0dc8b774dd0" args="(GLboolean bPause)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSpeedControl::SetPause           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bPause</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca pauzę. 
+<p>
+Jeżeli uaktywnimy pauzę to funkcja <a class="el" href="class_c_speed_control.html#573ec3783cedbd830ddf9be91c752a27" title="Metoda pobierająca mnożnik dla wszelkich animacji.">CSpeedControl::GetMultiplier</a> będzie zwracała <code>0.0f</code>. Jeżeli wartość ta będzie mnożona przez wszelkie zmienne związane z ruchem i obrotem obiektów to w oczywisty sposób je unieruchomimy dając efekt spauzowania gry. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bPause</em>&nbsp;</td><td>Podając <code>GL_TRUE</code> uaktywniamy pauzę. Podając <code>GL_FALSE</code> dezaktywujemy pauzę. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_speed_control.html#573ec3783cedbd830ddf9be91c752a27" title="Metoda pobierająca mnożnik dla wszelkich animacji.">GetMultiplier</a>, <a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b" title="Mnożnik dla wszelkiego ruchu animacji w renderingu.">m_fMultiplier</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f59292a4fe9a781fec59c62e27aee0fa"></a><!-- doxytag: member="CSpeedControl::CreateAnimationControl" ref="f59292a4fe9a781fec59c62e27aee0fa" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CSpeedControl::CreateAnimationControl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca nezależną instancję kontroli animacji. 
+<p>
+Metoda ta utworzy dla nas zmienną pamiętającą czas (liczbę milisekund) ostatniego wywołania animacji. Jest to niezbędne do kontroli naszej animacji. Jeżeli potrzebujemy kontrolować więcej animacji, np. pięć to musimy po prostu pięć razy wywołać tę metodę. Metodę tą należy wywoływać w <a class="el" href="class_c_game_control.html#39a8b6c3e7cd3dbae8707e4e79afe89d" title="Metoda tworząca wszelkie obiekty dla kontroli animacji.">CGameControl::CreateAllAnimCtrl</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks kontroli animacji. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="22c351e81ad2583dd0dd012995ada682"></a><!-- doxytag: member="CSpeedControl::CheckAnimationTime" ref="22c351e81ad2583dd0dd012995ada682" args="(unsigned long ulMs, GLint iIndex, GLboolean bUpdateIfPause=GL_TRUE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint CSpeedControl::CheckAnimationTime           </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&nbsp;</td>
+          <td class="paramname"> <em>ulMs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bUpdateIfPause</em> = <code>GL_TRUE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy minął zadany czas dla danej animacji. 
+<p>
+Metodę tą należy wywoływać w trakcie renderowania sceny. Dzięki tej metodzie możemy kontrolować animację poprzez sprawdzenie czy upłyneła zadana liczbma milisekund dla danej instancji animacji stworzonej przez metodę <a class="el" href="class_c_speed_control.html#f59292a4fe9a781fec59c62e27aee0fa" title="Metoda tworząca nezależną instancję kontroli animacji.">CSpeedControl::CreateAnimationControl</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>ulMs</em>&nbsp;</td><td>Liczba milisekund, czyli tutaj określamy szybkość naszej animacji. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks (liczony od 0) zwrócony przez <a class="el" href="class_c_speed_control.html#f59292a4fe9a781fec59c62e27aee0fa" title="Metoda tworząca nezależną instancję kontroli animacji.">CSpeedControl::CreateAnimationControl</a>. Indeksy przypisane są danym animacją. Przypisanie to jest dowolne i określane przez nas, np. ustalamy sobie, że indeks 0 będzie odnosił się do animacji żołnierza, indeks 1 do animacji lotu pociski, itd. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bUpdateIfPause</em>&nbsp;</td><td>Czy aktualizować czas jeżeli jest pauze. Jeżeli ustawimy tę wartość na <code>GL_TRUE</code> (i tak jest domyślnie) to gdy aktywna będzie pauza to czas szybkości naszej animacji zostanie odświeżony aktualnym czasem. Jest to wymagane w przypadkach gdy nie chcemy aby po anulowaniu pauzy dana animacja od razu ruszyła (znaczy aby <a class="el" href="class_c_speed_control.html#22c351e81ad2583dd0dd012995ada682" title="Metoda sprawdzająca czy minął zadany czas dla danej animacji.">CSpeedControl::CheckAnimationTime</a> od razu zwrócił <code>TRUE</code>) a stanie się tak jeżeli czas pauza potrwa dłużej niż podana <em>ulMs</em>. Dzięki ustawieniu tej wartości na <code>GL_TRUE</code> pauza nie będzie miała wpływu na czas – czas jakby stanie w miejscu. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>0</code> jeżeli jeszcze nie upłynęła podana w <em>ulMs</em> liczba milisekund. Liczba większa od zera – jeżeli upłynęła podana liczba milisekund i wtedy możemy wykonać daną animację, np. podmienić tekstury. Zwracana liczba większa od <code>0</code> to aktualny czas animacji jaki upłynął. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eee7b598ba617573d2fa36b324c58a44"></a><!-- doxytag: member="CSpeedControl::GetActualAnimationTime" ref="eee7b598ba617573d2fa36b324c58a44" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CSpeedControl::GetActualAnimationTime           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracajaca aktualny czas jaki upłynął dla dnaje instancji animacji. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks (liczony od 0) zwrócony przez <a class="el" href="class_c_speed_control.html#f59292a4fe9a781fec59c62e27aee0fa" title="Metoda tworząca nezależną instancję kontroli animacji.">CSpeedControl::CreateAnimationControl</a>. Indeksy przypisane są danym animacją. Przypisanie to jest dowolne i określane przez nas. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Aktualna liczba milisekund jaka upłynęła dla danej instancji animacji. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7695daadad0588d2cf1322b9f042c19e"></a><!-- doxytag: member="CSpeedControl::UpdateAnimationTime" ref="7695daadad0588d2cf1322b9f042c19e" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSpeedControl::UpdateAnimationTime           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda aktualizująca czas dla danej instancji animacji. 
+<p>
+Jeżeli nie zawsze w każdej klatce będziemy mogli wywołać <a class="el" href="class_c_speed_control.html#22c351e81ad2583dd0dd012995ada682" title="Metoda sprawdzająca czy minął zadany czas dla danej animacji.">CSpeedControl::CheckAnimationTime()</a> bo, np. uzależnione to będzie od jakiejś instrukcji warunkowej, to jeżeli po długim okresie czasu, np. dwóch sekundach wywołamy, np. <code>CheckAnimationTime</code>(500, ...) to funkcja ta zawsze zwróci wynik większy od <code>0</code>. Jeżeli jednak chcemy aby odczekał te <code>500</code> milisekund to w miejscu tegoż warunku tworzymy <code>else</code> i tam wywołujemy <code>UpdateAnimationTime</code>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks (liczony od 0) zwrócony przez <a class="el" href="class_c_speed_control.html#f59292a4fe9a781fec59c62e27aee0fa" title="Metoda tworząca nezależną instancję kontroli animacji.">CSpeedControl::CreateAnimationControl</a>. Indeksy przypisane są danym animacją. Przypisanie to jest dowolne i określane przez nas. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eb1a1a34b6ab6af3f86bee3a98053131"></a><!-- doxytag: member="CSpeedControl::GetTimeInMs" ref="eb1a1a34b6ab6af3f86bee3a98053131" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long CSpeedControl::GetTimeInMs           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca aktualny czas w milisekundach. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Aktualny czas (w milisekundach) jaki upłynął od uruchomienia systemu. </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="d9a93dad72fbbf6908858007d274356b"></a><!-- doxytag: member="CSpeedControl::m_fMultiplier" ref="d9a93dad72fbbf6908858007d274356b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat <a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b">CSpeedControl::m_fMultiplier</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Mnożnik dla wszelkiego ruchu animacji w renderingu. 
+<p>
+Wartość tego mnożlika jest ustawiana co klatkę w metodze <a class="el" href="class_c_speed_control.html#eedef67d334a80fd4d1e2f659df010d9" title="Metoda odświeżająca aktualny czas dla kontroli prędkości animacji.">CSpeedControl::RefreshTime</a>. Wartość mnożlika należy pobrać metodą <a class="el" href="class_c_speed_control.html#573ec3783cedbd830ddf9be91c752a27" title="Metoda pobierająca mnożnik dla wszelkich animacji.">CSpeedControl::GetMultiplier</a> i mnożlić przez wszelkie zmienne odpowiedzialne za animację, jak przesuwanie, obracanie, itp. 
+</div>
+</div><p>
+<a class="anchor" name="1747930b01345300565a82dc0e65eb54"></a><!-- doxytag: member="CSpeedControl::m_fRegulationSpeed" ref="1747930b01345300565a82dc0e65eb54" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat <a class="el" href="class_c_speed_control.html#1747930b01345300565a82dc0e65eb54">CSpeedControl::m_fRegulationSpeed</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zmienna pomocnicza przy obliczaniu aktualnego czasu dla <a class="el" href="class_c_speed_control.html#d9a93dad72fbbf6908858007d274356b" title="Mnożnik dla wszelkiego ruchu animacji w renderingu.">CSpeedControl::m_fMultiplier</a>. 
+<p>
+Jeżeli nie odpowiada nam szybkość zwracana przez <a class="el" href="class_c_speed_control.html#573ec3783cedbd830ddf9be91c752a27" title="Metoda pobierająca mnożnik dla wszelkich animacji.">CSpeedControl::GetMultiplier</a>, możemy w konstruktorze klasy <a class="el" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji.">CSpeedControl</a> spróbować zmodyfikować wartość przypisywaną do zmiennej <a class="el" href="class_c_speed_control.html#1747930b01345300565a82dc0e65eb54" title="Zmienna pomocnicza przy obliczaniu aktualnego czasu dla CSpeedControl::m_fMultiplier...">CSpeedControl::m_fRegulationSpeed</a>. Jeżeli zmniejszymy przypisywaną wartość dla tej zmiennej, wówczas animacja będzie wolniejsza. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>SpeedControl/<a class="el" href="_speed_control_8h-source.html">SpeedControl.h</a><li>SpeedControl/SpeedControl.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

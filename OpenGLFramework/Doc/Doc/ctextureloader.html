@@ -1,0 +1,414 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - CTextureLoader</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Klasa CTextureLoader</H1>
+
+<p><b>Konstruktor</b></p>
+<p><a href="#konstruktor">CTextureLoader</a></p>
+
+<p><b>Metody klasy - interface</b></p>
+<table border="1">
+<tr><td><a href="#LoadAllTexture">LoadAllTexture</a></td></tr>
+<tr><td><a href="#SetTexture">SetTexture</a></td></tr>
+<tr><td><a href="#SetMultiTextures">SetMultiTextures</a></td></tr>
+<tr><td><a href="#LoadTextureMipmaps">LoadTextureMipmaps</a></td></tr>
+<tr><td><a href="#LoadTexture">LoadTexture</a></td></tr>
+<tr><td><a href="#LoadTextureLowQuality">LoadTextureLowQuality</a></td></tr>
+<tr><td><a href="#LoadMultiTextureMaskMipmaps">LoadMultiTextureMaskMipmaps</a></td></tr>
+<tr><td><a href="#LoadEmbossBump">LoadEmbossBump</a></td></tr>
+<tr><td><a href="#DisplayIDTextureName">DisplayIDTextureName</a></td></tr>
+<tr><td><a href="#GetCountIndex">GetCountIndex</a></td></tr>
+</table>
+
+<p><b>Metody klasy - prywatne</b></p>
+<table border="1">
+<tr><td><a href="#CheckExtension">CheckExtension</a></td></tr>
+<tr><td><a href="#LoadBMP">LoadBMP</a></td></tr>
+<tr><td><a href="#LoadTGA">LoadTGA</a></td></tr>
+<tr><td><a href="#LoadGLTexture">LoadGLTexture</a></td></tr>
+<tr><td><a href="#LoadGLMultiTextureMask">LoadGLMultiTextureMask</a></td></tr>
+<tr><td><a href="#CreateEmbossBumpTexture">CreateEmbossBumpTexture</a></td></tr>
+</table>
+
+<p><a href="#przyklad">Przykład</a></p>
+
+<p><a name="konstruktor"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::CTextureLoader</h3>
+<p>[public] <b>CTextureLoader(const CGameControl *</b><i>objGameCtrl</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>objGameCtrl</i> - wskaźnik na obiekt klasy <a href="cgamecontrol.html">CGameControl</a>. Należy wykorzystać globalny <a href="cgamecontrol.html">CGameControl</a> *g_objGameCtrl.
+</p>
+
+<p><a name="LoadAllTexture"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadAllTexture</h3>
+<p>[public] <b>GLboolean LoadAllTexture();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenie wczytania plików.</p>
+<p><b>Uwagi</b></p>
+<p>Funkcja ta jest już wywoływana w
+<a href="cgamecontrol.html#Initialization">CGameControl::Initialization</a> a my
+tylko musimy wewnątrz jej dopisać odpowiednie instrukcje wczytujące
+pojedyncze pliki. Dokonamy tego za pomocą funkcji
+<a href="#LoadTextureMipmaps">LoadTextureMipmaps</a>,
+<a href="#LoadTexture">LoadTexture</a> oraz
+<a href="#LoadTextureLowQuality">LoadTextureLowQuality</a>.</p>
+
+<p><a name="SetTexture"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::SetTexture</h3>
+<p>Funkcja aktywująca wcześniej wczytaną teksturę.</p>
+<p>[public] <b>GLboolean SetTexture(GLuint </b><i>uiIndex</i><b> = 0);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>uiIndex</i></td></tr>
+<tr><td></td><td>Indeks tekstury, którą chcemy uaktywnić. Indeksy liczone
+są od 0 w kolejności wczytywania tekstur.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia, GL_FALSE gdy podamy błędny indeks.</p>
+<p><b>Uwagi</b></p>
+<p>Funkcja SetTexture jednocześnie aktywuje teksturowanie poprzez wywołanie
+glEnable(GL_TEXTURE_2D).</p>
+
+<p><a name="SetMultiTextures"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::SetMultiTextures</h3>
+<p>Funkcja aktywująca wcześniej wczytaną teksturę poprzez metodę CTextureLoader::LoadMultiTextureMaskMipmaps().</p>
+<p>[public] <b>GLboolean SetMultiTextures(GLuint </b><i>uiIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>uiIndex</i></td></tr>
+<tr><td></td><td>Indeks tekstury, którą chcemy uaktywnić. Indeksy liczone
+są od 0 w kolejności wczytywania tekstur.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia, GL_FALSE gdy podamy błędny indeks.</p>
+<p><b>Uwagi</b></p>
+<p>Funkcja SetMultiTextures jednocześnie aktywuje teksturowanie poprzez wywołanie
+glEnable(GL_TEXTURE_2D).</p>
+
+<p><a name="LoadTextureMipmaps"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadTextureMipmaps</h3>
+<p>Za pomocą tej funkcji tworzymy teksturę mipmapową.</p>
+<p>[public] <b>GLboolean LoadTextureMipmaps(LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Pełna nazwa pliku (wraz ze ścieżką), który chcemy uczynić teksturą.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia, stworzenia tekstury.</p>
+
+<p><a name="LoadTexture"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadTexture</h3>
+<p>Za pomocą tej funkcji tworzymy teksturę typu linear.</p>
+<p>[public] <b>GLboolean LoadTexture(LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Pełna nazwa pliku (wraz ze ścieżką), który chcemy uczynić teksturą.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia, stworzenia tekstury.</p>
+
+<p><a name="LoadTextureLowQuality"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadTextureLowQuality</h3>
+<p>Za pomocą tej funkcji tworzymy teksturę typu nearest.</p>
+<p>[public] <b>GLboolean LoadTextureLowQuality(LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Pełna nazwa pliku (wraz ze ścieżką), który chcemy uczynić teksturą.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia, stworzenia tekstury.</p>
+
+<p><a name="LoadMultiTextureMaskMipmaps"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadMultiTextureMaskMipmaps</h3>
+<p>Za pomocą tej funkcji tworzymy teksturę o nieregularnym kształcie poprzez
+użycie dodatkowej tekstury jako maski.</p>
+<p>[public] <b>GLboolean LoadMultiTextureMaskMipmaps(LPCTSTR </b><i>lpFileNameMask</i><b>, LPCTSTR </b><i>lpFileNameRGB</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileNameMask</i></td></tr>
+<tr><td></td><td>Pełna nazwa pliku z maską, który chcemy uczynić teksturą.</td></tr>
+
+<tr><td><i>lpFileNameRGB</i></td></tr>
+<tr><td></td><td>Pełna nazwa pliku z normalną, kolorową teksturą.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia, stworzenia tekstury. W przeciwnym wypadku GL_FALSE.</p>
+<p><b>Uwagi</b></p>
+<p>Jest to pseudo-multiteksturing, który możemy wykorzystać przy sprite'ach z użyciem
+specjalnej maski do wskazania obszarów tekstury, które mają być niewidoczne.
+Dzięki temu w wydajny sposób (rysując obiekt tylko jeden raz) możemy uzyskać
+dowolne kształty sprite'a. Metoda ta polega na wczytaniu dwóch tekstur,
+gdzie pierwsza to tzw. maska - czyli tekstura w odcieniach szarości, gdzie
+czarny kolor oznacza całkowitą przezroczystość a biały całkowitą widoczność
+elementów drugiej tekstury. Druga tekstura to właściwy, w pełni kolorowy obraz.
+Następnie program spreparuje obydwie tekstury do jednej, którą możemy wykorzystać.<br />
+Należy pamiętać, że pomimo podania dwóch plików, powyższa funkcja utworzy jedną teksturę
+czyli zostanie utworzony jeden indeks tekstury - pamiętajmy o tym przy wywoływaniu
+CTextureLoader::SetMultiTextures(). Poza tym, jak wynika z nazwy powyższej
+funkcji, tekstury zawsze będą mipmapami.</p>
+
+<p><a name="LoadEmbossBump"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadEmbossBump</h3>
+<p>Za pomocą tej funkcji tworzymy dwie tekstury, które zostaną wykorzytsane
+dla efektu mapowania wybojów.</p>
+<p>[public] <b>GLboolean LoadEmbossBump(LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Nazwa pliku, którą chcemy uczyć teksturą. Musi to być
+specjakna tekstura, tzw. mapa wysokości, gdzie ciemne obszary oznaczają
+elementy niżej położone, a jaśniejsze wyżej.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia, stworzenia tekstury. W przeciwnym wypadku GL_FALSE.</p>
+<p><b>Uwagi</b></p>
+<p>Należy pamiętać, że powyższa metoda z jednego pliku tworzy dwie tekstuty,
+a więc powstają dwa indeksy tekstur. W programie, przy wykorzytywaniu tekstury
+bump, używać będziemy tylko indeksu pierwszego.</p>
+
+<p><a name="DisplayIDTextureName"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::DisplayIDTextureName</h3>
+<p>Funkcja wypisująca na konsolę nazwy plików-tekstur wraz z ich identyfikatorami.</p>
+<p>[public] <b>GLvoid DisplayIDTextureName();</b></p>
+
+<p><a name="GetCountIndex"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::GetCountIndex</h3>
+<p>Dzięki tej metodzie dowiemy się ile mamy indeksów tekstur.</p>
+<p>[public] <b>GLint GetCountIndex();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Liczba całkowita informująca o ilość indeksów.</p>
+
+<p><a name="CheckExtension"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::CheckExtension</h3>
+<p>Funkcja sprawdzająca rozszerzenie pliku.</p>
+<p>[private] <b>GLint CheckExtension(LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Nazwa pliku.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>0 gdy plik jest BMP, 1 gdy plik jest TGA, w przypadku błędu lub nieobsługiwanego formatu -1.</p>
+
+<p><a name="LoadBMP"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadBMP</h3>
+<p>Funkcja wczytująca plik BMP.</p>
+<p>[private] <b>AUX_RGBImageRec* LoadBMP(LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Nazwa pliku.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>W przypadku powodzenia wskaźnik na strukturę AUX_RGBImageRec. W przypadku błędu NULL.</p>
+
+<p><a name="LoadTGA"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadTGA</h3>
+<p>Funkcja wczytująca plik TGA.</p>
+<p>[private] <b>GLboolean LoadTGA(STexture &amp;</b><i>ptexTexture</i><b>, LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>ptexTexture</i></td></tr>
+<tr><td></td><td>Referencja na strukturę STexture.</td></tr>
+
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Nazwa pliku.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE gdy wczytanie zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="LoadGLTexture"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadGLTexture</h3>
+<p>Główna funkcja tworząca teksturę.</p>
+<p>[private] <b>GLboolean LoadGLTexture(LPCTSTR </b><i>lpFileName</i><b>, GLint </b><i>iMode</i><b> = 0, GLint </b><i>iFormat</i><b> = 0, GLboolean </b><i>bEmbossBump</i><b> = GL_FALSE);</b></p>
+<p><b>Parametry</b></p>
+<p>
+
+<table border="0">
+<tr><td><i>lpFileName</i></td></tr>
+<tr><td></td><td>Nazwa pliku.</td></tr>
+
+<tr><td><i>iMode</i></td></tr>
+<tr><td></td><td>Typ tekstury jaką chcemy stworzyć:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;0 - tekstura mipmapowa<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1 - tekstura typu linear<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2 - tekstura typu nearest<br />
+</td></tr>
+
+<tr><td><i>iFormat</i></td></tr>
+<tr><td></td><td>Format pliku, możemy podać:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;0 - plik BMP<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1 - plik TGA<br />
+</td></tr>
+
+<tr><td><i>bEmbossBump</i></td></tr>
+<tr><td></td><td>Czy tekstura jest mapą wysokości dla efektu mapowania wybojów.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE gdy wczytanie zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="LoadGLMultiTextureMask"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::LoadGLMultiTextureMask</h3>
+<p>Metoda tworząca teksturę z pseudo-multiteksturingiem.</p>
+<p>[private] <b>GLboolean LoadGLMultiTextureMask(LPCTSTR </b><i>lpFileName1</i><b>, LPCTSTR </b><i>lpFileName2</i><b>, GLint </b><i>iMode</i><b> = 0, GLint </b><i>iFormat1</i><b> = 0, GLint </b><i>iFormat2</i><b> = 0);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>lpFileName1</i></td></tr>
+<tr><td></td><td>Nazwa pliku z maską.</td></tr>
+
+<tr><td><i>lpFileName2</i></td></tr>
+<tr><td></td><td>Nazwa pliku z teksturą kolorową.</td></tr>
+
+<tr><td><i>iMode</i></td></tr>
+<tr><td></td><td>Typ tekstury jaką chcemy stworzyć:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;0 - tekstura mipmapowa<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1 - tekstura typu linear<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2 - tekstura typu nearest
+</td></tr>
+
+<tr><td><i>iFormat1</i></td></tr>
+<tr><td></td><td>Format pliku z maską, możemy podać:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;0 - plik BMP<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1 - plik TGA
+</td></tr>
+
+<tr><td><i>iFormat2</i></td></tr>
+<tr><td></td><td>Format pliku z kolorem, możemy podać:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;0 - plik BMP<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1 - plik TGA
+</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE gdy wczytanie zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+<p><b>Uwagi</b></p>
+<p>Pomimo podania formatów dla każdego z plików, funkcja obsługuje jedynie format BMP.</p>
+
+<p><a name="CreateEmbossBumpTexture"></a></p>
+
+<hr/>
+
+<h3>CTextureLoader::CreateEmbossBumpTexture</h3>
+<p>Metoda tworząca tekstury dla efektu mapowania wybojów.</p>
+<p>[private] <b>GLboolean CreateEmbossBumpTexture(GLint </b><i>iIndex</i><b>, STexture &amp;</b><i>texTexture</i><b>, GLint </b><i>iMode</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>iIndex</i></td></tr>
+<tr><td></td><td>Indeks tekstury.</td></tr>
+
+<tr><td><i>texTexture</i></td></tr>
+<tr><td></td><td>Adres do strukturt STexture zawierającej dane wcześniej wczytego pliku.</td></tr>
+
+<tr><td><i>iMode</i></td></tr>
+<tr><td></td><td>Typ tekstury jaką chcemy stworzyć:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;0 - tekstura mipmapowa<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1 - tekstura typu linear<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2 - tekstura typu nearest.
+</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE gdy stworzenie tekstur zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="przyklad"></a></p>
+
+<hr/>
+<h3>Przykład</h3>
+<p><font face="Courier New" size="2">
+GLboolean CTextureLoader::LoadAllTexture()<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;LoadTextureMipmaps(_T("textures/img1.bmp"));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// index 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;LoadTextureLowQuality(_T("textures/picture.bmp"));&nbsp;// index 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;LoadTexture(_T("textures/graphic.bmp"));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// index 2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;return GL_TRUE;<br />
+}<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;// gdzieś w kodzie uaktywniamy teksturę picture.bmp:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;m_objGameCtrl->GetTextureLoader()->SetTexture(1);<br />
+</font></p>
+
+<hr />
+</BODY>
+</HTML>

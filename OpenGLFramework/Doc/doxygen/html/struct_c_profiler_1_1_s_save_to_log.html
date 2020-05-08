@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja struktury CProfiler::SSaveToLog</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<div class="nav">
+<a class="el" href="class_c_profiler.html">CProfiler</a>::<a class="el" href="struct_c_profiler_1_1_s_save_to_log.html">SSaveToLog</a></div>
+<h1>Dokumentacja struktury CProfiler::SSaveToLog</h1><!-- doxytag: class="CProfiler::SSaveToLog" -->
+<p>
+<a href="struct_c_profiler_1_1_s_save_to_log-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Struktura przechowująca wszelkie informacje jakie zostaną zapisaane do pliku. 
+<p>
+Struktura przechowuje takie informacje jak komentarz wywołania metody <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a>, czas jaki upłynął między wywołaniami <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a> a <a class="el" href="class_c_profiler.html#a9a5f0f0f1534dd28b9158e57c32cda8" title="Metoda kończąca pomiar czasu.">CProfiler::End</a> oraz ilość wcięć dla lepszej czytelności loga. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="728f6c893ade4103ad97588046d2dda5"></a><!-- doxytag: member="CProfiler::SSaveToLog::bIsUse" ref="728f6c893ade4103ad97588046d2dda5" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_profiler_1_1_s_save_to_log.html#728f6c893ade4103ad97588046d2dda5">bIsUse</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Czy jest w użyciu? <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="88641eed69b99f7818c612fb7cd1e712"></a><!-- doxytag: member="CProfiler::SSaveToLog::iIndentNumber" ref="88641eed69b99f7818c612fb7cd1e712" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_profiler_1_1_s_save_to_log.html#88641eed69b99f7818c612fb7cd1e712">iIndentNumber</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ilość wcięć. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="494416990f6ee695f44e0ecde7e3ef2b"></a><!-- doxytag: member="CProfiler::SSaveToLog::lpComment" ref="494416990f6ee695f44e0ecde7e3ef2b" args="[MAX_SIZE_OF_STRING]" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_profiler_1_1_s_save_to_log.html#494416990f6ee695f44e0ecde7e3ef2b">lpComment</a> [MAX_SIZE_OF_STRING]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Komentarz jaki został podany przy wywołaniu metody <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="90d32e6c1858e24e0155a3ea76c84571"></a><!-- doxytag: member="CProfiler::SSaveToLog::ulTimeMs" ref="90d32e6c1858e24e0155a3ea76c84571" args="" -->
+unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_profiler_1_1_s_save_to_log.html#90d32e6c1858e24e0155a3ea76c84571">ulTimeMs</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Czas w milisekundach jaki upłynął między wywołaniem <a class="el" href="class_c_profiler.html#0c5b932403ac810acb027b8e5fa1ee05" title="Metoda rozpoczynająca pomiar czasu.">CProfiler::Begin</a> a <a class="el" href="class_c_profiler.html#a9a5f0f0f1534dd28b9158e57c32cda8" title="Metoda kończąca pomiar czasu.">CProfiler::End</a>. <br></td></tr>
+</table>
+<hr>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li>SpeedControl/<a class="el" href="_profiler_8h-source.html">Profiler.h</a></ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:30 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

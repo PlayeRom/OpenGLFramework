@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Draw/Fog.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Draw/Fog.h</h1><a href="_fog_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="class_c_fog.html">00008</a> <span class="keyword">class </span><a class="code" href="class_c_fog.html" title="Klasa zarządzająca ustawieniami mgły.">CFog</a>
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010 <span class="keyword">public</span>:
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013         <a class="code" href="class_c_fog.html#acf95321b6c88b8349591ca0dd7aa6a9" title="Konstruktor.">CFog</a>();
+<a name="l00014"></a>00014 
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017         <a class="code" href="class_c_fog.html#d21e5142e0589fc10cdfc1724ae65d39" title="Destruktor.">~CFog</a>();
+<a name="l00018"></a>00018 
+<a name="l00020"></a>00020 
+<a name="l00024"></a><a class="code" href="class_c_fog.html#bf54f183db0a45cd709b2123994bf80b">00024</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#bf54f183db0a45cd709b2123994bf80b" title="Metoda ustawiająca kolor mgły.">SetColor</a>( GLfloat r, GLfloat g, GLfloat b, GLfloat a = 1.0f ) {
+<a name="l00025"></a>00025                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 0 ] = r;
+<a name="l00026"></a>00026                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 1 ] = g;
+<a name="l00027"></a>00027                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 2 ] = b;
+<a name="l00028"></a>00028                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 3 ] = a;
+<a name="l00029"></a>00029                 glFogfv( GL_FOG_COLOR, <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a> );
+<a name="l00030"></a>00030         }
+<a name="l00031"></a>00031 
+<a name="l00033"></a>00033 
+<a name="l00034"></a><a class="code" href="class_c_fog.html#4031b981e20c74757c84ab35c2b37807">00034</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#bf54f183db0a45cd709b2123994bf80b" title="Metoda ustawiająca kolor mgły.">SetColor</a>( GLfloat aColour[ 4 ] ) {
+<a name="l00035"></a>00035                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 0 ] = aColour[ 0 ];
+<a name="l00036"></a>00036                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 1 ] = aColour[ 1 ];
+<a name="l00037"></a>00037                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 2 ] = aColour[ 2 ];
+<a name="l00038"></a>00038                 <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 3 ] = aColour[ 3 ];
+<a name="l00039"></a>00039                 glFogfv( GL_FOG_COLOR, <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a> );
+<a name="l00040"></a>00040         }
+<a name="l00041"></a>00041 
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="class_c_fog.html#4e885e30560d3f5e01f49697058c607c">00044</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#4e885e30560d3f5e01f49697058c607c" title="Metoda ustawiająca tryb mgły.">SetFogMode</a>( GLfloat fParam = GL_EXP ) {
+<a name="l00045"></a>00045                 glFogf( GL_FOG_MODE, fParam );
+<a name="l00046"></a>00046         }
+<a name="l00047"></a>00047 
+<a name="l00049"></a>00049 
+<a name="l00050"></a><a class="code" href="class_c_fog.html#6956dedb74ed9f190992ab6b2573a340">00050</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#6956dedb74ed9f190992ab6b2573a340" title="Metoda ustawiająca początek mgły.">SetStart</a>( GLfloat fStart ) {
+<a name="l00051"></a>00051                 <a class="code" href="class_c_fog.html#b0891be5e0a1b856da618db28a622fb7" title="Wartość aktualnie ustawionego początku mgły.">m_fStart</a> = fStart;
+<a name="l00052"></a>00052                 glFogf( GL_FOG_START, <a class="code" href="class_c_fog.html#b0891be5e0a1b856da618db28a622fb7" title="Wartość aktualnie ustawionego początku mgły.">m_fStart</a> );
+<a name="l00053"></a>00053         }
+<a name="l00054"></a>00054 
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="class_c_fog.html#33c98d835ff23dbeb4bbd9a3e3f1ff36">00057</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#33c98d835ff23dbeb4bbd9a3e3f1ff36" title="Metoda ustawiająca koniec mgły.">SetEnd</a>( GLfloat fEnd ) {
+<a name="l00058"></a>00058                 <a class="code" href="class_c_fog.html#118785e94151e785436b186f8e2aa4e0" title="Wartość aktualnie ustawionego końca mgły.">m_fEnd</a> = fEnd;
+<a name="l00059"></a>00059                 glFogf( GL_FOG_END, <a class="code" href="class_c_fog.html#118785e94151e785436b186f8e2aa4e0" title="Wartość aktualnie ustawionego końca mgły.">m_fEnd</a> );
+<a name="l00060"></a>00060         }
+<a name="l00061"></a>00061 
+<a name="l00063"></a>00063 
+<a name="l00065"></a><a class="code" href="class_c_fog.html#f8aeac8e0703a30b4a1763f1021264a6">00065</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#f8aeac8e0703a30b4a1763f1021264a6" title="Metoda ustawiająca początek i koniec mgły.">SetStartEnd</a>( GLfloat fStart, GLfloat fEnd ) {
+<a name="l00066"></a>00066                 <a class="code" href="class_c_fog.html#b0891be5e0a1b856da618db28a622fb7" title="Wartość aktualnie ustawionego początku mgły.">m_fStart</a> = fStart;
+<a name="l00067"></a>00067                 <a class="code" href="class_c_fog.html#118785e94151e785436b186f8e2aa4e0" title="Wartość aktualnie ustawionego końca mgły.">m_fEnd</a> = fEnd;
+<a name="l00068"></a>00068                 glFogf( GL_FOG_START, <a class="code" href="class_c_fog.html#b0891be5e0a1b856da618db28a622fb7" title="Wartość aktualnie ustawionego początku mgły.">m_fStart</a> );
+<a name="l00069"></a>00069                 glFogf( GL_FOG_END, <a class="code" href="class_c_fog.html#118785e94151e785436b186f8e2aa4e0" title="Wartość aktualnie ustawionego końca mgły.">m_fEnd</a> );
+<a name="l00070"></a>00070         }
+<a name="l00071"></a>00071 
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="class_c_fog.html#38bbf74ff32f865212f7df897a92e2bb">00074</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#38bbf74ff32f865212f7df897a92e2bb" title="Metoda ustawiająca gęstość mgły.">SetDensity</a>( GLfloat fDensity = 1.0f ) {
+<a name="l00075"></a>00075                 <a class="code" href="class_c_fog.html#7b7154b799d666f4cb07ba337b0d7b63" title="Wartość aktualnej gęstości mgły.">m_fDensity</a> = fDensity;
+<a name="l00076"></a>00076                 glFogf( GL_FOG_DENSITY, <a class="code" href="class_c_fog.html#7b7154b799d666f4cb07ba337b0d7b63" title="Wartość aktualnej gęstości mgły.">m_fDensity</a> );
+<a name="l00077"></a>00077         }
+<a name="l00078"></a>00078 
+<a name="l00080"></a>00080 
+<a name="l00082"></a><a class="code" href="class_c_fog.html#7da8e5a84e36939bdaa9d442ff99f3b1">00082</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fog.html#7da8e5a84e36939bdaa9d442ff99f3b1" title="Metoda ustawiająca sposób tworzenia mgły.">SetHint</a>( GLenum fMode = GL_DONT_CARE ) {
+<a name="l00083"></a>00083                 glHint( GL_FOG_HINT, fMode );
+<a name="l00084"></a>00084         }
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="keyword">private</span>:
+<a name="l00087"></a><a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b">00087</a>         GLfloat <a class="code" href="class_c_fog.html#46b394ab29ad350bbefc5fd357a87a1b" title="Tablica aktualnie ustawionego koloru mgły.">m_aColor</a>[ 4 ];  
+<a name="l00088"></a><a class="code" href="class_c_fog.html#b0891be5e0a1b856da618db28a622fb7">00088</a>         GLfloat <a class="code" href="class_c_fog.html#b0891be5e0a1b856da618db28a622fb7" title="Wartość aktualnie ustawionego początku mgły.">m_fStart</a>;               
+<a name="l00089"></a><a class="code" href="class_c_fog.html#118785e94151e785436b186f8e2aa4e0">00089</a>         GLfloat <a class="code" href="class_c_fog.html#118785e94151e785436b186f8e2aa4e0" title="Wartość aktualnie ustawionego końca mgły.">m_fEnd</a>;                 
+<a name="l00090"></a><a class="code" href="class_c_fog.html#7b7154b799d666f4cb07ba337b0d7b63">00090</a>         GLfloat <a class="code" href="class_c_fog.html#7b7154b799d666f4cb07ba337b0d7b63" title="Wartość aktualnej gęstości mgły.">m_fDensity</a>;             
+<a name="l00091"></a>00091 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:18 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

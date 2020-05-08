@@ -1,0 +1,906 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CWindowData</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CWindowData</h1><!-- doxytag: class="CWindowData" --><!-- doxytag: inherits="CSingletonBase&lt; CWindowData &gt;" --><code>#include &lt;<a class="el" href="_window_data_8h-source.html">WindowData.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CWindowData</div>
+<div class="dynsection">
+<p><center><img src="class_c_window_data__inherit__graph.png" border="0" usemap="#_c_window_data__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_window_data__inherit__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="5,5,232,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagram współpracy dla CWindowData:</div>
+<div class="dynsection">
+<p><center><img src="class_c_window_data__coll__graph.png" border="0" usemap="#_c_window_data__coll__map" alt="Collaboration graph"></center>
+<map name="_c_window_data__coll__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,5,520,32"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,56,472,83"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,71,476,79"><area shape="rect" title="m_pARBMultisample" alt="" coords="697,103,705,111"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,107,465,133"><area shape="rect" title="m_pMultiLang" alt="" coords="463,116,471,124"><area shape="rect" title="m_pMultiLang" alt="" coords="689,116,697,124"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,107,243,133"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,157,500,184"><area shape="rect" title="m_sSettingFile" alt="" coords="496,160,504,168"><area shape="rect" title="m_sSettingFile" alt="" coords="697,129,705,137"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,208,443,235"><area shape="rect" title="m_pLogger" alt="" coords="440,216,448,224"><area shape="rect" title="m_pLogger" alt="" coords="729,129,737,137"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_window_data-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa okna aplikacji. 
+<p>
+Klata ta odpowiada za tworzenie i usuwanie okna oraz co ważne przechowuje różne informacje takie jak:<ul>
+<li>rozdzielczość ekranu,</li><li>głębia kolorów,</li><li>kolor tła,</li><li>nazwę okna i klasy okna,</li><li>aktywność antyaliasingu, trybu pełnoekranowego, wyświetlanie kursora </li></ul>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#89e8ab7b1aa0b610b9f5c234436bbbe6">Initialization</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicjalizacja obiektu <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>.  <a href="#89e8ab7b1aa0b610b9f5c234436bbbe6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#f083572a035d23944d138bcf3ed1608b">~CWindowData</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#f083572a035d23944d138bcf3ed1608b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#4f4d4b0002c67b4263cd729cc5786c23">CreateGLWindow</a> (WNDPROC *pWndProc, const GLint iIcon, const GLint iCursor)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Główna metoda tworząca okno aplikacji.  <a href="#4f4d4b0002c67b4263cd729cc5786c23"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c347a14d8871320d4ca1c108b619f4f6"></a><!-- doxytag: member="CWindowData::KillGLWindow" ref="c347a14d8871320d4ca1c108b619f4f6" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#c347a14d8871320d4ca1c108b619f4f6">KillGLWindow</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda niszcząca okno aplikacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#b7f23fb9b5cdb84772c85d69c8c47518">RestartWindow</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda restaru okna.  <a href="#b7f23fb9b5cdb84772c85d69c8c47518"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9f4a5eadec979e61571d3d530a0c9197"></a><!-- doxytag: member="CWindowData::FullscreenSwitch" ref="9f4a5eadec979e61571d3d530a0c9197" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#9f4a5eadec979e61571d3d530a0c9197">FullscreenSwitch</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przełączająca pomiędzy aplikacją okienkową a pełno-ekranową. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#02d72a15217fdd0e437bdfafded94023">SetRestart</a> (GLboolean bRestart)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca zmienną nakazującą restartować okno.  <a href="#02d72a15217fdd0e437bdfafded94023"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#3d121bb281cace3fbd83c849fa21e131">IsRestart</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy należy zrestartować okno aplikacji.  <a href="#3d121bb281cace3fbd83c849fa21e131"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="struct_c_window_data_1_1_s_setting_file.html">SSettingFile</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#3de9eab8b98c86d9ff454d2a296d1bc1">SettingFile</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca strukturę <a class="el" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji.">SSettingFile</a> przechowującą ustawienia programu.  <a href="#3de9eab8b98c86d9ff454d2a296d1bc1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#3e3681ea6383151a21af8050856813f4">LoadSettingFile</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik konfiguracyjny.  <a href="#3e3681ea6383151a21af8050856813f4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#0609086c9a71ff33e02694706b344874">SaveSettingFile</a> (GLboolean bDefaultSave=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapisująca plik konfiguracyjny.  <a href="#0609086c9a71ff33e02694706b344874"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#1225fbaa54df0873ae1d661333714ae5">IsCommandLine</a> (LPCTSTR lpParam)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy program został uruchomiony z danym parametrem.  <a href="#1225fbaa54df0873ae1d661333714ae5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#5fbbfb54451febe3829d7e9470dbc1d9">GetAntialiasingSamples</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pobranie aktualnej ilości sampli dla antyaliasingu.  <a href="#5fbbfb54451febe3829d7e9470dbc1d9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#d82cacad4c97ca9c33c3236f30c5334f">SetAntialiasingSamples</a> (GLint iSamples, GLboolean bRestart=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ustawienie aktualnej ilości sampli dla antyaliasingu.  <a href="#d82cacad4c97ca9c33c3236f30c5334f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#e580bed37d7ad464a1bd35b514cb9997">ReSizeGLScene</a> (GLfloat fViewAngle=45.0f)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Przeskalowanie okna OpenGL.  <a href="#e580bed37d7ad464a1bd35b514cb9997"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#edee292e52851f646279775503a9f200">ReSizeGLScene</a> (GLsizei iWidth, GLsizei iHeight, GLfloat fViewAngle=45.0f)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Przeskalowanie okna OpenGL.  <a href="#edee292e52851f646279775503a9f200"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Gettery dla danych obiektów</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="06b287aa370cbbbf64f223513437add6"></a><!-- doxytag: member="CWindowData::GetLogger" ref="06b287aa370cbbbf64f223513437add6" args="()" -->
+<a class="el" href="class_c_logger.html">CLogger</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetLogger</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bebe1c90f45e05663656a143415e412d"></a><!-- doxytag: member="CWindowData::GetMultiLang" ref="bebe1c90f45e05663656a143415e412d" args="()" -->
+<a class="el" href="class_c_multi_language.html">CMultiLanguage</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMultiLang</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="52c2713c432c644b477059e0bbf56f37"></a><!-- doxytag: member="CWindowData::GetHDC" ref="52c2713c432c644b477059e0bbf56f37" args="()" -->
+HDC&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetHDC</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d69d3f01501a670dc047d65aae519c49"></a><!-- doxytag: member="CWindowData::GetHINSTANCE" ref="d69d3f01501a670dc047d65aae519c49" args="()" -->
+HINSTANCE&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetHINSTANCE</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7ae11797c7985f630c7bf68dba43f340"></a><!-- doxytag: member="CWindowData::GetHWND" ref="7ae11797c7985f630c7bf68dba43f340" args="()" -->
+HWND&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetHWND</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b1f642bb25978f1091a95bfad96062fe"></a><!-- doxytag: member="CWindowData::GetHRC" ref="b1f642bb25978f1091a95bfad96062fe" args="()" -->
+HGLRC&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetHRC</b> ()</td></tr>
+
+<tr><td colspan="2"><div class="groupHeader">Settery i gettery dla podwójnego restartu</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f909f18205ec398760b2a1578bb4e1dd"></a><!-- doxytag: member="CWindowData::SetDoubleRestart" ref="f909f18205ec398760b2a1578bb4e1dd" args="(GLboolean bParam)" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetDoubleRestart</b> (GLboolean bParam)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="30427654ff4db68f7342b5caa6870a76"></a><!-- doxytag: member="CWindowData::IsDoubleRestart" ref="30427654ff4db68f7342b5caa6870a76" args="()" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsDoubleRestart</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1ca0871ad3f296c1710091d5ef9e7924"></a><!-- doxytag: member="CWindowData::SetResDoubleRestartX" ref="1ca0871ad3f296c1710091d5ef9e7924" args="(GLint iResX)" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetResDoubleRestartX</b> (GLint iResX)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="5ce3ff5c2d92da13a568a553cd47bc4b"></a><!-- doxytag: member="CWindowData::GetResDoubleRestartX" ref="5ce3ff5c2d92da13a568a553cd47bc4b" args="()" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetResDoubleRestartX</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="af13c8a5ab3f9cfb71a81a3295dbda53"></a><!-- doxytag: member="CWindowData::SetResDoubleRestartY" ref="af13c8a5ab3f9cfb71a81a3295dbda53" args="(GLint iResY)" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetResDoubleRestartY</b> (GLint iResY)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f7935851e3cef1f3781e412cf2f7e0ad"></a><!-- doxytag: member="CWindowData::GetResDoubleRestartY" ref="f7935851e3cef1f3781e412cf2f7e0ad" args="()" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetResDoubleRestartY</b> ()</td></tr>
+
+<tr><td colspan="2"><div class="groupHeader">Settery i gettery dla różnych pól</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2729d485ddea8a4144c36a2b81294a35"></a><!-- doxytag: member="CWindowData::IsUseAntialiasing" ref="2729d485ddea8a4144c36a2b81294a35" args="()" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><b>IsUseAntialiasing</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9a148e2c87aff95b218c7f79533ce3ce"></a><!-- doxytag: member="CWindowData::SetUseAntialiasing" ref="9a148e2c87aff95b218c7f79533ce3ce" args="(GLboolean bAntialiasing)" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><b>SetUseAntialiasing</b> (GLboolean bAntialiasing)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6da5f0c15f56cabf06823656d2c827ae"></a><!-- doxytag: member="CWindowData::GetBkColorR" ref="6da5f0c15f56cabf06823656d2c827ae" args="()" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetBkColorR</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8f440f4c9d7aedf9ed1cf584309992f9"></a><!-- doxytag: member="CWindowData::GetBkColorG" ref="8f440f4c9d7aedf9ed1cf584309992f9" args="()" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetBkColorG</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bfdaf75d72d96f5e5f3e439b9eaa1561"></a><!-- doxytag: member="CWindowData::GetBkColorB" ref="bfdaf75d72d96f5e5f3e439b9eaa1561" args="()" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetBkColorB</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d655621d5bc315deeb01f25c419b35ec"></a><!-- doxytag: member="CWindowData::GetBkColorA" ref="d655621d5bc315deeb01f25c419b35ec" args="()" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetBkColorA</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6c0f8a26e055e859f03a3db68d3dbfb8"></a><!-- doxytag: member="CWindowData::GetZBufferBits" ref="6c0f8a26e055e859f03a3db68d3dbfb8" args="()" -->
+GLubyte&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetZBufferBits</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="20680598d6377a48d30ed53a6cb08bf0"></a><!-- doxytag: member="CWindowData::GetDesktopWidth" ref="20680598d6377a48d30ed53a6cb08bf0" args="()" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDesktopWidth</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="925289e8f3cc00ca0a835e5c9831fc70"></a><!-- doxytag: member="CWindowData::GetDesktopHeight" ref="925289e8f3cc00ca0a835e5c9831fc70" args="()" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetDesktopHeight</b> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_c_window_data.html">CWindowData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#fd8735ad22581614f694e2bf7f2375e9">Construct</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>.  <a href="#fd8735ad22581614f694e2bf7f2375e9"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="99c262a634fb3c9cac097b3bd5410cf8"></a><!-- doxytag: member="CWindowData::m_bCharModeKeyboard" ref="99c262a634fb3c9cac097b3bd5410cf8" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#99c262a634fb3c9cac097b3bd5410cf8">m_bCharModeKeyboard</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Jeżeli <code>GL_TRUE</code> to komunikaty WM_KEYDOWN mają być ignorowane, bo wtedy działa WM_CHAR. <br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#38968181b351375d843ab674a9424ab5">CWindowData</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#38968181b351375d843ab674a9424ab5"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metody wywoływane przy tworzeniu okna.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#5868951769c3eadc130bd574091d55a5">CreateInstance</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca instancję naszego programu.  <a href="#5868951769c3eadc130bd574091d55a5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#1dc4f2cc149c4a62a84c27aae72ccac0">RegisterMyClass</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca oraz rejestrująca klasę okna naszej aplikacji.  <a href="#1dc4f2cc149c4a62a84c27aae72ccac0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#58a9446cdec03ee3800bdfee9981e9b5">SetDeviceOnFullscreen</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca tryb urządzenia graficznego na tryb pełnoekranowy.  <a href="#58a9446cdec03ee3800bdfee9981e9b5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#0642f2af0be6ab3ed08ffe581b643549">CreateMyWindow</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca okno naszej aplikacji.  <a href="#0642f2af0be6ab3ed08ffe581b643549"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#553a157e14b03e5e54c4c9f7489504d8">GetDeviceContent</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca kontekst urządzenia naszej aplikacji.  <a href="#553a157e14b03e5e54c4c9f7489504d8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#24d1c29f3534ccd3af5c74e378eaf7cb">SetPixelFormat</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca format piksela.  <a href="#24d1c29f3534ccd3af5c74e378eaf7cb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#2de875e8987ce38e9f0bdde46d3ff425">CreateRenderingContext</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca kontekst renderowania.  <a href="#2de875e8987ce38e9f0bdde46d3ff425"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="60b3722dcbdbaf402caf4beb5cb1a82f"></a><!-- doxytag: member="CWindowData::m_hRC" ref="60b3722dcbdbaf402caf4beb5cb1a82f" args="" -->
+HGLRC&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#60b3722dcbdbaf402caf4beb5cb1a82f">m_hRC</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Stały kontekst renderowania. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e1b204fbbc2913eddd4f27fb8c3c39e7"></a><!-- doxytag: member="CWindowData::m_hDC" ref="e1b204fbbc2913eddd4f27fb8c3c39e7" args="" -->
+HDC&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#e1b204fbbc2913eddd4f27fb8c3c39e7">m_hDC</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Prywatny kontekst urządzenia GDI. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c3b683e539eded822c4697b5936b43ce"></a><!-- doxytag: member="CWindowData::m_hWnd" ref="c3b683e539eded822c4697b5936b43ce" args="" -->
+HWND&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#c3b683e539eded822c4697b5936b43ce">m_hWnd</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Przechowuje uchwyt okna. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9982e2d65d75b3efafd7cf38a734655a"></a><!-- doxytag: member="CWindowData::m_hInstance" ref="9982e2d65d75b3efafd7cf38a734655a" args="" -->
+HINSTANCE&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#9982e2d65d75b3efafd7cf38a734655a">m_hInstance</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Przechowuje instancję aplikacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="5a4f5fec88c890ce18c697d06c9c90b7"></a><!-- doxytag: member="CWindowData::m_sSettingFile" ref="5a4f5fec88c890ce18c697d06c9c90b7" args="" -->
+<a class="el" href="struct_c_window_data_1_1_s_setting_file.html">SSettingFile</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7">m_sSettingFile</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca wczelką konfigurację programu. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9d052511a84d03c7b51b5c2dcabffc38"></a><!-- doxytag: member="CWindowData::m_pWndProc" ref="9d052511a84d03c7b51b5c2dcabffc38" args="" -->
+WNDPROC *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#9d052511a84d03c7b51b5c2dcabffc38">m_pWndProc</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na funkcję <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c2e825500762cafffd1b62ebd97bae9c"></a><!-- doxytag: member="CWindowData::m_bRestart" ref="c2e825500762cafffd1b62ebd97bae9c" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c">m_bRestart</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Czy okno będzie restartowane. Zmienna wykorzystywana w głównej pętli programu. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="97563065a40d6bd64f59958570fde85d"></a><!-- doxytag: member="CWindowData::m_lpTitle" ref="97563065a40d6bd64f59958570fde85d" args="" -->
+TCHAR *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#97563065a40d6bd64f59958570fde85d">m_lpTitle</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tytuł okna aplikacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c3cf7551b5f62adbdce10356f1a3090e"></a><!-- doxytag: member="CWindowData::m_lpClassName" ref="c3cf7551b5f62adbdce10356f1a3090e" args="" -->
+TCHAR *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#c3cf7551b5f62adbdce10356f1a3090e">m_lpClassName</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nazwa klasy aplikacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f4bb1a7d04382087d74638642134e102"></a><!-- doxytag: member="CWindowData::m_iIcon" ref="f4bb1a7d04382087d74638642134e102" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#f4bb1a7d04382087d74638642134e102">m_iIcon</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ID ikony aplikacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2ee31cfaeb90176bdf3c8ec695f50dbb"></a><!-- doxytag: member="CWindowData::m_iCursor" ref="2ee31cfaeb90176bdf3c8ec695f50dbb" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#2ee31cfaeb90176bdf3c8ec695f50dbb">m_iCursor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ID kursora aplikacji. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d0db8124fa06d13ec1bc4747142c853e"></a><!-- doxytag: member="CWindowData::m_bDoubleRestart" ref="d0db8124fa06d13ec1bc4747142c853e" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#d0db8124fa06d13ec1bc4747142c853e">m_bDoubleRestart</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Czy wymagany podwójny restart okna. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="368546625026afc8655a9033c728a545"></a><!-- doxytag: member="CWindowData::m_iResDoubleRestartX" ref="368546625026afc8655a9033c728a545" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#368546625026afc8655a9033c728a545">m_iResDoubleRestartX</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Oczekiwana szerokość (rozdzielczość X) okna aplikacji po podwójnym restarcie. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4b1680ddbce1114bf231667dcbc2231b"></a><!-- doxytag: member="CWindowData::m_iResDoubleRestartY" ref="4b1680ddbce1114bf231667dcbc2231b" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#4b1680ddbce1114bf231667dcbc2231b">m_iResDoubleRestartY</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Oczekiwana wysokość (rozdzielczość Y) okna aplikacji po podwójnym restarcie. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d1d858e45e54478cb6672b31d2ff5e85"></a><!-- doxytag: member="CWindowData::m_fBkColor" ref="d1d858e45e54478cb6672b31d2ff5e85" args="[4]" -->
+GLfloat&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#d1d858e45e54478cb6672b31d2ff5e85">m_fBkColor</a> [4]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Kolor tła RGB + alfa. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="66955c4affcbfc680af21d6e6124d0c6"></a><!-- doxytag: member="CWindowData::m_uiTimer" ref="66955c4affcbfc680af21d6e6124d0c6" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#66955c4affcbfc680af21d6e6124d0c6">m_uiTimer</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Częstotliwość tikania timera w milisekundach. Domyślnie 1000, jeżeli ustawimy na 0 to timer nieaktywny. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="486dea18b4f4a679f1f3a0e9ecc2f9b5"></a><!-- doxytag: member="CWindowData::m_bUseAntialiasing" ref="486dea18b4f4a679f1f3a0e9ecc2f9b5" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#486dea18b4f4a679f1f3a0e9ecc2f9b5">m_bUseAntialiasing</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Czy aktywny pełnoekranowy antyaliasing. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="620e1e4c3c83cd4ac308ecb2ed35a749"></a><!-- doxytag: member="CWindowData::m_bShowMouseCursor" ref="620e1e4c3c83cd4ac308ecb2ed35a749" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#620e1e4c3c83cd4ac308ecb2ed35a749">m_bShowMouseCursor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Czy kursor myszy ma być pokazywany - tylko gdy fullscreen. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d1247a5903ccb42a246cee31eabc5046"></a><!-- doxytag: member="CWindowData::m_ubBitsPerPixel" ref="d1247a5903ccb42a246cee31eabc5046" args="" -->
+GLubyte&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#d1247a5903ccb42a246cee31eabc5046">m_ubBitsPerPixel</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Głębia kolorów pulpitu. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="37d60e48cc57b765c3d0205f170d7d13"></a><!-- doxytag: member="CWindowData::m_ubZBufferBits" ref="37d60e48cc57b765c3d0205f170d7d13" args="" -->
+GLubyte&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#37d60e48cc57b765c3d0205f170d7d13">m_ubZBufferBits</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bufor głębi. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2e0fc863e0c07553567c39e67698bc95"></a><!-- doxytag: member="CWindowData::m_iDesktopWidth" ref="2e0fc863e0c07553567c39e67698bc95" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#2e0fc863e0c07553567c39e67698bc95">m_iDesktopWidth</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Szerokość pulpitu - rozdzielczość X. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0c8fb3e9d18aa7d87b869142e8570bde"></a><!-- doxytag: member="CWindowData::m_iDesktopHeight" ref="0c8fb3e9d18aa7d87b869142e8570bde" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#0c8fb3e9d18aa7d87b869142e8570bde">m_iDesktopHeight</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wysokość pulpitu - rozdzielczość Y. <br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Wskaźniki na wszelkie obiekty jakie są tworzone w CWindowData.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f7ce9e10c906e362e11db18e4f42222b"></a><!-- doxytag: member="CWindowData::m_pLogger" ref="f7ce9e10c906e362e11db18e4f42222b" args="" -->
+<a class="el" href="class_c_logger.html">CLogger</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#f7ce9e10c906e362e11db18e4f42222b">m_pLogger</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ef7e62a2c08702bc137e3e43175a61a7"></a><!-- doxytag: member="CWindowData::m_pARBMultisample" ref="ef7e62a2c08702bc137e3e43175a61a7" args="" -->
+<a class="el" href="class_c_a_r_b_multisample.html">CARBMultisample</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#ef7e62a2c08702bc137e3e43175a61a7">m_pARBMultisample</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing.">CARBMultisample</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bf5e29dcee354e0ec51cd9c146626f99"></a><!-- doxytag: member="CWindowData::m_pMultiLang" ref="bf5e29dcee354e0ec51cd9c146626f99" args="" -->
+<a class="el" href="class_c_multi_language.html">CMultiLanguage</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_window_data.html#bf5e29dcee354e0ec51cd9c146626f99">m_pMultiLang</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_window_data_1_1_s_setting_file.html">SSettingFile</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca ustawienia aplikacji.  <a href="struct_c_window_data_1_1_s_setting_file.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="f083572a035d23944d138bcf3ed1608b"></a><!-- doxytag: member="CWindowData::~CWindowData" ref="f083572a035d23944d138bcf3ed1608b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CWindowData::~CWindowData           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<a class="anchor" name="38968181b351375d843ab674a9424ab5"></a><!-- doxytag: member="CWindowData::CWindowData" ref="38968181b351375d843ab674a9424ab5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CWindowData::CWindowData           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="fd8735ad22581614f694e2bf7f2375e9"></a><!-- doxytag: member="CWindowData::Construct" ref="fd8735ad22581614f694e2bf7f2375e9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_window_data.html">CWindowData</a> * CWindowData::Construct           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>. 
+<p>
+<a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a> jest singletonem, więc jeżeli wywołamy tę metodę po raz drugi to zwróci ona wskaźnik na obiekt już istniejący, utworzony wcześniej. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="89e8ab7b1aa0b610b9f5c234436bbbe6"></a><!-- doxytag: member="CWindowData::Initialization" ref="89e8ab7b1aa0b610b9f5c234436bbbe6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::Initialization           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Inicjalizacja obiektu <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>. 
+<p>
+Tutaj tworzone są wszelkie obiekty innych klas oraz ustawiane początkowe wartości zmiennych. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia inicjalizacji wszelkich obiektów. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4f4d4b0002c67b4263cd729cc5786c23"></a><!-- doxytag: member="CWindowData::CreateGLWindow" ref="4f4d4b0002c67b4263cd729cc5786c23" args="(WNDPROC *pWndProc, const GLint iIcon, const GLint iCursor)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::CreateGLWindow           </td>
+          <td>(</td>
+          <td class="paramtype">WNDPROC *&nbsp;</td>
+          <td class="paramname"> <em>pWndProc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLint&nbsp;</td>
+          <td class="paramname"> <em>iIcon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLint&nbsp;</td>
+          <td class="paramname"> <em>iCursor</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Główna metoda tworząca okno aplikacji. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pWndProc</em>&nbsp;</td><td>Wskaźnik na funkcje <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIcon</em>&nbsp;</td><td>ID zasobu ikonki jaka zostanie przypisana aplikacji. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iCursor</em>&nbsp;</td><td>ID zasobu kursora jaki zostanie wykorzystany w aplikacji. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia utworzenia okna. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b7f23fb9b5cdb84772c85d69c8c47518"></a><!-- doxytag: member="CWindowData::RestartWindow" ref="b7f23fb9b5cdb84772c85d69c8c47518" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CWindowData::RestartWindow           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda restaru okna. 
+<p>
+Metodę tę należy wywołać jeżeli wymagany jest restart okna, np. pod wpływem zmiany rozdzielczości, głębi kolorów, próbkowania anyatliasingu, przełączając się z trybu okienkowego na pełno-ekranowy i na odwrót. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c" title="Czy okno będzie restartowane. Zmienna wykorzystywana w głównej pętli programu...">m_bRestart</a>, <a class="el" href="class_c_window_data.html#02d72a15217fdd0e437bdfafded94023" title="Metoda ustawiająca zmienną nakazującą restartować okno.">SetRestart</a>, <a class="el" href="class_c_window_data.html#3d121bb281cace3fbd83c849fa21e131" title="Metoda sprawdzająca czy należy zrestartować okno aplikacji.">IsRestart</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="02d72a15217fdd0e437bdfafded94023"></a><!-- doxytag: member="CWindowData::SetRestart" ref="02d72a15217fdd0e437bdfafded94023" args="(GLboolean bRestart)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CWindowData::SetRestart           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bRestart</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca zmienną nakazującą restartować okno. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bRestart</em>&nbsp;</td><td><code>GL_TRUE</code> aby restartować okno, <code>GL_FALSE</code> aby nie restartować. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c" title="Czy okno będzie restartowane. Zmienna wykorzystywana w głównej pętli programu...">m_bRestart</a>, <a class="el" href="class_c_window_data.html#3d121bb281cace3fbd83c849fa21e131" title="Metoda sprawdzająca czy należy zrestartować okno aplikacji.">IsRestart</a>, <a class="el" href="class_c_window_data.html#b7f23fb9b5cdb84772c85d69c8c47518" title="Metoda restaru okna.">RestartWindow</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3d121bb281cace3fbd83c849fa21e131"></a><!-- doxytag: member="CWindowData::IsRestart" ref="3d121bb281cace3fbd83c849fa21e131" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::IsRestart           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy należy zrestartować okno aplikacji. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli należy restartować okno, <code>GL_FALSE</code> jeżeli nie. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c" title="Czy okno będzie restartowane. Zmienna wykorzystywana w głównej pętli programu...">m_bRestart</a>, <a class="el" href="class_c_window_data.html#02d72a15217fdd0e437bdfafded94023" title="Metoda ustawiająca zmienną nakazującą restartować okno.">SetRestart</a>, <a class="el" href="class_c_window_data.html#b7f23fb9b5cdb84772c85d69c8c47518" title="Metoda restaru okna.">RestartWindow</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3de9eab8b98c86d9ff454d2a296d1bc1"></a><!-- doxytag: member="CWindowData::SettingFile" ref="3de9eab8b98c86d9ff454d2a296d1bc1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_c_window_data_1_1_s_setting_file.html">SSettingFile</a>&amp; CWindowData::SettingFile           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca strukturę <a class="el" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji.">SSettingFile</a> przechowującą ustawienia programu. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Referencja na strukturę <a class="el" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji.">SSettingFile</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3e3681ea6383151a21af8050856813f4"></a><!-- doxytag: member="CWindowData::LoadSettingFile" ref="3e3681ea6383151a21af8050856813f4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::LoadSettingFile           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik konfiguracyjny. 
+<p>
+Zwszelkia konfiguracja wczytana z pliku zostanie zapisana do struktury <a class="el" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7" title="Struktura przechowująca wczelką konfigurację programu.">CWindowData::m_sSettingFile</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku konfiguracyjnego. <code>GL_FALSE</code> jeżeli wystąpił jakiś błąd. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_window_data.html#0609086c9a71ff33e02694706b344874" title="Metoda zapisująca plik konfiguracyjny.">SaveSettingFile</a>, <a class="el" href="define_8h.html#85ba5dd2134021be8cd8d3f543e4b0c3" title="Nazwa pliku konfiguracyjnego.">SETTING_FILE_NAME</a>, <a class="el" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7" title="Struktura przechowująca wczelką konfigurację programu.">m_sSettingFile</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0609086c9a71ff33e02694706b344874"></a><!-- doxytag: member="CWindowData::SaveSettingFile" ref="0609086c9a71ff33e02694706b344874" args="(GLboolean bDefaultSave=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::SaveSettingFile           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bDefaultSave</em> = <code>GL_FALSE</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapisująca plik konfiguracyjny. 
+<p>
+Do pliku konfiguracyjnego zostanie zapisana struktura <a class="el" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7" title="Struktura przechowująca wczelką konfigurację programu.">CWindowData::m_sSettingFile</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bDefaultSave</em>&nbsp;</td><td>Jeżeli podamy <code>GL_TRUE</code> to zostaną zapisane ustawienia domyślne a nie rzeczywiste jakie są aktualnie przechowywane w <a class="el" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7" title="Struktura przechowująca wczelką konfigurację programu.">CWindowData::m_sSettingFile</a>. Ustawienia domyślne zapisywane są tylko przy pierwszym uruchomieniu aplikacji. Dalej należy zapisywać ustawienia rzeczywiste czyli skorzystać w domyślnej wartości parametru: <code>GL_FALSE</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia zapisu pliku konfiguracyjnego. <code>GL_FALSE</code> jeżeli wystąpił jakiś błąd. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_window_data.html#3e3681ea6383151a21af8050856813f4" title="Metoda wczytująca plik konfiguracyjny.">LoadSettingFile</a>, <a class="el" href="define_8h.html#85ba5dd2134021be8cd8d3f543e4b0c3" title="Nazwa pliku konfiguracyjnego.">SETTING_FILE_NAME</a>, <a class="el" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7" title="Struktura przechowująca wczelką konfigurację programu.">m_sSettingFile</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1225fbaa54df0873ae1d661333714ae5"></a><!-- doxytag: member="CWindowData::IsCommandLine" ref="1225fbaa54df0873ae1d661333714ae5" args="(LPCTSTR lpParam)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::IsCommandLine           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpParam</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy program został uruchomiony z danym parametrem. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpParam</em>&nbsp;</td><td>Tekst jaki chcemy sprawdzić, czy został zawarty w parametrze programu. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli lpParam zostanie znaleziony w parametrze uruchomionym wraz z programem. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5fbbfb54451febe3829d7e9470dbc1d9"></a><!-- doxytag: member="CWindowData::GetAntialiasingSamples" ref="5fbbfb54451febe3829d7e9470dbc1d9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CWindowData::GetAntialiasingSamples           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Pobranie aktualnej ilości sampli dla antyaliasingu. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Aktualna ilość sampli dla anyaliasingu. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing.">CARBMultisample</a>, <a class="el" href="class_c_window_data.html#d82cacad4c97ca9c33c3236f30c5334f" title="Ustawienie aktualnej ilości sampli dla antyaliasingu.">SetAntialiasingSamples</a>, <a class="el" href="class_c_window_data.html#ef7e62a2c08702bc137e3e43175a61a7" title="Wskaźnik na obiekt klasy CARBMultisample.">m_pARBMultisample</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d82cacad4c97ca9c33c3236f30c5334f"></a><!-- doxytag: member="CWindowData::SetAntialiasingSamples" ref="d82cacad4c97ca9c33c3236f30c5334f" args="(GLint iSamples, GLboolean bRestart=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CWindowData::SetAntialiasingSamples           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iSamples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bRestart</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ustawienie aktualnej ilości sampli dla antyaliasingu. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iSamples</em>&nbsp;</td><td>Ilość sampli jaką chcemy ustawić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bRestart</em>&nbsp;</td><td>Czy od razu restartować okno? Jeżeli podamy <code>GL_TRUE</code> to okno aplikacji zostanie zrestartowane. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing.">CARBMultisample</a>, <a class="el" href="class_c_window_data.html#5fbbfb54451febe3829d7e9470dbc1d9" title="Pobranie aktualnej ilości sampli dla antyaliasingu.">GetAntialiasingSamples</a>, <a class="el" href="class_c_window_data.html#ef7e62a2c08702bc137e3e43175a61a7" title="Wskaźnik na obiekt klasy CARBMultisample.">m_pARBMultisample</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e580bed37d7ad464a1bd35b514cb9997"></a><!-- doxytag: member="CWindowData::ReSizeGLScene" ref="e580bed37d7ad464a1bd35b514cb9997" args="(GLfloat fViewAngle=45.0f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CWindowData::ReSizeGLScene           </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fViewAngle</em> = <code>45.0f</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Przeskalowanie okna OpenGL. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fViewAngle</em>&nbsp;</td><td>Kąt pola widzenia przekazywany do funkcji <em>gluPerspective</em>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="edee292e52851f646279775503a9f200"></a><!-- doxytag: member="CWindowData::ReSizeGLScene" ref="edee292e52851f646279775503a9f200" args="(GLsizei iWidth, GLsizei iHeight, GLfloat fViewAngle=45.0f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CWindowData::ReSizeGLScene           </td>
+          <td>(</td>
+          <td class="paramtype">GLsizei&nbsp;</td>
+          <td class="paramname"> <em>iWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&nbsp;</td>
+          <td class="paramname"> <em>iHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fViewAngle</em> = <code>45.0f</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Przeskalowanie okna OpenGL. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iWidth</em>&nbsp;</td><td>Szerokość okna - rozdzielczość X. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iHeight</em>&nbsp;</td><td>Wysokość okna - rozdzielczość Y. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fViewAngle</em>&nbsp;</td><td>Kąt pola widzenia przekazywany do funkcji <em>gluPerspective</em>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5868951769c3eadc130bd574091d55a5"></a><!-- doxytag: member="CWindowData::CreateInstance" ref="5868951769c3eadc130bd574091d55a5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::CreateInstance           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca instancję naszego programu. 
+<p>
+Metoda ustawia uchwyt <a class="el" href="class_c_window_data.html#9982e2d65d75b3efafd7cf38a734655a" title="Przechowuje instancję aplikacji.">CWindowData::m_hInstance</a> instancją naszej aplikacji. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia pobrania instancji. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1dc4f2cc149c4a62a84c27aae72ccac0"></a><!-- doxytag: member="CWindowData::RegisterMyClass" ref="1dc4f2cc149c4a62a84c27aae72ccac0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::RegisterMyClass           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca oraz rejestrująca klasę okna naszej aplikacji. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="58a9446cdec03ee3800bdfee9981e9b5"></a><!-- doxytag: member="CWindowData::SetDeviceOnFullscreen" ref="58a9446cdec03ee3800bdfee9981e9b5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CWindowData::SetDeviceOnFullscreen           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca tryb urządzenia graficznego na tryb pełnoekranowy. 
+<p>
+Próba ustawienia trybu pełnoekranowego będzie realizowana tylko wtedy jeżeli flaga <a class="el" href="struct_c_window_data_1_1_s_setting_file.html#d539d36241dfb61d56e19d96c08a7254" title="Czy aplikacja ma pracować w trybie pełnoekranowym.">SSettingFile::bFullScreen</a> ustawiona będzie na <code>GL_TRUE</code>. <br>
+ Jeżeli próba ustawienia urządzenia graficznego na tryb pełnoekranowy zakończy się niepowodzeniem, aplikacja zostanie uruchomiona w trybie okna oraz flaga <a class="el" href="struct_c_window_data_1_1_s_setting_file.html#d539d36241dfb61d56e19d96c08a7254" title="Czy aplikacja ma pracować w trybie pełnoekranowym.">SSettingFile::bFullScreen</a> zostanie ustawiona na <code>GL_FALSE</code>. 
+</div>
+</div><p>
+<a class="anchor" name="0642f2af0be6ab3ed08ffe581b643549"></a><!-- doxytag: member="CWindowData::CreateMyWindow" ref="0642f2af0be6ab3ed08ffe581b643549" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::CreateMyWindow           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca okno naszej aplikacji. 
+<p>
+Metoda ustawia uchwyt <a class="el" href="class_c_window_data.html#c3b683e539eded822c4697b5936b43ce" title="Przechowuje uchwyt okna.">CWindowData::m_hWnd</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia utworzenia okna. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="553a157e14b03e5e54c4c9f7489504d8"></a><!-- doxytag: member="CWindowData::GetDeviceContent" ref="553a157e14b03e5e54c4c9f7489504d8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::GetDeviceContent           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca kontekst urządzenia naszej aplikacji. 
+<p>
+Metoda ustawia zmienną <a class="el" href="class_c_window_data.html#e1b204fbbc2913eddd4f27fb8c3c39e7" title="Prywatny kontekst urządzenia GDI.">CWindowData::m_hDC</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia pobrania kontekstu urządzenia. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="24d1c29f3534ccd3af5c74e378eaf7cb"></a><!-- doxytag: member="CWindowData::SetPixelFormat" ref="24d1c29f3534ccd3af5c74e378eaf7cb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::SetPixelFormat           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca format piksela. 
+<p>
+Jeżeli aplikacja wykorzystuje pełnoekranowy antyaliasing to format piksela zostanie wybrany z klasy <a class="el" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing.">CARBMultisample</a>. Jeżeli nie to format piksela zostanie wybrany z kontekstu urządzenia. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku znalezienia pasującego formatu piksela. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2de875e8987ce38e9f0bdde46d3ff425"></a><!-- doxytag: member="CWindowData::CreateRenderingContext" ref="2de875e8987ce38e9f0bdde46d3ff425" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CWindowData::CreateRenderingContext           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca kontekst renderowania. 
+<p>
+Metoda ustawia zmienną <a class="el" href="class_c_window_data.html#60b3722dcbdbaf402caf4beb5cb1a82f" title="Stały kontekst renderowania.">CWindowData::m_hRC</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>OpenGLFramework/<a class="el" href="_window_data_8h-source.html">WindowData.h</a><li>OpenGLFramework/WindowData.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:32 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

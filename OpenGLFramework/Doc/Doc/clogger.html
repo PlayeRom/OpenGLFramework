@@ -1,0 +1,179 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - CLogger</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Klasa CLogger</H1>
+
+<p><b>Konstruktor</b></p>
+<p><a href="#konstruktor">CLogger</a></p>
+
+<p><b>Metody klasy - interface</b></p>
+<table border="1">
+<tr><td><a href="#Open">Open</a></td></tr>
+<tr><td><a href="#Close">Close</a></td></tr>
+<tr><td><a href="#SetActive">SetActive</a></td></tr>
+<tr><td><a href="#GetActive">GetActive</a></td></tr>
+<tr><td><a href="#ClearOldLog">ClearOldLog</a></td></tr>
+<tr><td><a href="#IsClearOldLog">IsClearOldLog</a></td></tr>
+<tr><td><a href="#LOG">LOG</a></td></tr>
+<tr><td><a href="#LOGGetLastError">LOGGetLastError</a></td></tr>
+</table>
+
+<p><a name="konstruktor"></a></p>
+
+<hr/>
+
+<h3>CLogger::CLogger</h3>
+<p>[public] <b>CLogger();</b></p>
+
+<p><a name="Open"></a></p>
+
+<hr/>
+
+<h3>CLogger::Open</h3>
+
+<p>Metoda otwierająca plik do logowania.</p>
+
+<p>[public] <b>GLboolean Open(LPCTSTR </b><i>lpFileName</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>lpFileName</i> - nazwa pliku (a raczej pierwszy człon nazwy pliku), do
+którego będą zapisywane informacje. Pełna nazwa pliku zawiera następujący
+format:<br />
+[<i>lpFileName</i>] <i>&ndash;</i> [<i>YYYY.MM.DD</i>] <i>&ndash;</i> [<i>HH.MM.SS</i>]<i>.log</i><br />
+gdzie:<br />
+<i>lpFileName</i> - to opisywany tu parametr,<br />
+<i>YYYY.MM.DD</i> - data (rok, miesiąc i dzień) utworzenia pliku,<br />
+<i>HH.MM.SS</i> - czas utworzenia pliku, tj. godzina, minuty i sekundy,<br />
+<i>.log</i> - rozszerzenia pliku.<br /><br />
+Patrz plik <a href="define.html">define.h</a>.
+</p>
+
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli otwarcie pliku zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="Close"></a></p>
+
+<hr/>
+
+<h3>CLogger::Close</h3>
+
+<p>Metoda zamykająca plik logowania. Domyślnie jest już wywoływana w destruktorze klasy.</p>
+
+<p>[public] <b>GLvoid Close();</b></p>
+
+<p><a name="SetActive"></a></p>
+
+<hr/>
+
+<h3>CLogger::SetActive</h3>
+
+<p>Za pomocą tej metody uaktywniamy bądź blokujemy możliwość zapisywania
+informacji do pliku. Wywołując metodę <a href="#Open">Open</a> jednocześnie
+uaktywniamy logowanie.</p>
+
+<p>[public] <b>GLvoid SetActive(GLboolean </b><i>bMode</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>bMode</i> - przekazując GL_TRUE uaktywniamy logowanie, przekazując GL_FALSE, logowanie zostanie zablokowane.
+</p>
+
+<p><a name="GetActive"></a></p>
+
+<hr/>
+
+<h3>CLogger::GetActive</h3>
+
+<p>Za pomocą tej metody możemy sprawdzić czy logowanie jest aktywne czy też nie.</p>
+
+<p>[public] <b>inline GLboolean GetActive();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli logowanie jest aktywne, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="ClearOldLog"></a></p>
+
+<hr/>
+
+<h3>CLogger::ClarOldLog</h3>
+
+<p>Za pomocą tej metody możemy ustawic czy w trakcie otwarcia pliku z logowaniem,
+mają być usuwane starte pliki .log.</p>
+<p>[public] <b>inline GLvoid ClearOldLog(GLboolean </b><i>bParam</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>bParam</i> - ustawiając na GL_TRUE stare logi będą usuwane, gdy ustawimy
+na GL_FALSE - nie będą usuwane.
+</p>
+
+<p><a name="IsClearOldLog"></a></p>
+
+<hr/>
+
+<h3>CLogger::IsClarOldLog</h3>
+
+<p>Za pomocą tej metody możemy strawdzić czy w trakcie otwarcia pliku z logowaniem,
+mają być usuwane starte pliki .log.</p>
+<p>[public] <b>inline GLboolean IsClearOldLog();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli stare pliki są usuwane.</p>
+
+<p><a name="LOG"></a></p>
+
+<hr/>
+
+<h3>CLogger::LOG</h3>
+
+<p>Metoda logująca. Za pomocą tej metody przekazujemy dowolny tekst wraz
+z parametrami dla formatowania. Przekazany tekst i parametry zostaną
+zapisane do pliku.</p>
+
+<p>[public] <b>GLvoid LOG(const wchar_t *</b><i>fmt</i><b>, </b><i>...</i><b>);</b></p>
+<p>[public] <b>GLvoid LOG(const char *</b><i>fmt</i><b>, </b><i>...</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>fmt</i> - dowolny łańcuch znaków - może zawierać znaki dla formatowania.<br/>
+<i>...</i> - opcjonalne parametry dla formatowania.
+</p>
+
+<p><b>Przykład</b></p>
+<p><font face="Courier New" size="2">
+m_objLogger->LOG(_T("Wartość x = %d"), nValueX);
+</font></p>
+
+<p><a name="LOGGetLastError"></a></p>
+
+<hr/>
+
+<h3>CLogger::LOGGetLastError</h3>
+
+<p>Motoda ta umożliwia logowanie z wywołaniem metody WinAPI GetLastError().
+Oznacza to, że sprawdzony zostanie kod ostatniego błędu oraz sam numer kodu
+jak i jego opis zostaną zapisane do pliku.</p>
+
+<p>[public] <b>GLvoid LOGGetLastError(LPCTSTR </b><i>lpWhatCallError</i><b> = _T(""));</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>lpWhatCallError</i> - dowolny tekst dzięki, któremu będziemy wiedzieli co wywołało błąd.
+</p>
+
+<p><b>Przykład</b></p>
+<p><font face="Courier New" size="2">
+/*<br />
+&nbsp;* Jeżeli JaksFunkcja zakończy się niepowodzeniem, wywołujemy LOGGetLastError:<br />
+*/<br />
+if(JakasFunkcja() == NULL)<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;m_objLogger->LOGGetLastError(_T("JakasFunkcja()"));<br />
+}
+</font></p>
+<p>W pliku "Log.txt" ujrzymy, np. taki wpis:</p>
+<p><i>21:05:32 05.06.2006: JakasFunkcja() - ErrCode: 2, Nie można odnaleźć
+określonego pliku.</i></p>
+<p>Jak widzimy otrzymamy nasz tekst, następnie kod błędu zwrócony przez
+GetLastError() oraz opis błędu.</p>
+<hr/>
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Draw/Brightness.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Draw/Brightness.h</h1><a href="_brightness_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include "../OpenGLFramework/SingletonBase.h"</span>
+<a name="l00007"></a>00007 
+<a name="l00009"></a>00009 
+<a name="l00012"></a><a class="code" href="class_c_brightness.html">00012</a> <span class="keyword">class </span><a class="code" href="class_c_brightness.html" title="Klasa kontroli jasności ekranu.">CBrightness</a> : <span class="keyword">public</span> <a class="code" href="class_c_singleton_base.html" title="Klasa szablonu singletonów.">CSingletonBase</a> &lt;CBrightness&gt;
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014 <span class="keyword">public</span>:
+<a name="l00016"></a>00016 
+<a name="l00019"></a>00019         <span class="keyword">static</span> <a class="code" href="class_c_brightness.html" title="Klasa kontroli jasności ekranu.">CBrightness</a>* <a class="code" href="class_c_brightness.html#5b3aac851f07b366cd98d29291bf899e" title="Statyczna metoda tworząca obiekt klasy CBrightness.">Construct</a>();
+<a name="l00020"></a>00020 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023         <a class="code" href="class_c_brightness.html#a5ed9f69fd2a7139bb22819dbb401197" title="Destruktor.">~CBrightness</a>();
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026 
+<a name="l00029"></a>00029         GLvoid <a class="code" href="class_c_brightness.html#f87f0e7d2ec58f495c089d411a2ebe33" title="Metoda ustawiająca wartość jasności ekranu.">SetBrightness</a>( GLint iBrightness = 0 );
+<a name="l00030"></a>00030 
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="class_c_brightness.html#6378d9d4755303e9d959c681f316cb87">00033</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_brightness.html#6378d9d4755303e9d959c681f316cb87" title="Metoda zwracająca aktualnie ustawioną wartość jasności ekranu.">GetBrightness</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_brightness.html#ac99ad15496ce409b7c20b273a0eb3ae" title="Zmienna przechowująca aktualną wartość jasności.">m_iBrightness</a>; }
+<a name="l00034"></a>00034 
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037         GLvoid <a class="code" href="class_c_brightness.html#00fb9d02d75d642999ec88dd5e416a97" title="Metoda rysująca &amp;quot;prostokąt jasności&amp;quot;.">Draw</a>();
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">private</span>:
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042         <a class="code" href="class_c_brightness.html#eddb552f75fb350e38f8d29931cd6c16" title="Konstruktor.">CBrightness</a>();
+<a name="l00043"></a>00043 
+<a name="l00045"></a>00045 
+<a name="l00048"></a><a class="code" href="class_c_brightness.html#ac99ad15496ce409b7c20b273a0eb3ae">00048</a>         GLint <a class="code" href="class_c_brightness.html#ac99ad15496ce409b7c20b273a0eb3ae" title="Zmienna przechowująca aktualną wartość jasności.">m_iBrightness</a>;
+<a name="l00049"></a>00049 
+<a name="l00051"></a>00051 
+<a name="l00053"></a><a class="code" href="class_c_brightness.html#7e60f32a5ec28411e28e85047f6ef631">00053</a>         GLubyte <a class="code" href="class_c_brightness.html#7e60f32a5ec28411e28e85047f6ef631" title="Zmienna przechowująca aktualną wartość przezroczystości dla rysowania.">m_ubBrightness</a>;
+<a name="l00054"></a>00054 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:18 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

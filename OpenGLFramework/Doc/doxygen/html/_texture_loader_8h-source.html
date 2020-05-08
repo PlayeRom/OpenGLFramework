@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Draw/TextureLoader.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Draw/TextureLoader.h</h1><a href="_texture_loader_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00007"></a><a class="code" href="_texture_loader_8h.html#34141e6d786db06420feaf9b49e4871c">00007</a> <span class="preprocessor">#define JEH_HEADER "JEH"</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span>
+<a name="l00010"></a>00010 
+<a name="l00013"></a><a class="code" href="class_c_texture_loader.html">00013</a> <span class="keyword">class </span><a class="code" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur.">CTextureLoader</a>  
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015 <span class="keyword">public</span>:
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018         <a class="code" href="class_c_texture_loader.html#8aa537fe7ffdf982dc200d67a9639dd5" title="Konstruktor.">CTextureLoader</a>();
+<a name="l00019"></a>00019 
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022         <span class="keyword">virtual</span> <a class="code" href="class_c_texture_loader.html#e8a06a362e9a96eea99b990e357e3733" title="Destruktor.">~CTextureLoader</a>();
+<a name="l00023"></a>00023 
+<a name="l00025"></a>00025 
+<a name="l00029"></a>00029         GLint <a class="code" href="class_c_texture_loader.html#30966e5a6b8a5c8259843c429213ba52" title="Metoda tworząca teksturę typu mipmap.">LoadTexMipmaps</a>( LPCTSTR lpFileName );
+<a name="l00030"></a>00030 
+<a name="l00032"></a>00032 
+<a name="l00035"></a>00035         GLint <a class="code" href="class_c_texture_loader.html#53d47454d1289542b035473b804bc6a0" title="Metoda tworząca teksturę typu linear.">LoadTex</a>( LPCTSTR lpFileName );
+<a name="l00036"></a>00036 
+<a name="l00038"></a>00038 
+<a name="l00042"></a>00042         GLint <a class="code" href="class_c_texture_loader.html#8d7a24f8e5d5a00f048e547c63f3bb44" title="Metoda tworząca teksturę typu nearest.">LoadTexLowQuality</a>( LPCTSTR lpFileName );
+<a name="l00043"></a>00043 
+<a name="l00045"></a>00045 
+<a name="l00049"></a>00049         GLint <a class="code" href="class_c_texture_loader.html#127cbd716168587a234989fe956dea8f" title="Metoda tworząca teksturę mipmap-ową z maską wczytywaną z pliku.">LoadMultiTexMaskMipmaps</a>( LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB );
+<a name="l00050"></a>00050 
+<a name="l00052"></a>00052 
+<a name="l00059"></a>00059         GLint <a class="code" href="class_c_texture_loader.html#127cbd716168587a234989fe956dea8f" title="Metoda tworząca teksturę mipmap-ową z maską wczytywaną z pliku.">LoadMultiTexMaskMipmaps</a>( LPCTSTR lpFileNameMask, COLORREF crColor );
+<a name="l00060"></a>00060 
+<a name="l00062"></a>00062 
+<a name="l00066"></a>00066         GLint <a class="code" href="class_c_texture_loader.html#5c0286b80e07c0bc64eb42c7ba718bb1" title="Metoda tworząca teksturę linear z maską wczytywaną z pliku.">LoadMultiTexMask</a>( LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB );
+<a name="l00067"></a>00067 
+<a name="l00069"></a>00069 
+<a name="l00073"></a>00073         GLint <a class="code" href="class_c_texture_loader.html#5c0286b80e07c0bc64eb42c7ba718bb1" title="Metoda tworząca teksturę linear z maską wczytywaną z pliku.">LoadMultiTexMask</a>( LPCTSTR lpFileNameMask, COLORREF crColor );
+<a name="l00074"></a>00074 
+<a name="l00076"></a>00076 
+<a name="l00080"></a>00080         GLint <a class="code" href="class_c_texture_loader.html#adc2d97da7c496b3d087343d44e55fc1" title="Metoda tworząca teksturę nearest z maską wczytywaną z pliku.">LoadMultiTexMaskLowQuality</a>( LPCTSTR lpFileNameMask, LPCTSTR lpFileNameRGB );
+<a name="l00081"></a>00081 
+<a name="l00083"></a>00083 
+<a name="l00087"></a>00087         GLint <a class="code" href="class_c_texture_loader.html#adc2d97da7c496b3d087343d44e55fc1" title="Metoda tworząca teksturę nearest z maską wczytywaną z pliku.">LoadMultiTexMaskLowQuality</a>( LPCTSTR lpFileNameMask, COLORREF crColor );
+<a name="l00088"></a>00088 
+<a name="l00090"></a>00090 
+<a name="l00094"></a>00094         GLint <a class="code" href="class_c_texture_loader.html#2db6cb797fd4f2324b0048a9f7115b2c" title="Metoda wczytująca teksturę dla efektu emboss bump.">LoadEmbossBump</a>( LPCTSTR lpFileName );
+<a name="l00095"></a>00095 
+<a name="l00097"></a>00097 
+<a name="l00103"></a>00103         GLboolean <a class="code" href="class_c_texture_loader.html#00f41dc44ce4b25c563439b4eb4dc647" title="Metoda ustawiająca teksturę dla aktualnie ustawionej jednostki teksturującej.">SetTexture</a>( GLint iIndex = 0 );
+<a name="l00104"></a>00104 
+<a name="l00106"></a>00106 
+<a name="l00112"></a>00112         GLboolean <a class="code" href="class_c_texture_loader.html#8a16ef37de31ebeead0d068992411d2f" title="Metoda ustawiająca multi-teksturę dla aktualnie ustawionej jednostki teksturującej...">SetMultiTextures</a>( GLint iIndex );
+<a name="l00113"></a>00113 
+<a name="l00115"></a>00115         GLvoid <a class="code" href="class_c_texture_loader.html#02e0a02a884d70782feb13cd0e28ba5c" title="Metoda wyświetlająca identyfikatory i przypisane im nazwy tekstur.">DisplayIDTextureName</a>();
+<a name="l00116"></a>00116 
+<a name="l00118"></a>00118 
+<a name="l00119"></a><a class="code" href="class_c_texture_loader.html#27e19a54a90b03f42e58ba7db7bff151">00119</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_texture_loader.html#27e19a54a90b03f42e58ba7db7bff151" title="Metoda zwracająca liczbę określajacą ilość wczytanych tekstur.">GetTextureSize</a>() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c_texture_loader.html#ddf2d90b481f5df92b017d6feb17468e" title="Tablica przechowująca identyfikatory wszytskich wczytanych tekstur.">m_aTexture</a>.size() ); }
+<a name="l00120"></a>00120 
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123         GLvoid <a class="code" href="class_c_texture_loader.html#9b76fe8fb1949e93a82b44cbdbb4969a" title="Metoda usuwająca wskazaną teksturę.">DeleteTexture</a>( GLint iIndex );
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125 <span class="keyword">private</span>:
+<a name="l00126"></a>00126 
+<a name="l00128"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture_data.html">00128</a>         <span class="keyword">struct </span><a class="code" href="struct_c_texture_loader_1_1_s_texture_data.html" title="Struktura przechowująca identyfikatory wczytanych tekstur.">STextureData</a>
+<a name="l00129"></a>00129         {
+<a name="l00130"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture_data.html#57117f02102fa13068e1e84ba16406ff">00130</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_texture_data.html#57117f02102fa13068e1e84ba16406ff" title="Identyfikator tekstury.">uiTexture</a>;               
+<a name="l00131"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture_data.html#971807b89745face83ea57a3ac81201a">00131</a>                 TCHAR *lpFileName;              
+<a name="l00132"></a>00132         };
+<a name="l00133"></a>00133 
+<a name="l00135"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture.html">00135</a>         <span class="keyword">struct </span><a class="code" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">STexture</a>
+<a name="l00136"></a>00136         {
+<a name="l00137"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture.html#8f258da8de35afd68f7f9a0a03f3675d">00137</a>                 GLubyte* <a class="code" href="struct_c_texture_loader_1_1_s_texture.html#8f258da8de35afd68f7f9a0a03f3675d" title="Wskaźnik na dane obrazu.">ubImageData</a>;           
+<a name="l00138"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture.html#08783fc24627d6714e149f864ceec671">00138</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_texture.html#08783fc24627d6714e149f864ceec671" title="Ilość bitów na piksel.">uiBitsPerPixel</a>;          
+<a name="l00139"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture.html#358f7ff3c90b9373ad23750f349abfa4">00139</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_texture.html#358f7ff3c90b9373ad23750f349abfa4" title="Szerokość obrazu w pikselach.">uiWidth</a>;                         
+<a name="l00140"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture.html#8698b62d19e78a7d0ce61d3decb778d1">00140</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_texture.html#8698b62d19e78a7d0ce61d3decb778d1" title="Wysokość obrazu w pikselach.">uiHeight</a>;                        
+<a name="l00141"></a><a class="code" href="struct_c_texture_loader_1_1_s_texture.html#76c47cbe0fdbf4a78071e605c00f208e">00141</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_texture.html#76c47cbe0fdbf4a78071e605c00f208e" title="Format tekstury, tj. GL_RGB, GL_RGBA.">uiType</a>;                          
+<a name="l00142"></a>00142         };
+<a name="l00143"></a>00143 
+<a name="l00145"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html">00145</a>         <span class="keyword">struct </span><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html" title="Struktura pomocnicza przy wczytywaniu pliku TGA.">STGAFile</a>
+<a name="l00146"></a>00146         {
+<a name="l00147"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#e586af097fab3d342a29bedb8da9cfc3">00147</a>                 GLubyte <a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#e586af097fab3d342a29bedb8da9cfc3" title="Nagłowek pliku TGA.">ubHeader</a>[ 18 ];         
+<a name="l00148"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#ac91b8b200cfe80b7da93ae89f918513">00148</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#ac91b8b200cfe80b7da93ae89f918513" title="Ilość bajtów na piksel.">uiBytesPerPixel</a>;         
+<a name="l00149"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#7487bdf66f7a3ec99de108c1c1169600">00149</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#7487bdf66f7a3ec99de108c1c1169600" title="Rozmiar obrazu w bajtach/.">uiImageSize</a>;                     
+<a name="l00150"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#487b885b7b3e83da34637723510adf2b">00150</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#487b885b7b3e83da34637723510adf2b" title="Format tekstury, tj. GL_RGB, GL_RGBA.">uiType</a>;                          
+<a name="l00151"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#54954b5475d0aab9ba9b40eab55fce8f">00151</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#54954b5475d0aab9ba9b40eab55fce8f" title="Szerokość obrazu w pikselach.">uiWidth</a>;                         
+<a name="l00152"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#158477b70db7e96c4653a0f6639dc1ac">00152</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#158477b70db7e96c4653a0f6639dc1ac" title="Wysokość obrazu w pikselach.">uiHeight</a>;                        
+<a name="l00153"></a><a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#718c756ce6ab50e3f0ff2cc0bd04980a">00153</a>                 GLuint <a class="code" href="struct_c_texture_loader_1_1_s_t_g_a_file.html#718c756ce6ab50e3f0ff2cc0bd04980a" title="Ilość bitów na piksel.">uiBitsPerPixel</a>;          
+<a name="l00154"></a>00154         };
+<a name="l00155"></a>00155 
+<a name="l00157"></a><a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html">00157</a>         <span class="keyword">struct </span><a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html" title="Struktura reprezentująca nagłówek pliku JEH.">SHeaderJEH</a>
+<a name="l00158"></a>00158         {
+<a name="l00159"></a><a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#a084b6c758bb118606de75b3ab4da474">00159</a>                 <span class="keywordtype">char</span> <a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#a084b6c758bb118606de75b3ab4da474" title="Nagłowek identyfikujący format pliku.">cHeader</a>[ 4 ];                      
+<a name="l00160"></a><a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#b2e3569f0adeb0bc580db6e1e4f7a21b">00160</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#b2e3569f0adeb0bc580db6e1e4f7a21b" title="Szerokość obrazu w pikselach.">uiWidth</a>;           
+<a name="l00161"></a><a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#eb3ec3cce1e8a5256102ea8ccea30dfe">00161</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#eb3ec3cce1e8a5256102ea8ccea30dfe" title="Wysokość obrazu w pikselach.">uiHeight</a>;          
+<a name="l00162"></a><a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#d16b4bd96cb3d2e306e01ef87c2869f6">00162</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#d16b4bd96cb3d2e306e01ef87c2869f6" title="Wielkość danych obrazu w bajtach.">uiSizeImage</a>;       
+<a name="l00163"></a><a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#f8989965bdbc2baebda2a184154f03c1">00163</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_c_texture_loader_1_1_s_header_j_e_h.html#f8989965bdbc2baebda2a184154f03c1" title="Ilość bitów na piksel.">uiBitCount</a>;        
+<a name="l00164"></a>00164         };
+<a name="l00165"></a>00165 
+<a name="l00167"></a>00167 
+<a name="l00170"></a>00170         GLint <a class="code" href="class_c_texture_loader.html#8a62a34c6d0780c8a70786e5ca213ad0" title="Metoda sprawdzająca rozszerzenie pliku.">CheckExtension</a>( LPCTSTR lpFileName );
+<a name="l00171"></a>00171 
+<a name="l00173"></a>00173 
+<a name="l00180"></a>00180         GLint <a class="code" href="class_c_texture_loader.html#4910b7e765d2f9664c9edf829c45bd7e" title="Metoda wczytując oraz tworząca normalną teksturę.">LoadGLTex</a>( LPCTSTR lpFileName, GLint iMode = 0, GLint iFormat = 0, GLboolean bEmbossBump = GL_FALSE );
+<a name="l00181"></a>00181         
+<a name="l00183"></a>00183 
+<a name="l00193"></a>00193         GLint <a class="code" href="class_c_texture_loader.html#77ca8f83ac06b406f574a77434ed573c" title="Metoda wczytując oraz tworząca multi-teksturę z maską wczytaną z pliku.">LoadGLMultiTexMask</a>( LPCTSTR lpFileName1, LPCTSTR lpFileName2, GLint iMode = 0, GLint iFormat1 = 0, GLint iFormat2 = 0 );
+<a name="l00194"></a>00194 
+<a name="l00196"></a>00196 
+<a name="l00207"></a>00207         GLint <a class="code" href="class_c_texture_loader.html#77ca8f83ac06b406f574a77434ed573c" title="Metoda wczytując oraz tworząca multi-teksturę z maską wczytaną z pliku.">LoadGLMultiTexMask</a>( LPCTSTR lpFileNameMask, COLORREF crColor, GLint iMode = 0, GLint iFormat = 0 );
+<a name="l00208"></a>00208 
+<a name="l00210"></a>00210 
+<a name="l00215"></a>00215         GLint <a class="code" href="class_c_texture_loader.html#0f589df7d28e3d8c5c37c50734cdad81" title="Metoda tworząca teksturę dla efektu emboss bump.">CreateEmbossBumpTexture</a>( GLint iIndex, <a class="code" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">STexture</a> &amp;texTexture, GLint iMode );
+<a name="l00216"></a>00216 
+<a name="l00218"></a>00218 
+<a name="l00222"></a>00222         GLboolean <a class="code" href="class_c_texture_loader.html#e7e81a500ad81641e3138fe72f319f57" title="Metoda wczytująca plik BMP.">LoadBMP</a>( <a class="code" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">STexture</a> &amp;out_sTexture, LPCTSTR lpFileName );
+<a name="l00223"></a>00223 
+<a name="l00225"></a>00225 
+<a name="l00229"></a>00229         GLboolean <a class="code" href="class_c_texture_loader.html#7e7a92b970af9129ecda4b97a3deb01a" title="Metoda wczytująca plik TGA.">LoadTGA</a>( <a class="code" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">STexture</a> &amp;out_sTexture, LPCTSTR lpFileName );
+<a name="l00230"></a>00230 
+<a name="l00232"></a>00232 
+<a name="l00236"></a>00236         GLboolean <a class="code" href="class_c_texture_loader.html#18a62fdcede34a54b4cbebaa7d806ea0" title="Metoda wczytująca plik JEH.">LoadJEH</a>( <a class="code" href="struct_c_texture_loader_1_1_s_texture.html" title="Struktua pomocnicza, przechowująca dane obrazu.">STexture</a> &amp;out_sTexture, LPCTSTR lpFileName );
+<a name="l00237"></a>00237 
+<a name="l00239"></a><a class="code" href="class_c_texture_loader.html#9fa9ec879b6510827ba18043b8ccdfe1">00239</a>         GLint <a class="code" href="class_c_texture_loader.html#9fa9ec879b6510827ba18043b8ccdfe1" title="Licznik kontrolny, ilości wczytywanych tekstur.">m_iCounterTexture</a>;
+<a name="l00240"></a>00240 
+<a name="l00242"></a><a class="code" href="class_c_texture_loader.html#ddf2d90b481f5df92b017d6feb17468e">00242</a>         std::vector&lt;STextureData&gt; <a class="code" href="class_c_texture_loader.html#ddf2d90b481f5df92b017d6feb17468e" title="Tablica przechowująca identyfikatory wszytskich wczytanych tekstur.">m_aTexture</a>;
+<a name="l00243"></a>00243 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,1183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CGameControl</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CGameControl</h1><!-- doxytag: class="CGameControl" --><!-- doxytag: inherits="CSingletonBase&lt; CGameControl &gt;" --><code>#include &lt;<a class="el" href="_game_control_8h-source.html">GameControl.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CGameControl</div>
+<div class="dynsection">
+<p><center><img src="class_c_game_control__inherit__graph.png" border="0" usemap="#_c_game_control__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_game_control__inherit__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CGameControl \&gt;" alt="" coords="5,5,235,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagram współpracy dla CGameControl:</div>
+<div class="dynsection">
+<p><center><img src="class_c_game_control__coll__graph.png" border="0" usemap="#_c_game_control__coll__map" alt="Collaboration graph"></center>
+<map name="_c_game_control__coll__map">
+<area shape="rect" href="class_c_particles.html" title="Klasa cząsteczek." alt="" coords="2055,504,2137,531"><area shape="rect" title="m_pGameCtrl" alt="" coords="1900,573,1908,581"><area shape="rect" title="m_pGameCtrl" alt="" coords="2060,527,2068,535"><area shape="rect" href="class_c3_d_obj_manager.html" title="Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku 3DObj..." alt="" coords="2288,637,2411,664"><area shape="rect" title="m_pGameCtrl" alt="" coords="1900,588,1908,596"><area shape="rect" title="m_pGameCtrl" alt="" coords="2300,633,2308,641"><area shape="rect" href="class_c3_d_obj_file.html" title="Klasa zapisu i odczytu pliku 3DObj." alt="" coords="2051,637,2141,664"><area shape="rect" title="m_pGameCtrl" alt="" coords="1872,599,1880,607"><area shape="rect" title="m_pGameCtrl" alt="" coords="2047,643,2055,651"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CGameControl \&gt;" alt="" coords="1375,11,1604,37"><area shape="rect" href="class_c_emboss_bump.html" title="Klasa tworzenia efektu tłoczonego mapowania wybojów." alt="" coords="1235,65,1349,92"><area shape="rect" title="m_pEmbossBump" alt="" coords="1345,73,1353,81"><area shape="rect" title="m_pEmbossBump" alt="" coords="1843,572,1851,580"><area shape="rect" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="708,109,785,136"><area shape="rect" title="m_cLight" alt="" coords="781,113,789,121"><area shape="rect" title="m_cLight" alt="" coords="1231,79,1239,87"><area shape="rect" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku..." alt="" coords="939,124,1197,151"><area shape="rect" title="cLightPos" alt="" coords="781,123,789,131"><area shape="rect" title="cLightPos" alt="" coords="935,131,943,139"><area shape="rect" href="class_c_console.html" title="Klasa konsoli." alt="" coords="1449,481,1529,508"><area shape="rect" title="m_pConsole" alt="" coords="1525,492,1533,500"><area shape="rect" title="m_pConsole" alt="" coords="1827,572,1835,580"><area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="1016,403,1120,429"><area shape="rect" href="class_c_r_message_box.html" title="Klasa rysująca MessageBox&#45;a." alt="" coords="1431,393,1548,420"><area shape="rect" href="class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową." alt="" coords="1019,539,1117,565"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,548,1123,556"><area shape="rect" title="m_pBitmapFont" alt="" coords="1789,576,1797,584"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,541,1123,549"><area shape="rect" title="m_pBitmapFont" alt="" coords="1445,496,1453,504"><area shape="rect" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="1027,267,1109,293"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,276,1115,284"><area shape="rect" title="m_pSDLFont" alt="" coords="1843,572,1851,580"><area shape="rect" title="m_pSDLFont" alt="" coords="1091,289,1099,297"><area shape="rect" title="m_pSDLFont" alt="" coords="1459,477,1467,485"><area shape="rect" href="class_c_fps.html" title="Klasa zliczająca i wyświetlająca ilość generowanych klatek na sekundę." alt="" coords="1463,227,1516,253"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,272,1115,280"><area shape="rect" title="m_pSDLFont" alt="" coords="1459,239,1467,247"><area shape="rect" title="m_pSDLFontText" alt="" coords="1107,285,1115,293"><area shape="rect" title="m_pSDLFontText" alt="" coords="1459,389,1467,397"><area shape="rect" href="class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,191,800,217"><area shape="rect" title="m_pWin" alt="" coords="796,196,804,204"><area shape="rect" title="m_pWin" alt="" coords="1844,572,1852,580"><area shape="rect" title="m_pWinData" alt="" coords="793,213,801,221"><area shape="rect" title="m_pWinData" alt="" coords="1023,267,1031,275"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,89,520,116"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,140,472,167"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,155,476,163"><area shape="rect" title="m_pARBMultisample" alt="" coords="697,187,705,195"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,191,465,217"><area shape="rect" title="m_pMultiLang" alt="" coords="463,200,471,208"><area shape="rect" title="m_pMultiLang" alt="" coords="689,200,697,208"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,191,243,217"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,241,500,268"><area shape="rect" title="m_sSettingFile" alt="" coords="496,244,504,252"><area shape="rect" title="m_sSettingFile" alt="" coords="699,213,707,221"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,292,443,319"><area shape="rect" title="m_pLogger" alt="" coords="440,303,448,311"><area shape="rect" title="m_pLogger" alt="" coords="731,213,739,221"><area shape="rect" href="class_c_my_font.html" title="Klasa rysująca tekst." alt="" coords="1031,463,1105,489"><area shape="rect" title="m_pMyFont" alt="" coords="1103,473,1111,481"><area shape="rect" title="m_pMyFont" alt="" coords="1445,489,1453,497"><area shape="rect" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji." alt="" coords="1012,604,1124,631"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,612,1129,620"><area shape="rect" title="m_pSpeedControl" alt="" coords="1789,588,1797,596"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,607,1129,615"><area shape="rect" title="m_pSpeedControl" alt="" coords="1445,503,1453,511"><area shape="rect" href="class_c_matrix_operations.html" title="Klasa wspierająca obliczenia dla przekształceń dwu i trzywymiarowych." alt="" coords="1423,669,1556,696"><area shape="rect" title="m_pMatrixOp" alt="" coords="1552,683,1560,691"><area shape="rect" title="m_pMatrixOp" alt="" coords="1832,599,1840,607"><area shape="rect" title="m_pFps" alt="" coords="1513,231,1521,239"><area shape="rect" title="m_pFps" alt="" coords="1843,572,1851,580"><area shape="rect" href="class_c_stencil_shadow.html" title="Klasa wspomagająca rysowanie dynamicznych cieni shadow volume." alt="" coords="1429,125,1549,152"><area shape="rect" title="m_pStencilShadow" alt="" coords="1545,123,1553,131"><area shape="rect" title="m_pStencilShadow" alt="" coords="1844,572,1852,580"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1193,133,1201,141"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1425,135,1433,143"><area shape="rect" href="class_c_billboard.html" title="Klasa rysująca billboardy." alt="" coords="1448,720,1531,747"><area shape="rect" title="m_pBillboard" alt="" coords="1527,735,1535,743"><area shape="rect" title="m_pBillboard" alt="" coords="1839,599,1847,607"><area shape="rect" href="class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora..." alt="" coords="1407,771,1572,797"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1564,793,1572,801"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1843,599,1851,607"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWGLEXTSwapControl \&gt;" alt="" coords="927,771,1209,797"><area shape="rect" href="class_c_outline_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką konturową." alt="" coords="1439,821,1540,848"><area shape="rect" title="m_pOutlineFont" alt="" coords="1536,843,1544,851"><area shape="rect" title="m_pOutlineFont" alt="" coords="1841,599,1849,607"><area shape="rect" href="class_c_cursor.html" title="Klasa zarządzająca kursorami." alt="" coords="1453,872,1525,899"><area shape="rect" title="m_pCursor" alt="" coords="1521,892,1529,900"><area shape="rect" title="m_pCursor" alt="" coords="1843,599,1851,607"><area shape="rect" title="m_pParticles" alt="" coords="2051,509,2059,517"><area shape="rect" title="m_pParticles" alt="" coords="1857,572,1865,580"><area shape="rect" href="class_c_texture_font.html" title="Klasa umożliwiająca rysowanie tekstu za pomocą tekstury z czcionką." alt="" coords="1437,987,1541,1013"><area shape="rect" title="m_pTextureFont" alt="" coords="1537,1008,1545,1016"><area shape="rect" title="m_pTextureFont" alt="" coords="1843,599,1851,607"><area shape="rect" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur." alt="" coords="1009,956,1127,983"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,961,1132,969"><area shape="rect" title="m_pTextureLoader" alt="" coords="1843,599,1851,607"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,969,1132,977"><area shape="rect" title="m_pTextureLoader" alt="" coords="1433,992,1441,1000"><area shape="rect" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing." alt="" coords="1419,1037,1560,1064"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1531,1060,1539,1068"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1844,599,1852,607"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CARBMultiTexturing \&gt;" alt="" coords="937,1037,1199,1064"><area shape="rect" title="m_p3DObjManager" alt="" coords="2307,660,2315,668"><area shape="rect" title="m_p3DObjManager" alt="" coords="1861,599,1869,607"><area shape="rect" title="m_p3DObjFile" alt="" coords="2137,647,2145,655"><area shape="rect" title="m_p3DObjFile" alt="" coords="2284,647,2292,655"><area shape="rect" title="m_pRMessageBox" alt="" coords="1545,409,1553,417"><area shape="rect" title="m_pRMessageBox" alt="" coords="1837,572,1845,580"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_game_control-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Główna klasa zarządzająca grą. 
+<p>
+Jest to klasa odpowiedzialna za zarządzanie tworzoną grą. Jako, że jest klasą newralgiczną dla projektu i zawiera ważne dane programu, <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a> jest singletonem. Klasa ta tworzy większość obiektów opisywanych tu klas oraz wskazane jest aby obiekty naszych nowo dodanych klas także były tutaj tworzone. <br>
+ Poza tym klasa <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a> otrzymuje wszelkie zdarzenia klawiatury i myszy oraz obsługuje je, bądź przekazuje innym klasom. W metodzie <a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f" title="Główna funkcja rysująca scenę.">CGameControl::Draw</a>, natomiast, rysowany jest cały wirtualny świat. Ogólnie mówiąc jest to klasa, od której rozpoczynamy tworzenie naszej gry. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#213d34be5d15e4bf1bf6e979d44a0e66">~CGameControl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#213d34be5d15e4bf1bf6e979d44a0e66"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891">Initialization</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a>.  <a href="#cf77808f6f76e9450b8bcce36fe6d891"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLUquadricObj *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#3ca00a544e364fc102c1ec335e0bbbdf">GetQuadric</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca wskaźnik kwadryki.  <a href="#3ca00a544e364fc102c1ec335e0bbbdf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#f67644039305f7dec302a9977219d565">SetVSync</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda włączająca lub wyłączająca synchronicazję pionową.  <a href="#f67644039305f7dec302a9977219d565"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#bcb5377d0f05a30a8fd9c07a184f30c2">Exit</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zamykająca aplikację.  <a href="#bcb5377d0f05a30a8fd9c07a184f30c2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#65a5c9465fd2ee0231762b3ccb12d751">RestartObjects</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda restartuje wszelkie obiekty utworzone w <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a>, które restartu wymagają.  <a href="#65a5c9465fd2ee0231762b3ccb12d751"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#2938bdf7ed88f7d1fd6b94f472581cf1">KeyDown</a> (GLuint uiKey)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#2938bdf7ed88f7d1fd6b94f472581cf1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#048c636173190a77930819e776f841b6">KeyUp</a> (GLuint uiKey)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie zwolnienia klawisza klawiatury, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#048c636173190a77930819e776f841b6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#afe8dc0f2316b76616b1f9bba1e88907">Keyboard</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przetwarzająca naciśnięte klawisze klawiatury.  <a href="#afe8dc0f2316b76616b1f9bba1e88907"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#20aa5c436ba2f8a9c474dc55649014be">WriteOnKeyboard</a> (GLuint uiKey, LPTSTR lpBuffer, GLint iBufferLenMax)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wypełniająca bufor znakami przekazywanymi z klawiatury.  <a href="#20aa5c436ba2f8a9c474dc55649014be"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#37c32bbfd7c38964e441b7177138d510">GetKeyStatus</a> (GLuint uiKey)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda za pomocą, której możemy sprawdzić czy dany klawisz jest wciśnięty.  <a href="#37c32bbfd7c38964e441b7177138d510"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#189532981410bcb749a73115822e7472">GetKeyChar</a> (GLuint uiKeyCode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda konwertująca kod klawisza na odpowiadający mu znak ASCII.  <a href="#189532981410bcb749a73115822e7472"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#d3da7b6b8391553e8d3ac907d188a856">MouseLButtonDown</a> (GLint iX, GLint iY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie kliknięcia lewym przyciskiem myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#d3da7b6b8391553e8d3ac907d188a856"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#143f30d97688ba432425eee25f14984c">MouseLButtonUp</a> (GLint iX, GLint iY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie zwolnienia lewego przycisku myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#143f30d97688ba432425eee25f14984c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#67651756d2815089f2bc6f4eed51c2ef">MouseRButtonDown</a> (GLint iX, GLint iY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie kliknięcia prawym przyciskiem myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#67651756d2815089f2bc6f4eed51c2ef"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#b9e3c966599eb7ba0f7cc71546ad55d7">MouseRButtonUp</a> (GLint iX, GLint iY)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie zwolnienia prawego przycisku myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#b9e3c966599eb7ba0f7cc71546ad55d7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#11604953bd6fafa0fcb24ff09bf1c0cf">MouseWheel</a> (GLint iScrollLines)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zdarzenie przekręcenia kółka myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#11604953bd6fafa0fcb24ff09bf1c0cf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f">Draw</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Główna funkcja rysująca scenę.  <a href="#e48ce07d9969e4d92457cde2ac095f7f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">POINT&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#1b6f2f9b4ec8b5d64393e9362d6f81e1">GetPointCursor</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca aktualną pozycję kurosra myszy.  <a href="#1b6f2f9b4ec8b5d64393e9362d6f81e1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#c173df6f512c2648eb7092c369b8af07">Enable2D</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda włączająca tryb grafiki 2D.  <a href="#c173df6f512c2648eb7092c369b8af07"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#8fc28049e8a53deec96581ae946e264b">Disable2D</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyłączająca tryb grafiki 2D - powraca do 3D.  <a href="#8fc28049e8a53deec96581ae946e264b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#57558c24df99d131697b9ef884bd7b6a">Timer</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda timer-a, wywoływana automatycznie gdy nadejdzie zdarzenie <code>WM_TIMER</code>, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>.  <a href="#57558c24df99d131697b9ef884bd7b6a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e">CreateObjects</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.  <a href="#d5535ce90f5fb5284a31fb42dfcfed4e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#93c24a57afb6dd1118a1b8a15f841ae8">DeleteObjects</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Usuwa wszelkie obiekty innych klasy, utworzonych w <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a>.  <a href="#93c24a57afb6dd1118a1b8a15f841ae8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="10e95f1ea7ef96b81e967b0f77becb7f"></a><!-- doxytag: member="CGameControl::SetLights" ref="10e95f1ea7ef96b81e967b0f77becb7f" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#10e95f1ea7ef96b81e967b0f77becb7f">SetLights</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawia wstępne parametry oświetlenia. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#39a8b6c3e7cd3dbae8707e4e79afe89d">CreateAllAnimCtrl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca wszelkie obiekty dla kontroli animacji.  <a href="#39a8b6c3e7cd3dbae8707e4e79afe89d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#f149039ef53e701fa0f514cddbf10329">LoadAllTextures</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca tekstury.  <a href="#f149039ef53e701fa0f514cddbf10329"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#82b544fd603ac60e32a812e0a6139823">CreateAllParticles</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca emitery cząsteczek.  <a href="#82b544fd603ac60e32a812e0a6139823"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#b65036aedad334e0d4851060df188779">LoadAll3DObjFiles</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca wszystkie obiekty 3D.  <a href="#b65036aedad334e0d4851060df188779"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#a93e8afb18f0fecc348f03f10c0574b7">LoadAllSounds</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca wszelkie dźwieki i muzykę.  <a href="#a93e8afb18f0fecc348f03f10c0574b7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#f8e1c320d64532fefaa68a2d5f656cb6">CreateVertices</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca własnoręcznie dodawane wierzchołki w celu ich późniejszego renderowania.  <a href="#f8e1c320d64532fefaa68a2d5f656cb6"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metody get zwracające wskaźniki na różne obiekty tworzone w CGameControl.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="61c2fd5bff29be9eb08a8f4fe07f132d"></a><!-- doxytag: member="CGameControl::GetWinData" ref="61c2fd5bff29be9eb08a8f4fe07f132d" args="()" -->
+<a class="el" href="class_c_window_data.html">CWindowData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetWinData</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7c24fff8c657f8dc6eb71c79a9a2acb6"></a><!-- doxytag: member="CGameControl::GetSpeedCtrl" ref="7c24fff8c657f8dc6eb71c79a9a2acb6" args="()" -->
+<a class="el" href="class_c_speed_control.html">CSpeedControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSpeedCtrl</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c0dbb930f2360f55507f2f5e244563fe"></a><!-- doxytag: member="CGameControl::GetTexLoader" ref="c0dbb930f2360f55507f2f5e244563fe" args="()" -->
+<a class="el" href="class_c_texture_loader.html">CTextureLoader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTexLoader</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="76519fc8ad9bc0622154a67f65b4d084"></a><!-- doxytag: member="CGameControl::GetBitmapFont" ref="76519fc8ad9bc0622154a67f65b4d084" args="()" -->
+<a class="el" href="class_c_bitmap_font.html">CBitmapFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetBitmapFont</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d088c76e6d4a32a00355ff3996674752"></a><!-- doxytag: member="CGameControl::GetOutlineFont" ref="d088c76e6d4a32a00355ff3996674752" args="()" -->
+<a class="el" href="class_c_outline_font.html">COutlineFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetOutlineFont</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="47575a5b9c8283a355e53de5c2c06362"></a><!-- doxytag: member="CGameControl::GetConsole" ref="47575a5b9c8283a355e53de5c2c06362" args="()" -->
+<a class="el" href="class_c_console.html">CConsole</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetConsole</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b7ef34636ea076a5f4519b5f6edb9f18"></a><!-- doxytag: member="CGameControl::GetFps" ref="b7ef34636ea076a5f4519b5f6edb9f18" args="()" -->
+<a class="el" href="class_c_fps.html">CFps</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetFps</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a9b857a5d4efa0cc47087fe0a57dc775"></a><!-- doxytag: member="CGameControl::GetSoundFMOD" ref="a9b857a5d4efa0cc47087fe0a57dc775" args="()" -->
+CSoundFMOD *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSoundFMOD</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="030f8349b383a917cb40f0708f3828d1"></a><!-- doxytag: member="CGameControl::GetMasterVolume" ref="030f8349b383a917cb40f0708f3828d1" args="()" -->
+CMasterVolume *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMasterVolume</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bcba0fee9a22bf12d0a255524313bbe9"></a><!-- doxytag: member="CGameControl::GetSDLFont" ref="bcba0fee9a22bf12d0a255524313bbe9" args="()" -->
+<a class="el" href="class_c_s_d_l_font.html">CSDLFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetSDLFont</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f5a25273768174c8ff4e05e59b7deb08"></a><!-- doxytag: member="CGameControl::GetLighting" ref="f5a25273768174c8ff4e05e59b7deb08" args="()" -->
+CLighting *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetLighting</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="47cd78d6e3714db87d65f182300de9e7"></a><!-- doxytag: member="CGameControl::GetTextureFont" ref="47cd78d6e3714db87d65f182300de9e7" args="()" -->
+<a class="el" href="class_c_texture_font.html">CTextureFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetTextureFont</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="df195c33211106da5a1122e28c2b2c72"></a><!-- doxytag: member="CGameControl::GetCursor" ref="df195c33211106da5a1122e28c2b2c72" args="()" -->
+<a class="el" href="class_c_cursor.html">CCursor</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetCursor</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6e94ad8f4f5deeb1f3d9362cccbc1203"></a><!-- doxytag: member="CGameControl::GetARBMultiTexturing" ref="6e94ad8f4f5deeb1f3d9362cccbc1203" args="()" -->
+<a class="el" href="class_c_a_r_b_multi_texturing.html">CARBMultiTexturing</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetARBMultiTexturing</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="37ef4c44b85a98d7136b7277dcb4fd08"></a><!-- doxytag: member="CGameControl::GetWGLEXTSwapControl" ref="37ef4c44b85a98d7136b7277dcb4fd08" args="()" -->
+<a class="el" href="class_c_w_g_l_e_x_t_swap_control.html">CWGLEXTSwapControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetWGLEXTSwapControl</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="368f94ec13e4b7f3298e124aeb20165b"></a><!-- doxytag: member="CGameControl::GetVertexArrays" ref="368f94ec13e4b7f3298e124aeb20165b" args="()" -->
+CVertexArrays *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetVertexArrays</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="619146220bed57e5136b3c3807321ddc"></a><!-- doxytag: member="CGameControl::GetMatrixOp" ref="619146220bed57e5136b3c3807321ddc" args="()" -->
+<a class="el" href="class_c_matrix_operations.html">CMatrixOperations</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetMatrixOp</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="cd7b1bba1670803652758447181fcf7b"></a><!-- doxytag: member="CGameControl::Get3DObjManager" ref="cd7b1bba1670803652758447181fcf7b" args="()" -->
+<a class="el" href="class_c3_d_obj_manager.html">C3DObjManager</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>Get3DObjManager</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ca7eda5f1edfc722ef925af62c42cff8"></a><!-- doxytag: member="CGameControl::GetEmbossBump" ref="ca7eda5f1edfc722ef925af62c42cff8" args="()" -->
+<a class="el" href="class_c_emboss_bump.html">CEmbossBump</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetEmbossBump</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7445890ca79000d561ebd5b1e6c308c4"></a><!-- doxytag: member="CGameControl::GetParticles" ref="7445890ca79000d561ebd5b1e6c308c4" args="()" -->
+<a class="el" href="class_c_particles.html">CParticles</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetParticles</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="af9c800e38ef87b642f0522be38fdceb"></a><!-- doxytag: member="CGameControl::GetBillboard" ref="af9c800e38ef87b642f0522be38fdceb" args="()" -->
+<a class="el" href="class_c_billboard.html">CBillboard</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetBillboard</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="19c6b816bf0506c6af49ac5875c853dc"></a><!-- doxytag: member="CGameControl::GetStencilShadow" ref="19c6b816bf0506c6af49ac5875c853dc" args="()" -->
+<a class="el" href="class_c_stencil_shadow.html">CStencilShadow</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetStencilShadow</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d0d425f7f465b2dbd5347a8ccd853bc3"></a><!-- doxytag: member="CGameControl::GetNetworkManager" ref="d0d425f7f465b2dbd5347a8ccd853bc3" args="()" -->
+CNetworkManager *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetNetworkManager</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="35257b46990c6602426338597db283a4"></a><!-- doxytag: member="CGameControl::GetRMessageBox" ref="35257b46990c6602426338597db283a4" args="()" -->
+<a class="el" href="class_c_r_message_box.html">CRMessageBox</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>GetRMessageBox</b> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_c_game_control.html">CGameControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#e47089dea4b072f910efce877b422b5c">Construct</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>.  <a href="#e47089dea4b072f910efce877b422b5c"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="095d3c65a3270938bf228f6807d7abbe"></a><!-- doxytag: member="CGameControl::m_cCharKey" ref="095d3c65a3270938bf228f6807d7abbe" args="" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#095d3c65a3270938bf228f6807d7abbe">m_cCharKey</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Znak ASCII klawisza jaki został naciśnięty. Ustawiane przez komunikat <code>WM_CHAR</code>. <br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#4d210db875f68ca299c193755e483a23">CGameControl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#4d210db875f68ca299c193755e483a23"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#310e43713802238f6a6e013e3a47d55e">CreateQuadric</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca kwadrykę.  <a href="#310e43713802238f6a6e013e3a47d55e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2f7886ff6b9f8dd9dd366bf18e004bff"></a><!-- doxytag: member="CGameControl::GetCursorPosition" ref="2f7886ff6b9f8dd9dd366bf18e004bff" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#2f7886ff6b9f8dd9dd366bf18e004bff">GetCursorPosition</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca i obliczająca pozycję kursora myszy. <br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="89b74f077ef19474a7cfa29173a25915"></a><!-- doxytag: member="CGameControl::m_pWin" ref="89b74f077ef19474a7cfa29173a25915" args="" -->
+<a class="el" href="class_c_window_data.html">CWindowData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#89b74f077ef19474a7cfa29173a25915">m_pWin</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c8a092c08df43f951b364028d929bafc"></a><!-- doxytag: member="CGameControl::m_pQuadric" ref="c8a092c08df43f951b364028d929bafc" args="" -->
+GLUquadricObj *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#c8a092c08df43f951b364028d929bafc">m_pQuadric</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt kwadryki. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="080a47817c392d0cdaa372336afea2d7"></a><!-- doxytag: member="CGameControl::m_ptCursor" ref="080a47817c392d0cdaa372336afea2d7" args="" -->
+POINT&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#080a47817c392d0cdaa372336afea2d7">m_ptCursor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pozycja kursora w pikselach względem okna programu. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="18df8e8fb37d4198df7197b908e53a14"></a><!-- doxytag: member="CGameControl::m_bKeys" ref="18df8e8fb37d4198df7197b908e53a14" args="[256]" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#18df8e8fb37d4198df7197b908e53a14">m_bKeys</a> [256]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica używana do obsługi klawiatury. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a044b184297bc41666abf53ea6d609e2"></a><!-- doxytag: member="CGameControl::m_bIs2D" ref="a044b184297bc41666abf53ea6d609e2" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_game_control.html#a044b184297bc41666abf53ea6d609e2">m_bIs2D</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna zapamiętująca ostatnio używany tryb: 2D lub 3D. <br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Wskaźniki na wszelkie obiekty jakie są tworzone w CGameControl.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1bb03d7d56f8529629c33f2ec8cba826"></a><!-- doxytag: member="CGameControl::m_pSpeedControl" ref="1bb03d7d56f8529629c33f2ec8cba826" args="" -->
+<a class="el" href="class_c_speed_control.html">CSpeedControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pSpeedControl</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="23034f5be558e714a42612378e839b62"></a><!-- doxytag: member="CGameControl::m_pTextureLoader" ref="23034f5be558e714a42612378e839b62" args="" -->
+<a class="el" href="class_c_texture_loader.html">CTextureLoader</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pTextureLoader</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fed0156d6fd867fa41e199276adb8c59"></a><!-- doxytag: member="CGameControl::m_pBitmapFont" ref="fed0156d6fd867fa41e199276adb8c59" args="" -->
+<a class="el" href="class_c_bitmap_font.html">CBitmapFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pBitmapFont</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9eb0f0d874c515ec22132a6749a05d63"></a><!-- doxytag: member="CGameControl::m_pOutlineFont" ref="9eb0f0d874c515ec22132a6749a05d63" args="" -->
+<a class="el" href="class_c_outline_font.html">COutlineFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pOutlineFont</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2879eb8b110eaaa6767886232e9bac53"></a><!-- doxytag: member="CGameControl::m_pConsole" ref="2879eb8b110eaaa6767886232e9bac53" args="" -->
+<a class="el" href="class_c_console.html">CConsole</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pConsole</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="88c896c729f17d5f9771bb2abf5d002a"></a><!-- doxytag: member="CGameControl::m_pFps" ref="88c896c729f17d5f9771bb2abf5d002a" args="" -->
+<a class="el" href="class_c_fps.html">CFps</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pFps</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="aa6625d22bee4b92a5c372969b9541f0"></a><!-- doxytag: member="CGameControl::m_pSoundFMOD" ref="aa6625d22bee4b92a5c372969b9541f0" args="" -->
+CSoundFMOD *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pSoundFMOD</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3f02b5d80ad3caf3b9eaaed02005e18a"></a><!-- doxytag: member="CGameControl::m_pMasterVolume" ref="3f02b5d80ad3caf3b9eaaed02005e18a" args="" -->
+CMasterVolume *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pMasterVolume</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a472576492ef44da9e27f8f0957113ca"></a><!-- doxytag: member="CGameControl::m_pSDLFont" ref="a472576492ef44da9e27f8f0957113ca" args="" -->
+<a class="el" href="class_c_s_d_l_font.html">CSDLFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pSDLFont</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0033121d0aebaea886aee7a731481f4a"></a><!-- doxytag: member="CGameControl::m_pLighting" ref="0033121d0aebaea886aee7a731481f4a" args="" -->
+CLighting *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pLighting</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fc2b5ca084fb8cc77bbdfcabfbafd014"></a><!-- doxytag: member="CGameControl::m_pTextureFont" ref="fc2b5ca084fb8cc77bbdfcabfbafd014" args="" -->
+<a class="el" href="class_c_texture_font.html">CTextureFont</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pTextureFont</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="dbc4c98c0646ea6b0c5a90da850697b0"></a><!-- doxytag: member="CGameControl::m_pCursor" ref="dbc4c98c0646ea6b0c5a90da850697b0" args="" -->
+<a class="el" href="class_c_cursor.html">CCursor</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pCursor</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7e5047809df24f2108a595dbc9b1a820"></a><!-- doxytag: member="CGameControl::m_pARBMultiTexturing" ref="7e5047809df24f2108a595dbc9b1a820" args="" -->
+<a class="el" href="class_c_a_r_b_multi_texturing.html">CARBMultiTexturing</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pARBMultiTexturing</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="afd04aaab39cde3a60f0d41ba205011c"></a><!-- doxytag: member="CGameControl::m_pWglExtSwapCtrl" ref="afd04aaab39cde3a60f0d41ba205011c" args="" -->
+<a class="el" href="class_c_w_g_l_e_x_t_swap_control.html">CWGLEXTSwapControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pWglExtSwapCtrl</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="107e1ac029d6279646db306566b01d08"></a><!-- doxytag: member="CGameControl::m_pVertexArrays" ref="107e1ac029d6279646db306566b01d08" args="" -->
+CVertexArrays *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pVertexArrays</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f20379c2415c6b2fa38ed3c4f6681f61"></a><!-- doxytag: member="CGameControl::m_pMatrixOp" ref="f20379c2415c6b2fa38ed3c4f6681f61" args="" -->
+<a class="el" href="class_c_matrix_operations.html">CMatrixOperations</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pMatrixOp</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c31957c26cc17415faf711116af8dce0"></a><!-- doxytag: member="CGameControl::m_p3DObjManager" ref="c31957c26cc17415faf711116af8dce0" args="" -->
+<a class="el" href="class_c3_d_obj_manager.html">C3DObjManager</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_p3DObjManager</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3468bc2c33e28b607b5ffd6b8886d580"></a><!-- doxytag: member="CGameControl::m_pEmbossBump" ref="3468bc2c33e28b607b5ffd6b8886d580" args="" -->
+<a class="el" href="class_c_emboss_bump.html">CEmbossBump</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pEmbossBump</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="18a1dddaf5371e8edf5abff9e957e453"></a><!-- doxytag: member="CGameControl::m_pParticles" ref="18a1dddaf5371e8edf5abff9e957e453" args="" -->
+<a class="el" href="class_c_particles.html">CParticles</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pParticles</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d01e3c24ecc8ab89b782934df2c0abc7"></a><!-- doxytag: member="CGameControl::m_pBillboard" ref="d01e3c24ecc8ab89b782934df2c0abc7" args="" -->
+<a class="el" href="class_c_billboard.html">CBillboard</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pBillboard</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="66d7c15fcc90f322da201e71a48d0e25"></a><!-- doxytag: member="CGameControl::m_pStencilShadow" ref="66d7c15fcc90f322da201e71a48d0e25" args="" -->
+<a class="el" href="class_c_stencil_shadow.html">CStencilShadow</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pStencilShadow</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a44d6718eb5e614d2d98086b8c6d62d7"></a><!-- doxytag: member="CGameControl::m_pNetworkManager" ref="a44d6718eb5e614d2d98086b8c6d62d7" args="" -->
+CNetworkManager *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pNetworkManager</b></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3ce81993577947762057ed2b268cd31f"></a><!-- doxytag: member="CGameControl::m_pRMessageBox" ref="3ce81993577947762057ed2b268cd31f" args="" -->
+<a class="el" href="class_c_r_message_box.html">CRMessageBox</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_pRMessageBox</b></td></tr>
+
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="213d34be5d15e4bf1bf6e979d44a0e66"></a><!-- doxytag: member="CGameControl::~CGameControl" ref="213d34be5d15e4bf1bf6e979d44a0e66" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGameControl::~CGameControl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<a class="anchor" name="4d210db875f68ca299c193755e483a23"></a><!-- doxytag: member="CGameControl::CGameControl" ref="4d210db875f68ca299c193755e483a23" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGameControl::CGameControl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="e47089dea4b072f910efce877b422b5c"></a><!-- doxytag: member="CGameControl::Construct" ref="e47089dea4b072f910efce877b422b5c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_game_control.html">CGameControl</a> * CGameControl::Construct           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. 
+<p>
+<a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a> jest singletonem, więc jeżeli wywołamy tę metodę po raz drugi to zwróci ona wskaźnik na obiekt już istniejący, utworzony wcześniej. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cf77808f6f76e9450b8bcce36fe6d891"></a><!-- doxytag: member="CGameControl::Initialization" ref="cf77808f6f76e9450b8bcce36fe6d891" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::Initialization           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a>. 
+<p>
+Tutaj wywoływana jest metoda <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a> oraz wczytywane są zasoby dla innych obiektów oraz wywoływane są inne funkcje takie jak <a class="el" href="class_c_game_control.html#f67644039305f7dec302a9977219d565" title="Metoda włączająca lub wyłączająca synchronicazję pionową.">CGameControl::SetVSync</a>, <a class="el" href="class_c_game_control.html#f8e1c320d64532fefaa68a2d5f656cb6" title="Metoda tworząca własnoręcznie dodawane wierzchołki w celu ich późniejszego...">CGameControl::CreateVertices</a>, <a class="el" href="class_c_game_control.html#310e43713802238f6a6e013e3a47d55e" title="Metoda tworząca kwadrykę.">CGameControl::CreateQuadric</a>. <br>
+ Wewnątrz tej metody możemy wywoływać inne inicjalizacje dla naszych klas. <br>
+ Metoda ta jest już wywoływana w <a class="el" href="class_c_framework.html#8e322cfe86db25e165730364d9df602a" title="Metoda tworząca oraz inicjalizująca obiekt klasy CGameControl.">CFramework::CreateGameControl</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia inicjalizacji wszelkich obiektów. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3ca00a544e364fc102c1ec335e0bbbdf"></a><!-- doxytag: member="CGameControl::GetQuadric" ref="3ca00a544e364fc102c1ec335e0bbbdf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLUquadricObj* CGameControl::GetQuadric           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca wskaźnik kwadryki. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt kwadryki. Jeżeli kwadryka nie została stworzona, metoda zwróci NULL. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#310e43713802238f6a6e013e3a47d55e" title="Metoda tworząca kwadrykę.">CreateQuadric</a>, <a class="el" href="class_c_game_control.html#c8a092c08df43f951b364028d929bafc" title="Wskaźnik na obiekt kwadryki.">m_pQuadric</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f67644039305f7dec302a9977219d565"></a><!-- doxytag: member="CGameControl::SetVSync" ref="f67644039305f7dec302a9977219d565" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::SetVSync           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda włączająca lub wyłączająca synchronicazję pionową. 
+<p>
+Czy synchronizacja pionowa zostanie włączona, zależy od wartość zmiennej SETTING_FILE::bVSync. Metoda ta jest już domyślnie wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora...">CWGLEXTSwapControl</a>, SETTING_FILE. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="bcb5377d0f05a30a8fd9c07a184f30c2"></a><!-- doxytag: member="CGameControl::Exit" ref="bcb5377d0f05a30a8fd9c07a184f30c2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::Exit           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zamykająca aplikację. 
+<p>
+Jeżeli chemy zamknąć program, należy wywołać tę metodę. 
+</div>
+</div><p>
+<a class="anchor" name="65a5c9465fd2ee0231762b3ccb12d751"></a><!-- doxytag: member="CGameControl::RestartObjects" ref="65a5c9465fd2ee0231762b3ccb12d751" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::RestartObjects           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda restartuje wszelkie obiekty utworzone w <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a>, które restartu wymagają. 
+<p>
+Metoda ta jest wywoływana gdy restartowane jest okno, np. pod wpływem zmiany rozdzielczości, próbkowania dla antyaliasingu, itp. W metodzie tej należy wywołać funkcję, np. także <a class="el" href="class_c_game_control.html#65a5c9465fd2ee0231762b3ccb12d751" title="Metoda restartuje wszelkie obiekty utworzone w CGameControl::CreateObjects, które...">RestartObjects()</a> naszych obiektów, które mogą zostać utracone pod wpływem zmian parametrów okna, jak np. rozdzielczość. W ostateczności możemy tutaj zniszczyć nasz obiekt i utworzyć ponownie nowy. Pod warunkiem, że obiekt ten nie będzie przechowywał danych pamiętających aktualny stan gry. <br>
+ Przestrzegając tych reguł uzyskujemy możliwość restaru okna (np. po zmianie rozdzielczości) bez utraty aktualnego stanu gry co będzie bardzo dogodne dla użytkownika. 
+</div>
+</div><p>
+<a class="anchor" name="2938bdf7ed88f7d1fd6b94f472581cf1"></a><!-- doxytag: member="CGameControl::KeyDown" ref="2938bdf7ed88f7d1fd6b94f472581cf1" args="(GLuint uiKey)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::KeyDown           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKey</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Metoda ta zostanie wywołana automatycznie gdy nadejdzie komunikat <code>WM_KEYDOWN</code>. Tutaj klawisz może być przekazany do innego obiektu lub może zostać ustawiona odpowiednia wartość tablicy <a class="el" href="class_c_game_control.html#18df8e8fb37d4198df7197b908e53a14" title="Tablica używana do obsługi klawiatury.">CGameControl::m_bKeys</a> w celu przetworzenia klawisza wewnątrz metody <a class="el" href="class_c_game_control.html#afe8dc0f2316b76616b1f9bba1e88907" title="Metoda przetwarzająca naciśnięte klawisze klawiatury.">CGameControl::Keyboard</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKey</em>&nbsp;</td><td>Wirtualny kod klawisza jaki został naciśnięty. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#18df8e8fb37d4198df7197b908e53a14" title="Tablica używana do obsługi klawiatury.">m_bKeys</a>, <a class="el" href="class_c_game_control.html#afe8dc0f2316b76616b1f9bba1e88907" title="Metoda przetwarzająca naciśnięte klawisze klawiatury.">Keyboard</a>, <a class="el" href="class_c_game_control.html#048c636173190a77930819e776f841b6" title="Zdarzenie zwolnienia klawisza klawiatury, przekazywane z WndProc.">KeyUp</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="048c636173190a77930819e776f841b6"></a><!-- doxytag: member="CGameControl::KeyUp" ref="048c636173190a77930819e776f841b6" args="(GLuint uiKey)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::KeyUp           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKey</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie zwolnienia klawisza klawiatury, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Metoda ta zostanie wywołana automatycznie gdy nadejdzie komunikat <code>WM_KEYUP</code>. Tutaj klawisz może być przekazany do innego obiektu lub może zostać ustawiona odpowiednia wartość tablicy <a class="el" href="class_c_game_control.html#18df8e8fb37d4198df7197b908e53a14" title="Tablica używana do obsługi klawiatury.">CGameControl::m_bKeys</a> w celu nie przetwarzania klawisza wewnątrz metody <a class="el" href="class_c_game_control.html#afe8dc0f2316b76616b1f9bba1e88907" title="Metoda przetwarzająca naciśnięte klawisze klawiatury.">CGameControl::Keyboard</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKey</em>&nbsp;</td><td>Wirtualny kod klawisza jaki został zwolniony. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#18df8e8fb37d4198df7197b908e53a14" title="Tablica używana do obsługi klawiatury.">m_bKeys</a>, <a class="el" href="class_c_game_control.html#afe8dc0f2316b76616b1f9bba1e88907" title="Metoda przetwarzająca naciśnięte klawisze klawiatury.">Keyboard</a>, <a class="el" href="class_c_game_control.html#2938bdf7ed88f7d1fd6b94f472581cf1" title="Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z WndProc.">KeyDown</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="afe8dc0f2316b76616b1f9bba1e88907"></a><!-- doxytag: member="CGameControl::Keyboard" ref="afe8dc0f2316b76616b1f9bba1e88907" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::Keyboard           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przetwarzająca naciśnięte klawisze klawiatury. 
+<p>
+Wewnątrz tej metody możemy zaimplementować odpowiednią reakcję aplikacji na naciskane klawisze klawiatury. Obsłużenie klawiszy tutaj a nie w <a class="el" href="class_c_game_control.html#2938bdf7ed88f7d1fd6b94f472581cf1" title="Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z WndProc.">CGameControl::KeyDown</a> umożliwia obsługę klawiszy, które są naciskane jednocześnie. <br>
+ Metoda ta jest już wywoływana w głównej pętli programu, tj. w <a class="el" href="class_c_framework.html#20be1cac00839e2301e94a571139231b" title="Metoda zarządzająca całym frameworkiem.">CFramework::Run</a>. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#18df8e8fb37d4198df7197b908e53a14" title="Tablica używana do obsługi klawiatury.">m_bKeys</a>, <a class="el" href="class_c_game_control.html#2938bdf7ed88f7d1fd6b94f472581cf1" title="Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z WndProc.">KeyDown</a>, <a class="el" href="class_c_game_control.html#048c636173190a77930819e776f841b6" title="Zdarzenie zwolnienia klawisza klawiatury, przekazywane z WndProc.">KeyUp</a>, <a class="el" href="class_c_game_control.html#37c32bbfd7c38964e441b7177138d510" title="Metoda za pomocą, której możemy sprawdzić czy dany klawisz jest wciśnięty.">GetKeyStatus</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="20aa5c436ba2f8a9c474dc55649014be"></a><!-- doxytag: member="CGameControl::WriteOnKeyboard" ref="20aa5c436ba2f8a9c474dc55649014be" args="(GLuint uiKey, LPTSTR lpBuffer, GLint iBufferLenMax)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::WriteOnKeyboard           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iBufferLenMax</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wypełniająca bufor znakami przekazywanymi z klawiatury. 
+<p>
+Metodę tę należy wywoływać np. w KeyDown. Metoda WriteOnKeyboard zapewnia obsługę klawisza Backspace do kasowania ostatnio wpisanego znaku, oraz wszelkie pozostałe klawisze, włącznie z kombinacją z klawiszem Shift. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKey</em>&nbsp;</td><td>Wirtualny kod klawisza, który został wciśnięty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpBuffer</em>&nbsp;</td><td>Wskaźnik na łańcuch znaków w którym przechowywany będzie tekst wpisywany z klawiatury. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iBufferLenMax</em>&nbsp;</td><td>Wielkość <em>lpBuffer</em>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia klawisza. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="37c32bbfd7c38964e441b7177138d510"></a><!-- doxytag: member="CGameControl::GetKeyStatus" ref="37c32bbfd7c38964e441b7177138d510" args="(GLuint uiKey)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::GetKeyStatus           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKey</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda za pomocą, której możemy sprawdzić czy dany klawisz jest wciśnięty. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKey</em>&nbsp;</td><td>Wirtualny kod klawisza, który chcemy sprawdzić. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli klawisz jest wciśnięty. <code>GL_FALSE</code> jeżeli klawisz nie jest wciśnięty. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#18df8e8fb37d4198df7197b908e53a14" title="Tablica używana do obsługi klawiatury.">m_bKeys</a>, <a class="el" href="class_c_game_control.html#2938bdf7ed88f7d1fd6b94f472581cf1" title="Zdarzenie naciśnięcia klawisza klawiatury, przekazywane z WndProc.">KeyDown</a>, <a class="el" href="class_c_game_control.html#048c636173190a77930819e776f841b6" title="Zdarzenie zwolnienia klawisza klawiatury, przekazywane z WndProc.">KeyUp</a>, <a class="el" href="class_c_game_control.html#afe8dc0f2316b76616b1f9bba1e88907" title="Metoda przetwarzająca naciśnięte klawisze klawiatury.">Keyboard</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="189532981410bcb749a73115822e7472"></a><!-- doxytag: member="CGameControl::GetKeyChar" ref="189532981410bcb749a73115822e7472" args="(GLuint uiKeyCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint CGameControl::GetKeyChar           </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiKeyCode</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda konwertująca kod klawisza na odpowiadający mu znak ASCII. 
+<p>
+Funkcja uwzględnia przytrzymanie klawisza Shift. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiKeyCode</em>&nbsp;</td><td>Wirtualny kod klawisza. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Znak ASCII przypisany danemu klawiszowi wirtualnemu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d3da7b6b8391553e8d3ac907d188a856"></a><!-- doxytag: member="CGameControl::MouseLButtonDown" ref="d3da7b6b8391553e8d3ac907d188a856" args="(GLint iX, GLint iY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::MouseLButtonDown           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie kliknięcia lewym przyciskiem myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Metoda wywoływana automatycznie gdy nadejdzie komunikat <code>WM_LBUTTONDOWN</code>. Tutaj możemy przetworzyć kliknięcie myszy lub przekazać je dalej do innej klasy. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iX</em>&nbsp;</td><td>Współrzędna <em>X</em> położenia kursora w momencie kliknięcia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iY</em>&nbsp;</td><td>Współrzędna <em>Y</em> położenia kursora w momencie kliknięcia. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="143f30d97688ba432425eee25f14984c"></a><!-- doxytag: member="CGameControl::MouseLButtonUp" ref="143f30d97688ba432425eee25f14984c" args="(GLint iX, GLint iY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::MouseLButtonUp           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie zwolnienia lewego przycisku myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Metoda wywoływana automatycznie gdy nadejdzie komunikat <code>WM_LBUTTONUP</code>. Tutaj możemy przetworzyć puszczenie myszy lub przekazać je dalej do innej klasy. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iX</em>&nbsp;</td><td>Współrzędna <em>X</em> położenia kursora w momencie kliknięcia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iY</em>&nbsp;</td><td>Współrzędna <em>Y</em> położenia kursora w momencie kliknięcia. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="67651756d2815089f2bc6f4eed51c2ef"></a><!-- doxytag: member="CGameControl::MouseRButtonDown" ref="67651756d2815089f2bc6f4eed51c2ef" args="(GLint iX, GLint iY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::MouseRButtonDown           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie kliknięcia prawym przyciskiem myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Metoda wywoływana automatycznie gdy nadejdzie komunikat <code>WM_RBUTTONDOWN</code>. Tutaj możemy przetworzyć kliknięcie myszy lub przekazać je dalej do innej klasy. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iX</em>&nbsp;</td><td>Współrzędna <em>X</em> położenia kursora w momencie kliknięcia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iY</em>&nbsp;</td><td>Współrzędna <em>Y</em> położenia kursora w momencie kliknięcia. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b9e3c966599eb7ba0f7cc71546ad55d7"></a><!-- doxytag: member="CGameControl::MouseRButtonUp" ref="b9e3c966599eb7ba0f7cc71546ad55d7" args="(GLint iX, GLint iY)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::MouseRButtonUp           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iY</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie zwolnienia prawego przycisku myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Metoda wywoływana automatycznie gdy nadejdzie komunikat <code>WM_RBUTTONUP</code>. Tutaj możemy przetworzyć puszczenie myszy lub przekazać je dalej do innej klasy. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iX</em>&nbsp;</td><td>Współrzędna <em>X</em> położenia kursora w momencie kliknięcia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iY</em>&nbsp;</td><td>Współrzędna <em>Y</em> położenia kursora w momencie kliknięcia. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. <code>GL_FALSE</code> gdy klawisz nie został obsłużony. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="11604953bd6fafa0fcb24ff09bf1c0cf"></a><!-- doxytag: member="CGameControl::MouseWheel" ref="11604953bd6fafa0fcb24ff09bf1c0cf" args="(GLint iScrollLines)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::MouseWheel           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iScrollLines</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zdarzenie przekręcenia kółka myszy, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Metoda wywoływana automatycznie gdy nadejdzie komunikat <code>WM_MOUSEWHEEL</code>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iScrollLines</em>&nbsp;</td><td>Mowi nam o ile linii i w która stronę wykonano obrót, wartość ujemna - w dól, wartość dodatnia - w górę. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku przetworzenia zdarzenia. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e48ce07d9969e4d92457cde2ac095f7f"></a><!-- doxytag: member="CGameControl::Draw" ref="e48ce07d9969e4d92457cde2ac095f7f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::Draw           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Główna funkcja rysująca scenę. 
+<p>
+Funkcja ta wywoływana jest z metody <a class="el" href="class_c_framework.html#ed819af2204d27d211efcf737c755125" title="Główna metoda, od której rozpoczyna się rysowanie całej sceny.">CFramework::DrawGLScene</a>. Wewątrz tej funkcji należy wywoływać kolejne metody <em><a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f" title="Główna funkcja rysująca scenę.">Draw()</a></em> innych obiektów mogących coś rysować. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_framework.html#ed819af2204d27d211efcf737c755125" title="Główna metoda, od której rozpoczyna się rysowanie całej sceny.">CFramework::DrawGLScene</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1b6f2f9b4ec8b5d64393e9362d6f81e1"></a><!-- doxytag: member="CGameControl::GetPointCursor" ref="1b6f2f9b4ec8b5d64393e9362d6f81e1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">POINT CGameControl::GetPointCursor           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca aktualną pozycję kurosra myszy. 
+<p>
+/return Struktura typu <code>POINT</code> zawierająca aktualne współrzędne kursora myszy. 
+</div>
+</div><p>
+<a class="anchor" name="c173df6f512c2648eb7092c369b8af07"></a><!-- doxytag: member="CGameControl::Enable2D" ref="c173df6f512c2648eb7092c369b8af07" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::Enable2D           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda włączająca tryb grafiki 2D. 
+<p>
+Należy wywołać tę metodę, jeżeli chcemy rysować w trybie 2D, na powierzchni ekranu. Domyślnie tryb 2D jest wyłączony - framework działa w trybie 3D. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#8fc28049e8a53deec96581ae946e264b" title="Metoda wyłączająca tryb grafiki 2D - powraca do 3D.">Disable2D</a>, makro <a class="el" href="define_8h.html#a75a2a8422a9af4b61c0b551a7761fcd" title="Czy użyć trybu tylko 2D?">_USE_2D_ONLY_</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8fc28049e8a53deec96581ae946e264b"></a><!-- doxytag: member="CGameControl::Disable2D" ref="8fc28049e8a53deec96581ae946e264b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::Disable2D           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyłączająca tryb grafiki 2D - powraca do 3D. 
+<p>
+Jeżeli włączyliśmy tryb grafiki 2D za pomocą metody <a class="el" href="class_c_game_control.html#c173df6f512c2648eb7092c369b8af07" title="Metoda włączająca tryb grafiki 2D.">CGameControl::Enable2D</a>. To teraz za pomocą <a class="el" href="class_c_game_control.html#8fc28049e8a53deec96581ae946e264b" title="Metoda wyłączająca tryb grafiki 2D - powraca do 3D.">CGameControl::Disable2D</a> możemy powrócić do trybu 3D. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#c173df6f512c2648eb7092c369b8af07" title="Metoda włączająca tryb grafiki 2D.">Enable2D</a>, makro <a class="el" href="define_8h.html#a75a2a8422a9af4b61c0b551a7761fcd" title="Czy użyć trybu tylko 2D?">_USE_2D_ONLY_</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="57558c24df99d131697b9ef884bd7b6a"></a><!-- doxytag: member="CGameControl::Timer" ref="57558c24df99d131697b9ef884bd7b6a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::Timer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda timer-a, wywoływana automatycznie gdy nadejdzie zdarzenie <code>WM_TIMER</code>, przekazywane z <a class="el" href="_framework_8cpp.html#e749e989b362e19783c7af4a2bf46c95">WndProc</a>. 
+<p>
+Domyślnie timer wywoływany jest co 1000 milisekund. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_window_data.html#66955c4affcbfc680af21d6e6124d0c6" title="Częstotliwość tikania timera w milisekundach. Domyślnie 1000, jeżeli ustawimy...">CWindowData::m_uiTimer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d5535ce90f5fb5284a31fb42dfcfed4e"></a><!-- doxytag: member="CGameControl::CreateObjects" ref="d5535ce90f5fb5284a31fb42dfcfed4e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::CreateObjects           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry. 
+<p>
+Tutaj należy tworzyć obiekty własnych klas. Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia utworzenia wszelkich obiektów. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="93c24a57afb6dd1118a1b8a15f841ae8"></a><!-- doxytag: member="CGameControl::DeleteObjects" ref="93c24a57afb6dd1118a1b8a15f841ae8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::DeleteObjects           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Usuwa wszelkie obiekty innych klasy, utworzonych w <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a>. 
+<p>
+Tutaj należy usuwać obiekty własnych klas, które utworzyliśmy w metodzie <a class="el" href="class_c_game_control.html#d5535ce90f5fb5284a31fb42dfcfed4e" title="Tworzy wszelkie obiekty innych klasy, niezbędnych do funkcjonowania gry.">CGameControl::CreateObjects</a>. 
+</div>
+</div><p>
+<a class="anchor" name="39a8b6c3e7cd3dbae8707e4e79afe89d"></a><!-- doxytag: member="CGameControl::CreateAllAnimCtrl" ref="39a8b6c3e7cd3dbae8707e4e79afe89d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::CreateAllAnimCtrl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca wszelkie obiekty dla kontroli animacji. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. Tutaj należy wywoływać <a class="el" href="class_c_speed_control.html#f59292a4fe9a781fec59c62e27aee0fa" title="Metoda tworząca nezależną instancję kontroli animacji.">CSpeedControl::CreateAnimationControl</a>. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji.">CSpeedControl</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f149039ef53e701fa0f514cddbf10329"></a><!-- doxytag: member="CGameControl::LoadAllTextures" ref="f149039ef53e701fa0f514cddbf10329" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::LoadAllTextures           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca tekstury. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. Tutaj należy wczytywać wszelkie tekstury. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania tekstur. <code>GL_FALSE</code> w przypadku wystąpienia błędu. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur.">CTextureLoader</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="82b544fd603ac60e32a812e0a6139823"></a><!-- doxytag: member="CGameControl::CreateAllParticles" ref="82b544fd603ac60e32a812e0a6139823" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::CreateAllParticles           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca emitery cząsteczek. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. Tutaj należy tworzyć wszelkie emitery cząsteczek. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia utworzenia emiterów. <code>GL_FALSE</code> w przypadku wystąpienia błędu. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_particles.html" title="Klasa cząsteczek.">CParticles</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b65036aedad334e0d4851060df188779"></a><!-- doxytag: member="CGameControl::LoadAll3DObjFiles" ref="b65036aedad334e0d4851060df188779" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::LoadAll3DObjFiles           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca wszystkie obiekty 3D. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. W tej metodzie należy wczytywać wszelkie obiekty 3D - pliki <em>*</em>.<em>3DObj</em>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania obiektów. <code>GL_FALSE</code> w przypadku wystąpienia błędu. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c3_d_obj_manager.html" title="Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku 3DObj...">C3DObjManager</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a93e8afb18f0fecc348f03f10c0574b7"></a><!-- doxytag: member="CGameControl::LoadAllSounds" ref="a93e8afb18f0fecc348f03f10c0574b7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CGameControl::LoadAllSounds           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca wszelkie dźwieki i muzykę. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. Tutaj należy wczytywać wszelkie dźwięki i muzykę. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania dźwięków. <code>GL_FALSE</code> w przypadku wystąpienia błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f8e1c320d64532fefaa68a2d5f656cb6"></a><!-- doxytag: member="CGameControl::CreateVertices" ref="f8e1c320d64532fefaa68a2d5f656cb6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::CreateVertices           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca własnoręcznie dodawane wierzchołki w celu ich późniejszego renderowania. 
+<p>
+Wewnątrz tej metody możemy dodawać własne wierzchołki, poprzez ręczne wpisanie ich koordynatów jak i innych parametrów, jak werktor normalny, kolor itp. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd>CVertexArrays. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="310e43713802238f6a6e013e3a47d55e"></a><!-- doxytag: member="CGameControl::CreateQuadric" ref="310e43713802238f6a6e013e3a47d55e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CGameControl::CreateQuadric           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca kwadrykę. 
+<p>
+Tutaj tworzony jest obiekt kwadryki oraz ustawiane są jej wszelkie domyślne parametry. <br>
+ Metoda ta jest już domyślnie wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_game_control.html#3ca00a544e364fc102c1ec335e0bbbdf" title="Metoda zwracająca wskaźnik kwadryki.">GetQuadric</a>, <a class="el" href="class_c_game_control.html#c8a092c08df43f951b364028d929bafc" title="Wskaźnik na obiekt kwadryki.">m_pQuadric</a>. </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>OpenGLFramework/<a class="el" href="_game_control_8h-source.html">GameControl.h</a><li>OpenGLFramework/GameControl.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:29 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

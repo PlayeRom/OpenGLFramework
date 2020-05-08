@@ -1,0 +1,32 @@
+
+GLboolean CTextureLoader::LoadAllTexture()
+{
+	...
+
+	LoadTextureMipmaps(_T("textures/podstawowa.bmp"));	//index 1
+	LoadTextureMipmaps(_T("textures/dla_multi.bmp"));	//index 2
+	LoadEmbossBump(_T("textures/bump.bmp"));		//index 3, 4
+
+	...
+}
+
+CXObjManager::CXObjManager(CGameControl *objGameCtrl)
+{
+	...
+
+	//normalnie z jedną teksturą
+	CreateXObject(_T("objects/filename.x"), 1); //1 - tekstura
+
+	//z miltiteksturingiem
+	CreateXObject(_T("objects/filename.x"), 1, 2); //1 - pierwsza tekstura, 2 - ilosc kolejnych tekstur
+
+	//z embos bump mappingiem
+	CreateXObject(_T("objects/filename.x"), 1, -1, 3); //1 - tekstura podstawowa, -1 - dla multiteksturingu, 3 - tekstura bump
+
+	...
+}
+
+GLvoid CGameControl::Draw()
+{
+	GetXObjManager()->DrawXObject(0, GetEmbossBump()->IsUse(), GL_LIGHT0); //0 - indeks obiektu
+}

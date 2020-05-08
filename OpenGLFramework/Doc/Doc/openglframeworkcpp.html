@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - OpenGLFramework.cpp</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Główny plik projektu OpenGLFramework.cpp</H1>
+
+<p><b>Funkcje globalne</b></p>
+
+<table border="1">
+<tr><td><a href="#WinMain">WinMain</a></td></tr>
+<tr><td><a href="#ReSizeGLScene">ReSizeGLScene</a></td></tr>
+<tr><td><a href="#InitalizationGL">InitalizationGL</a></td></tr>
+<tr><td><a href="#DrawGLScene">DrawGLScene</a></td></tr>
+<tr><td><a href="#CreateObjects">CreateObjects</a></td></tr>
+<tr><td><a href="#WndProc">WndProc</a></td></tr>
+<tr><td><a href="#Destroy">Destroy</a></td></tr>
+</table>
+
+<p><b>Zmienne globalne</b></p>
+
+<table border="1">
+<tr><td>GLboolean g_bActive;</td><td>Flaga aktywności okna.</td></tr>
+<tr><td>GLint g_iCompleteWheelRotate</td><td>Licznik całkowitego obrotu rolki myszy.</td></tr>
+<tr><td><a href="cwindowdata.html">CWindowData</a> *g_objWin;</td><td>Wskaźnik na obiekt klasy <a href="cwindowdata.html">CWindowData</a>.</td></tr>
+<tr><td><a href="cgamecontrol.html">CGameControl</a> *g_objGameCtrl;</td><td>Wskaźnik na obiekt klasy <a href="cgamecontrol.html">CGameControl</a>.</td></tr>
+</table>
+
+<p><a name="WinMain"></a></p>
+
+<hr/>
+
+<h3>WinMain</h3>
+<p>Główna funkcja programu.</p>
+<p><b>int WINAPI WinMain(HINSTANCE </b><i>hInstance</i><b>, HINSTANCE </b><i>hPrevInstance</i><b>, LPSTR </b><i>lpCmdLine</i><b>, int </b><i>nCmdShow</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>hInstance</i> - uchwyt to bieżącej instancji.</br>
+<i>hPrevInstance</i> - uchwyt do poprzedniej instancji (zawsze NULL).</br>
+<i>lpCmdLine</i> - wskaźnik na linię komend parametrów programu.<br />
+<i>nCmdShow</i> - status wyświetlania okna.
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>Parametr <i>wParam</i> wiadomości WM_QUIT.</p>
+
+<p><b>Uwagi</b></p>
+<p>Funkcja WinMain tworzy dwa singletony, tj. obiekty klas
+<a href="cwindowdata.html">CWindowData</a> oraz 
+<a href="cgamecontrol.html">CGameControl</a>.</p>
+
+<p><a name="ReSizeGLScene"></a></p>
+
+<hr/>
+
+<h3>ReSizeGLScene</h3>
+<p>Funkcja ta przeskalowuje okno OpenGL wedle podanej rozdzielczości.</p>
+<p><b>GLvoid ReSizeGLScene(GLsizei </b><i>width</i><b>, GLsizei </b><i>height</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>width</i> - szerokość okna - rozdzielczość X.</br>
+<i>height</i> - wysokość okna - rozdzielczość Y.</br>
+</p>
+
+<p><a name="InitalizationGL"></a></p>
+
+<hr/>
+
+<h3>InitalizationGL</h3>
+<p>Funkcja inicjalizuje wstępne ustawienia OpenGL. Wywołuje nie mniej ważną
+<a href="cgamecontrol.html#Initialization">CGameControl::Initialization</a>.</p>
+<p><b>GLboolean InitalizationGL();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli inicjalizacja zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="DrawGLScene"></a></p>
+
+<hr/>
+
+<h3>DrawGLScene</h3>
+<p>Główna funkcja rysująca. Wywołuje nie mniej ważną
+<a href="cgamecontrol.html#Draw">CGameControl::Draw</a>.</p>
+<p><b>GLboolean DrawGLScene();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli rysowanie zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="CreateObjects"></a></p>
+
+<hr/>
+
+<h3>CreateObjects</h3>
+<p>Funkcja tworząca obiekt kalsy <a href="cgamecontrol.html">CGameControl</a>.</p>
+<p><b>GLboolean CreateObjects();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli tworzenie obiektu zakończy się powodzeniem, w przeciwnym
+wypadku GL_FALSE.</p>
+
+<p><a name="WndProc"></a></p>
+
+<hr/>
+
+<h3>WndProc</h3>
+<p>Funkcja przetwarzania komunikatów. Tutaj przetwarzamy takie komunikaty
+jak naciskanie klawiszy czy klikanie myszą i przekazujemy je do obiektu klasy
+<a href="cgamecontrol.html">CGameControl</a>.</p>
+<p><b>LRESULT CALLBACK WndProc(HWND </b><i>hWnd</i><b>, UINT </b><i>uMsg</i><b>, WPARAM </b><i>wParam</i><b>, LPARAM </b><i>lParam</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>hWnd</i> - uchwyt okna.<br />
+<i>uMsg</i> - wiadomość dla okna.<br />
+<i>wParam</i>, <i>lParam</i> - parametry wiadomości zawierające dodatkowe informacje, zależnie od wiadomości.
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>0 jeżeli wiadomość została przetworzona. Jeżeli wiadomość nie została
+przetworzona zwracany jest rezultat DefWindowProc.</p>
+
+<p><a name="Destroy"></a></p>
+
+<hr/>
+
+<h3>Destroy</h3>
+<p>Funkcja niszcząca wszelkie obiekty, wywoływana na zakończenie działania
+aplikacji.</p>
+<p><b>GLvoid Destroy(GLboolean </b><i>bKillGLWindow</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>bKillGLWindow</i> - jeżeli ustawimy na GL_TRUE to wywołana zostanie
+także metoda <a href="cwindowdata.html#KillGLWindow">CWindowData::KillGLWindow</a>,
+czyli zniszczone zostanie także okno aplikacji. Dlatego GL_TRUE używane jest przy zamykaniu
+aplikacji. Ustawiając na GL_FALSE okno nie zostanie zniszczone, dlatego też
+GL_FALSE używane jest przy restartowaniu okna.
+</p>
+
+<hr />
+</BODY>
+</HTML>

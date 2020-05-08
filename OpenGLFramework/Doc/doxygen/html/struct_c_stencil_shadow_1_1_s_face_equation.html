@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja struktury CStencilShadow::SFaceEquation</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<div class="nav">
+<a class="el" href="class_c_stencil_shadow.html">CStencilShadow</a>::<a class="el" href="struct_c_stencil_shadow_1_1_s_face_equation.html">SFaceEquation</a></div>
+<h1>Dokumentacja struktury CStencilShadow::SFaceEquation</h1><!-- doxytag: class="CStencilShadow::SFaceEquation" --><div class="dynheader">
+Diagram współpracy dla CStencilShadow::SFaceEquation:</div>
+<div class="dynsection">
+<p><center><img src="struct_c_stencil_shadow_1_1_s_face_equation__coll__graph.png" border="0" usemap="#_c_stencil_shadow_1_1_s_face_equation__coll__map" alt="Collaboration graph"></center>
+<map name="_c_stencil_shadow_1_1_s_face_equation__coll__map">
+<area shape="rect" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="76,5,153,32"><area shape="rect" title="cFaceEq" alt="" coords="111,28,119,36"><area shape="rect" title="cFaceEq" alt="" coords="111,92,119,100"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="struct_c_stencil_shadow_1_1_s_face_equation-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Struktura równania płaszczyzny. 
+<p>
+Struktura ta przechowuje wszelkie informacje o danym trójkącie obiektu 3D potrzebnych do wyliczenia cieni. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_face_equation.html#6d27e4305cab23f8ccd5c09284f4c699">aIndexFace</a> [3]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica przechowująca indeksy trzech wierzchołków.  <a href="#6d27e4305cab23f8ccd5c09284f4c699"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3a990496e2323e0f4dc3b3c4577dfde5"></a><!-- doxytag: member="CStencilShadow::SFaceEquation::cFaceEq" ref="3a990496e2323e0f4dc3b3c4577dfde5" args="" -->
+<a class="el" href="class_c_vector4.html">CVector4</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_face_equation.html#3a990496e2323e0f4dc3b3c4577dfde5">cFaceEq</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dane dla rownania plaszczyzny ax + by + cz + d = 0. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="62f7c471e703b7e9edfd712edd8f7dad"></a><!-- doxytag: member="CStencilShadow::SFaceEquation::bVisible" ref="62f7c471e703b7e9edfd712edd8f7dad" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_face_equation.html#62f7c471e703b7e9edfd712edd8f7dad">bVisible</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy trójkąt jest oświetlony. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="905b2fae0a71460e12fab8fde4c01457"></a><!-- doxytag: member="CStencilShadow::SFaceEquation::iNeighbour" ref="905b2fae0a71460e12fab8fde4c01457" args="[3]" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_face_equation.html#905b2fae0a71460e12fab8fde4c01457">iNeighbour</a> [3]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indeksy innych trójkątów sąsiadujących z daną krawędzią trójkąta. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="6d27e4305cab23f8ccd5c09284f4c699"></a><!-- doxytag: member="CStencilShadow::SFaceEquation::aIndexFace" ref="6d27e4305cab23f8ccd5c09284f4c699" args="[3]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint <a class="el" href="struct_c_stencil_shadow_1_1_s_face_equation.html#6d27e4305cab23f8ccd5c09284f4c699">CStencilShadow::SFaceEquation::aIndexFace</a>[3]          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tablica przechowująca indeksy trzech wierzchołków. 
+<p>
+Tablica przechowująca indeksy (z tablicy CVertexArray::m_aShortIndices) trzech wierzchołków tworzących trójką, dla którego obliczane jest rówanie płaszczyzny. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li>Draw/<a class="el" href="_stencil_shadow_8h-source.html">StencilShadow.h</a></ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

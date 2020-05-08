@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CARBMultiTexturing</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CARBMultiTexturing</h1><!-- doxytag: class="CARBMultiTexturing" --><!-- doxytag: inherits="CSingletonBase&lt; CARBMultiTexturing &gt;" --><code>#include &lt;<a class="el" href="_a_r_b_multi_texturing_8h-source.html">ARBMultiTexturing.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CARBMultiTexturing</div>
+<div class="dynsection">
+<p><center><img src="class_c_a_r_b_multi_texturing__inherit__graph.png" border="0" usemap="#_c_a_r_b_multi_texturing__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_a_r_b_multi_texturing__inherit__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CARBMultiTexturing \&gt;" alt="" coords="5,5,267,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagram współpracy dla CARBMultiTexturing:</div>
+<div class="dynsection">
+<p><center><img src="class_c_a_r_b_multi_texturing__coll__graph.png" border="0" usemap="#_c_a_r_b_multi_texturing__coll__map" alt="Collaboration graph"></center>
+<map name="_c_a_r_b_multi_texturing__coll__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CARBMultiTexturing \&gt;" alt="" coords="5,5,267,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_a_r_b_multi_texturing-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa obsługująca multiteksturing. 
+<p>
+Klasa ta daje wsparcie do obsługi rozszerzenia GL_ARB_multitexture oraz zarządza dostępnymi jednostami teksturującymi. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#6c62dbf1a5bcac803057fdb3bb4552d1">~CARBMultiTexturing</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#6c62dbf1a5bcac803057fdb3bb4552d1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#50481ca92157136ee23e954c9eea0254">IsSupported</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy multiteksturing jest wspierany przez kartę graficzną.  <a href="#50481ca92157136ee23e954c9eea0254"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#95b376c60229447445452339bc44bfdc">BindMultiTextures</a> (GLint iFirstTex, GLsizei iCount=2, GLboolean bEmbossBump=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiające tekstury do renderingu.  <a href="#95b376c60229447445452339bc44bfdc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#e3c22c7602358850a1d85b6e76228087">ClientActiveTextureARB</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda aktywująca daną jednostkę teksturującą.  <a href="#e3c22c7602358850a1d85b6e76228087"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#e562d7f94dda099b5610756d53addd5f">ActiveTextureARB</a> (GLint iIndex=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda aktywująca daną jednostkę teksturującą.  <a href="#e562d7f94dda099b5610756d53addd5f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#145cbc1ecd11464fd72ba9e2aa0aad52">InactiveTextureARB</a> (GLint iIndex=0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda dezaktywująca daną jednostkę teksturującą.  <a href="#145cbc1ecd11464fd72ba9e2aa0aad52"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#f65b32b40e2d2e1d83a9c1426c9d9cce">DisableMultiTeksturing</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyłączająca multitekturing.  <a href="#f65b32b40e2d2e1d83a9c1426c9d9cce"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#9d39816c1337a01e69aed19fff9163f1">MultiTexCoord2fARB</a> (GLint iIndex, GLfloat s, GLfloat t)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca recznie koordynaty tekstury dla danej jednostki teksturującej.  <a href="#9d39816c1337a01e69aed19fff9163f1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#2c3abaf0ceb31e7bb8c6991ee524b96b">ActiveOnlyOneUnit</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda aktywująca tylko jedną zadaną jednostkę teksturującą.  <a href="#2c3abaf0ceb31e7bb8c6991ee524b96b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#fbffe37f0bdb8ad10b70bf3b8720d46a">GetMaxTexelUnits</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość jednostek teksturujących.  <a href="#fbffe37f0bdb8ad10b70bf3b8720d46a"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_c_a_r_b_multi_texturing.html">CARBMultiTexturing</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#df24dddc9c180b41245cd2cad000d927">Construct</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing.">CARBMultiTexturing</a>.  <a href="#df24dddc9c180b41245cd2cad000d927"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#6821382742e28abbc52951ace50c2b4a">CARBMultiTexturing</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#6821382742e28abbc52951ace50c2b4a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#ed5ca5fe5c12e5983b44e4fa2cc0b6cc">InitMultiTexturing</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda inicjalizująca multiteksturing.  <a href="#ed5ca5fe5c12e5983b44e4fa2cc0b6cc"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2db7a73c08f0b4fdb080f2fc1fb9244c"></a><!-- doxytag: member="CARBMultiTexturing::m_bIsSupported" ref="2db7a73c08f0b4fdb080f2fc1fb9244c" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#2db7a73c08f0b4fdb080f2fc1fb9244c">m_bIsSupported</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy multiteksturing jest wspierany. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c07dc1895bcd82175a6023b17528e1f4"></a><!-- doxytag: member="CARBMultiTexturing::m_iMaxTexUnits" ref="c07dc1895bcd82175a6023b17528e1f4" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#c07dc1895bcd82175a6023b17528e1f4">m_iMaxTexUnits</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna przechowująca liczbę ilość jednostek teksturujących. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9a6945090756b73d985ac75a85f6585b"></a><!-- doxytag: member="CARBMultiTexturing::m_iCountUnit" ref="9a6945090756b73d985ac75a85f6585b" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_a_r_b_multi_texturing.html#9a6945090756b73d985ac75a85f6585b">m_iCountUnit</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna zpamiętująca ilość podanych tekstur w metodzie <a class="el" href="class_c_a_r_b_multi_texturing.html#95b376c60229447445452339bc44bfdc" title="Metoda ustawiające tekstury do renderingu.">CARBMultiTexturing::BindMultiTextures</a>. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="6c62dbf1a5bcac803057fdb3bb4552d1"></a><!-- doxytag: member="CARBMultiTexturing::~CARBMultiTexturing" ref="6c62dbf1a5bcac803057fdb3bb4552d1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CARBMultiTexturing::~CARBMultiTexturing           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<a class="anchor" name="6821382742e28abbc52951ace50c2b4a"></a><!-- doxytag: member="CARBMultiTexturing::CARBMultiTexturing" ref="6821382742e28abbc52951ace50c2b4a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CARBMultiTexturing::CARBMultiTexturing           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="df24dddc9c180b41245cd2cad000d927"></a><!-- doxytag: member="CARBMultiTexturing::Construct" ref="df24dddc9c180b41245cd2cad000d927" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_a_r_b_multi_texturing.html">CARBMultiTexturing</a> * CARBMultiTexturing::Construct           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing.">CARBMultiTexturing</a>. 
+<p>
+<a class="el" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing.">CARBMultiTexturing</a> jest singletonem, więc jeżeli wywołamy tę metodę po raz drugi to zwróci ona wskaźnik na obiekt już istniejący, utworzony wcześniej. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt <a class="el" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing.">CARBMultiTexturing</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="50481ca92157136ee23e954c9eea0254"></a><!-- doxytag: member="CARBMultiTexturing::IsSupported" ref="50481ca92157136ee23e954c9eea0254" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::IsSupported           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy multiteksturing jest wspierany przez kartę graficzną. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli multiteksturing jest wspierany. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="95b376c60229447445452339bc44bfdc"></a><!-- doxytag: member="CARBMultiTexturing::BindMultiTextures" ref="95b376c60229447445452339bc44bfdc" args="(GLint iFirstTex, GLsizei iCount=2, GLboolean bEmbossBump=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::BindMultiTextures           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iFirstTex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&nbsp;</td>
+          <td class="paramname"> <em>iCount</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bEmbossBump</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiające tekstury do renderingu. 
+<p>
+Metodę tę należy wywołać przed rysowaniem obiektu, na który chcemy nalożyć kilka tekstur. Warunkiem jest aby tekstury te były wczytane (w <a class="el" href="class_c_game_control.html#f149039ef53e701fa0f514cddbf10329" title="Metoda wczytująca tekstury.">CGameControl::LoadAllTextures</a>) jedna po drugiej. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iFirstTex</em>&nbsp;</td><td>Indeks pierwszej tekstury. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iCount</em>&nbsp;</td><td>Ilość kolejnych tekstur jaka ma być aktywowana. Musi być co najmniej 2. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bEmbossBump</em>&nbsp;</td><td>Flaga wskazująca czy chcemy nałożyć na obiekt teksturę bump. Jeżeli tak, to wymagane jest aby <em>iCount</em> był równy <code>2</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia aktywowania tekstur. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e3c22c7602358850a1d85b6e76228087"></a><!-- doxytag: member="CARBMultiTexturing::ClientActiveTextureARB" ref="e3c22c7602358850a1d85b6e76228087" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::ClientActiveTextureARB           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda aktywująca daną jednostkę teksturującą. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks jednostki teksturującej, którą chcemy aktywować. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia aktywacji. W przeciwnym razie <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e562d7f94dda099b5610756d53addd5f"></a><!-- doxytag: member="CARBMultiTexturing::ActiveTextureARB" ref="e562d7f94dda099b5610756d53addd5f" args="(GLint iIndex=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::ActiveTextureARB           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em> = <code>0</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda aktywująca daną jednostkę teksturującą. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks jednostki teksturującej, którą chcemy aktywować. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia aktywacji. W przeciwnym razie <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="145cbc1ecd11464fd72ba9e2aa0aad52"></a><!-- doxytag: member="CARBMultiTexturing::InactiveTextureARB" ref="145cbc1ecd11464fd72ba9e2aa0aad52" args="(GLint iIndex=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::InactiveTextureARB           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em> = <code>0</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda dezaktywująca daną jednostkę teksturującą. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks jednostki teksturującej, którą chcemy dezaktywować. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia dezaktywacji. W przeciwnym razie <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f65b32b40e2d2e1d83a9c1426c9d9cce"></a><!-- doxytag: member="CARBMultiTexturing::DisableMultiTeksturing" ref="f65b32b40e2d2e1d83a9c1426c9d9cce" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CARBMultiTexturing::DisableMultiTeksturing           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyłączająca multitekturing. 
+<p>
+Metoda ta dezaktywuje wszystkie jednostki teksturujące poza pierwszą. 
+</div>
+</div><p>
+<a class="anchor" name="9d39816c1337a01e69aed19fff9163f1"></a><!-- doxytag: member="CARBMultiTexturing::MultiTexCoord2fARB" ref="9d39816c1337a01e69aed19fff9163f1" args="(GLint iIndex, GLfloat s, GLfloat t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::MultiTexCoord2fARB           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>t</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca recznie koordynaty tekstury dla danej jednostki teksturującej. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks jednostki teksturującej dla której chcemy ustawić koordydany. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>s</em>&nbsp;</td><td>Koordynata tekstury s. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>t</em>&nbsp;</td><td>Koordynata tekstury t. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia ustawienia koordynatów tekstury. <code>GL_FALSE</code> w przypadku niepowodzenia. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2c3abaf0ceb31e7bb8c6991ee524b96b"></a><!-- doxytag: member="CARBMultiTexturing::ActiveOnlyOneUnit" ref="2c3abaf0ceb31e7bb8c6991ee524b96b" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::ActiveOnlyOneUnit           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda aktywująca tylko jedną zadaną jednostkę teksturującą. 
+<p>
+Metoda ta aktywuje tylko jedną podaną jednostkę teksturującą a wszytskie pozostałe dezaktywuje. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Index jednostki teksturującej jaką chcemy ukatywnić. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia. W przeciwnym razie <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fbffe37f0bdb8ad10b70bf3b8720d46a"></a><!-- doxytag: member="CARBMultiTexturing::GetMaxTexelUnits" ref="fbffe37f0bdb8ad10b70bf3b8720d46a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CARBMultiTexturing::GetMaxTexelUnits           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość jednostek teksturujących. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita reprezentująca ilość jednostek teksturujących jakimi dysponuje karta graficzna. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ed5ca5fe5c12e5983b44e4fa2cc0b6cc"></a><!-- doxytag: member="CARBMultiTexturing::InitMultiTexturing" ref="ed5ca5fe5c12e5983b44e4fa2cc0b6cc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CARBMultiTexturing::InitMultiTexturing           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda inicjalizująca multiteksturing. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia inicjalizaji tj. wsparcia dla multiteksturingu. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Extensions/<a class="el" href="_a_r_b_multi_texturing_8h-source.html">ARBMultiTexturing.h</a><li>Extensions/ARBMultiTexturing.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:27 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

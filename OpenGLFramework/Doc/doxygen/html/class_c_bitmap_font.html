@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CBitmapFont</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CBitmapFont</h1><!-- doxytag: class="CBitmapFont" --><code>#include &lt;<a class="el" href="_bitmap_font_8h-source.html">BitmapFont.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_c_bitmap_font-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa umożliwiająca rysowanie tekstu czcionką rastrową. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#fe8576e974456d9b456107e8fbc82178">CBitmapFont</a> (HDC hDC, LPCTSTR lpFontName, GLint iHeight=-24)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#fe8576e974456d9b456107e8fbc82178"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#85921b128eebdaf278b10c7e63c0db4a">~CBitmapFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#85921b128eebdaf278b10c7e63c0db4a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#6753bf4869bd8fd7eb122cbf1da1b2e4">DrawText</a> (GLfloat fX, GLfloat fY, LPCTSTR fmt)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tekst.  <a href="#6753bf4869bd8fd7eb122cbf1da1b2e4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#3b80bb645d763c5157f35aa23059f849">DrawTextFormat</a> (GLfloat fX, GLfloat fY, LPCTSTR fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tekst z możliwością formatowania.  <a href="#3b80bb645d763c5157f35aa23059f849"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#ac24957dbfae425a480901d6e5c5c069">BuildFont</a> (LPCTSTR lpFontName, GLint iHeight=-24)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda budująca czcionkę rastrową.  <a href="#ac24957dbfae425a480901d6e5c5c069"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6a1a9ccbb2aeeacce963d9017f18bb00"></a><!-- doxytag: member="CBitmapFont::KillFont" ref="6a1a9ccbb2aeeacce963d9017f18bb00" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#6a1a9ccbb2aeeacce963d9017f18bb00">KillFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca zbudowaną czcionkę. <br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d9f101625bd1c8f29c995a649e76fba7"></a><!-- doxytag: member="CBitmapFont::m_uiBase" ref="d9f101625bd1c8f29c995a649e76fba7" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#d9f101625bd1c8f29c995a649e76fba7">m_uiBase</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Identyfikator list wyświetlania czcionki. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8c336052201612a8289d723d9a6a449b"></a><!-- doxytag: member="CBitmapFont::m_hDC" ref="8c336052201612a8289d723d9a6a449b" args="" -->
+HDC&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bitmap_font.html#8c336052201612a8289d723d9a6a449b">m_hDC</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Kontekst urządzenia GDI. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="fe8576e974456d9b456107e8fbc82178"></a><!-- doxytag: member="CBitmapFont::CBitmapFont" ref="fe8576e974456d9b456107e8fbc82178" args="(HDC hDC, LPCTSTR lpFontName, GLint iHeight=-24)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CBitmapFont::CBitmapFont           </td>
+          <td>(</td>
+          <td class="paramtype">HDC&nbsp;</td>
+          <td class="paramname"> <em>hDC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFontName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iHeight</em> = <code>-24</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>hDC</em>&nbsp;</td><td>Kontekst urządzenia GDI (należy pobrać go z klasy <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>). </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFontName</em>&nbsp;</td><td>Nazwa czcionki zarejestrowanej w systemie. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iHeight</em>&nbsp;</td><td>Wielkość czcionki (należy podawać w wartościach ujemnych). </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="85921b128eebdaf278b10c7e63c0db4a"></a><!-- doxytag: member="CBitmapFont::~CBitmapFont" ref="85921b128eebdaf278b10c7e63c0db4a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CBitmapFont::~CBitmapFont           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="6753bf4869bd8fd7eb122cbf1da1b2e4"></a><!-- doxytag: member="CBitmapFont::DrawText" ref="6753bf4869bd8fd7eb122cbf1da1b2e4" args="(GLfloat fX, GLfloat fY, LPCTSTR fmt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CBitmapFont::DrawText           </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>fmt</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tekst. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fX</em>&nbsp;</td><td>Współrędna x położenia tekstu, gdzie 0, 0 to środek ekranu. Tekst jest rysowany na płaszczyźnie ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fY</em>&nbsp;</td><td>Współrędna y położenia tekstu, gdzie 0, 0 to środek ekranu. Tekst jest rysowany na płaszczyźnie ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3b80bb645d763c5157f35aa23059f849"></a><!-- doxytag: member="CBitmapFont::DrawTextFormat" ref="3b80bb645d763c5157f35aa23059f849" args="(GLfloat fX, GLfloat fY, LPCTSTR fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CBitmapFont::DrawTextFormat           </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tekst z możliwością formatowania. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fX</em>&nbsp;</td><td>Współrędna x położenia tekstu, gdzie 0, 0 to środek ekranu. Tekst jest rysowany na płaszczyźnie ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fY</em>&nbsp;</td><td>Współrędna x położenia tekstu, gdzie 0, 0 to środek ekranu. Tekst jest rysowany na płaszczyźnie ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalane parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ac24957dbfae425a480901d6e5c5c069"></a><!-- doxytag: member="CBitmapFont::BuildFont" ref="ac24957dbfae425a480901d6e5c5c069" args="(LPCTSTR lpFontName, GLint iHeight=-24)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CBitmapFont::BuildFont           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFontName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iHeight</em> = <code>-24</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda budująca czcionkę rastrową. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFontName</em>&nbsp;</td><td>Nazwa czcionki zarejestrowanej w systemie. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iHeight</em>&nbsp;</td><td>Wielkość czcionki (należy podawać w wartościach ujemnych). </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Fonts/<a class="el" href="_bitmap_font_8h-source.html">BitmapFont.h</a><li>Fonts/BitmapFont.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:27 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

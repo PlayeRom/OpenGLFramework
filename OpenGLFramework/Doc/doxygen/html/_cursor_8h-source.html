@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy OpenGLFramework/Cursor.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework/Cursor.h</h1><a href="_cursor_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00007"></a><a class="code" href="_cursor_8h.html#9ffbc1099a1d78ce0ee5b4fff56dcff0">00007</a> <span class="preprocessor">#define MAX_CURSOR 3</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span>
+<a name="l00010"></a><a class="code" href="class_c_cursor.html">00010</a> <span class="keyword">class </span><a class="code" href="class_c_cursor.html" title="Klasa zarządzająca kursorami.">CCursor</a>  
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012 <span class="keyword">public</span>:
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015         <a class="code" href="class_c_cursor.html#401e07ca63f8d69701ee65c2df56c8fd" title="Konstruktor.">CCursor</a>();
+<a name="l00016"></a>00016 
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019         <span class="keyword">virtual</span> <a class="code" href="class_c_cursor.html#ab81e84d1e070bb178f3de8f4267888f" title="Destruktor.">~CCursor</a>();
+<a name="l00020"></a>00020 
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023         GLvoid <a class="code" href="class_c_cursor.html#9f1a8697d36220de89c211d40aef0be5" title="Metoda ustawiająca kursor.">SetMyCursor</a>(GLint iIndex);
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="class_c_cursor.html#47810a8ed8d3f1fa39cdb6ed5c8aea41">00027</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_cursor.html#47810a8ed8d3f1fa39cdb6ed5c8aea41" title="Metoda zwracająca indeks aktualnie ustawionego kursora.">GetMyCursor</a>()      { <span class="keywordflow">return</span> <a class="code" href="class_c_cursor.html#2cce741e8e23a6901e65deb975df0e83" title="Zmienna pamiętająca indeks ostatnio ustawionego kursora.">m_iCursor</a>; }
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">private</span>:
+<a name="l00030"></a><a class="code" href="class_c_cursor.html#451a209d647cc1bde57f54148c275a5a">00030</a>         HCURSOR <a class="code" href="class_c_cursor.html#451a209d647cc1bde57f54148c275a5a" title="Tablica przechowująca wczytane kursory.">m_hCursor</a>[<a class="code" href="_cursor_8h.html#9ffbc1099a1d78ce0ee5b4fff56dcff0" title="Definicja stałej maksymalnej liczby kursorów.">MAX_CURSOR</a>];  
+<a name="l00031"></a>00031 
+<a name="l00033"></a><a class="code" href="class_c_cursor.html#2cce741e8e23a6901e65deb975df0e83">00033</a>         GLint <a class="code" href="class_c_cursor.html#2cce741e8e23a6901e65deb975df0e83" title="Zmienna pamiętająca indeks ostatnio ustawionego kursora.">m_iCursor</a>;
+<a name="l00034"></a>00034 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

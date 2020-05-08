@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Strona główna</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li class="current"><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework Dokumentacja</h1>
+<p>
+<h2><a class="anchor" name="intro_sec">
+Wstęp</a></h2>
+OpenGLFramework jest to prosty szablon, na podstawie którego możemy budować aplikacje (w tym gry) oparte na bibliotece OpenGL. I takie też było jego główne założenie. OpenGLFramework zawiera więc podstawowe funkcje związane chyba z każdą grą. Całą resztę, tj. funkcjonalność, mechanizm gry należy już wykonać we własnym zakresie, dokładając do opisywanego tu szablonu własne klasy/moduły. <br>
+ Na stan obecny OpenGLFramework zawiera:<ul>
+<li>wczytywanie tekstur (nearest, linear oraz mipmap) z plików BMP oraz TGA,</li><li>multiteksturing,</li><li>obsługa dźwięku za pomocą biblioteki FMOD oraz OpenAL,</li><li>wyświetlanie tekstu – aż pięć możliwość,</li><li>obliczanie i wyświetlanie FPS (ilość generowanych klatek na sekundę),</li><li>kontrola prędkości animacji, dzięki czemu animacje wyświetlane będą z prędkością niezależną od FPS,</li><li>prosty profiler do sprawdzania czasu wykonania się różnych funkcji,</li><li>konsola do wyświetlania i wprowadzania komunikatów,</li><li>wspieranie UNICODE,</li><li>wspieranie wielojęzyczności,</li><li>wspieranie oświetlania i materiałów,</li><li>pełnoekranowy antyaliasing,</li><li>logger,</li><li>tryb 2D oraz 3D z możliwością przełączania się,</li><li>wykorzystanie VertexArrays,</li><li>wykorzystanie Vertex Buffer Object,</li><li>własny format pliku 3DObj dla modeli 3D,</li><li>włączanie / wyłączanie synchronizacji pionowej,</li><li>emboss bump mapping (mapowanie wybojów),</li><li>prosty system cząsteczkowy,</li><li>rysowanie billboard'ów (sprite'ów zawsze zwróconych przodem do widza),</li><li>możliwość zmiany, np. rozdzielczości, głębi kolorów, próbkowania dla antyaliasingu, itp. bez utraty aktualnego stanu gry,</li><li>możliwość tworzenia cieni w oparciu o stencil buffer.</li></ul>
+<h2><a class="anchor" name="library_sec">
+Wykorzystywane biblioteki.</a></h2>
+OpenGLFramework wykorzystuje takie biblioteki jak SDL_ttf, FMOD, OpenAL oraz STL no i oczywiście OpenGL. Oznacza to, że aby skompilować projekt należy posiadać biblioteki SDL, SDL_ttf, FMOD oraz OpenAL – możemy pobrać je z internetu (pozostałe powinniśmy już mieć). Oczywiście musimy w Visual C++ wskazać ścieżki do folderów include oraz lib – dla każdej z biblioteki z osobna. Do głównego katalogu projektu należy także skopiować pliki DLL i są to: fmod.dll (o ile zamierzamy korzystać z biblioteki FMOD a nie z OpenAL), alut.dll, OpenAL32.dll, ogg.dll, vorbis.dll i vorbisfile.dll (o ile zamierzamy korzystać z biblioteki OpenAL a nie FMOD), SDL.dll oraz SDL_ttf.dll. <hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:18 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

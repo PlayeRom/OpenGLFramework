@@ -1,0 +1,109 @@
+<area shape="rect" href="$class_c_game_control.html" title="Główna klasa zarządzająca grą." alt="" coords="1793,563,1903,589">
+<area shape="rect" title="m_pParticles" alt="" coords="1527,28,1535,36">
+<area shape="rect" title="m_pParticles" alt="" coords="1843,559,1851,567">
+<area shape="rect" title="m_pGameCtrl" alt="" coords="1844,559,1852,567">
+<area shape="rect" title="m_pGameCtrl" alt="" coords="1527,49,1535,57">
+<area shape="rect" href="$class_c3_d_obj_manager.html" title="Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku 3DObj..." alt="" coords="2288,563,2411,589">
+<area shape="rect" title="m_pGameCtrl" alt="" coords="1889,559,1897,567">
+<area shape="rect" title="m_pGameCtrl" alt="" coords="2297,559,2305,567">
+<area shape="rect" href="$class_c3_d_obj_file.html" title="Klasa zapisu i odczytu pliku 3DObj." alt="" coords="2051,563,2141,589">
+<area shape="rect" title="m_pGameCtrl" alt="" coords="1900,572,1908,580">
+<area shape="rect" title="m_pGameCtrl" alt="" coords="2047,572,2055,580">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CGameControl \&gt;" alt="" coords="1375,91,1604,117">
+<area shape="rect" href="$class_c_emboss_bump.html" title="Klasa tworzenia efektu tłoczonego mapowania wybojów." alt="" coords="1235,145,1349,172">
+<area shape="rect" title="m_pEmbossBump" alt="" coords="1345,155,1353,163">
+<area shape="rect" title="m_pEmbossBump" alt="" coords="1844,559,1852,567">
+<area shape="rect" href="$class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="708,189,785,216">
+<area shape="rect" title="m_cLight" alt="" coords="781,193,789,201">
+<area shape="rect" title="m_cLight" alt="" coords="1231,159,1239,167">
+<area shape="rect" href="$struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku..." alt="" coords="939,204,1197,231">
+<area shape="rect" title="cLightPos" alt="" coords="781,203,789,211">
+<area shape="rect" title="cLightPos" alt="" coords="935,211,943,219">
+<area shape="rect" href="$class_c_console.html" title="Klasa konsoli." alt="" coords="1449,533,1529,560">
+<area shape="rect" title="m_pConsole" alt="" coords="1525,545,1533,553">
+<area shape="rect" title="m_pConsole" alt="" coords="1789,568,1797,576">
+<area shape="rect" href="$class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="1016,483,1120,509">
+<area shape="rect" href="$class_c_r_message_box.html" title="Klasa rysująca MessageBox&#45;a." alt="" coords="1431,473,1548,500">
+<area shape="rect" href="$class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową." alt="" coords="1019,619,1117,645">
+<area shape="rect" title="m_pBitmapFont" alt="" coords="1115,624,1123,632">
+<area shape="rect" title="m_pBitmapFont" alt="" coords="1789,576,1797,584">
+<area shape="rect" title="m_pBitmapFont" alt="" coords="1115,620,1123,628">
+<area shape="rect" title="m_pBitmapFont" alt="" coords="1445,553,1453,561">
+<area shape="rect" href="$class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="1027,347,1109,373">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1107,353,1115,361">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1836,559,1844,567">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1087,369,1095,377">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1445,532,1453,540">
+<area shape="rect" href="$class_c_fps.html" title="Klasa zliczająca i wyświetlająca ilość generowanych klatek na sekundę." alt="" coords="1463,307,1516,333">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1107,352,1115,360">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1459,319,1467,327">
+<area shape="rect" title="m_pSDLFontText" alt="" coords="1107,365,1115,373">
+<area shape="rect" title="m_pSDLFontText" alt="" coords="1459,469,1467,477">
+<area shape="rect" href="$class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,271,800,297">
+<area shape="rect" title="m_pWin" alt="" coords="796,276,804,284">
+<area shape="rect" title="m_pWin" alt="" coords="1843,559,1851,567">
+<area shape="rect" title="m_pWinData" alt="" coords="793,293,801,301">
+<area shape="rect" title="m_pWinData" alt="" coords="1023,347,1031,355">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,169,520,196">
+<area shape="rect" href="$class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,220,472,247">
+<area shape="rect" title="m_pARBMultisample" alt="" coords="468,235,476,243">
+<area shape="rect" title="m_pARBMultisample" alt="" coords="697,267,705,275">
+<area shape="rect" href="$class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,271,465,297">
+<area shape="rect" title="m_pMultiLang" alt="" coords="463,280,471,288">
+<area shape="rect" title="m_pMultiLang" alt="" coords="689,280,697,288">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,271,243,297">
+<area shape="rect" href="$struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,321,500,348">
+<area shape="rect" title="m_sSettingFile" alt="" coords="496,324,504,332">
+<area shape="rect" title="m_sSettingFile" alt="" coords="699,293,707,301">
+<area shape="rect" href="$class_c_logger.html" title="Klasa loggera." alt="" coords="371,372,443,399">
+<area shape="rect" title="m_pLogger" alt="" coords="440,383,448,391">
+<area shape="rect" title="m_pLogger" alt="" coords="731,293,739,301">
+<area shape="rect" href="$class_c_my_font.html" title="Klasa rysująca tekst." alt="" coords="1031,543,1105,569">
+<area shape="rect" title="m_pMyFont" alt="" coords="1103,552,1111,560">
+<area shape="rect" title="m_pMyFont" alt="" coords="1445,545,1453,553">
+<area shape="rect" href="$class_c_speed_control.html" title="Klasa kontroli szybkości animacji." alt="" coords="1012,684,1124,711">
+<area shape="rect" title="m_pSpeedControl" alt="" coords="1121,692,1129,700">
+<area shape="rect" title="m_pSpeedControl" alt="" coords="1800,585,1808,593">
+<area shape="rect" title="m_pSpeedControl" alt="" coords="1121,692,1129,700">
+<area shape="rect" title="m_pSpeedControl" alt="" coords="1445,545,1453,553">
+<area shape="rect" href="$class_c_matrix_operations.html" title="Klasa wspierająca obliczenia dla przekształceń dwu i trzywymiarowych." alt="" coords="1423,712,1556,739">
+<area shape="rect" title="m_pMatrixOp" alt="" coords="1552,731,1560,739">
+<area shape="rect" title="m_pMatrixOp" alt="" coords="1840,585,1848,593">
+<area shape="rect" title="m_pFps" alt="" coords="1513,311,1521,319">
+<area shape="rect" title="m_pFps" alt="" coords="1841,559,1849,567">
+<area shape="rect" href="$class_c_stencil_shadow.html" title="Klasa wspomagająca rysowanie dynamicznych cieni shadow volume." alt="" coords="1429,205,1549,232">
+<area shape="rect" title="m_pStencilShadow" alt="" coords="1545,204,1553,212">
+<area shape="rect" title="m_pStencilShadow" alt="" coords="1843,559,1851,567">
+<area shape="rect" title="m_sObjTransfInfo" alt="" coords="1193,213,1201,221">
+<area shape="rect" title="m_sObjTransfInfo" alt="" coords="1425,215,1433,223">
+<area shape="rect" href="$class_c_billboard.html" title="Klasa rysująca billboardy." alt="" coords="1448,763,1531,789">
+<area shape="rect" title="m_pBillboard" alt="" coords="1527,781,1535,789">
+<area shape="rect" title="m_pBillboard" alt="" coords="1843,585,1851,593">
+<area shape="rect" href="$class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora..." alt="" coords="1407,813,1572,840">
+<area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1539,836,1547,844">
+<area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1841,585,1849,593">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CWGLEXTSwapControl \&gt;" alt="" coords="927,813,1209,840">
+<area shape="rect" href="$class_c_outline_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką konturową." alt="" coords="1439,864,1540,891">
+<area shape="rect" title="m_pOutlineFont" alt="" coords="1536,879,1544,887">
+<area shape="rect" title="m_pOutlineFont" alt="" coords="1843,585,1851,593">
+<area shape="rect" href="$class_c_cursor.html" title="Klasa zarządzająca kursorami." alt="" coords="1453,915,1525,941">
+<area shape="rect" title="m_pCursor" alt="" coords="1521,933,1529,941">
+<area shape="rect" title="m_pCursor" alt="" coords="1843,585,1851,593">
+<area shape="rect" href="$class_c_texture_font.html" title="Klasa umożliwiająca rysowanie tekstu za pomocą tekstury z czcionką." alt="" coords="1437,1029,1541,1056">
+<area shape="rect" title="m_pTextureFont" alt="" coords="1537,1051,1545,1059">
+<area shape="rect" title="m_pTextureFont" alt="" coords="1844,585,1852,593">
+<area shape="rect" href="$class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur." alt="" coords="1009,999,1127,1025">
+<area shape="rect" title="m_pTextureLoader" alt="" coords="1124,1004,1132,1012">
+<area shape="rect" title="m_pTextureLoader" alt="" coords="1843,585,1851,593">
+<area shape="rect" title="m_pTextureLoader" alt="" coords="1124,1012,1132,1020">
+<area shape="rect" title="m_pTextureLoader" alt="" coords="1433,1035,1441,1043">
+<area shape="rect" href="$class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing." alt="" coords="1419,1080,1560,1107">
+<area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1531,1103,1539,1111">
+<area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1843,585,1851,593">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CARBMultiTexturing \&gt;" alt="" coords="937,1080,1199,1107">
+<area shape="rect" title="m_p3DObjManager" alt="" coords="2297,585,2305,593">
+<area shape="rect" title="m_p3DObjManager" alt="" coords="1891,585,1899,593">
+<area shape="rect" title="m_p3DObjFile" alt="" coords="2137,572,2145,580">
+<area shape="rect" title="m_p3DObjFile" alt="" coords="2284,572,2292,580">
+<area shape="rect" title="m_pRMessageBox" alt="" coords="1545,489,1553,497">
+<area shape="rect" title="m_pRMessageBox" alt="" coords="1820,559,1828,567">

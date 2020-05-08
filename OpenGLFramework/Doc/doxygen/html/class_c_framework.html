@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CFramework</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CFramework</h1><!-- doxytag: class="CFramework" --><code>#include &lt;<a class="el" href="_framework_8h-source.html">Framework.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_c_framework-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa szkieletu aplikacji. 
+<p>
+Zadaniem tej klasy jest inicjalizacja oraz niszczenie całego frameworka oraz zarządzanie główną pętlą programu. <br>
+ Należy utworzyć obiekt tej klasy w głównej metodzie programu WinMain oraz wywołać jej jedyną publiczną metodę <a class="el" href="class_c_framework.html#20be1cac00839e2301e94a571139231b" title="Metoda zarządzająca całym frameworkiem.">CFramework::Run</a>. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_framework.html#385b883ca6a8fc90b92a5aa01279e5d0">CFramework</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#385b883ca6a8fc90b92a5aa01279e5d0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_framework.html#984aa18724a447c67ad259058c3b2f90">~CFramework</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#984aa18724a447c67ad259058c3b2f90"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_framework.html#20be1cac00839e2301e94a571139231b">Run</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zarządzająca całym frameworkiem.  <a href="#20be1cac00839e2301e94a571139231b"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_framework.html#3e57945d4555ba37e66aac29729fd538">InitalizationGL</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Główna metoda inicjalizująca wstępne parametry OpenGL-a.  <a href="#3e57945d4555ba37e66aac29729fd538"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_framework.html#8e322cfe86db25e165730364d9df602a">CreateGameControl</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca oraz inicjalizująca obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>.  <a href="#8e322cfe86db25e165730364d9df602a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_framework.html#ed819af2204d27d211efcf737c755125">DrawGLScene</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Główna metoda, od której rozpoczyna się rysowanie całej sceny.  <a href="#ed819af2204d27d211efcf737c755125"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_framework.html#76f7135c56fc94b5e20ed60a1dc42f7d">Destroy</a> (GLboolean bKillGLWindow)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca całe okno frameworka oraz obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>.  <a href="#76f7135c56fc94b5e20ed60a1dc42f7d"></a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="385b883ca6a8fc90b92a5aa01279e5d0"></a><!-- doxytag: member="CFramework::CFramework" ref="385b883ca6a8fc90b92a5aa01279e5d0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFramework::CFramework           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="984aa18724a447c67ad259058c3b2f90"></a><!-- doxytag: member="CFramework::~CFramework" ref="984aa18724a447c67ad259058c3b2f90" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFramework::~CFramework           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="20be1cac00839e2301e94a571139231b"></a><!-- doxytag: member="CFramework::Run" ref="20be1cac00839e2301e94a571139231b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CFramework::Run           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zarządzająca całym frameworkiem. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Kod wyjścia programu. Jeżeli <code>0</code> to program zakończył się prawidłowo. Wartość ta musi być także zwrócona przez główną funkcję programu WinMain. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3e57945d4555ba37e66aac29729fd538"></a><!-- doxytag: member="CFramework::InitalizationGL" ref="3e57945d4555ba37e66aac29729fd538" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CFramework::InitalizationGL           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Główna metoda inicjalizująca wstępne parametry OpenGL-a. 
+<p>
+Wewnątrz tej metody wywoływana jest także metoda <a class="el" href="class_c_framework.html#8e322cfe86db25e165730364d9df602a" title="Metoda tworząca oraz inicjalizująca obiekt klasy CGameControl.">CFramework::CreateGameControl</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia inicjalizacji. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8e322cfe86db25e165730364d9df602a"></a><!-- doxytag: member="CFramework::CreateGameControl" ref="8e322cfe86db25e165730364d9df602a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CFramework::CreateGameControl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca oraz inicjalizująca obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia inicjalizacji. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ed819af2204d27d211efcf737c755125"></a><!-- doxytag: member="CFramework::DrawGLScene" ref="ed819af2204d27d211efcf737c755125" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CFramework::DrawGLScene           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Główna metoda, od której rozpoczyna się rysowanie całej sceny. 
+<p>
+Wewnątrz tej metody wywoływana jest nie mniej ważna metoda <a class="el" href="class_c_game_control.html#e48ce07d9969e4d92457cde2ac095f7f" title="Główna funkcja rysująca scenę.">CGameControl::Draw</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="76f7135c56fc94b5e20ed60a1dc42f7d"></a><!-- doxytag: member="CFramework::Destroy" ref="76f7135c56fc94b5e20ed60a1dc42f7d" args="(GLboolean bKillGLWindow)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CFramework::Destroy           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bKillGLWindow</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca całe okno frameworka oraz obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bKillGLWindow</em>&nbsp;</td><td>Podając jako <code>GL_FALSE</code>, zniszczony zostanie tylko obiekt klasy <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. Podając <code>GL_TRUE</code>, oprócz zniszczenia <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>, zniszczone zostanie także okno apliakcji. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>OpenGLFramework/<a class="el" href="_framework_8h-source.html">Framework.h</a><li>OpenGLFramework/<a class="el" href="_framework_8cpp.html">Framework.cpp</a></ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:28 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

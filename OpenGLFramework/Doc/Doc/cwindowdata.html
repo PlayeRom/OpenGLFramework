@@ -1,0 +1,321 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - CWindowData</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Klasa CWindowData</H1>
+
+<p><b>Tworzenie singletonu</b></p>
+<p><a href="#Construct">Construct</a></p>
+
+<p><b>Konstruktor</b></p>
+<p><a href="#konstruktor">CWindowData</a></p>
+
+<p><b>Metody klasy - interfejs</b></p>
+
+<table border="1">
+<tr><td><a href="#CreateGLWindow">CreateGLWindow</a></td></tr>
+<tr><td><a href="#KillGLWindow">KillGLWindow</a></td></tr>
+<tr><td><a href="#RestartWindow">RestartWindow</a></td></tr>
+<tr><td><a href="#FullscreenSwitch">FullscreenSwitch</a></td></tr>
+<tr><td><a href="#LoadSettingFile">LoadSettingFile</a></td></tr>
+<tr><td><a href="#SaveSettingFile">SaveSettingFile</a></td></tr>
+<tr><td><a href="#IsCommandLine">IsCommandLine</a></td></tr>
+<tr><td><a href="#GetAntialiasingSamples">GetAntialiasingSamples</a></td></tr>
+<tr><td><a href="#SetAntialiasingSamples">SetAntialiasingSamples</a></td></tr>
+<tr><td><a href="#GetLogger">GetLogger</a></td></tr>
+</table>
+
+<p><b>Pola klasy</b></p>
+<table border="1">
+<tr>
+<td>GLfloat m_bkColor[4];</td>
+<td>Tablica zawierajaca cztery składowe (RGBA) domyślnego koloru tła.</td>
+</tr>
+<tr>
+<td>UINT m_uiTimer;</td>
+<td>Interwał timera. Jeżeli równy 0 to timer wyłączony.</td>
+</tr>
+<tr>
+<td>GLboolean m_bFullscreenAntialiasing;</td>
+<td>Określa czy antyaliasing jest aktywny. Jeżeli równy GL_TRUE to antyaliasing jest włączony.</td>
+</tr>
+<tr>
+<td>TCHAR *m_lpTitle;</td>
+<td>Wskaźnik na łańcuch znaków określający tytuł głownego okna aplikacji.</td>
+</tr>
+<tr>
+<td>TCHAR *m_lpClassName;</td>
+<td>Wskaźnik na łańcuch znaków określający nazwę klasy głownego okna aplikacji.</td>
+</tr>
+<tr>
+<td>GLint m_iResolutionX;</td>
+<td>Domyślna wartość szerokości okna.</td>
+</tr>
+<tr>
+<td>GLint m_iResolutionY;</td>
+<td>Domyślna wartość wysokości okna.</td>
+</tr>
+<tr>
+<td>GLint m_iBitsPerPixel;</td>
+<td>Domyślna wartość głębi kolorów.</td>
+</tr>
+<tr>
+<td>GLubyte m_ubZBufferBits;</td>
+<td>Domyślna wartość Z-bufora.</td>
+</tr>
+<tr>
+<td>GLboolean m_bShowMouseCursor;</td>
+<td>Domyślna wartość określająca czy kursor myszy ma być widoczny. Jeżeli równa GL_TRUE to kursor będzie widoczny.</td>
+</tr>
+<tr>
+<td>GLboolean m_bRestart;</td>
+<td>Pole mówiące czy aplikację należy zrestartować. Nie wymaga naszej igerencji gdyż jest już prawidłowo obsługiwane.</td>
+</tr>
+<tr>
+<td><a href="clogger.html">CLogger</a>	*m_objLogger;</td>
+<td>Wskaźnik na obiekt klasy <a href="clogger.html">CLogger</a>. Poprzez ten wskaźnik należy odwoływać się do metod kalsy <a href="clogger.html">CLogger</a>.</td>
+</tr>
+<tr>
+<td><a href="carbmultisample.html">CARBMultisample</a>	*m_objARBMultisample;</td>
+<td>Wskaźnik na obiekt klasy <a href="carbmultisample.html">CARBMultisample</a>.</td>
+</tr>
+<tr>
+<td><a href="#SETTING_FILE">SETTING_FILE</a> m_sSettingFile;</td>
+<td>Pole staruktury przechowującej podstawowe ustawienia apliakcji.</td>
+</tr>
+</table>
+
+<p><a name="Construct"></a></p>
+
+<hr/>
+
+<h3>CWindowData::Construct</h3>
+<p>[public] <b>static CWindowData* Construct();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt klasy CWindowData. Jeżeli obiekt już istnieje zwracany jest NULL.</p>
+<p><b>Uwagi</b></p>
+<p>Kalsa CWindowData jest singletonem. Oznacza to, że obiekt tej klasy
+może występowąć tylko w jednym egzemplarzu. Dlatego też obiekt klasy CWindowData
+tworzony jest poprzez statyczną metodę Construct.</p>
+
+<p><a name="konstruktor"></a></p>
+
+<hr/>
+
+<h3>CWindowData::CWindowData</h3>
+
+<p>[private] <b>CWindowData();</b></p>
+
+<p><a name="CreateGLWindow"></a></p>
+
+<hr/>
+
+<h3>CWindowData::CreateGLWindow</h3>
+
+<p>Metoda tworząca główne okno aplikacji.</p>
+
+<p>[public] <b>GLboolean CreateGLWindow(WNDPROC *</b><i>WndProc</i><b>, const GLint </b><i>iIcon</i><b>, const GLint </b><i>iCursor</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>WndProc</i> - wskaźnik na funkcję procedury okna - WndProc.<br/>
+<i>iIcon</i> - numer identyfikacyjny ikony znajdującej się w zasobach. Przekazana ikona stanie się główną ikoną aplikacji.<br/>
+<i>iCursor</i> - numer identyfikacyjny kursora znajdującego się w zasobach. Przekazany kursor stanie się domyślnym kursorem aplikacji.
+</p>
+
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli utworzenie okna zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="KillGLWindow"></a></p>
+
+<hr/>
+
+<h3>CWindowData::KillGLWindow</h3>
+
+<p>Metoda niszcząca główne okno aplikacji.</p>
+
+<p>[public] <b>GLvoid KillGLWindow();</b></p>
+
+<p><a name="RestartWindow"></a></p>
+
+<hr/>
+
+<h3>CWindowData::RestartWindow</h3>
+
+<p>Jeżeli wprowadzimy zmiany wymagające restartu
+okna, np: rozdzielczość, antyaliasing itp. to należy wywołać tę funkcję.
+Podczas restartu obiekty klas CWindowData oraz 
+<a href="cgamecontrol.html">CGameControl</a> pozostaną
+nienaruszone co oznacza, że aktualny stan gry nie zostanie utracony.</p>
+
+<p>[public] <b>GLvoid RestartWindow();</b></p>
+
+<p><a name="FullscreenSwitch"></a></p>
+
+<hr/>
+
+<h3>CWindowData::FullscreenSwitch</h3>
+
+<p>Funkca ta służy do przełączania się pomiędzy
+trybem pełnoekranowym a okienkowym.</p>
+
+<p>[public] <b>GLvoid FullscreenSwitch();</b></p>
+
+<p><a name="LoadSettingFile"></a></p>
+
+<hr/>
+
+<h3>CWindowData::LoadSettingFile</h3>
+
+<p>Funkcja wczytująca z pliku ustawienia do struktury <a href="#SETTING_FILE">SETTING_FILE</a>.</p>
+
+<p>[public] <b>GLvoid LoadSettingFile();</b></p>
+
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli wczytanie danych zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="SaveSettingFile"></a></p>
+
+<hr/>
+
+<h3>CWindowData::SaveSettingFile</h3>
+
+<p>Funkcja zapisująca do pliku ustawienia ze struktury
+<a href="#SETTING_FILE">SETTING_FILE</a>. Domyślną nazwą pliku jest
+"setting.cfg".</p>
+
+<p>[public] <b>GLboolean SaveSettingFile(GLboolean </b><i>bDefaultSave</i><b> = GL_FALSE);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>bDefaultSave</i> - jeżeli GL_TRUE to pola struktury
+<a href="#SETTING_FILE">SETTING_FILE</a> zostaną nadpisana wartościami
+domyślnymi oraz wartości te zostaną zapisane. Jeżeli GL_FALSE to zapisane
+zostaną aktualne wartości struktury <a href="#SETTING_FILE">SETTING_FILE</a>.
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli zapisanie danych zakończy się powodzeniem, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><a name="IsCommandLine"></a></p>
+
+<hr/>
+
+<h3>CWindowData::IsCommandLine</h3>
+
+<p>Funkcja sprawdzająca czy podany parametr zawiera się w parametrach
+podanych przy uruchomieniu aplikacji.</p>
+
+<p>[public] <b>GLboolean IsCommandLine(LPCTSTR </b><i>lpParam</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<i>lpParam</i> - parametr (jako łańcuch znaków) jaki chcemy sprawdzić.
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE jeżeli podany parametr zawiera się w parametrach linii komend, w przeciwnym wypadku GL_FALSE.</p>
+
+<p><b>Przykład</b></p>
+<p>
+Uruchamiamy program z parametrem /myparam oraz /logger:<br/>
+<i>C:\Aplikacja.exe /myparam/logger</i>
+</p>
+<p><font face="Courier New" size="2">
+//sprawdzamy czy podany parametr został zawarty:<br/>
+...<br />
+if(IsCommandLine(_T("/myparam")))<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//tutaj reakcja na zawartość parametru /myparam<br />
+}
+</font></p>
+
+<p><a name="GetAntialiasingSamples"></a></p>
+
+<hr/>
+
+<h3>CWindowData::GetAntialiasingSamples</h3>
+
+<p>Funkcja pobierająca ilość sampli dla antialiasingu.</p>
+
+<p>[public] <b>GLint GetAntialiasingSamples();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Liczba używanych sampli.</p>
+
+<p><a name="SetAntialiasingSamples"></a></p>
+
+<hr/>
+
+<h3>CWindowData::SetAntialiasingSamples</h3>
+
+<p>Funkcja ustawiająca ilość sampli dla antialiasingu.</p>
+
+<p>[public] <b>GLvoid SetAntialiasingSamples(GLint </b><i>iSamples</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p><i>iSamples</i> - liczba sampli jaką chcemy ustawić.</p>
+
+<p><a name="GetLogger"></a></p>
+
+<hr/>
+
+<h3>CWindowData::GetLogger</h3>
+
+<p>Metoda zwracająca wskaźnik na obiekt klasy <a href="clogger.html">CLogger</a>.</p>
+
+<p>[public] <b>inline CLogger* GetLogger();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>Wskaźnik na obiekt <a href="clogger.html">CLogger</a>.</p>
+
+<p><a name="SETTING_FILE"></a></p>
+
+<hr/>
+
+<h3>Struktura SETTING_FILE</h3>
+
+<p>Struktura przechowuje podstawowe dane aplikacji, które mogą być
+modyfikowane przez użytkownika w trakcie jej działania. Dane te zapisywane
+i odczytywane są z pliku za pomocą metod <a href="#LoadSettingFile">
+LoadSettingFile</a> oraz <a href="#SaveSettingFile">SaveSettingFile</a>.
+Domyślną nazwą pliku jest "setting.cfg".</p>
+
+<p><font face="Courier New" size="2">
+typedef struct<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLubyte ubMajorVersion;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLubyte ubMinorVersion;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLubyte ubReleaseVersion;<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLint iWidth;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLint iHeight;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLint iBitsPerPixel;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLint iAntialiasing;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLboolean bFullScreen;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;GLboolean bClearOldLog;<br/>
+} SETTING_FILE;
+</font></p>
+<p><b>Zawartość struktury</b></p>
+<p>
+<i>ubMajorVersion</i> - główna wersja pliku z ustawieniami.<br />
+<i>ubMinorVersion</i> - pomniejsza wersja pliku z ustawieniami.<br />
+<i>ubReleaseVersion</i> - trzeciorzędna wersja pliku z ustawieniami.<br />
+<i>iWidth</i> - aktualna szerokość okna - rozdzielczość X.<br />
+<i>iHeight</i> - aktualna wysokość okna - rozdzielczość Y<br />
+<i>iBitsPerPixel</i> - aktualna głębia kolorów - ilość bitów na piksel.<br />
+<i>iAntialiasing</i> - aktualna ilość próbek dla antyaliasingu.<br />
+<i>bFullScreen</i> - czy aktywny tryb pełnoekranowy.<br />
+<i>bClearOldLog</i> - czy stare pliki log mają być kasowane.
+</p>
+<p><b>Uwagi</b></p>
+<p>Jeżeli planujemy dodać więcej opcji konfiguracyjnych
+(np. włączenie/wyłączenie dźwięku, wybór języka itp.), to należy dodać je
+do struktury SETTING_FILE. Zapewni to automatyczny zapis i odczyt tychże
+ustawień.
+<br />
+Dodając z czasem nowe pola należy także pamiętać o zmianie numerowania
+wersji pliku. Dzięki temu unikniemy sytuacji wczytania przez użytkownika
+starszego pliku konfiguracyjnego, który będzie zawierał starszą wersję
+struktury. Dla zmiany wersji pliku konfiguracyjnego, patrz plik
+<a href="define.html">define.h</a>.
+</p>
+<hr/>
+
+</BODY>
+</HTML>

@@ -1,0 +1,17 @@
+<area shape="rect" href="$class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,107,800,133">
+<area shape="rect" title="m_pWinData" alt="" coords="796,116,804,124">
+<area shape="rect" title="m_pWinData" alt="" coords="923,116,931,124">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,5,520,32">
+<area shape="rect" href="$class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,56,472,83">
+<area shape="rect" title="m_pARBMultisample" alt="" coords="468,71,476,79">
+<area shape="rect" title="m_pARBMultisample" alt="" coords="697,103,705,111">
+<area shape="rect" href="$class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,107,465,133">
+<area shape="rect" title="m_pMultiLang" alt="" coords="463,116,471,124">
+<area shape="rect" title="m_pMultiLang" alt="" coords="689,116,697,124">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,107,243,133">
+<area shape="rect" href="$struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,157,500,184">
+<area shape="rect" title="m_sSettingFile" alt="" coords="496,160,504,168">
+<area shape="rect" title="m_sSettingFile" alt="" coords="697,129,705,137">
+<area shape="rect" href="$class_c_logger.html" title="Klasa loggera." alt="" coords="371,208,443,235">
+<area shape="rect" title="m_pLogger" alt="" coords="440,216,448,224">
+<area shape="rect" title="m_pLogger" alt="" coords="729,129,737,137">

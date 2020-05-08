@@ -1,0 +1,501 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CLogger</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CLogger</h1><!-- doxytag: class="CLogger" --><code>#include &lt;<a class="el" href="_logger_8h-source.html">Logger.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="class_c_logger-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa loggera. 
+<p>
+Jest to klasa odpowiedzialna za zapisywanie do pliku przekazywanych jej parametrów. Dzięki temu w fazie testowania naszej gry będziemy mogli rejestrować to co się dzieje w programie. Obiekt klasy <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a> zawsze jest tworzony w <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>, jednak domyślnie logowanie jest wyłączone. Aby je uaktywnić należy uruchomić program z parametrem <em>/logger</em>. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#0828d9679c7458e5ea3769ec1990f177">CLogger</a> (LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#0828d9679c7458e5ea3769ec1990f177"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#b7006486dce8452e8098c12c3f44c34b">~CLogger</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#b7006486dce8452e8098c12c3f44c34b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#e857b1e34b727fb7ba6f480c9e3ea9a7">Open</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda otwierająca plik loga.  <a href="#e857b1e34b727fb7ba6f480c9e3ea9a7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#9ee29286ab2347a988ac3f816e1a753c">SetActive</a> (GLboolean bMode)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda uaktywniająca bądź dezaktywująca logger.  <a href="#9ee29286ab2347a988ac3f816e1a753c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#6fb0dadfbcc9725dbffc7f20cdd500aa">IsActive</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy logger jest aktywny.  <a href="#6fb0dadfbcc9725dbffc7f20cdd500aa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="57c731d1358a7cc0f325be052f097d46"></a><!-- doxytag: member="CLogger::ClearOldLog" ref="57c731d1358a7cc0f325be052f097d46" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#57c731d1358a7cc0f325be052f097d46">ClearOldLog</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca stare pliki log. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e3f1416f5bd0edd731453d472b4ef41e"></a><!-- doxytag: member="CLogger::IsClearOldLog" ref="e3f1416f5bd0edd731453d472b4ef41e" args="()" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#e3f1416f5bd0edd731453d472b4ef41e">IsClearOldLog</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca stan flagi <a class="el" href="class_c_logger.html#22a8835522409d0fc26003a5f742473d" title="Flaga czyszczenia starych plików logger-a.">CLogger::m_bClearOldLog</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#182393fc9ac6de701f94ba6791202f48">SetTabulatorNumber</a> (GLint iTabNumber)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca ilość tabulatorów przed każym z wpisów.  <a href="#182393fc9ac6de701f94ba6791202f48"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metody zapisujące do pliku.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801">LOG</a> (const wchar_t *fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapisująca do pliku, linię tekstu (<code>UNICODE</code>), z możliwością formatowania.  <a href="#32af70a7993ae22e1613ecbd6fc4c801"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#6883c2e0dce4003ca2a10e653adf8aa8">LOG</a> (const char *fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapisująca do pliku, linię tekstu, z możliwością formatowania.  <a href="#6883c2e0dce4003ca2a10e653adf8aa8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#b128b9e5ae96cd30dcb4af782dcf84f5">LOGFreeChar</a> (wchar_t cChar)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapisująca do pliku pojedynczy znak <code>UNICODE</code>.  <a href="#b128b9e5ae96cd30dcb4af782dcf84f5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#be299a8978149596f21542aa153eae6b">LOGFreeChar</a> (char cChar)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapisująca do pliku pojedynczy znak.  <a href="#be299a8978149596f21542aa153eae6b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#5061c61652a4764aba1e84a165e05789">LOGGetLastError</a> (LPCTSTR lpWhatCallError=_T(&quot;&quot;))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zapisująca do pliku, linię teksu, z ostatnio wywołanym błędem WinAPI.  <a href="#5061c61652a4764aba1e84a165e05789"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#7e13cd7b3447d861e4306b794fb0643a">DeleteLogFiles</a> (LPCTSTR lpCurDir)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca stare pliki logger-a.  <a href="#7e13cd7b3447d861e4306b794fb0643a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#00d3e95ffa00dfa0da477ae42d9978bb">Close</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zamykająca plik logger-a.  <a href="#00d3e95ffa00dfa0da477ae42d9978bb"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="db198909e7fedca26c3ebfa59d159cc9"></a><!-- doxytag: member="CLogger::m_hFile" ref="db198909e7fedca26c3ebfa59d159cc9" args="" -->
+FILE *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#db198909e7fedca26c3ebfa59d159cc9">m_hFile</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Uchwyt do pliku log-a. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="82967e33021800e1156438064b00b349"></a><!-- doxytag: member="CLogger::m_bActive" ref="82967e33021800e1156438064b00b349" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#82967e33021800e1156438064b00b349">m_bActive</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga określająca czy logger jest aktywny. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b770d4720e965156bcc1036acc54e936"></a><!-- doxytag: member="CLogger::m_uiCounterLine" ref="b770d4720e965156bcc1036acc54e936" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#b770d4720e965156bcc1036acc54e936">m_uiCounterLine</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Licznik aktualnie zapisanych linii tekstu do pliku. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#22a8835522409d0fc26003a5f742473d">m_bClearOldLog</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga czyszczenia starych plików logger-a.  <a href="#22a8835522409d0fc26003a5f742473d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9da48d6b5f757db44114be2b0191175a"></a><!-- doxytag: member="CLogger::m_iTabNumber" ref="9da48d6b5f757db44114be2b0191175a" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#9da48d6b5f757db44114be2b0191175a">m_iTabNumber</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna przechowująca aktualnie ustawioną ilość tabulatorów. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fc7e3c2b6156cf9434677f28eaac3ae2"></a><!-- doxytag: member="CLogger::m_cFimeNameWithData" ref="fc7e3c2b6156cf9434677f28eaac3ae2" args="[256]" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html#fc7e3c2b6156cf9434677f28eaac3ae2">m_cFimeNameWithData</a> [256]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Przechowuje pełną nazwę pliku loga. <br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="0828d9679c7458e5ea3769ec1990f177"></a><!-- doxytag: member="CLogger::CLogger" ref="0828d9679c7458e5ea3769ec1990f177" args="(LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLogger::CLogger           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku (a raczej pierwszy człon nazwy pliku), do którego będą zapisywane informacje. Pełna nazwa pliku zawiera następujący format: <br>
+ lpFileName – YYYY.MM.DD – HH.MM.SS.log <br>
+ gdzie: <br>
+ lpFileName – to opisywany tu parametr, <br>
+ YYYY.MM.DD – data (rok, miesiąc i dzień) utworzenia pliku, <br>
+ HH.MM.SS – czas utworzenia pliku, tj. godzina, minuty i sekundy, <br>
+ .log – rozszerzenia pliku. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b7006486dce8452e8098c12c3f44c34b"></a><!-- doxytag: member="CLogger::~CLogger" ref="b7006486dce8452e8098c12c3f44c34b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CLogger::~CLogger           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="e857b1e34b727fb7ba6f480c9e3ea9a7"></a><!-- doxytag: member="CLogger::Open" ref="e857b1e34b727fb7ba6f480c9e3ea9a7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CLogger::Open           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda otwierająca plik loga. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_window_data.html#89e8ab7b1aa0b610b9f5c234436bbbe6" title="Inicjalizacja obiektu CWindowData.">CWindowData::Initialization</a>, ale pod warunkiem, że program został uruchomiony z parametrem <em>/logger</em>. <br>
+ Metoda ta w trakcie otwierania nowego pliku może jednocześnie usunąć stare pliki logger-a. To czy stare pliki będą usuwane zależy od ustawienia flagi <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>:m_bClearOldLog. <br>
+ Wywołanie tej metody jednocześnie ukatywnia logger-a, patrz <a class="el" href="class_c_logger.html#9ee29286ab2347a988ac3f816e1a753c" title="Metoda uaktywniająca bądź dezaktywująca logger.">CLogger::SetActive</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia otwarcia pliku loggera. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9ee29286ab2347a988ac3f816e1a753c"></a><!-- doxytag: member="CLogger::SetActive" ref="9ee29286ab2347a988ac3f816e1a753c" args="(GLboolean bMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::SetActive           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bMode</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda uaktywniająca bądź dezaktywująca logger. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bMode</em>&nbsp;</td><td>Podając <code>GL_TRUE</code> uaktywnimy logger. Jeżeli logger zostanie uaktywniony bez wcześniejszego wywołania metody <a class="el" href="class_c_logger.html#e857b1e34b727fb7ba6f480c9e3ea9a7" title="Metoda otwierająca plik loga.">CLogger::Open</a> to podczas wywołania metody zapisującej do pliku (np. <a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801" title="Metoda zapisująca do pliku, linię tekstu (UNICODE), z możliwością formatowania...">CLogger::LOG</a>), automatycznie zostanie wywołana także motoda <a class="el" href="class_c_logger.html#e857b1e34b727fb7ba6f480c9e3ea9a7" title="Metoda otwierająca plik loga.">CLogger::Open</a>. Czyli log zostanie utworzony. <br>
+ Podając <code>GL_FALSE</code> logger stanie się nieaktywny, co oznacza, że pomimo wywołania metody zapisującej do pliku (np. <a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801" title="Metoda zapisująca do pliku, linię tekstu (UNICODE), z możliwością formatowania...">CLogger::LOG</a>), do pliku nic nie zostanie zapisane. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_logger.html#6fb0dadfbcc9725dbffc7f20cdd500aa" title="Metoda sprawdzająca czy logger jest aktywny.">IsActive</a>, <a class="el" href="class_c_logger.html#82967e33021800e1156438064b00b349" title="Flaga określająca czy logger jest aktywny.">m_bActive</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6fb0dadfbcc9725dbffc7f20cdd500aa"></a><!-- doxytag: member="CLogger::IsActive" ref="6fb0dadfbcc9725dbffc7f20cdd500aa" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CLogger::IsActive           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy logger jest aktywny. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli logger jest aktywny. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_logger.html#9ee29286ab2347a988ac3f816e1a753c" title="Metoda uaktywniająca bądź dezaktywująca logger.">SetActive</a>, <a class="el" href="class_c_logger.html#82967e33021800e1156438064b00b349" title="Flaga określająca czy logger jest aktywny.">m_bActive</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="182393fc9ac6de701f94ba6791202f48"></a><!-- doxytag: member="CLogger::SetTabulatorNumber" ref="182393fc9ac6de701f94ba6791202f48" args="(GLint iTabNumber)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::SetTabulatorNumber           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iTabNumber</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca ilość tabulatorów przed każym z wpisów. 
+<p>
+Za pomocą tej metody możemy tworzyć wcięcia przed każdą linijką zapisywaną do pliku. Metodę tę należy wywołać przed wywołaniem jakiejkolwiek metody zapisującej do pliku (np. <a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801" title="Metoda zapisująca do pliku, linię tekstu (UNICODE), z możliwością formatowania...">CLogger::LOG</a>), podając odpowiednią liczbę tabulatorów. Teraz jeżeli wywołamy jedą z funkcji zapisującej do pliku to nasza linia tekstu zostanie porzedzona odpwiednią ilością wcięć. W każdej metodzie zapisującej do pliku, liczba tabulatorów jest zerowana. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iTabNumber</em>&nbsp;</td><td>Liczba określająca ilość tabulatorów - wielkość wcięcia jaką chcemy utworzyć dla danej linii tekstu, dla lepszej czytelności log-a. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_logger.html#9da48d6b5f757db44114be2b0191175a" title="Zmienna przechowująca aktualnie ustawioną ilość tabulatorów.">m_iTabNumber</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="32af70a7993ae22e1613ecbd6fc4c801"></a><!-- doxytag: member="CLogger::LOG" ref="32af70a7993ae22e1613ecbd6fc4c801" args="(const wchar_t *fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::LOG           </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapisująca do pliku, linię tekstu (<code>UNICODE</code>), z możliwością formatowania. 
+<p>
+Za pomocą tej metody możemy zapisać do pliku dowolny ciąg znaków. Otwarta lista parametrów umożliwia formatowanie tekstu, dzięki czemu możemy zapisywać wartości zmiennych, itp. <br>
+ Tekst zostanie zapisany do pliku tylko wtedy jeżeli logger jest aktywny, tj. jeżeli flaga <a class="el" href="class_c_logger.html#82967e33021800e1156438064b00b349" title="Flaga określająca czy logger jest aktywny.">CLogger::m_bActive</a> ustawiona jest na <code>GL_TRUE</code>. <br>
+ Tekst zawsze będzie zapisywany w pliku od nowej linii. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Dowolny tekst jaki chcemy zapisać do pliku. Tekst może zawierać znaki formatowania (d, s, c itp.). </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6883c2e0dce4003ca2a10e653adf8aa8"></a><!-- doxytag: member="CLogger::LOG" ref="6883c2e0dce4003ca2a10e653adf8aa8" args="(const char *fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::LOG           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapisująca do pliku, linię tekstu, z możliwością formatowania. 
+<p>
+Za pomocą tej metody możemy zapisać do pliku dowolny ciąg znaków. Otwarta lista parametrów umożliwia formatowanie tekstu, dzięki czemu możemy zapisywać wartości zmiennych, itp. <br>
+ Tekst zostanie zapisany do pliku tylko wtedy jeżeli logger jest aktywny, tj. jeżeli flaga <a class="el" href="class_c_logger.html#82967e33021800e1156438064b00b349" title="Flaga określająca czy logger jest aktywny.">CLogger::m_bActive</a> ustawiona jest na <code>GL_TRUE</code>. <br>
+ Tekst zawsze będzie zapisywany w pliku od nowej linii. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Dowolny tekst jaki chcemy zapisać do pliku. Tekst może zawierać znaki formatowania (d, s, c itp.). </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b128b9e5ae96cd30dcb4af782dcf84f5"></a><!-- doxytag: member="CLogger::LOGFreeChar" ref="b128b9e5ae96cd30dcb4af782dcf84f5" args="(wchar_t cChar)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::LOGFreeChar           </td>
+          <td>(</td>
+          <td class="paramtype">wchar_t&nbsp;</td>
+          <td class="paramname"> <em>cChar</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapisująca do pliku pojedynczy znak <code>UNICODE</code>. 
+<p>
+Znak zostanie zapisany do pliku tylko wtedy jeżeli logger jest aktywny, tj. jeżeli flaga <a class="el" href="class_c_logger.html#82967e33021800e1156438064b00b349" title="Flaga określająca czy logger jest aktywny.">CLogger::m_bActive</a> ustawiona jest na <code>GL_TRUE</code>. <br>
+ Znak zawsze będzie dopisywany na koniec pliku. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>cChar</em>&nbsp;</td><td>Znak jaki chemy zapisać. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="be299a8978149596f21542aa153eae6b"></a><!-- doxytag: member="CLogger::LOGFreeChar" ref="be299a8978149596f21542aa153eae6b" args="(char cChar)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::LOGFreeChar           </td>
+          <td>(</td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>cChar</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapisująca do pliku pojedynczy znak. 
+<p>
+Znak zostanie zapisany do pliku tylko wtedy jeżeli logger jest aktywny, tj. jeżeli flaga <a class="el" href="class_c_logger.html#82967e33021800e1156438064b00b349" title="Flaga określająca czy logger jest aktywny.">CLogger::m_bActive</a> ustawiona jest na <code>GL_TRUE</code>. <br>
+ Znak zawsze będzie dopisywany na koniec pliku. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>cChar</em>&nbsp;</td><td>Znak jaki chemy zapisać. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5061c61652a4764aba1e84a165e05789"></a><!-- doxytag: member="CLogger::LOGGetLastError" ref="5061c61652a4764aba1e84a165e05789" args="(LPCTSTR lpWhatCallError=_T(&quot;&quot;))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::LOGGetLastError           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpWhatCallError</em> = <code>_T(&quot;&quot;)</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zapisująca do pliku, linię teksu, z ostatnio wywołanym błędem WinAPI. 
+<p>
+Metoda ta zapisuje do pliku opis błędu, zwróconego przez funkcję WinAPI: <em>GetLastError</em>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpWhatCallError</em>&nbsp;</td><td>Dowolny tekst dzięki, któremu będziemy wiedzieli co wywołało błąd. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7e13cd7b3447d861e4306b794fb0643a"></a><!-- doxytag: member="CLogger::DeleteLogFiles" ref="7e13cd7b3447d861e4306b794fb0643a" args="(LPCTSTR lpCurDir)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::DeleteLogFiles           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpCurDir</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca stare pliki logger-a. 
+<p>
+Metoda usuwa wszystkie pliku z rozszerzeniem <em></em>.log znajdujące się w bierzącym katalogu. Metoda ta jest wywoływana w <a class="el" href="class_c_logger.html#e857b1e34b727fb7ba6f480c9e3ea9a7" title="Metoda otwierająca plik loga.">CLogger::Open</a> pod warunkiem, że flaga <a class="el" href="class_c_logger.html#22a8835522409d0fc26003a5f742473d" title="Flaga czyszczenia starych plików logger-a.">CLogger::m_bClearOldLog</a> ustawiona jest na <code>GL_TRUE</code>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpCurDir</em>&nbsp;</td><td>Nazwa katalogu, z którego zostaną usunięte pliki logger-a. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_logger.html#22a8835522409d0fc26003a5f742473d" title="Flaga czyszczenia starych plików logger-a.">m_bClearOldLog</a>, <a class="el" href="class_c_logger.html#57c731d1358a7cc0f325be052f097d46" title="Metoda usuwająca stare pliki log.">ClearOldLog</a>, <a class="el" href="class_c_logger.html#e3f1416f5bd0edd731453d472b4ef41e" title="Metoda sprawdzająca stan flagi CLogger::m_bClearOldLog.">IsClearOldLog</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="00d3e95ffa00dfa0da477ae42d9978bb"></a><!-- doxytag: member="CLogger::Close" ref="00d3e95ffa00dfa0da477ae42d9978bb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CLogger::Close           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zamykająca plik logger-a. 
+<p>
+Metoda ta jest wywoływana w destruktorze klasy. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="22a8835522409d0fc26003a5f742473d"></a><!-- doxytag: member="CLogger::m_bClearOldLog" ref="22a8835522409d0fc26003a5f742473d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean <a class="el" href="class_c_logger.html#22a8835522409d0fc26003a5f742473d">CLogger::m_bClearOldLog</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Flaga czyszczenia starych plików logger-a. 
+<p>
+Zmienna wskazująca czy w trakcie wywoływania metody <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>:Open, mają być jednocześnie usuwane stare pliki logger-a. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c_logger.html#57c731d1358a7cc0f325be052f097d46" title="Metoda usuwająca stare pliki log.">ClearOldLog</a>, <a class="el" href="class_c_logger.html#e3f1416f5bd0edd731453d472b4ef41e" title="Metoda sprawdzająca stan flagi CLogger::m_bClearOldLog.">IsClearOldLog</a>. </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Logger/<a class="el" href="_logger_8h-source.html">Logger.h</a><li>Logger/Logger.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:29 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,1163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CSDLFont</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CSDLFont</h1><!-- doxytag: class="CSDLFont" --><code>#include &lt;<a class="el" href="_s_d_l_font_8h-source.html">SDLFont.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram współpracy dla CSDLFont:</div>
+<div class="dynsection">
+<p><center><img src="class_c_s_d_l_font__coll__graph.png" border="0" usemap="#_c_s_d_l_font__coll__map" alt="Collaboration graph"></center>
+<map name="_c_s_d_l_font__coll__map">
+<area shape="rect" href="class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,107,800,133"><area shape="rect" title="m_pWinData" alt="" coords="796,116,804,124"><area shape="rect" title="m_pWinData" alt="" coords="923,116,931,124"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,5,520,32"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,56,472,83"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,71,476,79"><area shape="rect" title="m_pARBMultisample" alt="" coords="697,103,705,111"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,107,465,133"><area shape="rect" title="m_pMultiLang" alt="" coords="463,116,471,124"><area shape="rect" title="m_pMultiLang" alt="" coords="689,116,697,124"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,107,243,133"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,157,500,184"><area shape="rect" title="m_sSettingFile" alt="" coords="496,160,504,168"><area shape="rect" title="m_sSettingFile" alt="" coords="697,129,705,137"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,208,443,235"><area shape="rect" title="m_pLogger" alt="" coords="440,216,448,224"><area shape="rect" title="m_pLogger" alt="" coords="729,129,737,137"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_s_d_l_font-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa renderująca tekst. 
+<p>
+Klasa umożliwiająca rysowanie tekstu przy użyciu biblioteki SDL_ttf. Aby umożliwić wyświetlanie polskich znaków należy zbudować aplikację w <code>UNICODE</code> (domyślnie OpenGLFramework używa już <code>UNICODE</code>). <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#c32ca8b7dc876199d2b38bbba9d41392">CSDLFont</a> (const char *lpFontFile=&quot;fonts/FreeSansBold.ttf&quot;, GLint iSizeFont=20, GLboolean bUseStorageBuffer=GL_TRUE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#c32ca8b7dc876199d2b38bbba9d41392"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#ed69cbe21ff341fa595897c9bad2659f">~CSDLFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#ed69cbe21ff341fa595897c9bad2659f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#428d1141eaa1c59f8779fddf5859100a">SetBkgText</a> (GLboolean bDrawBkgText, COLORREF crColor=RGB(0, 0, 0))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda ustawiająca wyświetlanie tła pod tekstem.  <a href="#428d1141eaa1c59f8779fddf5859100a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#e0f2e91a2be3895a51590090cf51231f">GetHeightFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca wysokość czcionki w pikselach.  <a href="#e0f2e91a2be3895a51590090cf51231f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#f50ef9f642134266b52e99d9cefb28b0">Timer</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda timer-a wywoływana cyklicznie (domyślnie co sekundę) przez metodę <a class="el" href="class_c_game_control.html#57558c24df99d131697b9ef884bd7b6a" title="Metoda timer-a, wywoływana automatycznie gdy nadejdzie zdarzenie WM_TIMER, przekazywane...">CGameControl::Timer()</a>.  <a href="#f50ef9f642134266b52e99d9cefb28b0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LPTSTR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#b5113d96ec07ad83613bb361266b16e4">GetCompileVersionSLD_ttf</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca kompilowaną wersję bibliotek <code>SDL</code> i <code>SDL_ttf</code>.  <a href="#b5113d96ec07ad83613bb361266b16e4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LPTSTR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#2d596f10667dfcbf6099016925754fc8">GetLinkedVersionSLD_ttf</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca linkowaną wersję bibliotek <code>SDL</code> i <code>SDL_ttf</code>.  <a href="#2d596f10667dfcbf6099016925754fc8"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Zestaw metod rysujących tekst.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#f763b4129280be3da17a0055f01f8118">DrawText</a> (GLint iPosX, GLint iPosY, COLORREF crColor, LPCTSTR lpText, GLboolean bMidScreen=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tekst.  <a href="#f763b4129280be3da17a0055f01f8118"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#99374970b88ac91342a713f67e62585d">DrawTextFormat</a> (GLint iPosX, GLint iPosY, GLboolean bMidScreen, COLORREF crColor, LPCTSTR fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tekst z możliwością formatowania.  <a href="#99374970b88ac91342a713f67e62585d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#e1253737674689ce96dd4e9d6fa78afa">DrawText</a> (const RECT &amp;rcRectangle, COLORREF crColor, LPCTSTR lpText)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tekst w prostokącie.  <a href="#e1253737674689ce96dd4e9d6fa78afa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#ce2989b8542b3764c9863284e40552ae">DrawTextFormat</a> (const RECT &amp;rcRectangle, COLORREF crColor, LPCTSTR fmt,...)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tekst w prostokącie z możliwością formatowania.  <a href="#ce2989b8542b3764c9863284e40552ae"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metody dla StorageBuffer-a.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#742a76524c0af1a702e12655409d2d4c">ClearStorageBuffer</a> (GLboolean bLog=GL_TRUE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda czyszcząca cały StorageBuffer dla danego obiektu klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>.  <a href="#742a76524c0af1a702e12655409d2d4c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#4b376a49e3535de58d5334bf73e0f02e">IsStorageBuffer</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy StorageBuffer jest aktywny.  <a href="#4b376a49e3535de58d5334bf73e0f02e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#d177c1ed3a1ef9b0ea325cb3cb12592b">SetStorageBuffer</a> (GLboolean bUse)</td></tr>
+
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#733d4961d9744c442db6403390386c59">NextPowerOfTwo</a> (GLint iNumber)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca najbliższą, następną liczbę będącą potęgą dwójki.  <a href="#733d4961d9744c442db6403390386c59"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#5310f9693cf6645d690aa92ce5fa8faa">RenderText</a> (LPCTSTR lpText, TTF_Font *pFont, const SDL_Color &amp;in_sdlColor, SDL_Rect &amp;in_out_sdlLocation, GLboolean bMidScreen, GLboolean bIsRect=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wstępna metoda renderowania tekstu.  <a href="#5310f9693cf6645d690aa92ce5fa8faa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#d068e1eadf45dc68859f935b5a6b0a2a">IsTextInStorageBuffer</a> (LPCTSTR lpText, const SDL_Color &amp;in_sdlColor, GLboolean bMidScreen, GLint &amp;out_iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy dany tekst znajduje się w StorageBuffer.  <a href="#d068e1eadf45dc68859f935b5a6b0a2a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#61c29d21a77c54772b0ab67162de440c">RenderAlreadyExistText</a> (SDL_Rect &amp;in_out_sdlLocation, GLint iIndex, GLboolean bIsRect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda renderująca tekst ze StorageBuffer-a.  <a href="#61c29d21a77c54772b0ab67162de440c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#019cacf068b4a9d967d1197f1f2aa442">RenderNewText</a> (LPCTSTR lpText, TTF_Font *pFont, const SDL_Color &amp;in_sdlColor, SDL_Rect &amp;in_out_sdlLocation, GLboolean bMidScreen, GLboolean bIsRect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda renderująca nowy tekst.  <a href="#019cacf068b4a9d967d1197f1f2aa442"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#8f10c2b0cc13f6b538648f47365fcdf8">DeleteOneStorageBuffer</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca jeden element StorageBuffer-a.  <a href="#8f10c2b0cc13f6b538648f47365fcdf8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#4f24c2bf53c78368930c78513dfcd4dd">DeleteOldStorageBuffer</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca stare, nieużywane elementy StorageBuffer-a.  <a href="#4f24c2bf53c78368930c78513dfcd4dd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#8b68a0b5359ebc0e77b77cfa8293c4be">GetStorageBufferSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda pobierająca ilość składowanych elementów w StorageBuffer.  <a href="#8b68a0b5359ebc0e77b77cfa8293c4be"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metody pomocnicze przy renderowaniu teksu.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b5ebf218faf9c944e8019df002bddd80"></a><!-- doxytag: member="CSDLFont::ScaleFont" ref="b5ebf218faf9c944e8019df002bddd80" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#b5ebf218faf9c944e8019df002bddd80">ScaleFont</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda dopasowująca rozmiar tekstu do aktualnie używanej rozdzielczości okna. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#f007463e491c2272b5f21a58cc2248ae">MidScreenFont</a> (SDL_Rect &amp;in_out_sdlLocation, GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda obliczająca pozycję teksu na środku ekranu.  <a href="#f007463e491c2272b5f21a58cc2248ae"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#12d18b5bd55c7756c40f5b60401d9c37">CalculatePosTextFromRect</a> (SDL_Rect &amp;in_out_sdlLocation, GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyliczająca położenie tekstu w środku prostokąta.  <a href="#12d18b5bd55c7756c40f5b60401d9c37"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#87f7ee22dc6900956cd93cc5b69e05c0">DrawBkgText</a> (const SDL_Rect &amp;in_sdlLocation, GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tło pod tekstem.  <a href="#87f7ee22dc6900956cd93cc5b69e05c0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#1a18036a0d044c997348755929494687">DrawQuadText</a> (const SDL_Rect &amp;in_sdlLocation, GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca tekst.  <a href="#1a18036a0d044c997348755929494687"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9f9207814f37770bd01bc9e64efbbd61"></a><!-- doxytag: member="CSDLFont::m_pWinData" ref="9f9207814f37770bd01bc9e64efbbd61" args="" -->
+<a class="el" href="class_c_window_data.html">CWindowData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#9f9207814f37770bd01bc9e64efbbd61">m_pWinData</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4938c3c68f0c82b5faf35d0efb109fa6"></a><!-- doxytag: member="CSDLFont::m_pTTFFont" ref="4938c3c68f0c82b5faf35d0efb109fa6" args="" -->
+TTF_Font *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#4938c3c68f0c82b5faf35d0efb109fa6">m_pTTFFont</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt struktury TTF_Font, reprezentującej czcionkę. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="8af59f31597a47a8916b7410a5c63450"></a><!-- doxytag: member="CSDLFont::m_bDrawBkgText" ref="8af59f31597a47a8916b7410a5c63450" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#8af59f31597a47a8916b7410a5c63450">m_bDrawBkgText</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy ma być rysowane tło pod tekstem. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a878c8134b7766e625ebd572b3537e90"></a><!-- doxytag: member="CSDLFont::m_ubBkgR" ref="a878c8134b7766e625ebd572b3537e90" args="" -->
+GLubyte&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#a878c8134b7766e625ebd572b3537e90">m_ubBkgR</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Składowa <code>R</code> koloru tła rysowanego pod tekstem. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="34b05de783cb679ff09128b6d07dc979"></a><!-- doxytag: member="CSDLFont::m_ubBkgG" ref="34b05de783cb679ff09128b6d07dc979" args="" -->
+GLubyte&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#34b05de783cb679ff09128b6d07dc979">m_ubBkgG</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Składowa <code>G</code> koloru tła rysowanego pod tekstem. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a61a6951a72697cdb15fdf6a0c6551db"></a><!-- doxytag: member="CSDLFont::m_ubBkgB" ref="a61a6951a72697cdb15fdf6a0c6551db" args="" -->
+GLubyte&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#a61a6951a72697cdb15fdf6a0c6551db">m_ubBkgB</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Składowa <code>B</code> koloru tła rysowanego pod tekstem. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="42928e13143f2d83d1a929a286b749b8"></a><!-- doxytag: member="CSDLFont::m_iHeightFont" ref="42928e13143f2d83d1a929a286b749b8" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#42928e13143f2d83d1a929a286b749b8">m_iHeightFont</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna przechowująca wysokość czcionki. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4f7bdd4882fdaa7e15a9c04fb623aa2a"></a><!-- doxytag: member="CSDLFont::m_iID" ref="4f7bdd4882fdaa7e15a9c04fb623aa2a" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#4f7bdd4882fdaa7e15a9c04fb623aa2a">m_iID</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Identyfikator (indeks tablicy g_aPointerSDLFont) danej instancji klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="853a41c96349f57b2421b0e5e8abbe50"></a><!-- doxytag: member="CSDLFont::m_tcVersion" ref="853a41c96349f57b2421b0e5e8abbe50" args="[256]" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#853a41c96349f57b2421b0e5e8abbe50">m_tcVersion</a> [256]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tekst zwracany przez metody <a class="el" href="class_c_s_d_l_font.html#b5113d96ec07ad83613bb361266b16e4" title="Metoda zwracająca kompilowaną wersję bibliotek SDL i SDL_ttf.">CSDLFont::GetCompileVersionSLD_ttf</a> i <a class="el" href="class_c_s_d_l_font.html#2d596f10667dfcbf6099016925754fc8" title="Metoda zwracająca linkowaną wersję bibliotek SDL i SDL_ttf.">CSDLFont::GetLinkedVersionSLD_ttf</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fd9a6b21c15318935a7867b96571e4a7"></a><!-- doxytag: member="CSDLFont::m_aStorageBuffer" ref="fd9a6b21c15318935a7867b96571e4a7" args="" -->
+std::vector&lt; <a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html">SStorageBuffer</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#fd9a6b21c15318935a7867b96571e4a7">m_aStorageBuffer</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dynamiczna tablica StorageBuffer. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4cfc9afc7c0bcfd55fdbd93a223f160a"></a><!-- doxytag: member="CSDLFont::m_bUseStorageBuffer" ref="4cfc9afc7c0bcfd55fdbd93a223f160a" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#4cfc9afc7c0bcfd55fdbd93a223f160a">m_bUseStorageBuffer</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy StorageBuffer jest używany. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="616f37c1cbac21e370a38babb9246bf2"></a><!-- doxytag: member="CSDLFont::m_uiCountTimer" ref="616f37c1cbac21e370a38babb9246bf2" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#616f37c1cbac21e370a38babb9246bf2">m_uiCountTimer</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Licznik timer-a wskazujący kiedy należy usnąć stare elementy StorageBuffer-a. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="821dfbf04daa36eacfca3b3febcc3a1e"></a><!-- doxytag: member="CSDLFont::m_uiInterval" ref="821dfbf04daa36eacfca3b3febcc3a1e" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#821dfbf04daa36eacfca3b3febcc3a1e">m_uiInterval</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Interwał czasu wskazujący co ile sekund kasować stare elementy StorageBuffer-a. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0a87ca699ea7de0d4d8d169fe55acab6"></a><!-- doxytag: member="CSDLFont::m_iBufferLimit" ref="0a87ca699ea7de0d4d8d169fe55acab6" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#0a87ca699ea7de0d4d8d169fe55acab6">m_iBufferLimit</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Limit buforowania tekstów w StorageBuffer. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f3ffc4fbd04edb12a60de290c1c218ff"></a><!-- doxytag: member="CSDLFont::m_uiTimeOut" ref="f3ffc4fbd04edb12a60de290c1c218ff" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#f3ffc4fbd04edb12a60de290c1c218ff">m_uiTimeOut</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ilość sekund przedawnienia StorageBuffer-a. <br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c2c8daaa2a1b3e9bf53ab311cdfcb4ae"></a><!-- doxytag: member="CSDLFont::ms_iCountRef" ref="c2c8daaa2a1b3e9bf53ab311cdfcb4ae" args="" -->
+static GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_d_l_font.html#c2c8daaa2a1b3e9bf53ab311cdfcb4ae">ms_iCountRef</a> = 0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Licznik zliczający ilość stworzonych instancji klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html">SStorageBuffer</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>.  <a href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="c32ca8b7dc876199d2b38bbba9d41392"></a><!-- doxytag: member="CSDLFont::CSDLFont" ref="c32ca8b7dc876199d2b38bbba9d41392" args="(const char *lpFontFile=&quot;fonts/FreeSansBold.ttf&quot;, GLint iSizeFont=20, GLboolean bUseStorageBuffer=GL_TRUE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSDLFont::CSDLFont           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>lpFontFile</em> = <code>&quot;fonts/FreeSansBold.ttf&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iSizeFont</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bUseStorageBuffer</em> = <code>GL_TRUE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFontFile</em>&nbsp;</td><td>Nazwa pliku z czcionką jakiej chcemy użyć (domyślnie <code>"fonts/FreeSansBold.ttf"</code>). OpenGLFramework zawiera własne darmowe czcionki – umieszczone są one w katalogu <em>fonts</em>. Można także wczytać pliki zawarte w katalogu <em>C:\Windows\Fonts</em>, należy jednak pamiętać, że musimy podać nazwę pliku a nie nazwę zarejestrowanej czcionki. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iSizeFont</em>&nbsp;</td><td>Wielkość czcionki. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bUseStorageBuffer</em>&nbsp;</td><td>Ustawiając tę flagę na <code>GL_TRUE</code>, nakazujemy buforowania wyświetlanych tekstów, dzięki czemu, rendering teksu będzie wykonywany znacznie szybciej. Oznacza to także trochę większe absorbowanie pamięci. Ustawiając na <code>GL_FALSE</code>, każde to samo wywołanie rysowania tekstu, będzie renderowane od nowa. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html" title="Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy CSDLFont...">SStorageBuffer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ed69cbe21ff341fa595897c9bad2659f"></a><!-- doxytag: member="CSDLFont::~CSDLFont" ref="ed69cbe21ff341fa595897c9bad2659f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSDLFont::~CSDLFont           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="f763b4129280be3da17a0055f01f8118"></a><!-- doxytag: member="CSDLFont::DrawText" ref="f763b4129280be3da17a0055f01f8118" args="(GLint iPosX, GLint iPosY, COLORREF crColor, LPCTSTR lpText, GLboolean bMidScreen=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DrawText           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iPosX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iPosY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bMidScreen</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tekst. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iPosX</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iPosY</em>&nbsp;</td><td>Pozycja tekstu względem ekranu. Punkt <code>0x0</code> znajduje się w lewym górnym rogu ekranu (tekst jest rysowany "na płaszczyźnie ekranu"). Ważne jest aby rysować tekst tak jakby miał być rozmieszczony dla ekranu <code>1024x768</code> – wówczas będziemy mieli prawidłowe skalowanie tekstu względem rozdzielczości. Oznacza to, że jeżeli stosujemy rozdzielczość, np. <code>800x600</code> i chcemy wyświetlić tekst na samym spodzie okna, to nie ustawiamy <em>iPosY</em> na <code>600</code> tylko na <code>768!</code> </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Składowe koloru tekstu. Należy użyć makra <code>RGB()</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bMidScreen</em>&nbsp;</td><td>Czy tekst ma być wyrównany do środka. Jeżeli ustawimy tę wartość na <code>GL_TRUE</code> to tekst będzie wyrównany względem środka ekranu. Oznacza to, że wartość <em>iPosX</em> nie będzie brana pod uwagę, ponieważ program sam ją wyliczy. Gdy podamy <code>GL_FALSE</code> (wartość domyślna), wówczas tekst będzie pozycjonowany na podstawie <em>iPosX</em>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="99374970b88ac91342a713f67e62585d"></a><!-- doxytag: member="CSDLFont::DrawTextFormat" ref="99374970b88ac91342a713f67e62585d" args="(GLint iPosX, GLint iPosY, GLboolean bMidScreen, COLORREF crColor, LPCTSTR fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DrawTextFormat           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iPosX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iPosY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bMidScreen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tekst z możliwością formatowania. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iPosX</em>&nbsp;</td><td></td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iPosY</em>&nbsp;</td><td>Pozycja tekstu względem ekranu. Punkt <code>0x0</code> znajduje się w lewym górnym rogu ekranu (tekst jest rysowany "na płaszczyźnie ekranu"). Ważne jest aby rysować tekst tak jakby miał być rozmieszczony dla ekranu <code>1024x768</code> – wówczas będziemy mieli prawidłowe skalowanie tekstu względem rozdzielczości. Oznacza to, że jeżeli stosujemy rozdzielczość, np. <code>800x600</code> i chcemy wyświetlić tekst na samym spodzie okna, to nie ustawiamy <em>iPosY</em> na <code>600</code> tylko na <code>768!</code> </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bMidScreen</em>&nbsp;</td><td>Czy tekst ma być wyrównany do środka. Jeżeli ustawimy tę wartość na <code>GL_TRUE</code> to tekst będzie wyrównany względem środka ekranu. Oznacza to, że wartość <em>iPosX</em> nie będzie brana pod uwagę, ponieważ program sam ją wyliczy. Gdy podamy <code>GL_FALSE</code> (wartość domyślna), wówczas tekst będzie pozycjonowany na podstawie <em>iPosX</em>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Składowe koloru tekstu. Należy użyć makra <code>RGB()</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e1253737674689ce96dd4e9d6fa78afa"></a><!-- doxytag: member="CSDLFont::DrawText" ref="e1253737674689ce96dd4e9d6fa78afa" args="(const RECT &amp;rcRectangle, COLORREF crColor, LPCTSTR lpText)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DrawText           </td>
+          <td>(</td>
+          <td class="paramtype">const RECT &amp;&nbsp;</td>
+          <td class="paramname"> <em>rcRectangle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpText</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tekst w prostokącie. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rcRectangle</em>&nbsp;</td><td>Prostokąt opisujący położenie tekstu. Pozycja tekstu zostanie wyliczona tak aby tekst narysował się dokładanie na środku prostokąta. Ważne jest aby pola struktury <code>RECT</code> zawierały pozycję prostokąta w pikselach dla rozdzielczości ekranu <code>1024x768</code> – wówczas będziemy mieli prawidłowe skalowanie tekstu względem rozdzielczości. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Składowe koloru tekstu. Należy użyć makra <code>RGB()</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ce2989b8542b3764c9863284e40552ae"></a><!-- doxytag: member="CSDLFont::DrawTextFormat" ref="ce2989b8542b3764c9863284e40552ae" args="(const RECT &amp;rcRectangle, COLORREF crColor, LPCTSTR fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DrawTextFormat           </td>
+          <td>(</td>
+          <td class="paramtype">const RECT &amp;&nbsp;</td>
+          <td class="paramname"> <em>rcRectangle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tekst w prostokącie z możliwością formatowania. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rcRectangle</em>&nbsp;</td><td>Prostokąt opisujący położenie tekstu. Pozycja tekstu zostanie wyliczona tak aby tekst narysował się dokładanie na środku prostokąta. Ważne jest aby pola struktury <code>RECT</code> zawierały pozycję prostokąta w pikselach dla rozdzielczości ekranu <code>1024x768</code> – wówczas będziemy mieli prawidłowe skalowanie tekstu względem rozdzielczości. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Składowe koloru tekstu. Należy użyć makra <code>RGB()</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Tekst jaki chcemy wyświetlić. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Opcjonalne parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="428d1141eaa1c59f8779fddf5859100a"></a><!-- doxytag: member="CSDLFont::SetBkgText" ref="428d1141eaa1c59f8779fddf5859100a" args="(GLboolean bDrawBkgText, COLORREF crColor=RGB(0, 0, 0))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::SetBkgText           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bDrawBkgText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF&nbsp;</td>
+          <td class="paramname"> <em>crColor</em> = <code>RGB(&nbsp;0,&nbsp;0,&nbsp;0&nbsp;)</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda ustawiająca wyświetlanie tła pod tekstem. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bDrawBkgText</em>&nbsp;</td><td>Jeżeli podamy <code>GL_TRUE</code> to pod każdym tekstem będzie wyświetlane tło. Podając <code>GL_FALSE</code> tło nie będzie rysowane. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>crColor</em>&nbsp;</td><td>Składowe koloru tła. Należy użyć makra <code>RGB()</code>. Kolor będzie brany pod uwagę tylko wtedy jeżeli <em>bDrawBkgText</em> ustawimy na <code>GL_TRUE</code>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e0f2e91a2be3895a51590090cf51231f"></a><!-- doxytag: member="CSDLFont::GetHeightFont" ref="e0f2e91a2be3895a51590090cf51231f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CSDLFont::GetHeightFont           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca wysokość czcionki w pikselach. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba całkowita określająca wyskość czcionki w pikselach. W przypadku błędu metoda zwróci <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="742a76524c0af1a702e12655409d2d4c"></a><!-- doxytag: member="CSDLFont::ClearStorageBuffer" ref="742a76524c0af1a702e12655409d2d4c" args="(GLboolean bLog=GL_TRUE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::ClearStorageBuffer           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bLog</em> = <code>GL_TRUE</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda czyszcząca cały StorageBuffer dla danego obiektu klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bLog</em>&nbsp;</td><td>Dodatkowy parametr dla rejestrowania do pliku. Podająć <code>GL_TRUE</code>, zapisana zostanie do pliku informacja o ilości usuniętych pozycji bufora (ilość składowanych i usuniętych tekstów). Jeżeli podamy <code>GL_FALSE</code>, to pomimo aktywności logger-a wspomniana informacja nie zostanie zapisana do pliku. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html" title="Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy CSDLFont...">SStorageBuffer</a>, <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4b376a49e3535de58d5334bf73e0f02e"></a><!-- doxytag: member="CSDLFont::IsStorageBuffer" ref="4b376a49e3535de58d5334bf73e0f02e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CSDLFont::IsStorageBuffer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy StorageBuffer jest aktywny. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli używany jest StorageBuffer, w przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html" title="Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy CSDLFont...">SStorageBuffer</a>, <a class="el" href="class_c_s_d_l_font.html#d177c1ed3a1ef9b0ea325cb3cb12592b">SetStorageBuffer</a>, <a class="el" href="class_c_s_d_l_font.html#4cfc9afc7c0bcfd55fdbd93a223f160a" title="Flaga wskazująca czy StorageBuffer jest używany.">m_bUseStorageBuffer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d177c1ed3a1ef9b0ea325cb3cb12592b"></a><!-- doxytag: member="CSDLFont::SetStorageBuffer" ref="d177c1ed3a1ef9b0ea325cb3cb12592b" args="(GLboolean bUse)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::SetStorageBuffer           </td>
+          <td>(</td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bUse</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Za pomocą tej metody możemy włączyć lub wyłączyć użycie StorageBuffer w trakcie "życia" obiektu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bUse</em>&nbsp;</td><td>Podając <code>GL_TRUE</code> uaktywniamy StorageBuffer, podając <code>GL_FALSE</code> wyłączamy go. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f50ef9f642134266b52e99d9cefb28b0"></a><!-- doxytag: member="CSDLFont::Timer" ref="f50ef9f642134266b52e99d9cefb28b0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::Timer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda timer-a wywoływana cyklicznie (domyślnie co sekundę) przez metodę <a class="el" href="class_c_game_control.html#57558c24df99d131697b9ef884bd7b6a" title="Metoda timer-a, wywoływana automatycznie gdy nadejdzie zdarzenie WM_TIMER, przekazywane...">CGameControl::Timer()</a>. 
+<p>
+W metodzie tej usuwane są stare, nieużywane teksty ze StorageBuffera. 
+</div>
+</div><p>
+<a class="anchor" name="b5113d96ec07ad83613bb361266b16e4"></a><!-- doxytag: member="CSDLFont::GetCompileVersionSLD_ttf" ref="b5113d96ec07ad83613bb361266b16e4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPTSTR CSDLFont::GetCompileVersionSLD_ttf           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca kompilowaną wersję bibliotek <code>SDL</code> i <code>SDL_ttf</code>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Łańcych znaków zawierający następujące informacje: głowny numer wersji <code>SDL</code>, pomniejszy numer wersji <code>SDL</code>, numer łatki <code>SDL</code>, następnie mamy głowny numer wersji <code>SDL_ttf</code>, pomniejszy numer wersji <code>SDL_ttf</code> oraz numer łatki <code>SDL_ttf</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2d596f10667dfcbf6099016925754fc8"></a><!-- doxytag: member="CSDLFont::GetLinkedVersionSLD_ttf" ref="2d596f10667dfcbf6099016925754fc8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPTSTR CSDLFont::GetLinkedVersionSLD_ttf           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca linkowaną wersję bibliotek <code>SDL</code> i <code>SDL_ttf</code>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Łańcych znaków zawierający następujące informacje: głowny numer wersji <code>SDL</code>, pomniejszy numer wersji <code>SDL</code>, numer łatki <code>SDL</code>, następnie mamy głowny numer wersji <code>SDL_ttf</code>, pomniejszy numer wersji <code>SDL_ttf</code> oraz numer łatki <code>SDL_ttf</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="733d4961d9744c442db6403390386c59"></a><!-- doxytag: member="CSDLFont::NextPowerOfTwo" ref="733d4961d9744c442db6403390386c59" args="(GLint iNumber)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CSDLFont::NextPowerOfTwo           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iNumber</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca najbliższą, następną liczbę będącą potęgą dwójki. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iNumber</em>&nbsp;</td><td>Liczba, od której szukana będzie najbliższa potęga dwójki. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Liczba będąca potęgą dwójki. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5310f9693cf6645d690aa92ce5fa8faa"></a><!-- doxytag: member="CSDLFont::RenderText" ref="5310f9693cf6645d690aa92ce5fa8faa" args="(LPCTSTR lpText, TTF_Font *pFont, const SDL_Color &amp;in_sdlColor, SDL_Rect &amp;in_out_sdlLocation, GLboolean bMidScreen, GLboolean bIsRect=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::RenderText           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&nbsp;</td>
+          <td class="paramname"> <em>pFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_Color &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_sdlColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_out_sdlLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bMidScreen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bIsRect</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wstępna metoda renderowania tekstu. 
+<p>
+W metodzie tej podejmowana jest decyzja czy neleży renderować tekst od nowa, czy skorzystać już z istniejącego, składowanego w StorageBuffer. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst do wyświetlenia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pFont</em>&nbsp;</td><td>Wskaźnik na strukturę <code>TTF_Font</code> reprezentującą czcionkę. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_sdlColor</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Color</code> reprezentującej składowe koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>in_out_sdlLocation</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Rect</code> reprezentującej położenie tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bMidScreen</em>&nbsp;</td><td>Flaga wskazująca czy tekst ma być wyrównany do środka. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bIsRect</em>&nbsp;</td><td>Flaga wskazująca czy tekst ma być umieszczony w środku prostokąta <code>SDL_Rect</code>. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html" title="Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy CSDLFont...">SStorageBuffer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d068e1eadf45dc68859f935b5a6b0a2a"></a><!-- doxytag: member="CSDLFont::IsTextInStorageBuffer" ref="d068e1eadf45dc68859f935b5a6b0a2a" args="(LPCTSTR lpText, const SDL_Color &amp;in_sdlColor, GLboolean bMidScreen, GLint &amp;out_iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CSDLFont::IsTextInStorageBuffer           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_Color &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_sdlColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bMidScreen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_iIndex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy dany tekst znajduje się w StorageBuffer. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst do wyświetlenia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_sdlColor</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Color</code> reprezentującej składowe koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bMidScreen</em>&nbsp;</td><td>Flaga wskazująca czy tekst ma być wyrównany do środka. </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_iIndex</em>&nbsp;</td><td>Indeks elementu tablicy StorageBuffer-a, w którym został znaleziony tekst. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli tekst znajduje się w StorageBuffer, w przeciwnym wypadku <code>GL_FALSE</code>. Jeżeli metoda zwróci <code>GL_TRUE</code> to parametr <em>out_iIndex</em> zostanie ustawiony numerem indeksu tablicy StorageBuffer-a. </dd></dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html" title="Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy CSDLFont...">SStorageBuffer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="61c29d21a77c54772b0ab67162de440c"></a><!-- doxytag: member="CSDLFont::RenderAlreadyExistText" ref="61c29d21a77c54772b0ab67162de440c" args="(SDL_Rect &amp;in_out_sdlLocation, GLint iIndex, GLboolean bIsRect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::RenderAlreadyExistText           </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Rect &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_out_sdlLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bIsRect</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda renderująca tekst ze StorageBuffer-a. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>in_out_sdlLocation</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Rect</code> reprezentującej położenie tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy StorageBuffer-a, z której zostaną pobrane informacje do wyrenderowania tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bIsRect</em>&nbsp;</td><td>Flaga wskazująca czy tekst ma być umieszczony w środku prostokąta <code>SDL_Rect</code>. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html" title="Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy CSDLFont...">SStorageBuffer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="019cacf068b4a9d967d1197f1f2aa442"></a><!-- doxytag: member="CSDLFont::RenderNewText" ref="019cacf068b4a9d967d1197f1f2aa442" args="(LPCTSTR lpText, TTF_Font *pFont, const SDL_Color &amp;in_sdlColor, SDL_Rect &amp;in_out_sdlLocation, GLboolean bMidScreen, GLboolean bIsRect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::RenderNewText           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&nbsp;</td>
+          <td class="paramname"> <em>pFont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_Color &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_sdlColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_out_sdlLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bMidScreen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bIsRect</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda renderująca nowy tekst. 
+<p>
+Jeżeli używany jest StorageBuffer to informacje o nowo wyrenderowanym tekście zostaną do niego zapisane. Dzięki temu przy kolejnym rysowaniu tego samego tekstu, nie będzie on musiał być na nowo tworzony. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpText</em>&nbsp;</td><td>Tekst do wyświetlenia. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>pFont</em>&nbsp;</td><td>Wskaźnik na strukturę <code>TTF_Font</code> reprezentującą czcionkę. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_sdlColor</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Color</code> reprezentującej składowe koloru tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>in_out_sdlLocation</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Rect</code> reprezentującej położenie tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bMidScreen</em>&nbsp;</td><td>Flaga wskazująca czy tekst ma być wyrównany do środka. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bIsRect</em>&nbsp;</td><td>Flaga wskazująca czy tekst ma być umieszczony w środku prostokąta <code>SDL_Rect</code>. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html" title="Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy CSDLFont...">SStorageBuffer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8f10c2b0cc13f6b538648f47365fcdf8"></a><!-- doxytag: member="CSDLFont::DeleteOneStorageBuffer" ref="8f10c2b0cc13f6b538648f47365fcdf8" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DeleteOneStorageBuffer           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca jeden element StorageBuffer-a. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Pozycja StorageBuffer-a do usunięcia. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4f24c2bf53c78368930c78513dfcd4dd"></a><!-- doxytag: member="CSDLFont::DeleteOldStorageBuffer" ref="4f24c2bf53c78368930c78513dfcd4dd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DeleteOldStorageBuffer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca stare, nieużywane elementy StorageBuffer-a. 
+<p>
+Metoda ta wywoływana jest cyklicznie w metodzie <a class="el" href="class_c_s_d_l_font.html#f50ef9f642134266b52e99d9cefb28b0" title="Metoda timer-a wywoływana cyklicznie (domyślnie co sekundę) przez metodę CGameControl::Timer()...">CSDLFont::Timer</a> co zadany interwał czasu. 
+</div>
+</div><p>
+<a class="anchor" name="8b68a0b5359ebc0e77b77cfa8293c4be"></a><!-- doxytag: member="CSDLFont::GetStorageBufferSize" ref="8b68a0b5359ebc0e77b77cfa8293c4be" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CSDLFont::GetStorageBufferSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca ilość składowanych elementów w StorageBuffer. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość elementów tablicy <a class="el" href="class_c_s_d_l_font.html#fd9a6b21c15318935a7867b96571e4a7" title="Dynamiczna tablica StorageBuffer.">CSDLFont::m_aStorageBuffer</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f007463e491c2272b5f21a58cc2248ae"></a><!-- doxytag: member="CSDLFont::MidScreenFont" ref="f007463e491c2272b5f21a58cc2248ae" args="(SDL_Rect &amp;in_out_sdlLocation, GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::MidScreenFont           </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Rect &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_out_sdlLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda obliczająca pozycję teksu na środku ekranu. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>in_out_sdlLocation</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Rect</code> reprezentującej położenie tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy StorageBuffer-a, z której zostaną pobrane informacje o renderowanym tekście. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="12d18b5bd55c7756c40f5b60401d9c37"></a><!-- doxytag: member="CSDLFont::CalculatePosTextFromRect" ref="12d18b5bd55c7756c40f5b60401d9c37" args="(SDL_Rect &amp;in_out_sdlLocation, GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::CalculatePosTextFromRect           </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Rect &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_out_sdlLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyliczająca położenie tekstu w środku prostokąta. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in,out]</tt>&nbsp;</td><td valign="top"><em>in_out_sdlLocation</em>&nbsp;</td><td>Obiekt struktury prostokąta, w którym znajdować ma się tekst. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy StorageBuffer-a, z której zostaną pobrane informacje o renderowanym tekście. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="87f7ee22dc6900956cd93cc5b69e05c0"></a><!-- doxytag: member="CSDLFont::DrawBkgText" ref="87f7ee22dc6900956cd93cc5b69e05c0" args="(const SDL_Rect &amp;in_sdlLocation, GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DrawBkgText           </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Rect &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_sdlLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tło pod tekstem. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_sdlLocation</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Rect</code> reprezentującej położenie tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy StorageBuffer-a, z której zostaną pobrane informacje o renderowanym tekście. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1a18036a0d044c997348755929494687"></a><!-- doxytag: member="CSDLFont::DrawQuadText" ref="1a18036a0d044c997348755929494687" args="(const SDL_Rect &amp;in_sdlLocation, GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CSDLFont::DrawQuadText           </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Rect &amp;&nbsp;</td>
+          <td class="paramname"> <em>in_sdlLocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca tekst. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>in_sdlLocation</em>&nbsp;</td><td>Obiekt struktury <code>SDL_Rect</code> reprezentującej położenie tekstu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks tablicy StorageBuffer-a, z której zostaną pobrane informacje o renderowanym tekście. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Fonts/<a class="el" href="_s_d_l_font_8h-source.html">SDLFont.h</a><li>Fonts/SDLFont.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

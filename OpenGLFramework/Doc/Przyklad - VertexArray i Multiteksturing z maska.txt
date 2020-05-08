@@ -1,0 +1,28 @@
+Przykład rysowania z multiteksturami z maską i VerexArray:
+
+GLboolean CTextureLoader::LoadAllTexture()
+{
+	...
+
+	//"multitexturing" z maska - tworzy jeden index
+	LoadMultiTextureMaskMipmaps(_T("textures/mask.bmp"), _T("textures/rgb.bmp"));
+
+	...
+}
+
+GLboolean CGameControl::Initialization()
+{
+	GetVertexArrays()->AddFullVertex(-1.0f,-1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	GetVertexArrays()->AddFullVertex( 1.0f,-1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	GetVertexArrays()->AddFullVertex( 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f);
+	GetVertexArrays()->AddFullVertex(-1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f);
+
+	GetVertexArrays()->InitialArrays();
+}
+
+GLboolean CGameControl::Draw()
+{
+	//Przyklad rysowania "multitekstury" z maską:
+	GetTextureLoader()->SetMultiTextures(3); //gwiazda
+	glDrawArrays(GL_QUADS, 0, 4);
+}

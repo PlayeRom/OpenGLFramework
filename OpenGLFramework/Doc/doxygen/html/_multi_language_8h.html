@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja pliku MultiLanguage/MultiLanguage.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja pliku MultiLanguage/MultiLanguage.h</h1><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Plik nagłówkowy dla klasy <a class="el" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>. 
+<p>
+
+<p>
+<code>#include &quot;<a class="el" href="_window_data_8h-source.html">../OpenGLFramework/WindowData.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_singleton_base_8h-source.html">../OpenGLFramework/SingletonBase.h</a>&quot;</code><br>
+
+<p>
+<div class="dynheader">
+Wykres zależności załączania dla MultiLanguage.h:</div>
+<div class="dynsection">
+<p><center><img src="_multi_language_8h__incl.png" border="0" usemap="#MultiLanguage/MultiLanguage.h_map" alt=""></center>
+<map name="MultiLanguage/MultiLanguage.h_map">
+<area shape="rect" href="_window_data_8h.html" title="Plik nagłówkowy dla klasy CWindowData." alt="" coords="21,80,261,107"><area shape="rect" href="_singleton_base_8h.html" title="Plik nagłówkowy dla klasy CSingletonBase." alt="" coords="240,155,357,181"><area shape="rect" href="_a_r_b_multisample_8h.html" title="Plik nagłówkowy dla klasy CARBMultisample." alt="" coords="5,155,216,181"></map>
+</div>
+
+<p>
+<a href="_multi_language_8h-source.html">Idź do kodu źródłowego tego pliku.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html">CMultiLanguage</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Klasa wspierająca wielojęzyczność.  <a href="class_c_multi_language.html#_details">Więcej...</a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html">CMultiLanguage::SXMLLngData</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura danych dla pliku XML.  <a href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#_details">Więcej...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Definicje</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_multi_language_8h.html#04503c34db1baac3d4250b4069beb312">LNG_LINE</a>(x)&nbsp;&nbsp;&nbsp;CMultiLanguage::GetInstance()-&gt;GetLangText( x )</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Makro pobrania wskazanej linii tekstu z pliku językowego.  <a href="#04503c34db1baac3d4250b4069beb312"></a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja definicji</h2>
+<a class="anchor" name="04503c34db1baac3d4250b4069beb312"></a><!-- doxytag: member="MultiLanguage.h::LNG_LINE" ref="04503c34db1baac3d4250b4069beb312" args="(x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LNG_LINE          </td>
+          <td>(</td>
+          <td class="paramtype">x&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;CMultiLanguage::GetInstance()-&gt;GetLangText( x )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Makro pobrania wskazanej linii tekstu z pliku językowego. 
+<p>
+Makro to wywołuje metodę <a class="el" href="class_c_multi_language.html#3074c9da18091b336feafb7e5dd7aca8" title="Metoda zwracająca wskazaną linię tekstu z wcześniej wczytanego pliku językowego...">CMultiLanguage::GetLangText</a>, zwracającą łańcuch znaków z pliku językowego. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>x</em>&nbsp;</td><td>Numer linii z pliku tekstowego, który chcemy pobrać, np. w celu wyświetlenia. Numery linii liczone są od 0. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Łańcuch znaków zapisany w podanej linii pliku <em>*</em>.<em>lng</em>. </dd></dl>
+
+</div>
+</div><p>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:23 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

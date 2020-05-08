@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Fps/Fps.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Fps/Fps.h</h1><a href="_fps_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00006"></a>00006 <span class="keyword">class </span><a class="code" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>;
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include "../Fonts/SDLFont.h"</span>
+<a name="l00009"></a>00009 
+<a name="l00011"></a><a class="code" href="class_c_fps.html">00011</a> <span class="keyword">class </span><a class="code" href="class_c_fps.html" title="Klasa zliczająca i wyświetlająca ilość generowanych klatek na sekundę.">CFps</a>  
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013 <span class="keyword">public</span>:
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016         <a class="code" href="class_c_fps.html#95168420c76210df3a885c1eb7009bb4" title="Konstruktor.">CFps</a>();
+<a name="l00017"></a>00017 
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020         <span class="keyword">virtual</span> <a class="code" href="class_c_fps.html#0bd3984c47e6582d484693bb93b52adb" title="Destruktor.">~CFps</a>();
+<a name="l00021"></a>00021 
+<a name="l00023"></a>00023 
+<a name="l00024"></a><a class="code" href="class_c_fps.html#592da13add5cdfd804f85ecc1e117b32">00024</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fps.html#592da13add5cdfd804f85ecc1e117b32" title="Metoda ustawiająca tekst z ilością FPS jaki zostanie wyświetlony.">SetTextFps</a>() { wsprintf( <a class="code" href="class_c_fps.html#0cf8026e88da6a01be944502d466946b" title="Wyświetlany napis z aktualnym stanem licznika FPS.">m_cFpsText</a>, _T(<span class="stringliteral">"fps: %d"</span>), <a class="code" href="class_c_fps.html#1e8968ee0ebcefad068617604aa878de" title="Licznik FPS.">m_uiFps</a> ); }
+<a name="l00025"></a>00025 
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="class_c_fps.html#552d1bba767a36da3d42c775be768d31">00028</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fps.html#552d1bba767a36da3d42c775be768d31" title="Metoda zerująca licznik FPS.">CleanFps</a>() { <a class="code" href="class_c_fps.html#1e8968ee0ebcefad068617604aa878de" title="Licznik FPS.">m_uiFps</a> = 0; }
+<a name="l00029"></a>00029 
+<a name="l00031"></a>00031 
+<a name="l00033"></a><a class="code" href="class_c_fps.html#6441635d577654c402516305a0f45c5e">00033</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fps.html#6441635d577654c402516305a0f45c5e" title="Metoda inkrementująca licznik FPS.">IncreaseFps</a>()     { ++<a class="code" href="class_c_fps.html#1e8968ee0ebcefad068617604aa878de" title="Licznik FPS.">m_uiFps</a>; }
+<a name="l00034"></a>00034 
+<a name="l00036"></a>00036 
+<a name="l00038"></a><a class="code" href="class_c_fps.html#ab906badbc41a45fd177a1101f2d4d44">00038</a>         <span class="keyword">inline</span> GLuint <a class="code" href="class_c_fps.html#ab906badbc41a45fd177a1101f2d4d44" title="Metoda zwracająca aktualną wartość licznika FPS.">GetFps</a>()          { <span class="keywordflow">return</span> <a class="code" href="class_c_fps.html#1e8968ee0ebcefad068617604aa878de" title="Licznik FPS.">m_uiFps</a>; }
+<a name="l00039"></a>00039 
+<a name="l00041"></a>00041 
+<a name="l00044"></a><a class="code" href="class_c_fps.html#e39d3b6aa9693c7e0d8b78a6e6e44427">00044</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fps.html#e39d3b6aa9693c7e0d8b78a6e6e44427" title="Metoda wyświetlająca napis z aktualnym stanem licznika FPS.">DrawFps</a>() {
+<a name="l00045"></a>00045                 <span class="keywordflow">if</span>( !<a class="code" href="class_c_fps.html#463352d393d928787ebc75124f550d3c" title="Flaga wskazująca czy aktualny stan licznika FPS ma myć wyświetlany.">m_bShowFps</a> )
+<a name="l00046"></a>00046                         <span class="keywordflow">return</span>;
+<a name="l00047"></a>00047                 <a class="code" href="class_c_fps.html#63489c7e8cf85b53246456196025b4c1" title="Wskaźnik na obiekt klasy CSDLFont, za pomocą którego rysowny jest tekst z aktualnym...">m_pSDLFont</a>-&gt;<a class="code" href="class_c_s_d_l_font.html#f763b4129280be3da17a0055f01f8118" title="Metoda rysująca tekst.">DrawText</a>( 10, 768, RGB( 255, 255, 255 ), <a class="code" href="class_c_fps.html#0cf8026e88da6a01be944502d466946b" title="Wyświetlany napis z aktualnym stanem licznika FPS.">m_cFpsText</a> );
+<a name="l00048"></a>00048         }
+<a name="l00049"></a>00049 
+<a name="l00051"></a>00051 
+<a name="l00053"></a><a class="code" href="class_c_fps.html#2bed0ffe4626d8c2f438842931b3c505">00053</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fps.html#2bed0ffe4626d8c2f438842931b3c505" title="Metoda uaktywniająca wyświetlanie aktualnego stanu licznika FPS.">ShowFps</a>()         { <a class="code" href="class_c_fps.html#463352d393d928787ebc75124f550d3c" title="Flaga wskazująca czy aktualny stan licznika FPS ma myć wyświetlany.">m_bShowFps</a> = GL_TRUE; }
+<a name="l00054"></a>00054 
+<a name="l00056"></a>00056 
+<a name="l00058"></a><a class="code" href="class_c_fps.html#9907e265c395e2e7dce6815bae3a5cc8">00058</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_fps.html#9907e265c395e2e7dce6815bae3a5cc8" title="Metoda dezaktywująca wyświetlanie aktualnego stanu licznika FPS.">HideFps</a>()         { <a class="code" href="class_c_fps.html#463352d393d928787ebc75124f550d3c" title="Flaga wskazująca czy aktualny stan licznika FPS ma myć wyświetlany.">m_bShowFps</a> = GL_FALSE; }
+<a name="l00059"></a>00059 
+<a name="l00061"></a>00061 
+<a name="l00063"></a><a class="code" href="class_c_fps.html#1c2cde2ed0827b9b717fada18831ff72">00063</a>         <span class="keyword">inline</span> GLboolean <a class="code" href="class_c_fps.html#1c2cde2ed0827b9b717fada18831ff72" title="Metoda sprawdzająca czy licznik FPS jest wyświetlany.">IsFps</a>()        { <span class="keywordflow">return</span> <a class="code" href="class_c_fps.html#463352d393d928787ebc75124f550d3c" title="Flaga wskazująca czy aktualny stan licznika FPS ma myć wyświetlany.">m_bShowFps</a>; }
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">private</span>:
+<a name="l00066"></a><a class="code" href="class_c_fps.html#63489c7e8cf85b53246456196025b4c1">00066</a>         <a class="code" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>        *<a class="code" href="class_c_fps.html#63489c7e8cf85b53246456196025b4c1" title="Wskaźnik na obiekt klasy CSDLFont, za pomocą którego rysowny jest tekst z aktualnym...">m_pSDLFont</a>;            
+<a name="l00067"></a><a class="code" href="class_c_fps.html#1e8968ee0ebcefad068617604aa878de">00067</a>         GLuint          <a class="code" href="class_c_fps.html#1e8968ee0ebcefad068617604aa878de" title="Licznik FPS.">m_uiFps</a>;                        
+<a name="l00068"></a><a class="code" href="class_c_fps.html#463352d393d928787ebc75124f550d3c">00068</a>         GLboolean       <a class="code" href="class_c_fps.html#463352d393d928787ebc75124f550d3c" title="Flaga wskazująca czy aktualny stan licznika FPS ma myć wyświetlany.">m_bShowFps</a>;                     
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="class_c_fps.html#0cf8026e88da6a01be944502d466946b">00070</a>         TCHAR           <a class="code" href="class_c_fps.html#0cf8026e88da6a01be944502d466946b" title="Wyświetlany napis z aktualnym stanem licznika FPS.">m_cFpsText</a>[ 20 ];       
+<a name="l00071"></a>00071 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

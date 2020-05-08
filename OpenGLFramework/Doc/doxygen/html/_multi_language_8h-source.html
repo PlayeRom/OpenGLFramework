@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy MultiLanguage/MultiLanguage.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>MultiLanguage/MultiLanguage.h</h1><a href="_multi_language_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include "../OpenGLFramework/WindowData.h"</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "../OpenGLFramework/SingletonBase.h"</span>
+<a name="l00008"></a>00008 
+<a name="l00010"></a>00010 
+<a name="l00014"></a><a class="code" href="_multi_language_8h.html#04503c34db1baac3d4250b4069beb312">00014</a> <span class="preprocessor">#define LNG_LINE( x )   CMultiLanguage::GetInstance()-&gt;GetLangText( x )</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span>
+<a name="l00017"></a>00017 
+<a name="l00020"></a><a class="code" href="class_c_multi_language.html">00020</a> <span class="keyword">class </span><a class="code" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a> : <span class="keyword">public</span> <a class="code" href="class_c_singleton_base.html" title="Klasa szablonu singletonów.">CSingletonBase</a> &lt;CMultiLanguage&gt;
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022 <span class="keyword">public</span>:
+<a name="l00024"></a>00024 
+<a name="l00027"></a>00027         <span class="keyword">static</span> <a class="code" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>* <a class="code" href="class_c_multi_language.html#c94d696532be5caab5c31c0db1593b35" title="Statyczna metoda tworząca obiekt klasy CMultiLanguage.">Construct</a>();
+<a name="l00028"></a>00028 
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031         <span class="keyword">virtual</span> <a class="code" href="class_c_multi_language.html#59563874663a7a38d0c6cb47f4ac233f" title="Destruktor.">~CMultiLanguage</a>();
+<a name="l00032"></a>00032 
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038         GLvoid <a class="code" href="class_c_multi_language.html#87bfce1060c63da8096ec66b24e7ea7c" title="Metoda inicjalizująca wsparcie wielojęzyczności.">InitializeLanguage</a>();
+<a name="l00039"></a>00039 
+<a name="l00041"></a>00041 
+<a name="l00045"></a>00045         GLboolean <a class="code" href="class_c_multi_language.html#e31668704f3a51869aa3d2e5006649d5" title="Metoda wczytująca podany plik językowy.">LoadLanguage</a>(GLint iIndex);
+<a name="l00046"></a>00046 
+<a name="l00048"></a>00048 
+<a name="l00052"></a>00052         LPTSTR <a class="code" href="class_c_multi_language.html#3074c9da18091b336feafb7e5dd7aca8" title="Metoda zwracająca wskazaną linię tekstu z wcześniej wczytanego pliku językowego...">GetLangText</a>(GLint iLineNumber);
+<a name="l00053"></a>00053 
+<a name="l00055"></a>00055 
+<a name="l00057"></a>00057         GLint <a class="code" href="class_c_multi_language.html#ace3b97ecedd12a63ef8c2c05d836278" title="Metoda zwracająca ilość plików językowych.">GetLangFileNumber</a>();
+<a name="l00058"></a>00058 
+<a name="l00060"></a>00060 
+<a name="l00063"></a>00063         LPTSTR <a class="code" href="class_c_multi_language.html#4fc6891418292135ed0727f50d900ced" title="Metoda zwracająca nazwę pliku językowego.">GetLangFileName</a>(GLint iIndex);
+<a name="l00065"></a>00065 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 
+<a name="l00070"></a>00070 
+<a name="l00074"></a><a class="code" href="class_c_multi_language.html#98c10796a2e86e47b43ec641ddee8b28">00074</a>         <span class="keyword">inline</span> LPTSTR <a class="code" href="class_c_multi_language.html#98c10796a2e86e47b43ec641ddee8b28" title="Metoda zwracająca nazwę języka dla danego języka.">GetXMLLngName</a>() {
+<a name="l00075"></a>00075                 GLint iIndex = <a class="code" href="class_c_singleton_base.html#499628f8f54b9cafd1a4773e5cbb8040" title="Statyczna metoda za pomocą, której pobieramy wskaźnik na obiekt klasy szablonu...">CWindowData::GetInstance</a>()-&gt;<a class="code" href="class_c_window_data.html#3de9eab8b98c86d9ff454d2a296d1bc1" title="Metoda zwracająca strukturę SSettingFile przechowującą ustawienia programu.">SettingFile</a>().iIndexLanguage;
+<a name="l00076"></a>00076                 <span class="keywordflow">if</span>( !<a class="code" href="class_c_multi_language.html#742ae405afec58177d906594480da252" title="Flaga wskazująca czy wykorzystywany jest plik XML.">m_bUseXML</a> || ( iIndex &lt; 0 || iIndex &gt;= <a class="code" href="class_c_multi_language.html#a31c256ba244e3a408f589fe90940adb" title="Metoda zwracająca ilość zdefiniowanych języków w pliku languages_def.xml.">GetXMLLngDataSize</a>() ) )
+<a name="l00077"></a>00077                         <span class="keywordflow">return</span> _T(<span class="stringliteral">""</span>);
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079                 <span class="keywordflow">return</span> <a class="code" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">m_aXMLLngData</a>[ iIndex ].lpName;
+<a name="l00080"></a>00080         }
+<a name="l00081"></a>00081 
+<a name="l00083"></a>00083 
+<a name="l00089"></a><a class="code" href="class_c_multi_language.html#ff62845743fe107fbec46a26e210b085">00089</a>         <span class="keyword">inline</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_multi_language.html#ff62845743fe107fbec46a26e210b085" title="Metoda zwracająca nazwę pliku czcionki (*.ttf).">GetXMLLngFileTTF</a>(GLint iIndexTTF){
+<a name="l00090"></a>00090                 GLint iIndex = <a class="code" href="class_c_singleton_base.html#499628f8f54b9cafd1a4773e5cbb8040" title="Statyczna metoda za pomocą, której pobieramy wskaźnik na obiekt klasy szablonu...">CWindowData::GetInstance</a>()-&gt;<a class="code" href="class_c_window_data.html#3de9eab8b98c86d9ff454d2a296d1bc1" title="Metoda zwracająca strukturę SSettingFile przechowującą ustawienia programu.">SettingFile</a>().iIndexLanguage;
+<a name="l00091"></a>00091                 <span class="keywordflow">if</span>( !<a class="code" href="class_c_multi_language.html#742ae405afec58177d906594480da252" title="Flaga wskazująca czy wykorzystywany jest plik XML.">m_bUseXML</a> || ( iIndex &lt; 0 || iIndex &gt;= <a class="code" href="class_c_multi_language.html#a31c256ba244e3a408f589fe90940adb" title="Metoda zwracająca ilość zdefiniowanych języków w pliku languages_def.xml.">GetXMLLngDataSize</a>() ) )
+<a name="l00092"></a>00092                         <span class="keywordflow">return</span> <span class="stringliteral">""</span>;
+<a name="l00093"></a>00093                 <span class="keywordflow">if</span>( iIndexTTF &lt; 0 || iIndexTTF &gt;= <a class="code" href="class_c_multi_language.html#d78b14f4bb4f8e688b7c2966aa783c3b" title="Metoda zwracająca ilość zdefiniowanych czcionek dla danego języka.">GetXMLLngDataTTFSize</a>( iIndex ) )
+<a name="l00094"></a>00094                         <span class="keywordflow">return</span> <span class="stringliteral">""</span>;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096                 <span class="keywordflow">return</span> <a class="code" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">m_aXMLLngData</a>[iIndex].aFileTTF[iIndexTTF];
+<a name="l00097"></a>00097         }
+<a name="l00099"></a>00099 <span class="keyword">private</span>:
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102         <a class="code" href="class_c_multi_language.html#dcc53b74bc3b84c65db6812d20c0aae1" title="Konstruktor.">CMultiLanguage</a>();
+<a name="l00103"></a>00103 
+<a name="l00105"></a>00105 
+<a name="l00106"></a><a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html">00106</a>         <span class="keyword">struct </span><a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html" title="Struktura danych dla pliku XML.">SXMLLngData</a>
+<a name="l00107"></a>00107         {
+<a name="l00109"></a>00109 
+<a name="l00110"></a><a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#67ab3fbb7ac0af21fdd43671b62dcae8">00110</a>                 TCHAR *<a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#67ab3fbb7ac0af21fdd43671b62dcae8" title="Nazwa języka.">lpName</a>;
+<a name="l00111"></a>00111 
+<a name="l00113"></a>00113 
+<a name="l00114"></a><a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#c0e00b16714b3c937c5b4e49aff17bb9">00114</a>                 TCHAR *<a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#c0e00b16714b3c937c5b4e49aff17bb9" title="Nazwa pliku (*.lng) zawierającego tekst.">lpFileLNG</a>;
+<a name="l00115"></a>00115 
+<a name="l00117"></a>00117 
+<a name="l00118"></a><a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#c4e327a0db6f8f51f1303ef31e3ba802">00118</a>                 std::vector&lt;char*&gt; <a class="code" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#c4e327a0db6f8f51f1303ef31e3ba802" title="Tablica nazw czcionek.">aFileTTF</a>;
+<a name="l00119"></a>00119         };
+<a name="l00120"></a>00120 
+<a name="l00122"></a>00122 
+<a name="l00123"></a><a class="code" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb">00123</a>         std::vector&lt;TCHAR*&gt; <a class="code" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb" title="Tablica przechowująca linie tekstu pliku językowego (*.lng).">m_aLineText</a>;
+<a name="l00124"></a>00124 
+<a name="l00126"></a>00126         GLvoid <a class="code" href="class_c_multi_language.html#98ace6241503adf09a1e5d0835556329" title="Metoda czyszcząca tablicę CMultiLanguage::m_aLineText.">ClearLineText</a>();
+<a name="l00127"></a>00127 
+<a name="l00129"></a>00129 
+<a name="l00131"></a><a class="code" href="class_c_multi_language.html#eea39f67c02501a803e46312e000f205">00131</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_multi_language.html#eea39f67c02501a803e46312e000f205" title="Metoda zwracająca ilość linii tekstu pliku językowego (*.lng).">GetLineTextSize</a>() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb" title="Tablica przechowująca linie tekstu pliku językowego (*.lng).">m_aLineText</a>.size() ); }
+<a name="l00132"></a>00132 
+<a name="l00134"></a>00134 
+<a name="l00137"></a>00137         GLboolean <a class="code" href="class_c_multi_language.html#f3edef05d21c9b848ce29c431f9871e3" title="Metoda wczytująca plik językowy *.lng.">LoadLanguageFile</a>(LPCTSTR lpFileName);
+<a name="l00138"></a>00138 
+<a name="l00140"></a>00140 
+<a name="l00144"></a>00144         GLboolean <a class="code" href="class_c_multi_language.html#d664fe6919fb39579959622323e74079" title="Metoda wczytująca plik językowy *.lng z kodowaniem UNICODE.">LoadUnicodeFile</a>(FILE *f);
+<a name="l00145"></a>00145 
+<a name="l00147"></a>00147 
+<a name="l00151"></a>00151         GLboolean <a class="code" href="class_c_multi_language.html#dba35f6665a2833ccd77eacf8c408e78" title="Metoda wczytująca plik językowy *.lng z kodowaniem ANSI.">LoadAnsiFile</a>(FILE *f);
+<a name="l00152"></a>00152 
+<a name="l00153"></a><a class="code" href="class_c_multi_language.html#9bd3f593d26bf1f5670af80ed9fa130a">00153</a>         TCHAR <a class="code" href="class_c_multi_language.html#9bd3f593d26bf1f5670af80ed9fa130a" title="Pomocniczy tekst do zwracania informacji o błędzie.">m_cErrText</a>[128]; 
+<a name="l00154"></a>00154 
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157 
+<a name="l00159"></a>00159 
+<a name="l00163"></a>00163         GLvoid <a class="code" href="class_c_multi_language.html#89678b621eac0e2472623144842c60bf" title="Metoda wyszukująca pliki *.lng.">SearchLngFile</a>();
+<a name="l00164"></a>00164 
+<a name="l00166"></a>00166 
+<a name="l00169"></a>00169         GLboolean <a class="code" href="class_c_multi_language.html#0c2b899fd999066de3d4a70fcdde048c" title="Metoda sprawdzająca rozszerzenie pliku.">CheckExtensionLNG</a>(LPCTSTR lpPath);
+<a name="l00170"></a>00170 
+<a name="l00172"></a>00172 
+<a name="l00173"></a><a class="code" href="class_c_multi_language.html#22c5079e78e16d5a930241b3e868f02a">00173</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_multi_language.html#22c5079e78e16d5a930241b3e868f02a" title="Metoda zwracająca ilość znalezionych plików lng.">GetLngFileNameSize</a>() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8" title="Tablica nazw plików *.lng.">m_aLanguageFileName</a>.size() ); }
+<a name="l00174"></a>00174 
+<a name="l00176"></a>00176 
+<a name="l00179"></a><a class="code" href="class_c_multi_language.html#a006d7e55b1c5550909a72318ccea56c">00179</a>         <span class="keyword">inline</span> LPTSTR <a class="code" href="class_c_multi_language.html#a006d7e55b1c5550909a72318ccea56c" title="Metoda zwracająca nazwę pliku językowego.">GetLngFileName</a>(GLint iIndex){
+<a name="l00180"></a>00180                 <span class="keywordflow">if</span>( iIndex &lt; 0 || iIndex &gt;= <a class="code" href="class_c_multi_language.html#22c5079e78e16d5a930241b3e868f02a" title="Metoda zwracająca ilość znalezionych plików lng.">GetLngFileNameSize</a>() )
+<a name="l00181"></a>00181                         <span class="keywordflow">return</span> _T(<span class="stringliteral">"languages\\english.lng"</span>);
+<a name="l00182"></a>00182                 <span class="keywordflow">return</span> <a class="code" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8" title="Tablica nazw plików *.lng.">m_aLanguageFileName</a>[ iIndex ];
+<a name="l00183"></a>00183         }
+<a name="l00185"></a>00185 
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188 
+<a name="l00190"></a>00190 
+<a name="l00191"></a><a class="code" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8">00191</a>         std::vector&lt;TCHAR*&gt; <a class="code" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8" title="Tablica nazw plików *.lng.">m_aLanguageFileName</a>;
+<a name="l00193"></a>00193 
+<a name="l00195"></a>00195 
+<a name="l00196"></a>00196 
+<a name="l00198"></a>00198 
+<a name="l00201"></a>00201         GLboolean <a class="code" href="class_c_multi_language.html#3e5d674e4bd0c7bd60de8df135f1bad1" title="Metoda parsująca plik XML.">ParseXMLLngData</a>(LPCTSTR lpFileName = _T(<span class="stringliteral">"languages\\languages_def.xml"</span>));
+<a name="l00202"></a>00202 
+<a name="l00204"></a>00204 
+<a name="l00208"></a>00208         GLboolean <a class="code" href="class_c_multi_language.html#f9450883e6245d6ab0022befc3030add" title="Metoda szukająca znacznika w zadanym tekście.">SearchTag</a>(LPCTSTR lpSource, LPCTSTR lpTag);
+<a name="l00209"></a>00209 
+<a name="l00211"></a>00211 
+<a name="l00219"></a>00219         GLboolean <a class="code" href="class_c_multi_language.html#5fcb1f794f42d36287e9e26ac1470209" title="Metoda szukająca parametru w zadanym tekście.">SearchParameter</a>(LPCTSTR lpSource, LPCTSTR lpParameter, LPTSTR lpResult, GLsizei iSizeResult);
+<a name="l00220"></a>00220 
+<a name="l00222"></a>00222 
+<a name="l00226"></a>00226         GLvoid <a class="code" href="class_c_multi_language.html#4b8aae2e3159f753fe2be3a17c4defc5" title="Metoda tworząca nowy język na podstawie parsowania pliku XML.">AddXMLLngData</a>(LPCTSTR lpName, LPCTSTR lpLNG);
+<a name="l00227"></a>00227 
+<a name="l00229"></a>00229 
+<a name="l00231"></a>00231         GLvoid <a class="code" href="class_c_multi_language.html#ff4424ef8cbd57a3dc4e0593eace3a33" title="Metoda dodająca nazy plików z czcionką.">AddXMLLngDataTTF</a>(LPCTSTR lpTTF);
+<a name="l00232"></a>00232 
+<a name="l00234"></a>00234         GLvoid <a class="code" href="class_c_multi_language.html#d9aab58baffa4d2338f53a646e5bc7e4" title="Metoda usuwająca wszelkie dane zapisane w tablicy CMultiLanguage::m_aXMLLngData...">ClearXMLLngData</a>();
+<a name="l00235"></a>00235 
+<a name="l00237"></a>00237 
+<a name="l00238"></a><a class="code" href="class_c_multi_language.html#a31c256ba244e3a408f589fe90940adb">00238</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_multi_language.html#a31c256ba244e3a408f589fe90940adb" title="Metoda zwracająca ilość zdefiniowanych języków w pliku languages_def.xml.">GetXMLLngDataSize</a>() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>(<a class="code" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">m_aXMLLngData</a>.size()); }
+<a name="l00239"></a>00239 
+<a name="l00241"></a>00241 
+<a name="l00244"></a><a class="code" href="class_c_multi_language.html#568f797ccec5ce4312e7c27301c9d6fd">00244</a>         <span class="keyword">inline</span> LPTSTR <a class="code" href="class_c_multi_language.html#568f797ccec5ce4312e7c27301c9d6fd" title="Metoda zwracająca nazwę pliku językowego dla danego języka.">GetXMLLngFileLNG</a>(GLint iIndex){
+<a name="l00245"></a>00245                 <span class="keywordflow">if</span>( iIndex &lt; 0 || iIndex &gt;= <a class="code" href="class_c_multi_language.html#a31c256ba244e3a408f589fe90940adb" title="Metoda zwracająca ilość zdefiniowanych języków w pliku languages_def.xml.">GetXMLLngDataSize</a>() )
+<a name="l00246"></a>00246                         <span class="keywordflow">return</span> _T(<span class="stringliteral">"languages\\english.lng"</span>);
+<a name="l00247"></a>00247                 <span class="keywordflow">return</span> <a class="code" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">m_aXMLLngData</a>[ iIndex ].lpFileLNG;
+<a name="l00248"></a>00248         }
+<a name="l00249"></a>00249 
+<a name="l00251"></a>00251 
+<a name="l00256"></a><a class="code" href="class_c_multi_language.html#d78b14f4bb4f8e688b7c2966aa783c3b">00256</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_multi_language.html#d78b14f4bb4f8e688b7c2966aa783c3b" title="Metoda zwracająca ilość zdefiniowanych czcionek dla danego języka.">GetXMLLngDataTTFSize</a>(GLint iIndex) {
+<a name="l00257"></a>00257                 <span class="keywordflow">if</span>( !<a class="code" href="class_c_multi_language.html#742ae405afec58177d906594480da252" title="Flaga wskazująca czy wykorzystywany jest plik XML.">m_bUseXML</a> || ( iIndex &lt; 0 || iIndex &gt; <a class="code" href="class_c_multi_language.html#a31c256ba244e3a408f589fe90940adb" title="Metoda zwracająca ilość zdefiniowanych języków w pliku languages_def.xml.">GetXMLLngDataSize</a>() ) )
+<a name="l00258"></a>00258                         <span class="keywordflow">return</span> -1;
+<a name="l00259"></a>00259                 <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">m_aXMLLngData</a>[iIndex].aFileTTF.size() );
+<a name="l00260"></a>00260         }
+<a name="l00262"></a>00262 
+<a name="l00264"></a>00264 
+<a name="l00265"></a>00265 
+<a name="l00266"></a><a class="code" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9">00266</a>         std::vector&lt;SXMLLngData&gt; <a class="code" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">m_aXMLLngData</a>;         
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268 
+<a name="l00269"></a><a class="code" href="class_c_multi_language.html#742ae405afec58177d906594480da252">00269</a>         GLboolean <a class="code" href="class_c_multi_language.html#742ae405afec58177d906594480da252" title="Flaga wskazująca czy wykorzystywany jest plik XML.">m_bUseXML</a>;                                            
+<a name="l00270"></a>00270 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

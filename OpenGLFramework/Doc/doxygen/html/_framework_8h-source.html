@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy OpenGLFramework/Framework.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework/Framework.h</h1><a href="_framework_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#pragma once</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 
+<a name="l00011"></a><a class="code" href="class_c_framework.html">00011</a> <span class="keyword">class </span><a class="code" href="class_c_framework.html" title="Klasa szkieletu aplikacji.">CFramework</a>
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013 <span class="keyword">public</span>:
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016         <a class="code" href="class_c_framework.html#385b883ca6a8fc90b92a5aa01279e5d0" title="Konstruktor.">CFramework</a>();
+<a name="l00017"></a>00017 
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020         <a class="code" href="class_c_framework.html#984aa18724a447c67ad259058c3b2f90" title="Destruktor.">~CFramework</a>();
+<a name="l00021"></a>00021 
+<a name="l00023"></a>00023 
+<a name="l00025"></a>00025         GLint <a class="code" href="class_c_framework.html#20be1cac00839e2301e94a571139231b" title="Metoda zarządzająca całym frameworkiem.">Run</a>();
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">private</span>:
+<a name="l00029"></a>00029 
+<a name="l00031"></a>00031         GLboolean <a class="code" href="class_c_framework.html#3e57945d4555ba37e66aac29729fd538" title="Główna metoda inicjalizująca wstępne parametry OpenGL-a.">InitalizationGL</a>();
+<a name="l00032"></a>00032 
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035         GLboolean <a class="code" href="class_c_framework.html#8e322cfe86db25e165730364d9df602a" title="Metoda tworząca oraz inicjalizująca obiekt klasy CGameControl.">CreateGameControl</a>();
+<a name="l00036"></a>00036 
+<a name="l00038"></a>00038 
+<a name="l00040"></a>00040         GLboolean <a class="code" href="class_c_framework.html#ed819af2204d27d211efcf737c755125" title="Główna metoda, od której rozpoczyna się rysowanie całej sceny.">DrawGLScene</a>();
+<a name="l00041"></a>00041 
+<a name="l00043"></a>00043 
+<a name="l00045"></a>00045         GLvoid <a class="code" href="class_c_framework.html#76f7135c56fc94b5e20ed60a1dc42f7d" title="Metoda usuwająca całe okno frameworka oraz obiekt klasy CGameControl.">Destroy</a>( GLboolean bKillGLWindow );
+<a name="l00046"></a>00046 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

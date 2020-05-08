@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja struktury CStencilShadow::SObjectTransformInfo</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<div class="nav">
+<a class="el" href="class_c_stencil_shadow.html">CStencilShadow</a>::<a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html">SObjectTransformInfo</a></div>
+<h1>Dokumentacja struktury CStencilShadow::SObjectTransformInfo</h1><!-- doxytag: class="CStencilShadow::SObjectTransformInfo" --><div class="dynheader">
+Diagram współpracy dla CStencilShadow::SObjectTransformInfo:</div>
+<div class="dynsection">
+<p><center><img src="struct_c_stencil_shadow_1_1_s_object_transform_info__coll__graph.png" border="0" usemap="#_c_stencil_shadow_1_1_s_object_transform_info__coll__map" alt="Collaboration graph"></center>
+<map name="_c_stencil_shadow_1_1_s_object_transform_info__coll__map">
+<area shape="rect" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="96,5,173,32"><area shape="rect" title="cLightPos" alt="" coords="131,28,139,36"><area shape="rect" title="cLightPos" alt="" coords="131,92,139,100"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="struct_c_stencil_shadow_1_1_s_object_transform_info-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku. 
+<p>
+Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku dla danego obiektu 3D. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fcbc12ab73f1bceb7c8c329f641afc1f"></a><!-- doxytag: member="CStencilShadow::SObjectTransformInfo::iIndexObj" ref="fcbc12ab73f1bceb7c8c329f641afc1f" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#fcbc12ab73f1bceb7c8c329f641afc1f">iIndexObj</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indeks obiektu 3D wczytanego z pliku <em>3DObj</em>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f51dfad8e890be5ceae94a4d366ade2c"></a><!-- doxytag: member="CStencilShadow::SObjectTransformInfo::cLightPos" ref="f51dfad8e890be5ceae94a4d366ade2c" args="" -->
+<a class="el" href="class_c_vector4.html">CVector4</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#f51dfad8e890be5ceae94a4d366ade2c">cLightPos</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pozycja światła wyliczona przez <a class="el" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a" title="Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.">CStencilShadow::GetLightPos</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="31ed5f581e7d9fc1fe9d7e36a2ffd964"></a><!-- doxytag: member="CStencilShadow::SObjectTransformInfo::aTransform" ref="31ed5f581e7d9fc1fe9d7e36a2ffd964" args="" -->
+std::vector&lt; <a class="el" href="struct_c_stencil_shadow_1_1_s_transform.html">STransform</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#31ed5f581e7d9fc1fe9d7e36a2ffd964">aTransform</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica wszelkich przekształaceń macierzy widoku. <br></td></tr>
+</table>
+<hr>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li>Draw/<a class="el" href="_stencil_shadow_8h-source.html">StencilShadow.h</a></ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

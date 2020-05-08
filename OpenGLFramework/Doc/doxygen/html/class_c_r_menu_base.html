@@ -1,0 +1,554 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CRMenuBase</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CRMenuBase</h1><!-- doxytag: class="CRMenuBase" --><code>#include &lt;<a class="el" href="_r_menu_base_8h-source.html">RMenuBase.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CRMenuBase</div>
+<div class="dynsection">
+<p><center><img src="class_c_r_menu_base__inherit__graph.png" border="0" usemap="#_c_r_menu_base__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_r_menu_base__inherit__map">
+<area shape="rect" href="class_c_console.html" title="Klasa konsoli." alt="" coords="5,80,85,107"><area shape="rect" href="class_c_r_message_box.html" title="Klasa rysująca MessageBox&#45;a." alt="" coords="109,80,227,107"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_r_menu_base-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa bazowa dla klas GUI z przyciskami. 
+<p>
+Klasa ta zawiera metody przeznaczone do odziedziczenia przez inne klasy, reprezentujące graficzny interfejs użytkownika. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#02aab9ddef903e3916c2914806f3df26">CRMenuBase</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#02aab9ddef903e3916c2914806f3df26"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#dd7cba74535fd03c917331f9dab5954b">~CRMenuBase</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#dd7cba74535fd03c917331f9dab5954b"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody chronione</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#c2f5a69593d9cab37fbb1b19b91ee4cc">DrawRegionIfMouse</a> (const RECT &amp;rcRect, GLboolean bCheckMessageBox=GL_TRUE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca obramowanie wokół zadanego prostokąta po najechaniu na niego myszą.  <a href="#c2f5a69593d9cab37fbb1b19b91ee4cc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#27be6030fa84cc0c3f6b7c738748ee28">DrawRegionBorder</a> (const RECT &amp;rcRect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca obramowanie wokół zadanego prostokąta.  <a href="#27be6030fa84cc0c3f6b7c738748ee28"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#8ab5907181b9b2e2fda7f6cfc23e7467">CheckWhereClickedUser</a> (GLint iX, GLint iY, const RECT *prcRect, GLint iMaxCount, GLint &amp;out_iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy kliknięto w obrębie danego prostokąta.  <a href="#8ab5907181b9b2e2fda7f6cfc23e7467"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#7af2244a8c527a12b4adab225c52b296">DrawRegions</a> (const RECT *prcRect, GLint iMaxCount, GLint iStart=0, GLboolean bSetDrawParam=GL_TRUE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca zadany prostokąt.  <a href="#7af2244a8c527a12b4adab225c52b296"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#ff727653d73dd41e0fcd86851a5bd21e">SetRegionX</a> (LONG &amp;out_lPixelsVal, GLint iPercent, GLboolean bFont=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przeliczająca procent na piksele po osi X.  <a href="#ff727653d73dd41e0fcd86851a5bd21e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#d37dde222d1af9f881c0223c80c9f749">SetRegionY</a> (LONG &amp;out_lPixelsVal, GLint iPercent, GLboolean bFont=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przeliczająca procent na piksele po osi Y.  <a href="#d37dde222d1af9f881c0223c80c9f749"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#7a0d739a43be0248a35b55727011feb7">SetRegionX</a> (LONG &amp;out_lPixelsVal, GLfloat fPercent, GLboolean bFont=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przeliczająca procent na piksele po osi X z dokładnością liczby rzeczywistej.  <a href="#7a0d739a43be0248a35b55727011feb7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#311b6d484976f80191dcba9d2c35dcaa">SetRegionY</a> (LONG &amp;out_lPixelsVal, GLfloat fPercent, GLboolean bFont=GL_FALSE)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda przeliczająca procent na piksele po osi Y z dokładnością liczby rzeczywistej.  <a href="#311b6d484976f80191dcba9d2c35dcaa"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#899de78c370ba88f6e4932ccf6b8a513">CheckPtCursorInRect</a> (const POINT &amp;ptCursor, const RECT &amp;rcRect)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca czy dany punkt zawiera się w zadanym prostokącie.  <a href="#899de78c370ba88f6e4932ccf6b8a513"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty chronione</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#d75d4d0cc680947acb2095041a8d8ceb">m_iWhereIsMouse</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna zapamiętująca aktualny indeks prostokąta (np. przycisku), nad którym znajduje się kursor myszy.  <a href="#d75d4d0cc680947acb2095041a8d8ceb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_r_menu_base.html#eba182534c49a6965adda1051771fde6">m_iWhereIsMouseOld</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Zmienna zapamiętująca ostatni indeks prostokąta (np. przycisku), nad którym znajduje się kursor myszy.  <a href="#eba182534c49a6965adda1051771fde6"></a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="02aab9ddef903e3916c2914806f3df26"></a><!-- doxytag: member="CRMenuBase::CRMenuBase" ref="02aab9ddef903e3916c2914806f3df26" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRMenuBase::CRMenuBase           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="dd7cba74535fd03c917331f9dab5954b"></a><!-- doxytag: member="CRMenuBase::~CRMenuBase" ref="dd7cba74535fd03c917331f9dab5954b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRMenuBase::~CRMenuBase           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="c2f5a69593d9cab37fbb1b19b91ee4cc"></a><!-- doxytag: member="CRMenuBase::DrawRegionIfMouse" ref="c2f5a69593d9cab37fbb1b19b91ee4cc" args="(const RECT &amp;rcRect, GLboolean bCheckMessageBox=GL_TRUE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMenuBase::DrawRegionIfMouse           </td>
+          <td>(</td>
+          <td class="paramtype">const RECT &amp;&nbsp;</td>
+          <td class="paramname"> <em>rcRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bCheckMessageBox</em> = <code>GL_TRUE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca obramowanie wokół zadanego prostokąta po najechaniu na niego myszą. 
+<p>
+Metodę tę można wykorzystać, np. obramowując dany przycisk po najechaniu na niego kursorem myszy. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rcRect</em>&nbsp;</td><td>Referencja na strukturę <code>RECT</code> reprezentująca położenie, np. przycisku. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bCheckMessageBox</em>&nbsp;</td><td>Flaga mówiąca czy sprawdzane ma być, czy rysowana jest plansza z MessageBox-em klasy <a class="el" href="class_c_r_message_box.html" title="Klasa rysująca MessageBox-a.">CRMessageBox</a>. Jeżeli podamy <code>GL_TRUE</code> to obramowanie nie zostanie narysowane jeżeli rysowana będzie plansza z MessageBox-em. Jeżeli podamy <code>GL_FALSE</code> to obramowanie zostanie zawsze narysowane. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="27be6030fa84cc0c3f6b7c738748ee28"></a><!-- doxytag: member="CRMenuBase::DrawRegionBorder" ref="27be6030fa84cc0c3f6b7c738748ee28" args="(const RECT &amp;rcRect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMenuBase::DrawRegionBorder           </td>
+          <td>(</td>
+          <td class="paramtype">const RECT &amp;&nbsp;</td>
+          <td class="paramname"> <em>rcRect</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca obramowanie wokół zadanego prostokąta. 
+<p>
+Metodę tę można wykorzystać do rysowania ramki. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rcRect</em>&nbsp;</td><td>Referencja na strukturę <code>RECT</code> reprezentująca położenie, np. ramki. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8ab5907181b9b2e2fda7f6cfc23e7467"></a><!-- doxytag: member="CRMenuBase::CheckWhereClickedUser" ref="8ab5907181b9b2e2fda7f6cfc23e7467" args="(GLint iX, GLint iY, const RECT *prcRect, GLint iMaxCount, GLint &amp;out_iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CRMenuBase::CheckWhereClickedUser           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RECT *&nbsp;</td>
+          <td class="paramname"> <em>prcRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMaxCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_iIndex</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy kliknięto w obrębie danego prostokąta. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iX</em>&nbsp;</td><td>Współrzędna X położenia kursora myszy. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iY</em>&nbsp;</td><td>Współrzędna Y położenia kursora myszy. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>prcRect</em>&nbsp;</td><td>Wskaźnik na tablicę prostokątów. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMaxCount</em>&nbsp;</td><td>Ilość prostokątów podana w <em>prRect</em>. </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_iIndex</em>&nbsp;</td><td>Zmienna do której zapisany zostanie indeks prostokąta, na który kliknięto. Pod warunkiem, że metoda zwróci <code>GL_TRUE</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku gdy kusor znajduje się w którymś z regionów. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7af2244a8c527a12b4adab225c52b296"></a><!-- doxytag: member="CRMenuBase::DrawRegions" ref="7af2244a8c527a12b4adab225c52b296" args="(const RECT *prcRect, GLint iMaxCount, GLint iStart=0, GLboolean bSetDrawParam=GL_TRUE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMenuBase::DrawRegions           </td>
+          <td>(</td>
+          <td class="paramtype">const RECT *&nbsp;</td>
+          <td class="paramname"> <em>prcRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMaxCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iStart</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bSetDrawParam</em> = <code>GL_TRUE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca zadany prostokąt. 
+<p>
+Za pomocą tej metody możemy rysować, np. przyciski. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>prcRect</em>&nbsp;</td><td>Wskaźnik na tablicę obiektów <code>RECT</code>, które mają być narysowane. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMaxCount</em>&nbsp;</td><td>Maksymala ilość elementów tablicy obiektów <code>RECT</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iStart</em>&nbsp;</td><td>Początkowy indeks tablicy obiektów <code>RECT</code> od którego rozpocznie się rysowanie. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bSetDrawParam</em>&nbsp;</td><td>Flaga wskazująca czy przed rysowanie mają zostać wywołane odpowiednie funkcje ustawiające prametry rysowania prostokątów. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ff727653d73dd41e0fcd86851a5bd21e"></a><!-- doxytag: member="CRMenuBase::SetRegionX" ref="ff727653d73dd41e0fcd86851a5bd21e" args="(LONG &amp;out_lPixelsVal, GLint iPercent, GLboolean bFont=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMenuBase::SetRegionX           </td>
+          <td>(</td>
+          <td class="paramtype">LONG &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_lPixelsVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iPercent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bFont</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przeliczająca procent na piksele po osi X. 
+<p>
+Za pomocą tej metody możemy ustalić, np. pozycję przycisku wzdłuż szerokości ekranu podając wartość procentową położenia. Dzięki temu możemy uzyskać wizualne tą samą pozycję przycisku niezależnie od rozdzielczości ekranu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_lPixelsVal</em>&nbsp;</td><td>Referencja na wartość typu <code>LONG</code>. Do tej zmiennej zostanie zapisana wartość wynikowa, reprezentująca ilość pikseli wyliczoną na podstawie podanej wartości procentowej oraz aktualnej rozdzielczości ekranu na jakiej program pracuje. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iPercent</em>&nbsp;</td><td>Wartość procentowa szerokości ekranu, gdzie 0% to lewa a 100% prawa strona ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bFont</em>&nbsp;</td><td>Flaga wskazująca czy obliczenia przeprowadzane są dla ustalenia pozycji tekstu. Dotyczy tylko rysowania tekstu za pomocą klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d37dde222d1af9f881c0223c80c9f749"></a><!-- doxytag: member="CRMenuBase::SetRegionY" ref="d37dde222d1af9f881c0223c80c9f749" args="(LONG &amp;out_lPixelsVal, GLint iPercent, GLboolean bFont=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMenuBase::SetRegionY           </td>
+          <td>(</td>
+          <td class="paramtype">LONG &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_lPixelsVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iPercent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bFont</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przeliczająca procent na piksele po osi Y. 
+<p>
+Za pomocą tej metody możemy ustalić, np. pozycję przycisku wzdłuż wysokości ekranu podając wartość procentową położenia. Dzięki temu możemy uzyskać wizualne tą samą pozycję przycisku niezależnie od rozdzielczości ekranu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_lPixelsVal</em>&nbsp;</td><td>Referencja na wartość typu <code>LONG</code>. Do tej zmiennej zostanie zapisana wartość wynikowa, reprezentująca ilość pikseli wyliczoną na podstawie podanej wartości procentowej oraz aktualnej rozdzielczości ekranu na jakiej program pracuje. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iPercent</em>&nbsp;</td><td>Wartość procentowa wysokości ekranu, gdzie 0% to górna a 100% dolna strona ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bFont</em>&nbsp;</td><td>Flaga wskazująca czy obliczenia przeprowadzane są dla ustalenia pozycji tekstu. Dotyczy tylko rysowania tekstu za pomocą klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7a0d739a43be0248a35b55727011feb7"></a><!-- doxytag: member="CRMenuBase::SetRegionX" ref="7a0d739a43be0248a35b55727011feb7" args="(LONG &amp;out_lPixelsVal, GLfloat fPercent, GLboolean bFont=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMenuBase::SetRegionX           </td>
+          <td>(</td>
+          <td class="paramtype">LONG &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_lPixelsVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fPercent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bFont</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przeliczająca procent na piksele po osi X z dokładnością liczby rzeczywistej. 
+<p>
+Za pomocą tej metody możemy ustalić, np. pozycję przycisku wzdłuż szerokości ekranu podając wartość procentową położenia. Dzięki temu możemy uzyskać wizualne tą samą pozycję przycisku niezależnie od rozdzielczości ekranu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_lPixelsVal</em>&nbsp;</td><td>Referencja na wartość typu <code>LONG</code>. Do tej zmiennej zostanie zapisana wartość wynikowa, reprezentująca ilość pikseli wyliczoną na podstawie podanej wartości procentowej oraz aktualnej rozdzielczości ekranu na jakiej program pracuje. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fPercent</em>&nbsp;</td><td>Wartość procentowa szerokości ekranu, gdzie 0% to lewa a 100% prawa strona ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bFont</em>&nbsp;</td><td>Flaga wskazująca czy obliczenia przeprowadzane są dla ustalenia pozycji tekstu. Dotyczy tylko rysowania tekstu za pomocą klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="311b6d484976f80191dcba9d2c35dcaa"></a><!-- doxytag: member="CRMenuBase::SetRegionY" ref="311b6d484976f80191dcba9d2c35dcaa" args="(LONG &amp;out_lPixelsVal, GLfloat fPercent, GLboolean bFont=GL_FALSE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CRMenuBase::SetRegionY           </td>
+          <td>(</td>
+          <td class="paramtype">LONG &amp;&nbsp;</td>
+          <td class="paramname"> <em>out_lPixelsVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&nbsp;</td>
+          <td class="paramname"> <em>fPercent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bFont</em> = <code>GL_FALSE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda przeliczająca procent na piksele po osi Y z dokładnością liczby rzeczywistej. 
+<p>
+Za pomocą tej metody możemy ustalić, np. pozycję przycisku wzdłuż wysokości ekranu podając wartość procentową położenia. Dzięki temu możemy uzyskać wizualne tą samą pozycję przycisku niezależnie od rozdzielczości ekranu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>out_lPixelsVal</em>&nbsp;</td><td>Referencja na wartość typu <code>LONG</code>. Do tej zmiennej zostanie zapisana wartość wynikowa, reprezentująca ilość pikseli wyliczoną na podstawie podanej wartości procentowej oraz aktualnej rozdzielczości ekranu na jakiej program pracuje. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fPercent</em>&nbsp;</td><td>Wartość procentowa wysokości ekranu, gdzie 0% to górna a 100% dolna strona ekranu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bFont</em>&nbsp;</td><td>Flaga wskazująca czy obliczenia przeprowadzane są dla ustalenia pozycji tekstu. Dotyczy tylko rysowania tekstu za pomocą klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="899de78c370ba88f6e4932ccf6b8a513"></a><!-- doxytag: member="CRMenuBase::CheckPtCursorInRect" ref="899de78c370ba88f6e4932ccf6b8a513" args="(const POINT &amp;ptCursor, const RECT &amp;rcRect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CRMenuBase::CheckPtCursorInRect           </td>
+          <td>(</td>
+          <td class="paramtype">const POINT &amp;&nbsp;</td>
+          <td class="paramname"> <em>ptCursor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RECT &amp;&nbsp;</td>
+          <td class="paramname"> <em>rcRect</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca czy dany punkt zawiera się w zadanym prostokącie. 
+<p>
+<dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>ptCursor</em>&nbsp;</td><td>Referencja na obiekt <code>POINT</code>, np. pozycja kursora myszy. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rcRect</em>&nbsp;</td><td>Referencja na obiekt <code>RECT</code>, np. przycisk. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku gdy współrzędne punktu znajdują się wewnątrz prostokąta. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="d75d4d0cc680947acb2095041a8d8ceb"></a><!-- doxytag: member="CRMenuBase::m_iWhereIsMouse" ref="d75d4d0cc680947acb2095041a8d8ceb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint <a class="el" href="class_c_r_menu_base.html#d75d4d0cc680947acb2095041a8d8ceb">CRMenuBase::m_iWhereIsMouse</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zmienna zapamiętująca aktualny indeks prostokąta (np. przycisku), nad którym znajduje się kursor myszy. 
+<p>
+Zmienna ta wykorzystywana jest dla stwierdzenia faktu najechania kursora myszy na dany prostokąt. 
+</div>
+</div><p>
+<a class="anchor" name="eba182534c49a6965adda1051771fde6"></a><!-- doxytag: member="CRMenuBase::m_iWhereIsMouseOld" ref="eba182534c49a6965adda1051771fde6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint <a class="el" href="class_c_r_menu_base.html#eba182534c49a6965adda1051771fde6">CRMenuBase::m_iWhereIsMouseOld</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zmienna zapamiętująca ostatni indeks prostokąta (np. przycisku), nad którym znajduje się kursor myszy. 
+<p>
+Zmienna ta wykorzystywana jest dla stwierdzenia faktu najechania kursora myszy na dany prostokąt. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>OpenGLFramework/<a class="el" href="_r_menu_base_8h-source.html">RMenuBase.h</a><li>OpenGLFramework/RMenuBase.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:30 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

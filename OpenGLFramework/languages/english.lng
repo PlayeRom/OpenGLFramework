@@ -1,0 +1,7 @@
+;it is comment
+Language: English %d		;0
+Exit program?				;1
+OK							;2
+Cancel						;3
+Yes							;4
+No							;5

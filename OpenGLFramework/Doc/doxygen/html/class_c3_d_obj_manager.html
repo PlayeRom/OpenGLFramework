@@ -1,0 +1,547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy C3DObjManager</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy C3DObjManager</h1><!-- doxytag: class="C3DObjManager" --><code>#include &lt;<a class="el" href="3_d_obj_manager_8h-source.html">3DObjManager.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram współpracy dla C3DObjManager:</div>
+<div class="dynsection">
+<p><center><img src="class_c3_d_obj_manager__coll__graph.png" border="0" usemap="#_c3_d_obj_manager__coll__map" alt="Collaboration graph"></center>
+<map name="_c3_d_obj_manager__coll__map">
+<area shape="rect" href="class_c_game_control.html" title="Główna klasa zarządzająca grą." alt="" coords="1793,476,1903,503"><area shape="rect" title="m_p3DObjManager" alt="" coords="1547,93,1555,101"><area shape="rect" title="m_p3DObjManager" alt="" coords="1843,472,1851,480"><area shape="rect" href="class_c3_d_obj_file.html" title="Klasa zapisu i odczytu pliku 3DObj." alt="" coords="2037,392,2128,419"><area shape="rect" title="m_p3DObjFile" alt="" coords="2071,388,2079,396"><area shape="rect" title="m_p3DObjFile" alt="" coords="1527,81,1535,89"><area shape="rect" title="m_pGameCtrl" alt="" coords="1843,472,1851,480"><area shape="rect" title="m_pGameCtrl" alt="" coords="1540,108,1548,116"><area shape="rect" title="m_pGameCtrl" alt="" coords="1877,472,1885,480"><area shape="rect" title="m_pGameCtrl" alt="" coords="2039,415,2047,423"><area shape="rect" href="class_c_particles.html" title="Klasa cząsteczek." alt="" coords="2041,464,2124,491"><area shape="rect" title="m_pGameCtrl" alt="" coords="1900,499,1908,507"><area shape="rect" title="m_pGameCtrl" alt="" coords="2052,487,2060,495"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CGameControl \&gt;" alt="" coords="1375,145,1604,172"><area shape="rect" href="class_c_emboss_bump.html" title="Klasa tworzenia efektu tłoczonego mapowania wybojów." alt="" coords="1235,165,1349,192"><area shape="rect" title="m_pEmbossBump" alt="" coords="1336,188,1344,196"><area shape="rect" title="m_pEmbossBump" alt="" coords="1841,472,1849,480"><area shape="rect" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D." alt="" coords="708,183,785,209"><area shape="rect" title="m_cLight" alt="" coords="781,191,789,199"><area shape="rect" title="m_cLight" alt="" coords="1231,176,1239,184"><area shape="rect" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku..." alt="" coords="939,207,1197,233"><area shape="rect" title="cLightPos" alt="" coords="781,203,789,211"><area shape="rect" title="cLightPos" alt="" coords="935,219,943,227"><area shape="rect" href="class_c_console.html" title="Klasa konsoli." alt="" coords="1449,527,1529,553"><area shape="rect" title="m_pConsole" alt="" coords="1525,533,1533,541"><area shape="rect" title="m_pConsole" alt="" coords="1797,499,1805,507"><area shape="rect" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="1016,321,1120,348"><area shape="rect" href="class_c_r_message_box.html" title="Klasa rysująca MessageBox&#45;a." alt="" coords="1431,361,1548,388"><area shape="rect" href="class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową." alt="" coords="1019,615,1117,641"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,623,1123,631"><area shape="rect" title="m_pBitmapFont" alt="" coords="1821,499,1829,507"><area shape="rect" title="m_pBitmapFont" alt="" coords="1115,616,1123,624"><area shape="rect" title="m_pBitmapFont" alt="" coords="1445,547,1453,555"><area shape="rect" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="1027,415,1109,441"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,424,1115,432"><area shape="rect" title="m_pSDLFont" alt="" coords="1801,472,1809,480"><area shape="rect" title="m_pSDLFont" alt="" coords="1092,437,1100,445"><area shape="rect" title="m_pSDLFont" alt="" coords="1445,532,1453,540"><area shape="rect" href="class_c_fps.html" title="Klasa zliczająca i wyświetlająca ilość generowanych klatek na sekundę." alt="" coords="1463,476,1516,503"><area shape="rect" title="m_pSDLFont" alt="" coords="1107,435,1115,443"><area shape="rect" title="m_pSDLFont" alt="" coords="1459,484,1467,492"><area shape="rect" title="m_pSDLFontText" alt="" coords="1107,419,1115,427"><area shape="rect" title="m_pSDLFontText" alt="" coords="1427,379,1435,387"><area shape="rect" href="class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,281,800,308"><area shape="rect" title="m_pWin" alt="" coords="796,291,804,299"><area shape="rect" title="m_pWin" alt="" coords="1841,472,1849,480"><area shape="rect" title="m_pWinData" alt="" coords="775,304,783,312"><area shape="rect" title="m_pWinData" alt="" coords="1032,411,1040,419"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,180,520,207"><area shape="rect" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,231,472,257"><area shape="rect" title="m_pARBMultisample" alt="" coords="468,244,476,252"><area shape="rect" title="m_pARBMultisample" alt="" coords="699,277,707,285"><area shape="rect" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,281,465,308"><area shape="rect" title="m_pMultiLang" alt="" coords="463,291,471,299"><area shape="rect" title="m_pMultiLang" alt="" coords="689,291,697,299"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,281,243,308"><area shape="rect" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,332,500,359"><area shape="rect" title="m_sSettingFile" alt="" coords="496,335,504,343"><area shape="rect" title="m_sSettingFile" alt="" coords="697,304,705,312"><area shape="rect" href="class_c_logger.html" title="Klasa loggera." alt="" coords="371,383,443,409"><area shape="rect" title="m_pLogger" alt="" coords="440,391,448,399"><area shape="rect" title="m_pLogger" alt="" coords="729,304,737,312"><area shape="rect" href="class_c_my_font.html" title="Klasa rysująca tekst." alt="" coords="1031,544,1105,571"><area shape="rect" title="m_pMyFont" alt="" coords="1103,555,1111,563"><area shape="rect" title="m_pMyFont" alt="" coords="1445,541,1453,549"><area shape="rect" href="class_c_speed_control.html" title="Klasa kontroli szybkości animacji." alt="" coords="1012,700,1124,727"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,705,1129,713"><area shape="rect" title="m_pSpeedControl" alt="" coords="1836,499,1844,507"><area shape="rect" title="m_pSpeedControl" alt="" coords="1121,704,1129,712"><area shape="rect" title="m_pSpeedControl" alt="" coords="1445,539,1453,547"><area shape="rect" href="class_c_matrix_operations.html" title="Klasa wspierająca obliczenia dla przekształceń dwu i trzywymiarowych." alt="" coords="1423,705,1556,732"><area shape="rect" title="m_pMatrixOp" alt="" coords="1552,727,1560,735"><area shape="rect" title="m_pMatrixOp" alt="" coords="1844,499,1852,507"><area shape="rect" title="m_pFps" alt="" coords="1513,485,1521,493"><area shape="rect" title="m_pFps" alt="" coords="1789,485,1797,493"><area shape="rect" href="class_c_stencil_shadow.html" title="Klasa wspomagająca rysowanie dynamicznych cieni shadow volume." alt="" coords="1429,260,1549,287"><area shape="rect" title="m_pStencilShadow" alt="" coords="1545,260,1553,268"><area shape="rect" title="m_pStencilShadow" alt="" coords="1843,472,1851,480"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1193,229,1201,237"><area shape="rect" title="m_sObjTransfInfo" alt="" coords="1425,260,1433,268"><area shape="rect" href="class_c_billboard.html" title="Klasa rysująca billboardy." alt="" coords="1448,756,1531,783"><area shape="rect" title="m_pBillboard" alt="" coords="1527,776,1535,784"><area shape="rect" title="m_pBillboard" alt="" coords="1843,499,1851,507"><area shape="rect" href="class_c_w_g_l_e_x_t_swap_control.html" title="Klasa kontrolująca synchronizację renderowania klatek z odświeżaniem ekranu monitora..." alt="" coords="1407,807,1572,833"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1568,824,1576,832"><area shape="rect" title="m_pWglExtSwapCtrl" alt="" coords="1843,499,1851,507"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CWGLEXTSwapControl \&gt;" alt="" coords="927,807,1209,833"><area shape="rect" href="class_c_outline_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką konturową." alt="" coords="1439,857,1540,884"><area shape="rect" title="m_pOutlineFont" alt="" coords="1536,880,1544,888"><area shape="rect" title="m_pOutlineFont" alt="" coords="1843,499,1851,507"><area shape="rect" href="class_c_cursor.html" title="Klasa zarządzająca kursorami." alt="" coords="1453,908,1525,935"><area shape="rect" title="m_pCursor" alt="" coords="1521,929,1529,937"><area shape="rect" title="m_pCursor" alt="" coords="1844,499,1852,507"><area shape="rect" title="m_pParticles" alt="" coords="2037,476,2045,484"><area shape="rect" title="m_pParticles" alt="" coords="1900,483,1908,491"><area shape="rect" href="class_c_texture_font.html" title="Klasa umożliwiająca rysowanie tekstu za pomocą tekstury z czcionką." alt="" coords="1437,1023,1541,1049"><area shape="rect" title="m_pTextureFont" alt="" coords="1537,1044,1545,1052"><area shape="rect" title="m_pTextureFont" alt="" coords="1843,499,1851,507"><area shape="rect" href="class_c_texture_loader.html" title="Klasa odpowiedzialana za wczytywanie tekstur." alt="" coords="1009,992,1127,1019"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,997,1132,1005"><area shape="rect" title="m_pTextureLoader" alt="" coords="1844,499,1852,507"><area shape="rect" title="m_pTextureLoader" alt="" coords="1124,1005,1132,1013"><area shape="rect" title="m_pTextureLoader" alt="" coords="1433,1028,1441,1036"><area shape="rect" href="class_c_a_r_b_multi_texturing.html" title="Klasa obsługująca multiteksturing." alt="" coords="1419,5,1560,32"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1557,11,1565,19"><area shape="rect" title="m_pARBMultiTexturing" alt="" coords="1843,472,1851,480"><area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CARBMultiTexturing \&gt;" alt="" coords="937,5,1199,32"><area shape="rect" title="m_pRMessageBox" alt="" coords="1545,367,1553,375"><area shape="rect" title="m_pRMessageBox" alt="" coords="1835,472,1843,480"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c3_d_obj_manager-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Manager zarządzajacy obiektami 3D, wczytanymi z autorskiego formatu pliku <em>3DObj</em>. 
+<p>
+Zadaniem tej klasy jest zapewnienie wczytania plików <em>3DObj</em> oraz umożliwienie rysowania trójwymiarowych obiektów zawartych w tych plikach. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#bf029ccb14e8272ddf9d5daa765cd428">C3DObjManager</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#bf029ccb14e8272ddf9d5daa765cd428"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#75e725b4d8c27665df4c075de4116265">~C3DObjManager</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#75e725b4d8c27665df4c075de4116265"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#ff496eaf1b8de50ac90e935fb9891757">Initialization</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda inicjalizująca ustawienia 3D Object Manager-a.  <a href="#ff496eaf1b8de50ac90e935fb9891757"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186">Create3DObject</a> (LPCTSTR lpFileName, GLint iTextureFirst, GLint iTextureCount=-1, GLint iTextureEmbossBump=-1)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik <em>3DObj</em>.  <a href="#5a742e824c044f6adc8556bcf8662186"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#eb9c534b5dfb89a0003a93213ea015e4">Draw3DObject</a> (GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca pojedynczy obiekt.  <a href="#eb9c534b5dfb89a0003a93213ea015e4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#e59051abc5026ca3d478124f703e4d97">Draw3DObject_Lists</a> (GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca pojedynczy obiekt.  <a href="#e59051abc5026ca3d478124f703e4d97"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">DEV GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#7cdb1bdb3f24bbda7ecb8f8152b41f37">GetTextureFirstIndex</a> (GLint iIndex)</td></tr>
+
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#b54dc9351602043fe4fd3c7877215821">Get3DObjectSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca wielkość tablicy <a class="el" href="class_c3_d_obj_manager.html#d0b7056f9231046ac1d34c9abccce8de" title="Dynamiczna tablica obiektów C3DObjManager::S3DObject.">C3DObjManager::m_a3DObject</a>.  <a href="#b54dc9351602043fe4fd3c7877215821"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#3b5391da8cd7934ddf56bf4abf9da7c0">Draw3DObjectNoElem</a> (GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca pojedynczy obiekt.  <a href="#3b5391da8cd7934ddf56bf4abf9da7c0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#cbbd1ac7750a7d1df9c2c98bdbcf3835">Draw3DObjectElem</a> (GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda rysująca pojedynczy obiekt.  <a href="#cbbd1ac7750a7d1df9c2c98bdbcf3835"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#9080e06a17ceedd2d4b593bfe3ee39cb">CreateLists</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca listy wyświetlania.  <a href="#9080e06a17ceedd2d4b593bfe3ee39cb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#24a8e50630cfc0bba732367286314964">CreateListsBump</a> (GLint iMaxLights=8)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca listy wyświetlania z efektem bump.  <a href="#24a8e50630cfc0bba732367286314964"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#91a9e5a77ab9d5668ce28d6ced028bb6">DeleteLists</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca wszelkie listy wyświetlania.  <a href="#91a9e5a77ab9d5668ce28d6ced028bb6"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7837956296e31599afc7305b80236b9f"></a><!-- doxytag: member="C3DObjManager::m_pGameCtrl" ref="7837956296e31599afc7305b80236b9f" args="" -->
+<a class="el" href="class_c_game_control.html">CGameControl</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#7837956296e31599afc7305b80236b9f">m_pGameCtrl</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy singletonu <a class="el" href="class_c_game_control.html" title="Główna klasa zarządzająca grą.">CGameControl</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="281f7483365841b7adbb45b72691d114"></a><!-- doxytag: member="C3DObjManager::m_p3DObjFile" ref="281f7483365841b7adbb45b72691d114" args="" -->
+<a class="el" href="class_c3_d_obj_file.html">C3DObjFile</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#281f7483365841b7adbb45b72691d114">m_p3DObjFile</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wskaźnik na obiekt klasy <a class="el" href="class_c3_d_obj_file.html" title="Klasa zapisu i odczytu pliku 3DObj.">C3DObjFile</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d0b7056f9231046ac1d34c9abccce8de"></a><!-- doxytag: member="C3DObjManager::m_a3DObject" ref="d0b7056f9231046ac1d34c9abccce8de" args="" -->
+std::vector&lt; <a class="el" href="struct_c3_d_obj_manager_1_1_s3_d_object.html">S3DObject</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#d0b7056f9231046ac1d34c9abccce8de">m_a3DObject</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dynamiczna tablica obiektów <a class="el" href="struct_c3_d_obj_manager_1_1_s3_d_object.html" title="Struktura przechowująca niezbędne informacje dla każdego obiektu.">C3DObjManager::S3DObject</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b08b6cd6f1bfdc88d9a06617640cf72c"></a><!-- doxytag: member="C3DObjManager::m_ui3DObjLists" ref="b08b6cd6f1bfdc88d9a06617640cf72c" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#b08b6cd6f1bfdc88d9a06617640cf72c">m_ui3DObjLists</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Identyfikator przylegających do siebie list wyświetlania stworzonych metodą <a class="el" href="class_c3_d_obj_manager.html#9080e06a17ceedd2d4b593bfe3ee39cb" title="Metoda tworząca listy wyświetlania.">C3DObjManager::CreateLists</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#043f52e4d89c395635205c1a2081f9e0">m_ui3DObjListsBump</a> [8]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica identyfikatorów przylegających do siebie list wyświetlania.  <a href="#043f52e4d89c395635205c1a2081f9e0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b352fb09b9be53b7ec05786fd8cd750b"></a><!-- doxytag: member="C3DObjManager::m_iMaxLightsForLists" ref="b352fb09b9be53b7ec05786fd8cd750b" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c3_d_obj_manager.html#b352fb09b9be53b7ec05786fd8cd750b">m_iMaxLightsForLists</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Parametr <em>iMaxLights</em> pochodzący z metody <a class="el" href="class_c3_d_obj_manager.html#24a8e50630cfc0bba732367286314964" title="Metoda tworząca listy wyświetlania z efektem bump.">C3DObjManager::CreateListsBump</a>. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c3_d_obj_manager_1_1_s3_d_object.html">S3DObject</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca niezbędne informacje dla każdego obiektu.  <a href="struct_c3_d_obj_manager_1_1_s3_d_object.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="bf029ccb14e8272ddf9d5daa765cd428"></a><!-- doxytag: member="C3DObjManager::C3DObjManager" ref="bf029ccb14e8272ddf9d5daa765cd428" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">C3DObjManager::C3DObjManager           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<a class="anchor" name="75e725b4d8c27665df4c075de4116265"></a><!-- doxytag: member="C3DObjManager::~C3DObjManager" ref="75e725b4d8c27665df4c075de4116265" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">C3DObjManager::~C3DObjManager           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="ff496eaf1b8de50ac90e935fb9891757"></a><!-- doxytag: member="C3DObjManager::Initialization" ref="ff496eaf1b8de50ac90e935fb9891757" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::Initialization           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda inicjalizująca ustawienia 3D Object Manager-a. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#b65036aedad334e0d4851060df188779" title="Metoda wczytująca wszystkie obiekty 3D.">CGameControl::LoadAll3DObjFiles</a> i musi być wywołana na samym końcu, przed wczytywaniem plików <em>3DObj</em>. 
+</div>
+</div><p>
+<a class="anchor" name="5a742e824c044f6adc8556bcf8662186"></a><!-- doxytag: member="C3DObjManager::Create3DObject" ref="5a742e824c044f6adc8556bcf8662186" args="(LPCTSTR lpFileName, GLint iTextureFirst, GLint iTextureCount=-1, GLint iTextureEmbossBump=-1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint C3DObjManager::Create3DObject           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iTextureFirst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iTextureCount</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iTextureEmbossBump</em> = <code>-1</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik <em>3DObj</em>. 
+<p>
+Metodę tą należy wywoływać wewnątrz <a class="el" href="class_c_game_control.html#b65036aedad334e0d4851060df188779" title="Metoda wczytująca wszystkie obiekty 3D.">CGameControl::LoadAll3DObjFiles</a> tyle razy ile chcemy wczytać obiektów <em>3DObj</em>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku z rozszerzeniem <em>3DObj</em>, który chcemy wczytać. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iTextureFirst</em>&nbsp;</td><td>Indeks tekstury jaka zostanie nałożona na obiekt. Indeksy liczone są od <code>0</code> w kolejności wczytywania tekstur w metodzie <a class="el" href="class_c_game_control.html#f149039ef53e701fa0f514cddbf10329" title="Metoda wczytująca tekstury.">CGameControl::LoadAllTextures</a>. Jeżeli zamierzamy wykorzystać multiteksturing, parametr ten stanowi indeks pierwszej tekstury jaka zostanie nałożona na obiekt. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iTextureCount</em>&nbsp;</td><td>Tylko dla multiteksturingu – ilość kolejnych tekstur po <em>iTextureFirst</em>, jakie zostaną nałożone na obiekt. Aby miało sens, należy podać co najmniej wartość <code>2</code>. Jeżeli podamy wartość mniejszą od <code>2</code>, multiteksturing nie zostanie użyty. Domyślna wartość dla <em>iTextureCount</em> wynosi <code>-1</code>, czyli bez multiteksturingu. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iTextureEmbossBump</em>&nbsp;</td><td>Indeks tekstury jaka zostanie nałożona na obiekt w celu uzyskania efektu wybojów. Musi to być specjalnie do tego celu przygotowana tekstura, najczęściej w odcieniach szarości. Należy pamiętać, że jeżeli chcemy wykorzystać teksturę bump to parametr <em>iTextureCount</em> musi być równy wartości domyślnej, tj. <code>-1</code>. Jeżeli nie chcemy wykorzystać mapowania wybojów to należy parametr ten ustawić na wartość domyślną, czyli <code>-1</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Indeks nowo stworzonego obiektu. W przypadku wystąpienia błędu, zwracana jest wartość <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eb9c534b5dfb89a0003a93213ea015e4"></a><!-- doxytag: member="C3DObjManager::Draw3DObject" ref="eb9c534b5dfb89a0003a93213ea015e4" args="(GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::Draw3DObject           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bUseEmbossBump</em> = <code>GL_FALSE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiLight</em> = <code>GL_LIGHT0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca pojedynczy obiekt. 
+<p>
+Za pomocą tej metody możemy narysować pojedynczy obiekt wczytany z pliku <em>3DObj</em>. Jednak dla lepszej wydajności zaleca się użyć <a class="el" href="class_c3_d_obj_manager.html#e59051abc5026ca3d478124f703e4d97" title="Metoda rysująca pojedynczy obiekt.">C3DObjManager::Draw3DObject_Lists</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks obiektu jaki chcemy narysować. Indeksy liczone są od <code>0</code> w kolejności wczytywania obiektów, tj. w kolejności wywoływania metody <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bUseEmbossBump</em>&nbsp;</td><td>Ustawiając na <code>GL_TRUE</code> obiekt będzie rysowany z efektem mapowania wybojów. Aby jednak tak się stało należy uprzednio w metodzie <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a> podać indeks tekstury bump oraz ilość kolejnych tekstur dla multiteksturingu pozostawić w wartości domyślnej. Ustawiając na <code>GL_FALSE</code> (wartość domyślna) efekt mapowania wybojów nie będzie używany przy rysowaniu obiektu, nawet jeżeli przy tworzeniu obiektu podaliśmy teksturę bump. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiLight</em>&nbsp;</td><td>Identyfikator światła, używany jest tylko dla efektu mapowania wybojów. Należy użyć <code>GL_LIGHTx</code>, gdzie <code>x</code> to cyfra od <code>0</code> do <code>7</code>. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd>Create3DObject_Lists. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e59051abc5026ca3d478124f703e4d97"></a><!-- doxytag: member="C3DObjManager::Draw3DObject_Lists" ref="e59051abc5026ca3d478124f703e4d97" args="(GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::Draw3DObject_Lists           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bUseEmbossBump</em> = <code>GL_FALSE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiLight</em> = <code>GL_LIGHT0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca pojedynczy obiekt. 
+<p>
+Za pomocą tej metody możemy narysować pojedynczy obiekt wczytany z pliku <em>3DObj</em>. Obiekt taki zostanie narysowany z wykorzystaniem listy wyświetlania co znacznie zwiększy wydajność rysowania w prównaniu z metodą <a class="el" href="class_c3_d_obj_manager.html#eb9c534b5dfb89a0003a93213ea015e4" title="Metoda rysująca pojedynczy obiekt.">C3DObjManager::Draw3DObject</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks obiektu jaki chcemy narysować. Indeksy liczone są od <code>0</code> w kolejności wczytywania obiektów, tj. w kolejności wywoływania metody <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bUseEmbossBump</em>&nbsp;</td><td>Ustawiając na <code>GL_TRUE</code> obiekt będzie rysowany z efektem mapowania wybojów. Aby jednak tak się stało należy uprzednio w metodzie <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a> podać indeks tekstury bump oraz ilość kolejnych tekstur dla multiteksturingu pozostawić w wartości domyślnej. Ustawiając na <code>GL_FALSE</code> (wartość domyślna) efekt mapowania wybojów nie będzie używany przy rysowaniu obiektu, nawet jeżeli przy tworzeniu obiektu podaliśmy teksturę bump. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiLight</em>&nbsp;</td><td>Identyfikator światła, używany jest tylko dla efektu mapowania wybojów. Należy użyć <code>GL_LIGHTx</code>, gdzie <code>x</code> to cyfra od <code>0</code> do <code>7</code>. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c3_d_obj_manager.html#eb9c534b5dfb89a0003a93213ea015e4" title="Metoda rysująca pojedynczy obiekt.">Draw3DObject</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7cdb1bdb3f24bbda7ecb8f8152b41f37"></a><!-- doxytag: member="C3DObjManager::GetTextureFirstIndex" ref="7cdb1bdb3f24bbda7ecb8f8152b41f37" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint C3DObjManager::GetTextureFirstIndex           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda pobierająca pierwszą teksturę danego obiektu <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks obiektu z którego chcemy pobrać pierwszą teksturę. Indeksy liczone są od <code>0</code> w kolejności wczytywania obiektów, tj. w kolejności wywoływania metody <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Index pierwszej tekstury nakładanej na obiekt. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b54dc9351602043fe4fd3c7877215821"></a><!-- doxytag: member="C3DObjManager::Get3DObjectSize" ref="b54dc9351602043fe4fd3c7877215821" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint C3DObjManager::Get3DObjectSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca wielkość tablicy <a class="el" href="class_c3_d_obj_manager.html#d0b7056f9231046ac1d34c9abccce8de" title="Dynamiczna tablica obiektów C3DObjManager::S3DObject.">C3DObjManager::m_a3DObject</a>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość elementów tablicy <a class="el" href="class_c3_d_obj_manager.html#d0b7056f9231046ac1d34c9abccce8de" title="Dynamiczna tablica obiektów C3DObjManager::S3DObject.">C3DObjManager::m_a3DObject</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3b5391da8cd7934ddf56bf4abf9da7c0"></a><!-- doxytag: member="C3DObjManager::Draw3DObjectNoElem" ref="3b5391da8cd7934ddf56bf4abf9da7c0" args="(GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::Draw3DObjectNoElem           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bUseEmbossBump</em> = <code>GL_FALSE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiLight</em> = <code>GL_LIGHT0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca pojedynczy obiekt. 
+<p>
+Metoda ta rysuje obiekt wczytany z pliku <em>3DObj</em>, bez indeksowania wierzchołków. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks obiektu jaki chcemy narysować. Indeksy liczone są od <code>0</code> w kolejności wczytywania obiektów, tj. w kolejności wywoływania metody <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bUseEmbossBump</em>&nbsp;</td><td>Ustawiając na <code>GL_TRUE</code> obiekt będzie rysowany z efektem mapowania wybojów. Aby jednak tak się stało należy uprzednio w metodzie <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a> podać indeks tekstury bump oraz ilość kolejnych tekstur dla multiteksturingu pozostawić w wartości domyślnej. Ustawiając na <code>GL_FALSE</code> (wartość domyślna) efekt mapowania wybojów nie będzie używany przy rysowaniu obiektu, nawet jeżeli przy tworzeniu obiektu podaliśmy teksturę bump. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiLight</em>&nbsp;</td><td>Identyfikator światła, używany jest tylko dla efektu mapowania wybojów. Należy użyć <code>GL_LIGHTx</code>, gdzie <code>x</code> to cyfra od <code>0</code> do <code>7</code>. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c3_d_obj_manager.html#cbbd1ac7750a7d1df9c2c98bdbcf3835" title="Metoda rysująca pojedynczy obiekt.">Draw3DObjectElem</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cbbd1ac7750a7d1df9c2c98bdbcf3835"></a><!-- doxytag: member="C3DObjManager::Draw3DObjectElem" ref="cbbd1ac7750a7d1df9c2c98bdbcf3835" args="(GLint iIndex, GLboolean bUseEmbossBump=GL_FALSE, GLuint uiLight=GL_LIGHT0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::Draw3DObjectElem           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&nbsp;</td>
+          <td class="paramname"> <em>bUseEmbossBump</em> = <code>GL_FALSE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&nbsp;</td>
+          <td class="paramname"> <em>uiLight</em> = <code>GL_LIGHT0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda rysująca pojedynczy obiekt. 
+<p>
+Metoda ta rysuje obiekt wczytany z pliku <em>3DObj</em>, z indeksowaniem wierzchołków. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks obiektu jaki chcemy narysować. Indeksy liczone są od <code>0</code> w kolejności wczytywania obiektów, tj. w kolejności wywoływania metody <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>bUseEmbossBump</em>&nbsp;</td><td>Ustawiając na <code>GL_TRUE</code> obiekt będzie rysowany z efektem mapowania wybojów. Aby jednak tak się stało należy uprzednio w metodzie <a class="el" href="class_c3_d_obj_manager.html#5a742e824c044f6adc8556bcf8662186" title="Metoda wczytująca plik 3DObj.">C3DObjManager::Create3DObject</a> podać indeks tekstury bump oraz ilość kolejnych tekstur dla multiteksturingu pozostawić w wartości domyślnej. Ustawiając na <code>GL_FALSE</code> (wartość domyślna) efekt mapowania wybojów nie będzie używany przy rysowaniu obiektu, nawet jeżeli przy tworzeniu obiektu podaliśmy teksturę bump. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>uiLight</em>&nbsp;</td><td>Identyfikator światła, używany jest tylko dla efektu mapowania wybojów. Należy użyć <code>GL_LIGHTx</code>, gdzie <code>x</code> to cyfra od <code>0</code> do <code>7</code>. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c3_d_obj_manager.html#3b5391da8cd7934ddf56bf4abf9da7c0" title="Metoda rysująca pojedynczy obiekt.">Draw3DObjectNoElem</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9080e06a17ceedd2d4b593bfe3ee39cb"></a><!-- doxytag: member="C3DObjManager::CreateLists" ref="9080e06a17ceedd2d4b593bfe3ee39cb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::CreateLists           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca listy wyświetlania. 
+<p>
+Metoda ta tworzy listy wyświetlania dla rysowania wczelkich wczytanych obiektów <em>3DObj</em> bez użyca efektu emboss bump. Metoda ta jest już wywoływana w <a class="el" href="class_c3_d_obj_manager.html#ff496eaf1b8de50ac90e935fb9891757" title="Metoda inicjalizująca ustawienia 3D Object Manager-a.">C3DObjManager::Initialization</a>. <dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c3_d_obj_manager.html#24a8e50630cfc0bba732367286314964" title="Metoda tworząca listy wyświetlania z efektem bump.">CreateListsBump</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="24a8e50630cfc0bba732367286314964"></a><!-- doxytag: member="C3DObjManager::CreateListsBump" ref="24a8e50630cfc0bba732367286314964" args="(GLint iMaxLights=8)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::CreateListsBump           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iMaxLights</em> = <code>8</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca listy wyświetlania z efektem bump. 
+<p>
+Metoda ta tworzy listy wyświetlania dla rysowania wczelkich wczytanych obiektów <em>3DObj</em> z użyciem efektu emboss bump. Metoda ta jest już wywoływana w <a class="el" href="class_c3_d_obj_manager.html#ff496eaf1b8de50ac90e935fb9891757" title="Metoda inicjalizująca ustawienia 3D Object Manager-a.">C3DObjManager::Initialization</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iMaxLights</em>&nbsp;</td><td>Dla ilu świateł (rozpoczynając od <code>GL_LIGHT0</code>) mają być tworzone listy wyświetlania dla jednego obiektu. </td></tr>
+  </table>
+</dl>
+<dl class="see" compact><dt><b>Zobacz również:</b></dt><dd><a class="el" href="class_c3_d_obj_manager.html#9080e06a17ceedd2d4b593bfe3ee39cb" title="Metoda tworząca listy wyświetlania.">CreateLists</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="91a9e5a77ab9d5668ce28d6ced028bb6"></a><!-- doxytag: member="C3DObjManager::DeleteLists" ref="91a9e5a77ab9d5668ce28d6ced028bb6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid C3DObjManager::DeleteLists           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda usuwająca wszelkie listy wyświetlania. 
+<p>
+Metoda ta usuwa listy wyświetlania stworozne przez metody <a class="el" href="class_c3_d_obj_manager.html#9080e06a17ceedd2d4b593bfe3ee39cb" title="Metoda tworząca listy wyświetlania.">C3DObjManager::CreateLists</a> oraz <a class="el" href="class_c3_d_obj_manager.html#24a8e50630cfc0bba732367286314964" title="Metoda tworząca listy wyświetlania z efektem bump.">C3DObjManager::CreateListsBump</a>. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="043f52e4d89c395635205c1a2081f9e0"></a><!-- doxytag: member="C3DObjManager::m_ui3DObjListsBump" ref="043f52e4d89c395635205c1a2081f9e0" args="[8]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint <a class="el" href="class_c3_d_obj_manager.html#043f52e4d89c395635205c1a2081f9e0">C3DObjManager::m_ui3DObjListsBump</a>[8]<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tablica identyfikatorów przylegających do siebie list wyświetlania. 
+<p>
+Tablica identyfikatorów przylegających do siebie list wyświetlania stworzonych metodą <a class="el" href="class_c3_d_obj_manager.html#24a8e50630cfc0bba732367286314964" title="Metoda tworząca listy wyświetlania z efektem bump.">C3DObjManager::CreateListsBump</a>. Indeks tablicy odnosi się do indeksu światła, indeks <code>0</code> dla <code>GL_LIGHT0</code>, indeks <code>1</code> dla <code>GL_LIGHT1</code>, itd. do <code>GL_LIGHT7</code>. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Draw/<a class="el" href="3_d_obj_manager_8h-source.html">3DObjManager.h</a><li>Draw/3DObjManager.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:27 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

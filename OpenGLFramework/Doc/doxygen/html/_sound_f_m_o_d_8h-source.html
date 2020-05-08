@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Sound/SoundFMOD.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Sound/SoundFMOD.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// SoundFMOD.h: interface for the CSoundFMOD class.</span>
+<a name="l00002"></a>00002 <span class="comment">//</span>
+<a name="l00004"></a>00004 <span class="comment"></span>
+<a name="l00005"></a>00005 <span class="preprocessor">#pragma once</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;fmod.h&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keyword">class </span>CSoundFMOD  
+<a name="l00010"></a>00010 {
+<a name="l00011"></a>00011 <span class="keyword">public</span>:
+<a name="l00012"></a>00012         CSoundFMOD();
+<a name="l00013"></a>00013         <span class="keyword">virtual</span> ~CSoundFMOD();
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015         GLboolean LoadSample( <span class="keyword">const</span> <span class="keywordtype">char</span>* lpSample, GLboolean bLoopSound = GL_FALSE );
+<a name="l00016"></a>00016         GLboolean LoadStreamSample( <span class="keyword">const</span> <span class="keywordtype">char</span>* lpSample, GLboolean bLoopSound = GL_FALSE );
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018         GLvoid PlaySample( GLint iIndex );
+<a name="l00019"></a>00019         GLvoid StopSample( GLint iIndex );
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021         GLvoid PlayStreamSample( GLint iIndex );
+<a name="l00022"></a>00022         GLvoid StopStreamSample( GLint iIndex );
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024         GLvoid VolumeIncrease( GLint iValue = 10 );
+<a name="l00025"></a>00025         GLvoid VolumeDecrease( GLint iValue = 10 );
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">private</span>:
+<a name="l00028"></a>00028         <span class="keyword">struct </span>SSample
+<a name="l00029"></a>00029         {
+<a name="l00030"></a>00030                 FSOUND_SAMPLE *sample;
+<a name="l00031"></a>00031                 FSOUND_STREAM *stream;
+<a name="l00032"></a>00032                 GLint iChannel; <span class="comment">//jezeli == -1 to byl error przy play</span>
+<a name="l00033"></a>00033         };
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035         std::vector&lt;SSample&gt; m_aSoundSamples;
+<a name="l00036"></a>00036         <span class="keyword">inline</span> GLint GetSoundSamplesSize() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( m_aSoundSamples.size() ); }
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:20 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

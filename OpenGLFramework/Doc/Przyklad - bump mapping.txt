@@ -1,0 +1,62 @@
+Wykorzytsanie bump mapping
+VBO musi być wyłączone
+
+GLboolean CTextureLoader::LoadAllTexture()
+{
+	...
+
+	//tekstury bump
+	LoadTextureMipmaps(_T("textures/base_bump.bmp"));	//index 7
+	LoadEmbossBump(_T("textures/bump.bmp"));		//index 8, 9
+
+	...
+}
+
+GLboolean CGameControl::Initialization()
+{
+	GetVertexArrays()->AddFullVertex(-1.0f,-1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	GetVertexArrays()->AddFullVertex( 1.0f,-1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	GetVertexArrays()->AddFullVertex( 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f);
+
+	GetVertexArrays()->AddFullVertex(-1.0f,-1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	GetVertexArrays()->AddFullVertex( 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f);
+	GetVertexArrays()->AddFullVertex(-1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f);
+
+	GetEmbossBump()->CalcTangents(0, 6);
+}
+
+GLvoid CGameControl::Draw()
+{
+	GetVertexArrays()->GetARBVBO()->SetUse(GL_FALSE);
+
+	if(m_bUseBump) //z bump mappingiem
+	{
+		GetEmbossBump()->VMatMult( GetLighting()->GetPosition(GL_LIGHT0) );
+		GetEmbossBump()->SetUpBumps(0, 6); 
+		GetVertexArrays()->InitialArraysWithEmbossBump();
+		GetARBMultiTexturing()->BindMultiTextures(8, 2, GL_TRUE); //8 = indeks pierwszej tekstury, 2 = ilosc tekstur
+		glDisable(GL_BLEND);
+		glDisable(GL_LIGHTING);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+		GetARBMultiTexturing()->DisableMultiteksturing(); //uaktywniamy tylko pierwsza jednostke teksturujaca
+		GetVertexArrays()->DisableClientState();
+		
+		GetVertexArrays()->InitialArrays();
+		glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+		GetTextureLoader()->SetTexture(7); //base_bump
+		glBlendFunc(GL_DST_COLOR, GL_SRC_COLOR);
+		glEnable(GL_BLEND);
+		glEnable(GL_LIGHTING);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+		GetVertexArrays()->DisableClientState();
+	}
+	else //bez bump mappingu
+	{
+		glEnable(GL_LIGHTING);
+		glDisable(GL_BLEND);
+		GetVertexArrays()->InitialArrays();
+		GetTextureLoader()->SetTexture(7); //base_bump
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+		GetVertexArrays()->DisableClientState();
+	}
+}

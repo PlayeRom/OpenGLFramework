@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy OpenGLFramework/WindowData.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework/WindowData.h</h1><a href="_window_data_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#pragma once</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "../Extensions/ARBMultisample.h"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="_singleton_base_8h.html" title="Plik nagłówkowy dla klasy CSingletonBase.">SingletonBase.h</a>"</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a><a class="code" href="_window_data_8h.html#24d301bc783d269b9ba788c212c32958">00010</a> <span class="preprocessor">#define ID_TIMER 1 </span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="keyword">class </span><a class="code" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>;
+<a name="l00013"></a>00013 <span class="keyword">class </span><a class="code" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>;
+<a name="l00014"></a>00014 
+<a name="l00016"></a>00016 
+<a name="l00023"></a><a class="code" href="class_c_window_data.html">00023</a> <span class="keyword">class </span><a class="code" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a> : <span class="keyword">public</span> <a class="code" href="class_c_singleton_base.html" title="Klasa szablonu singletonów.">CSingletonBase</a> &lt;CWindowData&gt;
+<a name="l00024"></a>00024 {
+<a name="l00025"></a>00025 <span class="keyword">public</span>:
+<a name="l00027"></a>00027 
+<a name="l00033"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html">00033</a>         <span class="keyword">struct </span><a class="code" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji.">SSettingFile</a>
+<a name="l00034"></a>00034         {
+<a name="l00035"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#baf59da6b47aaa697d4deefbe93e2ca6">00035</a>                 GLubyte <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#baf59da6b47aaa697d4deefbe93e2ca6" title="Główna wersja pliku konfiguracyjnego.">ubMajorVersion</a>;         
+<a name="l00036"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#27193929ef7e168596b2e606ef913b34">00036</a>                 GLubyte <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#27193929ef7e168596b2e606ef913b34" title="Pomniejsza wersja pliku konfiguracyjnego.">ubMinorVersion</a>;         
+<a name="l00037"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#87f305619de4ebf810cd5cebc5471e94">00037</a>                 GLubyte <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#87f305619de4ebf810cd5cebc5471e94" title="Trzecia składowa wersji pliku konfiguracyjnego.">ubReleaseVersion</a>;       
+<a name="l00038"></a>00038                 <span class="comment">//</span>
+<a name="l00039"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#7a52433284a6fb3e4d3d3878a10ddfac">00039</a>                 GLint <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#7a52433284a6fb3e4d3d3878a10ddfac" title="Szerokość okna aplikacji - rozdzielczość X.">iWidth</a>;                           
+<a name="l00040"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#eeb16fc411e46f640451f094a98fffdc">00040</a>                 GLint <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#eeb16fc411e46f640451f094a98fffdc" title="Wysokość okna aplikacji - rozdzielczość Y.">iHeight</a>;                          
+<a name="l00041"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#f94519a5e1a181a2ab297af650b0898e">00041</a>                 GLubyte <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#f94519a5e1a181a2ab297af650b0898e" title="Głębia kolorów.">ubBitsPerPixel</a>;         
+<a name="l00042"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#32cd0bb623d05ced16f1a06aace78dda">00042</a>                 GLint <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#32cd0bb623d05ced16f1a06aace78dda" title="Ilość sampli dla antyaliasingu.">iAntialiasing</a>;            
+<a name="l00043"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#d539d36241dfb61d56e19d96c08a7254">00043</a>                 GLboolean <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#d539d36241dfb61d56e19d96c08a7254" title="Czy aplikacja ma pracować w trybie pełnoekranowym.">bFullScreen</a>;          
+<a name="l00044"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#66bc441ff9c8932cf530d9847f4358cf">00044</a>                 GLboolean <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#66bc441ff9c8932cf530d9847f4358cf" title="Czy włączona jest synchronizacja pionowa.">bVSync</a>;                       
+<a name="l00045"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#1e39f826de3da369329c91eb66a2c21d">00045</a>                 GLboolean <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#1e39f826de3da369329c91eb66a2c21d" title="Czy stary plik log-a ma być usuwany przy kolejnym uruchomieniem aplikacji.">bClearOldLog</a>;         
+<a name="l00046"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#e2d3ea66168b99b71fb11893eb30aa09">00046</a>                 GLint <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#e2d3ea66168b99b71fb11893eb30aa09" title="Indeks pliku językowego aplikacji.">iIndexLanguage</a>;           
+<a name="l00047"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#58ff3a75de24a2951121ab94b113b35b">00047</a>                 GLboolean <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#58ff3a75de24a2951121ab94b113b35b" title="Czy dźwięk ma być włączony.">bSound</a>;                       
+<a name="l00048"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#a5080dd0d6157effb3481e8ca0bb7d07">00048</a>                 GLboolean <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#a5080dd0d6157effb3481e8ca0bb7d07" title="Czy muzyka ma być włączona.">bMusic</a>;                       
+<a name="l00049"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#69f005a0a44cc2d061c6c756e965ebd0">00049</a>                 GLint <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#69f005a0a44cc2d061c6c756e965ebd0" title="Głośność dźwięków określona w procentach.">iVolumeSound</a>;                     
+<a name="l00050"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#0fb3ce080f42af937d3e6e8d9ab95b40">00050</a>                 GLint <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#0fb3ce080f42af937d3e6e8d9ab95b40" title="Głośność muzyki określona w procentach.">iVolumeMusic</a>;                     
+<a name="l00051"></a><a class="code" href="struct_c_window_data_1_1_s_setting_file.html#500e5b10970df5466cb906598ecb8ab1">00051</a>                 GLint <a class="code" href="struct_c_window_data_1_1_s_setting_file.html#500e5b10970df5466cb906598ecb8ab1" title="Jasność, od -255 (czerń) do 255 (biel), 0 - normalnie.">iBrightness</a>;                      
+<a name="l00052"></a>00052         };
+<a name="l00053"></a>00053 
+<a name="l00055"></a>00055 
+<a name="l00058"></a>00058         <span class="keyword">static</span> <a class="code" href="class_c_window_data.html" title="Klasa okna aplikacji.">CWindowData</a>* <a class="code" href="class_c_window_data.html#fd8735ad22581614f694e2bf7f2375e9" title="Statyczna metoda tworząca obiekt klasy CWindowData.">Construct</a>();
+<a name="l00059"></a>00059 
+<a name="l00061"></a>00061 
+<a name="l00064"></a>00064         GLboolean <a class="code" href="class_c_window_data.html#89e8ab7b1aa0b610b9f5c234436bbbe6" title="Inicjalizacja obiektu CWindowData.">Initialization</a>();
+<a name="l00065"></a>00065 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         <a class="code" href="class_c_window_data.html#f083572a035d23944d138bcf3ed1608b" title="Destruktor.">~CWindowData</a>();
+<a name="l00069"></a>00069 
+<a name="l00071"></a>00071 
+<a name="l00075"></a>00075         GLboolean <a class="code" href="class_c_window_data.html#4f4d4b0002c67b4263cd729cc5786c23" title="Główna metoda tworząca okno aplikacji.">CreateGLWindow</a>( WNDPROC *pWndProc, <span class="keyword">const</span> GLint iIcon, <span class="keyword">const</span> GLint iCursor );
+<a name="l00076"></a>00076 
+<a name="l00078"></a>00078         GLvoid <a class="code" href="class_c_window_data.html#c347a14d8871320d4ca1c108b619f4f6" title="Metoda niszcząca okno aplikacji.">KillGLWindow</a>();
+<a name="l00079"></a>00079 
+<a name="l00081"></a>00081 
+<a name="l00084"></a>00084         GLvoid <a class="code" href="class_c_window_data.html#b7f23fb9b5cdb84772c85d69c8c47518" title="Metoda restaru okna.">RestartWindow</a>();
+<a name="l00085"></a>00085 
+<a name="l00087"></a>00087         GLvoid <a class="code" href="class_c_window_data.html#9f4a5eadec979e61571d3d530a0c9197" title="Metoda przełączająca pomiędzy aplikacją okienkową a pełno-ekranową.">FullscreenSwitch</a>();
+<a name="l00088"></a>00088 
+<a name="l00090"></a>00090 
+<a name="l00092"></a><a class="code" href="class_c_window_data.html#02d72a15217fdd0e437bdfafded94023">00092</a>         <span class="keyword">inline</span> GLvoid <a class="code" href="class_c_window_data.html#02d72a15217fdd0e437bdfafded94023" title="Metoda ustawiająca zmienną nakazującą restartować okno.">SetRestart</a>( GLboolean bRestart )  { <a class="code" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c" title="Czy okno będzie restartowane. Zmienna wykorzystywana w głównej pętli programu...">m_bRestart</a> = bRestart; }
+<a name="l00093"></a>00093 
+<a name="l00095"></a>00095 
+<a name="l00097"></a><a class="code" href="class_c_window_data.html#3d121bb281cace3fbd83c849fa21e131">00097</a>         <span class="keyword">inline</span> GLboolean <a class="code" href="class_c_window_data.html#3d121bb281cace3fbd83c849fa21e131" title="Metoda sprawdzająca czy należy zrestartować okno aplikacji.">IsRestart</a>()                                    { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c" title="Czy okno będzie restartowane. Zmienna wykorzystywana w głównej pętli programu...">m_bRestart</a>; }
+<a name="l00098"></a>00098 
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="class_c_window_data.html#3de9eab8b98c86d9ff454d2a296d1bc1">00101</a>         <span class="keyword">inline</span> <a class="code" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji.">SSettingFile</a>&amp; <a class="code" href="class_c_window_data.html#3de9eab8b98c86d9ff454d2a296d1bc1" title="Metoda zwracająca strukturę SSettingFile przechowującą ustawienia programu.">SettingFile</a>()                              { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7" title="Struktura przechowująca wczelką konfigurację programu.">m_sSettingFile</a>; }
+<a name="l00102"></a>00102 
+<a name="l00104"></a>00104 
+<a name="l00107"></a>00107         GLboolean <a class="code" href="class_c_window_data.html#3e3681ea6383151a21af8050856813f4" title="Metoda wczytująca plik konfiguracyjny.">LoadSettingFile</a>();
+<a name="l00108"></a>00108 
+<a name="l00110"></a>00110 
+<a name="l00117"></a>00117         GLboolean <a class="code" href="class_c_window_data.html#0609086c9a71ff33e02694706b344874" title="Metoda zapisująca plik konfiguracyjny.">SaveSettingFile</a>( GLboolean bDefaultSave = GL_FALSE );
+<a name="l00118"></a>00118 
+<a name="l00119"></a><a class="code" href="class_c_window_data.html#99c262a634fb3c9cac097b3bd5410cf8">00119</a>         GLboolean <a class="code" href="class_c_window_data.html#99c262a634fb3c9cac097b3bd5410cf8" title="Jeżeli GL_TRUE to komunikaty WM_KEYDOWN mają być ignorowane, bo wtedy działa...">m_bCharModeKeyboard</a>; 
+<a name="l00120"></a>00120 
+<a name="l00122"></a>00122 
+<a name="l00125"></a>00125         GLboolean <a class="code" href="class_c_window_data.html#1225fbaa54df0873ae1d661333714ae5" title="Metoda sprawdzająca czy program został uruchomiony z danym parametrem.">IsCommandLine</a>( LPCTSTR lpParam );
+<a name="l00126"></a>00126 
+<a name="l00128"></a>00128 
+<a name="l00130"></a><a class="code" href="class_c_window_data.html#5fbbfb54451febe3829d7e9470dbc1d9">00130</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_window_data.html#5fbbfb54451febe3829d7e9470dbc1d9" title="Pobranie aktualnej ilości sampli dla antyaliasingu.">GetAntialiasingSamples</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#ef7e62a2c08702bc137e3e43175a61a7" title="Wskaźnik na obiekt klasy CARBMultisample.">m_pARBMultisample</a>-&gt;<a class="code" href="class_c_a_r_b_multisample.html#4e50362b5f26a9877efff869ef21afc3" title="Pobranie aktualnie ustawionej ilości próbek dla antyaliasingu.">GetSamples</a>(); }
+<a name="l00131"></a>00131 
+<a name="l00133"></a>00133 
+<a name="l00136"></a>00136         GLvoid <a class="code" href="class_c_window_data.html#d82cacad4c97ca9c33c3236f30c5334f" title="Ustawienie aktualnej ilości sampli dla antyaliasingu.">SetAntialiasingSamples</a>( GLint iSamples, GLboolean bRestart = GL_FALSE );
+<a name="l00137"></a>00137 
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140         GLvoid <a class="code" href="class_c_window_data.html#e580bed37d7ad464a1bd35b514cb9997" title="Przeskalowanie okna OpenGL.">ReSizeGLScene</a>( GLfloat fViewAngle = 45.0f );
+<a name="l00141"></a>00141 
+<a name="l00143"></a>00143 
+<a name="l00146"></a>00146         GLvoid <a class="code" href="class_c_window_data.html#e580bed37d7ad464a1bd35b514cb9997" title="Przeskalowanie okna OpenGL.">ReSizeGLScene</a>( GLsizei iWidth, GLsizei iHeight, GLfloat fViewAngle = 45.0f );
+<a name="l00147"></a>00147 
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150         <span class="keyword">inline</span> <a class="code" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>*                         GetLogger()             { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#f7ce9e10c906e362e11db18e4f42222b" title="Wskaźnik na obiekt klasy CLogger.">m_pLogger</a>; }
+<a name="l00151"></a>00151         <span class="keyword">inline</span> <a class="code" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>*          GetMultiLang()  { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#bf5e29dcee354e0ec51cd9c146626f99" title="Wskaźnik na obiekt klasy CMultiLanguage.">m_pMultiLang</a>; }
+<a name="l00152"></a>00152         <span class="keyword">inline</span> HDC                                      GetHDC()                { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#e1b204fbbc2913eddd4f27fb8c3c39e7" title="Prywatny kontekst urządzenia GDI.">m_hDC</a>; }
+<a name="l00153"></a>00153         <span class="keyword">inline</span> HINSTANCE                        GetHINSTANCE()  { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#9982e2d65d75b3efafd7cf38a734655a" title="Przechowuje instancję aplikacji.">m_hInstance</a>; }
+<a name="l00154"></a>00154         <span class="keyword">inline</span> HWND                                     GetHWND()               { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#c3b683e539eded822c4697b5936b43ce" title="Przechowuje uchwyt okna.">m_hWnd</a>; }
+<a name="l00155"></a>00155         <span class="keyword">inline</span> HGLRC                            GetHRC()                { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#60b3722dcbdbaf402caf4beb5cb1a82f" title="Stały kontekst renderowania.">m_hRC</a>; }
+<a name="l00157"></a>00157 
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160         <span class="keyword">inline</span> GLvoid           SetDoubleRestart( GLboolean bParam )    { <a class="code" href="class_c_window_data.html#d0db8124fa06d13ec1bc4747142c853e" title="Czy wymagany podwójny restart okna.">m_bDoubleRestart</a> = bParam; }
+<a name="l00161"></a>00161         <span class="keyword">inline</span> GLboolean        IsDoubleRestart()                                               { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#d0db8124fa06d13ec1bc4747142c853e" title="Czy wymagany podwójny restart okna.">m_bDoubleRestart</a>; }
+<a name="l00162"></a>00162         <span class="keyword">inline</span> GLvoid           SetResDoubleRestartX( GLint iResX )             { <a class="code" href="class_c_window_data.html#368546625026afc8655a9033c728a545" title="Oczekiwana szerokość (rozdzielczość X) okna aplikacji po podwójnym restarcie...">m_iResDoubleRestartX</a> = iResX; }
+<a name="l00163"></a>00163         <span class="keyword">inline</span> GLint            GetResDoubleRestartX()                                  { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#368546625026afc8655a9033c728a545" title="Oczekiwana szerokość (rozdzielczość X) okna aplikacji po podwójnym restarcie...">m_iResDoubleRestartX</a>; }
+<a name="l00164"></a>00164         <span class="keyword">inline</span> GLvoid           SetResDoubleRestartY( GLint iResY )             { <a class="code" href="class_c_window_data.html#4b1680ddbce1114bf231667dcbc2231b" title="Oczekiwana wysokość (rozdzielczość Y) okna aplikacji po podwójnym restarcie...">m_iResDoubleRestartY</a> = iResY; }
+<a name="l00165"></a>00165         <span class="keyword">inline</span> GLint            GetResDoubleRestartY()                                  { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#4b1680ddbce1114bf231667dcbc2231b" title="Oczekiwana wysokość (rozdzielczość Y) okna aplikacji po podwójnym restarcie...">m_iResDoubleRestartY</a>; }
+<a name="l00167"></a>00167 
+<a name="l00169"></a>00169 
+<a name="l00170"></a>00170         <span class="keyword">inline</span> GLboolean IsUseAntialiasing()    { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#486dea18b4f4a679f1f3a0e9ecc2f9b5" title="Czy aktywny pełnoekranowy antyaliasing.">m_bUseAntialiasing</a>; }
+<a name="l00171"></a>00171         <span class="keyword">inline</span> GLvoid SetUseAntialiasing( GLboolean bAntialiasing ) { <a class="code" href="class_c_window_data.html#486dea18b4f4a679f1f3a0e9ecc2f9b5" title="Czy aktywny pełnoekranowy antyaliasing.">m_bUseAntialiasing</a> = bAntialiasing; }
+<a name="l00172"></a>00172         <span class="keyword">inline</span> GLfloat GetBkColorR()                    { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#d1d858e45e54478cb6672b31d2ff5e85" title="Kolor tła RGB + alfa.">m_fBkColor</a>[ 0 ]; }
+<a name="l00173"></a>00173         <span class="keyword">inline</span> GLfloat GetBkColorG()                    { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#d1d858e45e54478cb6672b31d2ff5e85" title="Kolor tła RGB + alfa.">m_fBkColor</a>[ 1 ]; }
+<a name="l00174"></a>00174         <span class="keyword">inline</span> GLfloat GetBkColorB()                    { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#d1d858e45e54478cb6672b31d2ff5e85" title="Kolor tła RGB + alfa.">m_fBkColor</a>[ 2 ]; }
+<a name="l00175"></a>00175         <span class="keyword">inline</span> GLfloat GetBkColorA()                    { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#d1d858e45e54478cb6672b31d2ff5e85" title="Kolor tła RGB + alfa.">m_fBkColor</a>[ 3 ]; }
+<a name="l00176"></a>00176         <span class="keyword">inline</span> GLubyte GetZBufferBits()                 { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#37d60e48cc57b765c3d0205f170d7d13" title="Bufor głębi.">m_ubZBufferBits</a>; }
+<a name="l00177"></a>00177         <span class="keyword">inline</span> GLint GetDesktopWidth()                  { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#2e0fc863e0c07553567c39e67698bc95" title="Szerokość pulpitu - rozdzielczość X.">m_iDesktopWidth</a>; }
+<a name="l00178"></a>00178         <span class="keyword">inline</span> GLint GetDesktopHeight()                 { <span class="keywordflow">return</span> <a class="code" href="class_c_window_data.html#0c8fb3e9d18aa7d87b869142e8570bde" title="Wysokość pulpitu - rozdzielczość Y.">m_iDesktopHeight</a>; }
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 <span class="keyword">private</span>:
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184         <a class="code" href="class_c_window_data.html#38968181b351375d843ab674a9424ab5" title="Konstruktor.">CWindowData</a>();
+<a name="l00185"></a>00185 
+<a name="l00186"></a><a class="code" href="class_c_window_data.html#60b3722dcbdbaf402caf4beb5cb1a82f">00186</a>         HGLRC                   <a class="code" href="class_c_window_data.html#60b3722dcbdbaf402caf4beb5cb1a82f" title="Stały kontekst renderowania.">m_hRC</a>;                          
+<a name="l00187"></a><a class="code" href="class_c_window_data.html#e1b204fbbc2913eddd4f27fb8c3c39e7">00187</a>         HDC                             <a class="code" href="class_c_window_data.html#e1b204fbbc2913eddd4f27fb8c3c39e7" title="Prywatny kontekst urządzenia GDI.">m_hDC</a>;                          
+<a name="l00188"></a><a class="code" href="class_c_window_data.html#c3b683e539eded822c4697b5936b43ce">00188</a>         HWND                    <a class="code" href="class_c_window_data.html#c3b683e539eded822c4697b5936b43ce" title="Przechowuje uchwyt okna.">m_hWnd</a>;                         
+<a name="l00189"></a><a class="code" href="class_c_window_data.html#9982e2d65d75b3efafd7cf38a734655a">00189</a>         HINSTANCE               <a class="code" href="class_c_window_data.html#9982e2d65d75b3efafd7cf38a734655a" title="Przechowuje instancję aplikacji.">m_hInstance</a>;            
+<a name="l00190"></a>00190 
+<a name="l00191"></a><a class="code" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7">00191</a>         <a class="code" href="struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji.">SSettingFile</a>    <a class="code" href="class_c_window_data.html#5a4f5fec88c890ce18c697d06c9c90b7" title="Struktura przechowująca wczelką konfigurację programu.">m_sSettingFile</a>;         
+<a name="l00192"></a>00192         
+<a name="l00194"></a>00194 
+<a name="l00195"></a><a class="code" href="class_c_window_data.html#f7ce9e10c906e362e11db18e4f42222b">00195</a>         <a class="code" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>                 *<a class="code" href="class_c_window_data.html#f7ce9e10c906e362e11db18e4f42222b" title="Wskaźnik na obiekt klasy CLogger.">m_pLogger</a>;                     
+<a name="l00196"></a><a class="code" href="class_c_window_data.html#ef7e62a2c08702bc137e3e43175a61a7">00196</a>         <a class="code" href="class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing.">CARBMultisample</a> *<a class="code" href="class_c_window_data.html#ef7e62a2c08702bc137e3e43175a61a7" title="Wskaźnik na obiekt klasy CARBMultisample.">m_pARBMultisample</a>;     
+<a name="l00197"></a><a class="code" href="class_c_window_data.html#bf5e29dcee354e0ec51cd9c146626f99">00197</a>         <a class="code" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>  *<a class="code" href="class_c_window_data.html#bf5e29dcee354e0ec51cd9c146626f99" title="Wskaźnik na obiekt klasy CMultiLanguage.">m_pMultiLang</a>;          
+<a name="l00198"></a>00198 
+<a name="l00199"></a><a class="code" href="class_c_window_data.html#9d052511a84d03c7b51b5c2dcabffc38">00199</a>         WNDPROC                 *<a class="code" href="class_c_window_data.html#9d052511a84d03c7b51b5c2dcabffc38" title="Wskaźnik na funkcję WndProc.">m_pWndProc</a>;                    
+<a name="l00200"></a>00200 
+<a name="l00201"></a><a class="code" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c">00201</a>         GLboolean <a class="code" href="class_c_window_data.html#c2e825500762cafffd1b62ebd97bae9c" title="Czy okno będzie restartowane. Zmienna wykorzystywana w głównej pętli programu...">m_bRestart</a>;   
+<a name="l00202"></a>00202 
+<a name="l00203"></a><a class="code" href="class_c_window_data.html#97563065a40d6bd64f59958570fde85d">00203</a>         TCHAR *<a class="code" href="class_c_window_data.html#97563065a40d6bd64f59958570fde85d" title="Tytuł okna aplikacji.">m_lpTitle</a>;               
+<a name="l00204"></a><a class="code" href="class_c_window_data.html#c3cf7551b5f62adbdce10356f1a3090e">00204</a>         TCHAR *<a class="code" href="class_c_window_data.html#c3cf7551b5f62adbdce10356f1a3090e" title="Nazwa klasy aplikacji.">m_lpClassName</a>;   
+<a name="l00205"></a>00205 
+<a name="l00206"></a><a class="code" href="class_c_window_data.html#f4bb1a7d04382087d74638642134e102">00206</a>         GLint <a class="code" href="class_c_window_data.html#f4bb1a7d04382087d74638642134e102" title="ID ikony aplikacji.">m_iIcon</a>;                  
+<a name="l00207"></a><a class="code" href="class_c_window_data.html#2ee31cfaeb90176bdf3c8ec695f50dbb">00207</a>         GLint <a class="code" href="class_c_window_data.html#2ee31cfaeb90176bdf3c8ec695f50dbb" title="ID kursora aplikacji.">m_iCursor</a>;                
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209         <span class="comment">//dla podwójnego restartu - naprawa bug 12</span>
+<a name="l00210"></a><a class="code" href="class_c_window_data.html#d0db8124fa06d13ec1bc4747142c853e">00210</a>         GLboolean <a class="code" href="class_c_window_data.html#d0db8124fa06d13ec1bc4747142c853e" title="Czy wymagany podwójny restart okna.">m_bDoubleRestart</a>; 
+<a name="l00211"></a><a class="code" href="class_c_window_data.html#368546625026afc8655a9033c728a545">00211</a>         GLint <a class="code" href="class_c_window_data.html#368546625026afc8655a9033c728a545" title="Oczekiwana szerokość (rozdzielczość X) okna aplikacji po podwójnym restarcie...">m_iResDoubleRestartX</a>;     
+<a name="l00212"></a><a class="code" href="class_c_window_data.html#4b1680ddbce1114bf231667dcbc2231b">00212</a>         GLint <a class="code" href="class_c_window_data.html#4b1680ddbce1114bf231667dcbc2231b" title="Oczekiwana wysokość (rozdzielczość Y) okna aplikacji po podwójnym restarcie...">m_iResDoubleRestartY</a>; 
+<a name="l00213"></a>00213 
+<a name="l00214"></a><a class="code" href="class_c_window_data.html#d1d858e45e54478cb6672b31d2ff5e85">00214</a>         GLfloat <a class="code" href="class_c_window_data.html#d1d858e45e54478cb6672b31d2ff5e85" title="Kolor tła RGB + alfa.">m_fBkColor</a>[ 4 ];                        
+<a name="l00215"></a><a class="code" href="class_c_window_data.html#66955c4affcbfc680af21d6e6124d0c6">00215</a>         GLuint <a class="code" href="class_c_window_data.html#66955c4affcbfc680af21d6e6124d0c6" title="Częstotliwość tikania timera w milisekundach. Domyślnie 1000, jeżeli ustawimy...">m_uiTimer</a>;                                       
+<a name="l00216"></a><a class="code" href="class_c_window_data.html#486dea18b4f4a679f1f3a0e9ecc2f9b5">00216</a>         GLboolean <a class="code" href="class_c_window_data.html#486dea18b4f4a679f1f3a0e9ecc2f9b5" title="Czy aktywny pełnoekranowy antyaliasing.">m_bUseAntialiasing</a>;           
+<a name="l00217"></a><a class="code" href="class_c_window_data.html#620e1e4c3c83cd4ac308ecb2ed35a749">00217</a>         GLboolean <a class="code" href="class_c_window_data.html#620e1e4c3c83cd4ac308ecb2ed35a749" title="Czy kursor myszy ma być pokazywany - tylko gdy fullscreen.">m_bShowMouseCursor</a>;           
+<a name="l00218"></a><a class="code" href="class_c_window_data.html#d1247a5903ccb42a246cee31eabc5046">00218</a>         GLubyte <a class="code" href="class_c_window_data.html#d1247a5903ccb42a246cee31eabc5046" title="Głębia kolorów pulpitu.">m_ubBitsPerPixel</a>;                       
+<a name="l00219"></a><a class="code" href="class_c_window_data.html#37d60e48cc57b765c3d0205f170d7d13">00219</a>         GLubyte <a class="code" href="class_c_window_data.html#37d60e48cc57b765c3d0205f170d7d13" title="Bufor głębi.">m_ubZBufferBits</a>;                        
+<a name="l00220"></a><a class="code" href="class_c_window_data.html#2e0fc863e0c07553567c39e67698bc95">00220</a>         GLint <a class="code" href="class_c_window_data.html#2e0fc863e0c07553567c39e67698bc95" title="Szerokość pulpitu - rozdzielczość X.">m_iDesktopWidth</a>;                          
+<a name="l00221"></a><a class="code" href="class_c_window_data.html#0c8fb3e9d18aa7d87b869142e8570bde">00221</a>         GLint <a class="code" href="class_c_window_data.html#0c8fb3e9d18aa7d87b869142e8570bde" title="Wysokość pulpitu - rozdzielczość Y.">m_iDesktopHeight</a>;                         
+<a name="l00222"></a>00222 
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225 
+<a name="l00227"></a>00227 
+<a name="l00229"></a>00229         GLboolean <a class="code" href="class_c_window_data.html#5868951769c3eadc130bd574091d55a5" title="Metoda pobierająca instancję naszego programu.">CreateInstance</a>();
+<a name="l00230"></a>00230 
+<a name="l00232"></a>00232 
+<a name="l00233"></a>00233         GLboolean <a class="code" href="class_c_window_data.html#1dc4f2cc149c4a62a84c27aae72ccac0" title="Metoda tworząca oraz rejestrująca klasę okna naszej aplikacji.">RegisterMyClass</a>();
+<a name="l00234"></a>00234 
+<a name="l00236"></a>00236 
+<a name="l00240"></a>00240         GLvoid    <a class="code" href="class_c_window_data.html#58a9446cdec03ee3800bdfee9981e9b5" title="Metoda ustawiająca tryb urządzenia graficznego na tryb pełnoekranowy.">SetDeviceOnFullscreen</a>();
+<a name="l00241"></a>00241 
+<a name="l00243"></a>00243 
+<a name="l00245"></a>00245         GLboolean <a class="code" href="class_c_window_data.html#0642f2af0be6ab3ed08ffe581b643549" title="Metoda tworząca okno naszej aplikacji.">CreateMyWindow</a>();
+<a name="l00246"></a>00246 
+<a name="l00248"></a>00248 
+<a name="l00251"></a>00251         GLboolean <a class="code" href="class_c_window_data.html#553a157e14b03e5e54c4c9f7489504d8" title="Metoda pobierająca kontekst urządzenia naszej aplikacji.">GetDeviceContent</a>();
+<a name="l00252"></a>00252 
+<a name="l00254"></a>00254 
+<a name="l00257"></a>00257         GLboolean <a class="code" href="class_c_window_data.html#24d1c29f3534ccd3af5c74e378eaf7cb" title="Metoda ustawiająca format piksela.">SetPixelFormat</a>();
+<a name="l00258"></a>00258 
+<a name="l00260"></a>00260 
+<a name="l00262"></a>00262         GLboolean <a class="code" href="class_c_window_data.html#2de875e8987ce38e9f0bdde46d3ff425" title="Metoda tworząca kontekst renderowania.">CreateRenderingContext</a>();
+<a name="l00264"></a>00264 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:20 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy OpenGLFramework/FakeHDR.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework/FakeHDR.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="keyword">class </span>CFakeHDR
+<a name="l00004"></a>00004 {
+<a name="l00005"></a>00005 <span class="keyword">public</span>:
+<a name="l00006"></a>00006         CFakeHDR();
+<a name="l00007"></a>00007         ~CFakeHDR();
+<a name="l00008"></a>00008         GLvoid init_postprocess();
+<a name="l00009"></a>00009         GLvoid do_postprocess();
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">private</span>:
+<a name="l00012"></a>00012         GLvoid fx_get(GLint <span class="keywordtype">id</span>);
+<a name="l00013"></a>00013         GLvoid fx_quad(GLfloat tx, GLfloat ty);
+<a name="l00014"></a>00014         GLvoid fx_put(GLint <span class="keywordtype">id</span>, GLboolean square);
+<a name="l00015"></a>00015         GLvoid fx_fix_256();
+<a name="l00016"></a>00016         GLvoid do_blur(GLfloat sx, GLfloat sy);
+<a name="l00017"></a>00017 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy OpenGLFramework/RMenuBase.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>OpenGLFramework/RMenuBase.h</h1><a href="_r_menu_base_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00007"></a>00007 
+<a name="l00010"></a><a class="code" href="class_c_r_menu_base.html">00010</a> <span class="keyword">class </span><a class="code" href="class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami.">CRMenuBase</a>
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012 <span class="keyword">public</span>:
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015         <a class="code" href="class_c_r_menu_base.html#02aab9ddef903e3916c2914806f3df26" title="Konstruktor.">CRMenuBase</a>();
+<a name="l00016"></a>00016 
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019         <span class="keyword">virtual</span> <a class="code" href="class_c_r_menu_base.html#dd7cba74535fd03c917331f9dab5954b" title="Destruktor.">~CRMenuBase</a>();
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="keyword">protected</span>:
+<a name="l00023"></a>00023 
+<a name="l00028"></a>00028         GLvoid <a class="code" href="class_c_r_menu_base.html#c2f5a69593d9cab37fbb1b19b91ee4cc" title="Metoda rysująca obramowanie wokół zadanego prostokąta po najechaniu na niego...">DrawRegionIfMouse</a>(<span class="keyword">const</span> RECT &amp;rcRect, GLboolean bCheckMessageBox = GL_TRUE);
+<a name="l00029"></a>00029 
+<a name="l00031"></a>00031 
+<a name="l00033"></a>00033         GLvoid <a class="code" href="class_c_r_menu_base.html#27be6030fa84cc0c3f6b7c738748ee28" title="Metoda rysująca obramowanie wokół zadanego prostokąta.">DrawRegionBorder</a>(<span class="keyword">const</span> RECT &amp;rcRect);
+<a name="l00034"></a>00034 
+<a name="l00036"></a>00036 
+<a name="l00043"></a>00043         GLboolean <a class="code" href="class_c_r_menu_base.html#8ab5907181b9b2e2fda7f6cfc23e7467" title="Metoda sprawdzająca czy kliknięto w obrębie danego prostokąta.">CheckWhereClickedUser</a>(GLint iX, GLint iY, <span class="keyword">const</span> RECT *prcRect, GLint iMaxCount, GLint &amp;out_iIndex);
+<a name="l00044"></a>00044 
+<a name="l00046"></a>00046 
+<a name="l00052"></a>00052         GLvoid <a class="code" href="class_c_r_menu_base.html#7af2244a8c527a12b4adab225c52b296" title="Metoda rysująca zadany prostokąt.">DrawRegions</a>(<span class="keyword">const</span> RECT *prcRect, GLint iMaxCount, GLint iStart = 0, GLboolean bSetDrawParam = GL_TRUE);
+<a name="l00053"></a>00053 
+<a name="l00055"></a>00055 
+<a name="l00063"></a>00063         GLvoid <a class="code" href="class_c_r_menu_base.html#ff727653d73dd41e0fcd86851a5bd21e" title="Metoda przeliczająca procent na piksele po osi X.">SetRegionX</a>(LONG &amp;out_lPixelsVal, GLint iPercent, GLboolean bFont = GL_FALSE);
+<a name="l00064"></a>00064 
+<a name="l00066"></a>00066 
+<a name="l00074"></a>00074         GLvoid <a class="code" href="class_c_r_menu_base.html#d37dde222d1af9f881c0223c80c9f749" title="Metoda przeliczająca procent na piksele po osi Y.">SetRegionY</a>(LONG &amp;out_lPixelsVal, GLint iPercent, GLboolean bFont = GL_FALSE);
+<a name="l00075"></a>00075 
+<a name="l00077"></a>00077 
+<a name="l00085"></a>00085         GLvoid <a class="code" href="class_c_r_menu_base.html#ff727653d73dd41e0fcd86851a5bd21e" title="Metoda przeliczająca procent na piksele po osi X.">SetRegionX</a>(LONG &amp;out_lPixelsVal, GLfloat fPercent, GLboolean bFont = GL_FALSE);
+<a name="l00086"></a>00086 
+<a name="l00088"></a>00088 
+<a name="l00096"></a>00096         GLvoid <a class="code" href="class_c_r_menu_base.html#d37dde222d1af9f881c0223c80c9f749" title="Metoda przeliczająca procent na piksele po osi Y.">SetRegionY</a>(LONG &amp;out_lPixelsVal, GLfloat fPercent, GLboolean bFont = GL_FALSE);
+<a name="l00097"></a>00097 
+<a name="l00099"></a>00099 
+<a name="l00103"></a>00103         GLboolean <a class="code" href="class_c_r_menu_base.html#899de78c370ba88f6e4932ccf6b8a513" title="Metoda sprawdzająca czy dany punkt zawiera się w zadanym prostokącie.">CheckPtCursorInRect</a>(<span class="keyword">const</span> POINT &amp;ptCursor, <span class="keyword">const</span> RECT &amp;rcRect);
+<a name="l00104"></a>00104 
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="class_c_r_menu_base.html#d75d4d0cc680947acb2095041a8d8ceb">00107</a>         GLint <a class="code" href="class_c_r_menu_base.html#d75d4d0cc680947acb2095041a8d8ceb" title="Zmienna zapamiętująca aktualny indeks prostokąta (np. przycisku), nad którym...">m_iWhereIsMouse</a>;
+<a name="l00108"></a>00108 
+<a name="l00110"></a>00110 
+<a name="l00111"></a><a class="code" href="class_c_r_menu_base.html#eba182534c49a6965adda1051771fde6">00111</a>         GLint <a class="code" href="class_c_r_menu_base.html#eba182534c49a6965adda1051771fde6" title="Zmienna zapamiętująca ostatni indeks prostokąta (np. przycisku), nad którym znajduje...">m_iWhereIsMouseOld</a>;
+<a name="l00112"></a>00112 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

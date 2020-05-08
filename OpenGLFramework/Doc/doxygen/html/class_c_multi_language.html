@@ -1,0 +1,914 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja klasy CMultiLanguage</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja klasy CMultiLanguage</h1><!-- doxytag: class="CMultiLanguage" --><!-- doxytag: inherits="CSingletonBase&lt; CMultiLanguage &gt;" --><code>#include &lt;<a class="el" href="_multi_language_8h-source.html">MultiLanguage.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla CMultiLanguage</div>
+<div class="dynsection">
+<p><center><img src="class_c_multi_language__inherit__graph.png" border="0" usemap="#_c_multi_language__inherit__map" alt="Inheritance graph"></center>
+<map name="_c_multi_language__inherit__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,5,243,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+<div class="dynheader">
+Diagram współpracy dla CMultiLanguage:</div>
+<div class="dynsection">
+<p><center><img src="class_c_multi_language__coll__graph.png" border="0" usemap="#_c_multi_language__coll__map" alt="Collaboration graph"></center>
+<map name="_c_multi_language__coll__map">
+<area shape="rect" href="class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,5,243,32"></map>
+<center><font size="2">[<a href="graph_legend.html">legenda</a>]</font></center></div>
+
+<p>
+<a href="class_c_multi_language-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Klasa wspierająca wielojęzyczność. 
+<p>
+Zadanie tej klasy polega na wczytaniu pliku <em>lng</em> z linijkami tekstów przetłumaczonych na dany język. Następnie zwracania odpowiednich linii tekstu z wykorzystywanego języka. Odpowiedni plik <em>*</em>.<em>lng</em> może być wczytany na podstawie pliku <em>languages_def.xml</em> lub bezpośrednio gdy nie wykorzystujemy pliku XML. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#59563874663a7a38d0c6cb47f4ac233f">~CMultiLanguage</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor.  <a href="#59563874663a7a38d0c6cb47f4ac233f"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Interfejs uniwersalny, niezależnie czy używamy pliku XML czy nie.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#87bfce1060c63da8096ec66b24e7ea7c">InitializeLanguage</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda inicjalizująca wsparcie wielojęzyczności.  <a href="#87bfce1060c63da8096ec66b24e7ea7c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#e31668704f3a51869aa3d2e5006649d5">LoadLanguage</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca podany plik językowy.  <a href="#e31668704f3a51869aa3d2e5006649d5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LPTSTR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#3074c9da18091b336feafb7e5dd7aca8">GetLangText</a> (GLint iLineNumber)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca wskazaną linię tekstu z wcześniej wczytanego pliku językowego.  <a href="#3074c9da18091b336feafb7e5dd7aca8"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#ace3b97ecedd12a63ef8c2c05d836278">GetLangFileNumber</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość plików językowych.  <a href="#ace3b97ecedd12a63ef8c2c05d836278"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LPTSTR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#4fc6891418292135ed0727f50d900ced">GetLangFileName</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca nazwę pliku językowego.  <a href="#4fc6891418292135ed0727f50d900ced"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Interfejs tylko jeżeli wykorzystywany jest plik XML.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LPTSTR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#98c10796a2e86e47b43ec641ddee8b28">GetXMLLngName</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca nazwę języka dla danego języka.  <a href="#98c10796a2e86e47b43ec641ddee8b28"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#ff62845743fe107fbec46a26e210b085">GetXMLLngFileTTF</a> (GLint iIndexTTF)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca nazwę pliku czcionki (<em>*</em>.<em>ttf</em>).  <a href="#ff62845743fe107fbec46a26e210b085"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Statyczne metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_c_multi_language.html">CMultiLanguage</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#c94d696532be5caab5c31c0db1593b35">Construct</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>.  <a href="#c94d696532be5caab5c31c0db1593b35"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Metody prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#dcc53b74bc3b84c65db6812d20c0aae1">CMultiLanguage</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Konstruktor.  <a href="#dcc53b74bc3b84c65db6812d20c0aae1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="98ace6241503adf09a1e5d0835556329"></a><!-- doxytag: member="CMultiLanguage::ClearLineText" ref="98ace6241503adf09a1e5d0835556329" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#98ace6241503adf09a1e5d0835556329">ClearLineText</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda czyszcząca tablicę <a class="el" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb" title="Tablica przechowująca linie tekstu pliku językowego (*.lng).">CMultiLanguage::m_aLineText</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#eea39f67c02501a803e46312e000f205">GetLineTextSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość linii tekstu pliku językowego (<em>*</em>.<em>lng</em>).  <a href="#eea39f67c02501a803e46312e000f205"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#f3edef05d21c9b848ce29c431f9871e3">LoadLanguageFile</a> (LPCTSTR lpFileName)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik językowy <em>*</em>.<em>lng</em>.  <a href="#f3edef05d21c9b848ce29c431f9871e3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#d664fe6919fb39579959622323e74079">LoadUnicodeFile</a> (FILE *f)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik językowy <em>*</em>.<em>lng</em> z kodowaniem <code>UNICODE</code>.  <a href="#d664fe6919fb39579959622323e74079"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#dba35f6665a2833ccd77eacf8c408e78">LoadAnsiFile</a> (FILE *f)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wczytująca plik językowy <em>*</em>.<em>lng</em> z kodowaniem <code>ANSI</code>.  <a href="#dba35f6665a2833ccd77eacf8c408e78"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metody używane tylko wtedy gdy nie wykorzystywany jest XML.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#89678b621eac0e2472623144842c60bf">SearchLngFile</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda wyszukująca pliki <em>*</em>.<em>lng</em>.  <a href="#89678b621eac0e2472623144842c60bf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#0c2b899fd999066de3d4a70fcdde048c">CheckExtensionLNG</a> (LPCTSTR lpPath)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda sprawdzająca rozszerzenie pliku.  <a href="#0c2b899fd999066de3d4a70fcdde048c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#22c5079e78e16d5a930241b3e868f02a">GetLngFileNameSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość znalezionych plików <em>lng</em>.  <a href="#22c5079e78e16d5a930241b3e868f02a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LPTSTR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#a006d7e55b1c5550909a72318ccea56c">GetLngFileName</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca nazwę pliku językowego.  <a href="#a006d7e55b1c5550909a72318ccea56c"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metody używane tylko wtedy gdy wykorzystywany jest XML.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#3e5d674e4bd0c7bd60de8df135f1bad1">ParseXMLLngData</a> (LPCTSTR lpFileName=_T(&quot;languages\\languages_def.xml&quot;))</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda parsująca plik XML.  <a href="#3e5d674e4bd0c7bd60de8df135f1bad1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#f9450883e6245d6ab0022befc3030add">SearchTag</a> (LPCTSTR lpSource, LPCTSTR lpTag)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda szukająca znacznika w zadanym tekście.  <a href="#f9450883e6245d6ab0022befc3030add"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#5fcb1f794f42d36287e9e26ac1470209">SearchParameter</a> (LPCTSTR lpSource, LPCTSTR lpParameter, LPTSTR lpResult, GLsizei iSizeResult)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda szukająca parametru w zadanym tekście.  <a href="#5fcb1f794f42d36287e9e26ac1470209"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#4b8aae2e3159f753fe2be3a17c4defc5">AddXMLLngData</a> (LPCTSTR lpName, LPCTSTR lpLNG)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda tworząca nowy język na podstawie parsowania pliku XML.  <a href="#4b8aae2e3159f753fe2be3a17c4defc5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#ff4424ef8cbd57a3dc4e0593eace3a33">AddXMLLngDataTTF</a> (LPCTSTR lpTTF)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda dodająca nazy plików z czcionką.  <a href="#ff4424ef8cbd57a3dc4e0593eace3a33"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d9aab58baffa4d2338f53a646e5bc7e4"></a><!-- doxytag: member="CMultiLanguage::ClearXMLLngData" ref="d9aab58baffa4d2338f53a646e5bc7e4" args="()" -->
+GLvoid&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#d9aab58baffa4d2338f53a646e5bc7e4">ClearXMLLngData</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda usuwająca wszelkie dane zapisane w tablicy <a class="el" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">CMultiLanguage::m_aXMLLngData</a>. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#a31c256ba244e3a408f589fe90940adb">GetXMLLngDataSize</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość zdefiniowanych języków w pliku <em>languages_def.xml</em>.  <a href="#a31c256ba244e3a408f589fe90940adb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LPTSTR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#568f797ccec5ce4312e7c27301c9d6fd">GetXMLLngFileLNG</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca nazwę pliku językowego dla danego języka.  <a href="#568f797ccec5ce4312e7c27301c9d6fd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#d78b14f4bb4f8e688b7c2966aa783c3b">GetXMLLngDataTTFSize</a> (GLint iIndex)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Metoda zwracająca ilość zdefiniowanych czcionek dla danego języka.  <a href="#d78b14f4bb4f8e688b7c2966aa783c3b"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty prywatne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; TCHAR * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb">m_aLineText</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica przechowująca linie tekstu pliku językowego (<em>*</em>.<em>lng</em>).  <a href="#14066030fc4cce4b8d453b134af996eb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9bd3f593d26bf1f5670af80ed9fa130a"></a><!-- doxytag: member="CMultiLanguage::m_cErrText" ref="9bd3f593d26bf1f5670af80ed9fa130a" args="[128]" -->
+TCHAR&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#9bd3f593d26bf1f5670af80ed9fa130a">m_cErrText</a> [128]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pomocniczy tekst do zwracania informacji o błędzie. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="742ae405afec58177d906594480da252"></a><!-- doxytag: member="CMultiLanguage::m_bUseXML" ref="742ae405afec58177d906594480da252" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#742ae405afec58177d906594480da252">m_bUseXML</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga wskazująca czy wykorzystywany jest plik XML. <br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Pola używane tylko wtedy gdy nie wykorzystywany jest XML.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; TCHAR * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8">m_aLanguageFileName</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica nazw plików <em>*</em>.<em>lng</em>.  <a href="#6d60994be24203272728d25e4e0d6fb8"></a><br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Pola używane tylko wtedy gdy wykorzystywany jest XML.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="75339b9201fcb8b0564833e8e6d7c2d9"></a><!-- doxytag: member="CMultiLanguage::m_aXMLLngData" ref="75339b9201fcb8b0564833e8e6d7c2d9" args="" -->
+std::vector&lt; <a class="el" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html">SXMLLngData</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9">m_aXMLLngData</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tablica danych języków opisanych w pliku XML. <br></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html">SXMLLngData</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura danych dla pliku XML.  <a href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#_details">Więcej...</a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="59563874663a7a38d0c6cb47f4ac233f"></a><!-- doxytag: member="CMultiLanguage::~CMultiLanguage" ref="59563874663a7a38d0c6cb47f4ac233f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CMultiLanguage::~CMultiLanguage           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor. 
+<p>
+Destruktor. 
+</div>
+</div><p>
+<a class="anchor" name="dcc53b74bc3b84c65db6812d20c0aae1"></a><!-- doxytag: member="CMultiLanguage::CMultiLanguage" ref="dcc53b74bc3b84c65db6812d20c0aae1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CMultiLanguage::CMultiLanguage           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor. 
+<p>
+Konstruktor. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="c94d696532be5caab5c31c0db1593b35"></a><!-- doxytag: member="CMultiLanguage::Construct" ref="c94d696532be5caab5c31c0db1593b35" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_multi_language.html">CMultiLanguage</a> * CMultiLanguage::Construct           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Statyczna metoda tworząca obiekt klasy <a class="el" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>. 
+<p>
+<a class="el" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a> jest singletonem, więc jeżeli wywołamy tę metodę po raz drugi to zwróci ona wskaźnik na obiekt już istniejący, utworzony wcześniej. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Wskaźnik na obiekt <a class="el" href="class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność.">CMultiLanguage</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="87bfce1060c63da8096ec66b24e7ea7c"></a><!-- doxytag: member="CMultiLanguage::InitializeLanguage" ref="87bfce1060c63da8096ec66b24e7ea7c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CMultiLanguage::InitializeLanguage           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda inicjalizująca wsparcie wielojęzyczności. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_window_data.html#89e8ab7b1aa0b610b9f5c234436bbbe6" title="Inicjalizacja obiektu CWindowData.">CWindowData::Initialization</a>. 
+</div>
+</div><p>
+<a class="anchor" name="e31668704f3a51869aa3d2e5006649d5"></a><!-- doxytag: member="CMultiLanguage::LoadLanguage" ref="e31668704f3a51869aa3d2e5006649d5" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::LoadLanguage           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca podany plik językowy. 
+<p>
+Metoda ta jest już wywoływana w <a class="el" href="class_c_game_control.html#cf77808f6f76e9450b8bcce36fe6d891" title="Metoda inicjalizuje wszelkie inne obiekty utworzone w metodzie CGameControl::CreateObjects...">CGameControl::Initialization</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks pliku językowego jaki chcemy wczytać. Najlepiej podać tutaj pole <a class="el" href="struct_c_window_data_1_1_s_setting_file.html#e2d3ea66168b99b71fb11893eb30aa09" title="Indeks pliku językowego aplikacji.">CWindowData::SSettingFile::iIndexLanguage</a>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3074c9da18091b336feafb7e5dd7aca8"></a><!-- doxytag: member="CMultiLanguage::GetLangText" ref="3074c9da18091b336feafb7e5dd7aca8" args="(GLint iLineNumber)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPTSTR CMultiLanguage::GetLangText           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iLineNumber</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca wskazaną linię tekstu z wcześniej wczytanego pliku językowego. 
+<p>
+Metoda ta służy do pobrania konkretnej linii tekstu zapisanej w pliku językowym (<em>*</em>.<em>lng</em>). <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iLineNumber</em>&nbsp;</td><td>Numer linii z pliku tekstowego, który chcemy pobrać, np. w celu wyświetlenia. Numery linii liczone są od 0. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Łańcuch znaków zapisany w podanej linii pliku <em>*</em>.<em>lng</em>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ace3b97ecedd12a63ef8c2c05d836278"></a><!-- doxytag: member="CMultiLanguage::GetLangFileNumber" ref="ace3b97ecedd12a63ef8c2c05d836278" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CMultiLanguage::GetLangFileNumber           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość plików językowych. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość plików językowych zawartych w katalogu <em>languages</em> lub opisanych w pliku <em>languages/languages_def.xml</em>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4fc6891418292135ed0727f50d900ced"></a><!-- doxytag: member="CMultiLanguage::GetLangFileName" ref="4fc6891418292135ed0727f50d900ced" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPTSTR CMultiLanguage::GetLangFileName           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca nazwę pliku językowego. 
+<p>
+Za pomocą tej metody możemy sprawdzić jaki plik <em>*</em>.<em>lng</em> jest przypisany dla danego indeksu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks pliku językowego. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Nazwa pliku językowego. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="98c10796a2e86e47b43ec641ddee8b28"></a><!-- doxytag: member="CMultiLanguage::GetXMLLngName" ref="98c10796a2e86e47b43ec641ddee8b28" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPTSTR CMultiLanguage::GetXMLLngName           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca nazwę języka dla danego języka. 
+<p>
+Metoda zwraca wartość parametru <code>name</code>, znacznika <code>&lt;language&gt;</code> dla indeksu języka zawartego w polu <a class="el" href="struct_c_window_data_1_1_s_setting_file.html#e2d3ea66168b99b71fb11893eb30aa09" title="Indeks pliku językowego aplikacji.">CWindowData::SSettingFile::iIndexLanguage</a>. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Nazwa języka zdefiniowana w pliku <em>languages_def.xml</em>. W przypadku jakiegoś błędu, np. nie używania pliku XML, zwrócony zostanie pusty łańcuch znaków: <em>""</em>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ff62845743fe107fbec46a26e210b085"></a><!-- doxytag: member="CMultiLanguage::GetXMLLngFileTTF" ref="ff62845743fe107fbec46a26e210b085" args="(GLint iIndexTTF)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* CMultiLanguage::GetXMLLngFileTTF           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndexTTF</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca nazwę pliku czcionki (<em>*</em>.<em>ttf</em>). 
+<p>
+Metoda zwraca wartość parametru <code>file</code>, znacznika <code>&lt;font&gt;</code> dla indeksu języka zawartego w polu <a class="el" href="struct_c_window_data_1_1_s_setting_file.html#e2d3ea66168b99b71fb11893eb30aa09" title="Indeks pliku językowego aplikacji.">CWindowData::SSettingFile::iIndexLanguage</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndexTTF</em>&nbsp;</td><td>Indeks pliku <em>*</em>.<em>ttf</em> zawartego w pliku <em>languages_def.xml</em> w znaczniku <code>&lt;font&gt;</code>. Indeks jest wartością umowną liczoną od zera, pobieraną w kolejności podawania znaczników <code>&lt;font&gt;</code>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Nazwa pliku czcionki zdefiniowana w pliku <em>languages_def.xml</em>. W przypadku jakiegoś błędu, np. nie używania pliku XML, zwrócony zostanie pusty łańcuch znaków: <em>""</em>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="eea39f67c02501a803e46312e000f205"></a><!-- doxytag: member="CMultiLanguage::GetLineTextSize" ref="eea39f67c02501a803e46312e000f205" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CMultiLanguage::GetLineTextSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość linii tekstu pliku językowego (<em>*</em>.<em>lng</em>). 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość linii tekstu zapisanych w pliku językowym <em>*</em>.<em>lng</em>. Jest to rozmiar tablicy <a class="el" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb" title="Tablica przechowująca linie tekstu pliku językowego (*.lng).">CMultiLanguage::m_aLineText</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f3edef05d21c9b848ce29c431f9871e3"></a><!-- doxytag: member="CMultiLanguage::LoadLanguageFile" ref="f3edef05d21c9b848ce29c431f9871e3" args="(LPCTSTR lpFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::LoadLanguageFile           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik językowy <em>*</em>.<em>lng</em>. 
+<p>
+Metoda ta jest wywoływana bezpośrednio z <a class="el" href="class_c_multi_language.html#e31668704f3a51869aa3d2e5006649d5" title="Metoda wczytująca podany plik językowy.">CMultiLanguage::LoadLanguage</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku językowego <em>*</em>.<em>lng</em>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d664fe6919fb39579959622323e74079"></a><!-- doxytag: member="CMultiLanguage::LoadUnicodeFile" ref="d664fe6919fb39579959622323e74079" args="(FILE *f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::LoadUnicodeFile           </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&nbsp;</td>
+          <td class="paramname"> <em>f</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik językowy <em>*</em>.<em>lng</em> z kodowaniem <code>UNICODE</code>. 
+<p>
+Metoda ta jest wywoływana z <a class="el" href="class_c_multi_language.html#f3edef05d21c9b848ce29c431f9871e3" title="Metoda wczytująca plik językowy *.lng.">CMultiLanguage::LoadLanguageFile</a>. W metodzie tej tworzona jest tablica <a class="el" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb" title="Tablica przechowująca linie tekstu pliku językowego (*.lng).">CMultiLanguage::m_aLineText</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>f</em>&nbsp;</td><td>Uchwyt do otwartego pliku <em>*</em>.<em>lng</em>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="dba35f6665a2833ccd77eacf8c408e78"></a><!-- doxytag: member="CMultiLanguage::LoadAnsiFile" ref="dba35f6665a2833ccd77eacf8c408e78" args="(FILE *f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::LoadAnsiFile           </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&nbsp;</td>
+          <td class="paramname"> <em>f</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wczytująca plik językowy <em>*</em>.<em>lng</em> z kodowaniem <code>ANSI</code>. 
+<p>
+Metoda ta jest wywoływana z <a class="el" href="class_c_multi_language.html#f3edef05d21c9b848ce29c431f9871e3" title="Metoda wczytująca plik językowy *.lng.">CMultiLanguage::LoadLanguageFile</a>. W metodzie tej tworzona jest tablica <a class="el" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb" title="Tablica przechowująca linie tekstu pliku językowego (*.lng).">CMultiLanguage::m_aLineText</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>f</em>&nbsp;</td><td>Uchwyt do otwartego pliku <em>*</em>.<em>lng</em>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia wczytania pliku. <code>GL_FALSE</code> w przypadku wystąpienia jakiegoś błędu. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="89678b621eac0e2472623144842c60bf"></a><!-- doxytag: member="CMultiLanguage::SearchLngFile" ref="89678b621eac0e2472623144842c60bf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CMultiLanguage::SearchLngFile           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda wyszukująca pliki <em>*</em>.<em>lng</em>. 
+<p>
+Metoda ta przeszukuje katalog <em>languages</em> pod względem występowania w nim plików z rozszerzeniem <em>lng</em>. Każdy nazwa znalezionego pliku <em>lng</em> zapisywana jest w tablicy <a class="el" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8" title="Tablica nazw plików *.lng.">CMultiLanguage::m_aLanguageFileName</a>. <br>
+ Metoda ta jest wywoływana w <a class="el" href="class_c_multi_language.html#87bfce1060c63da8096ec66b24e7ea7c" title="Metoda inicjalizująca wsparcie wielojęzyczności.">CMultiLanguage::InitializeLanguage</a> pod warunkiem, że nie istnieje plik <em>languages\languages_def.xml</em>. 
+</div>
+</div><p>
+<a class="anchor" name="0c2b899fd999066de3d4a70fcdde048c"></a><!-- doxytag: member="CMultiLanguage::CheckExtensionLNG" ref="0c2b899fd999066de3d4a70fcdde048c" args="(LPCTSTR lpPath)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::CheckExtensionLNG           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpPath</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda sprawdzająca rozszerzenie pliku. 
+<p>
+Metoda ta sprawdza czy podana nazwa pliku posiada rozszerzenie <em>lng</em>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpPath</em>&nbsp;</td><td>Pełna nazwa pliku wraz ze ścieżką. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> jeżeli nazwa kończy się rozszerzeniem <em>lng</em>. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="22c5079e78e16d5a930241b3e868f02a"></a><!-- doxytag: member="CMultiLanguage::GetLngFileNameSize" ref="22c5079e78e16d5a930241b3e868f02a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CMultiLanguage::GetLngFileNameSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość znalezionych plików <em>lng</em>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość elementów tablicy <a class="el" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8" title="Tablica nazw plików *.lng.">CMultiLanguage::m_aLanguageFileName</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a006d7e55b1c5550909a72318ccea56c"></a><!-- doxytag: member="CMultiLanguage::GetLngFileName" ref="a006d7e55b1c5550909a72318ccea56c" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPTSTR CMultiLanguage::GetLngFileName           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca nazwę pliku językowego. 
+<p>
+Metoda ta jest wywoływana z <a class="el" href="class_c_multi_language.html#4fc6891418292135ed0727f50d900ced" title="Metoda zwracająca nazwę pliku językowego.">CMultiLanguage::GetLangFileName</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks pliku językowego. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Nazwa pliku językowego. W przypadku błędu zwraca <em>"languages\\english.lng"</em>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3e5d674e4bd0c7bd60de8df135f1bad1"></a><!-- doxytag: member="CMultiLanguage::ParseXMLLngData" ref="3e5d674e4bd0c7bd60de8df135f1bad1" args="(LPCTSTR lpFileName=_T(&quot;languages\\languages_def.xml&quot;))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::ParseXMLLngData           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpFileName</em> = <code>_T(&quot;languages\\languages_def.xml&quot;)</code>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda parsująca plik XML. 
+<p>
+Metoda ta parsuje specjalnie przygotowany plik XML ze zdefiniowanymi językami. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpFileName</em>&nbsp;</td><td>Nazwa pliku XML jaki zostanie sparsowany. Domyślnie jest to <em>"languages\\languages_def.xml"</em>. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku powodzenia otwarcia pliku XML. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f9450883e6245d6ab0022befc3030add"></a><!-- doxytag: member="CMultiLanguage::SearchTag" ref="f9450883e6245d6ab0022befc3030add" args="(LPCTSTR lpSource, LPCTSTR lpTag)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::SearchTag           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpTag</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda szukająca znacznika w zadanym tekście. 
+<p>
+Metoda ta wywoływana jest z <a class="el" href="class_c_multi_language.html#3e5d674e4bd0c7bd60de8df135f1bad1" title="Metoda parsująca plik XML.">CMultiLanguage::ParseXMLLngData</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpSource</em>&nbsp;</td><td>Tekst, w którym poszukiwany będzie znacznik. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpTag</em>&nbsp;</td><td>Nazwa poszukiwanego znacznika. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku znalezienia znacznika. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5fcb1f794f42d36287e9e26ac1470209"></a><!-- doxytag: member="CMultiLanguage::SearchParameter" ref="5fcb1f794f42d36287e9e26ac1470209" args="(LPCTSTR lpSource, LPCTSTR lpParameter, LPTSTR lpResult, GLsizei iSizeResult)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLboolean CMultiLanguage::SearchParameter           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpParameter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&nbsp;</td>
+          <td class="paramname"> <em>iSizeResult</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda szukająca parametru w zadanym tekście. 
+<p>
+Metoda ta wywoływana jest z <a class="el" href="class_c_multi_language.html#3e5d674e4bd0c7bd60de8df135f1bad1" title="Metoda parsująca plik XML.">CMultiLanguage::ParseXMLLngData</a>. Zadaniem tej metody jest odnaleźć w tekście dany parametr i wyłuskać z niego wartość. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpSource</em>&nbsp;</td><td>Tekst, w którym poszukiwany będzie parametr. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpParameter</em>&nbsp;</td><td>Nazwa poszukiwanego parametru. </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>lpResult</em>&nbsp;</td><td>Wskaźnik na bufor, do którego zapisana zostanie wartość parametru. Jeżeli parametr nie zostanie odnaleziony to lpResult będzie wypełniony zerami. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iSizeResult</em>&nbsp;</td><td>Rozmiar bufora lpResult. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd><code>GL_TRUE</code> w przypadku odnalezienia szukanego parametru. W przeciwnym wypadku <code>GL_FALSE</code>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4b8aae2e3159f753fe2be3a17c4defc5"></a><!-- doxytag: member="CMultiLanguage::AddXMLLngData" ref="4b8aae2e3159f753fe2be3a17c4defc5" args="(LPCTSTR lpName, LPCTSTR lpLNG)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CMultiLanguage::AddXMLLngData           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpLNG</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda tworząca nowy język na podstawie parsowania pliku XML. 
+<p>
+Metoda ta tworzy nowy element tablicy <a class="el" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">CMultiLanguage::m_aXMLLngData</a>, do którego zapisuje nazwę języka oraz nazwę pliku <em>lng</em>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpName</em>&nbsp;</td><td>Nazwa języka jako wartość parametru <code>name</code> znacznika <code>&lt;language&gt;</code>. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpLNG</em>&nbsp;</td><td>Nazwa pliku <em>lng</em> jako wartość parametru <code>file</code> znacznika <code>&lt;language&gt;</code>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ff4424ef8cbd57a3dc4e0593eace3a33"></a><!-- doxytag: member="CMultiLanguage::AddXMLLngDataTTF" ref="ff4424ef8cbd57a3dc4e0593eace3a33" args="(LPCTSTR lpTTF)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLvoid CMultiLanguage::AddXMLLngDataTTF           </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&nbsp;</td>
+          <td class="paramname"> <em>lpTTF</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda dodająca nazy plików z czcionką. 
+<p>
+Metoda ta dodaje nowy element do tablicy <a class="el" href="struct_c_multi_language_1_1_s_x_m_l_lng_data.html#c4e327a0db6f8f51f1303ef31e3ba802" title="Tablica nazw czcionek.">CMultiLanguage::SXMLLngData::aFileTTF</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>lpTTF</em>&nbsp;</td><td>Nazwa pliku z czcionką jako wartość parametru <code>file</code> znacznika <code>&lt;font&gt;</code>. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a31c256ba244e3a408f589fe90940adb"></a><!-- doxytag: member="CMultiLanguage::GetXMLLngDataSize" ref="a31c256ba244e3a408f589fe90940adb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CMultiLanguage::GetXMLLngDataSize           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość zdefiniowanych języków w pliku <em>languages_def.xml</em>. 
+<p>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość elementów tablicy <a class="el" href="class_c_multi_language.html#75339b9201fcb8b0564833e8e6d7c2d9" title="Tablica danych języków opisanych w pliku XML.">CMultiLanguage::m_aXMLLngData</a>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="568f797ccec5ce4312e7c27301c9d6fd"></a><!-- doxytag: member="CMultiLanguage::GetXMLLngFileLNG" ref="568f797ccec5ce4312e7c27301c9d6fd" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPTSTR CMultiLanguage::GetXMLLngFileLNG           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca nazwę pliku językowego dla danego języka. 
+<p>
+Metoda ta jest wywoływana z <a class="el" href="class_c_multi_language.html#4fc6891418292135ed0727f50d900ced" title="Metoda zwracająca nazwę pliku językowego.">CMultiLanguage::GetLangFileName</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks pliku językowego. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Nazwa pliku językowego. W przypadku błędu zwraca <em>"languages\\english.lng"</em>. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d78b14f4bb4f8e688b7c2966aa783c3b"></a><!-- doxytag: member="CMultiLanguage::GetXMLLngDataTTFSize" ref="d78b14f4bb4f8e688b7c2966aa783c3b" args="(GLint iIndex)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint CMultiLanguage::GetXMLLngDataTTFSize           </td>
+          <td>(</td>
+          <td class="paramtype">GLint&nbsp;</td>
+          <td class="paramname"> <em>iIndex</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Metoda zwracająca ilość zdefiniowanych czcionek dla danego języka. 
+<p>
+Metoda zwracająca ilość zdefiniowanych czcionek dla indeksu języka zawartego w polu <a class="el" href="struct_c_window_data_1_1_s_setting_file.html#e2d3ea66168b99b71fb11893eb30aa09" title="Indeks pliku językowego aplikacji.">CWindowData::SSettingFile::iIndexLanguage</a>. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>iIndex</em>&nbsp;</td><td>Indeks języka zdefiniowanego w pliku XML. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>Ilość zdefiniowanych czcionek dla danego języka. W przypadku jakiegoś błędu, np. nie używania pliku XML, zwrócona zostanie wartość <code>-1</code>. </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="14066030fc4cce4b8d453b134af996eb"></a><!-- doxytag: member="CMultiLanguage::m_aLineText" ref="14066030fc4cce4b8d453b134af996eb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;TCHAR*&gt; <a class="el" href="class_c_multi_language.html#14066030fc4cce4b8d453b134af996eb">CMultiLanguage::m_aLineText</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tablica przechowująca linie tekstu pliku językowego (<em>*</em>.<em>lng</em>). 
+<p>
+Tablica ta przechowuje linie tekstu aktualnie wczytanego pliku językowego (<em>*</em>.<em>lng</em>). 
+</div>
+</div><p>
+<a class="anchor" name="6d60994be24203272728d25e4e0d6fb8"></a><!-- doxytag: member="CMultiLanguage::m_aLanguageFileName" ref="6d60994be24203272728d25e4e0d6fb8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;TCHAR*&gt; <a class="el" href="class_c_multi_language.html#6d60994be24203272728d25e4e0d6fb8">CMultiLanguage::m_aLanguageFileName</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tablica nazw plików <em>*</em>.<em>lng</em>. 
+<p>
+Tablica ta przechowuje nazwy znalezionych plików z rozszerzeniem <em>lng</em> w katalogu <em>languages</em>. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>MultiLanguage/<a class="el" href="_multi_language_8h-source.html">MultiLanguage.h</a><li>MultiLanguage/MultiLanguage.cpp</ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:29 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

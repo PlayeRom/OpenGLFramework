@@ -1,0 +1,30 @@
+<area shape="rect" href="$class_c_r_menu_base.html" title="Klasa bazowa dla klas GUI z przyciskami." alt="" coords="931,5,1035,32">
+<area shape="rect" href="$class_c_bitmap_font.html" title="Klasa umożliwiająca rysowanie tekstu czcionką rastrową." alt="" coords="933,56,1032,83">
+<area shape="rect" title="m_pBitmapFont" alt="" coords="1029,71,1037,79">
+<area shape="rect" title="m_pBitmapFont" alt="" coords="1197,103,1205,111">
+<area shape="rect" href="$class_c_s_d_l_font.html" title="Klasa renderująca tekst." alt="" coords="941,107,1024,133">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1021,116,1029,124">
+<area shape="rect" title="m_pSDLFont" alt="" coords="1193,116,1201,124">
+<area shape="rect" href="$class_c_window_data.html" title="Klasa okna aplikacji." alt="" coords="693,107,800,133">
+<area shape="rect" title="m_pWinData" alt="" coords="796,116,804,124">
+<area shape="rect" title="m_pWinData" alt="" coords="937,116,945,124">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CWindowData \&gt;" alt="" coords="293,5,520,32">
+<area shape="rect" href="$class_c_a_r_b_multisample.html" title="Klasa obsługująca antyaliasing." alt="" coords="341,56,472,83">
+<area shape="rect" title="m_pARBMultisample" alt="" coords="468,69,476,77">
+<area shape="rect" title="m_pARBMultisample" alt="" coords="699,103,707,111">
+<area shape="rect" href="$class_c_multi_language.html" title="Klasa wspierająca wielojęzyczność." alt="" coords="348,107,465,133">
+<area shape="rect" title="m_pMultiLang" alt="" coords="463,116,471,124">
+<area shape="rect" title="m_pMultiLang" alt="" coords="689,116,697,124">
+<area shape="rect" href="$class_c_singleton_base.html" title="CSingletonBase\&lt; CMultiLanguage \&gt;" alt="" coords="5,107,243,133">
+<area shape="rect" href="$struct_c_window_data_1_1_s_setting_file.html" title="Struktura przechowująca ustawienia aplikacji." alt="" coords="313,157,500,184">
+<area shape="rect" title="m_sSettingFile" alt="" coords="496,160,504,168">
+<area shape="rect" title="m_sSettingFile" alt="" coords="697,129,705,137">
+<area shape="rect" href="$class_c_logger.html" title="Klasa loggera." alt="" coords="371,208,443,235">
+<area shape="rect" title="m_pLogger" alt="" coords="440,216,448,224">
+<area shape="rect" title="m_pLogger" alt="" coords="729,129,737,137">
+<area shape="rect" href="$class_c_my_font.html" title="Klasa rysująca tekst." alt="" coords="945,157,1020,184">
+<area shape="rect" title="m_pMyFont" alt="" coords="1017,163,1025,171">
+<area shape="rect" title="m_pMyFont" alt="" coords="1196,129,1204,137">
+<area shape="rect" href="$class_c_speed_control.html" title="Klasa kontroli szybkości animacji." alt="" coords="927,208,1039,235">
+<area shape="rect" title="m_pSpeedControl" alt="" coords="1036,213,1044,221">
+<area shape="rect" title="m_pSpeedControl" alt="" coords="1223,129,1231,137">

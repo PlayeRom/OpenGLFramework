@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Fonts/MyFont.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Fonts/MyFont.h</h1><a href="_my_font_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00007"></a><a class="code" href="class_c_my_font.html">00007</a> <span class="keyword">class </span><a class="code" href="class_c_my_font.html" title="Klasa rysująca tekst.">CMyFont</a>  
+<a name="l00008"></a>00008 {
+<a name="l00009"></a>00009 <span class="keyword">public</span>:
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012         <a class="code" href="class_c_my_font.html#0bb2ef27bfdd5b9ed2291cbfddc8c9c7" title="Konstruktor.">CMyFont</a>();
+<a name="l00013"></a>00013 
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016         <span class="keyword">virtual</span> <a class="code" href="class_c_my_font.html#2cb5ee7f4eea78209e1d1b09e1484532" title="Destruktor.">~CMyFont</a>();
+<a name="l00017"></a>00017 
+<a name="l00019"></a>00019 
+<a name="l00026"></a>00026         GLvoid <a class="code" href="class_c_my_font.html#bf2876d084c3c3f8a6f59fa498a5a082" title="Metoda rysująca tekst.">DrawText</a>(LPCTSTR lpText, GLfloat fX, GLfloat fY, GLfloat fZ, COLORREF crColor = RGB(255, 255, 255), GLfloat fSize = 1.0f, GLfloat fScale = 0.1f);
+<a name="l00027"></a>00027 
+<a name="l00029"></a>00029 
+<a name="l00037"></a>00037         GLvoid <a class="code" href="class_c_my_font.html#0524a65187c9766f4a5de9857d05b1a7" title="Metoda rysująca tekst.">DrawTextFormat</a>(GLfloat fX, GLfloat fY, GLfloat fZ, COLORREF crColor, GLfloat fSize, GLfloat fScale, LPCTSTR fmt, ...);
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">private</span>:
+<a name="l00041"></a>00041 
+<a name="l00046"></a>00046         GLvoid <a class="code" href="class_c_my_font.html#a4b89be12eab9e05e6086b800fafbc8a" title="Metoda rysująca znak.">DrawCharacter</a>(GLint iChar, GLfloat fX, GLfloat fY, GLfloat fZ, GLfloat fScale);
+<a name="l00047"></a>00047 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
+<TITLE>OpenGLFramework - CSoundFMOD</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" text="#000000">
+
+<H1>Klasa CSoundFMOD</H1>
+
+<p><b>Konstruktor</b></p>
+<p><a href="#konstruktor">CSoundFMOD</a></p>
+
+<p><b>Metody klasy - interface</b></p>
+<table border="1">
+<tr><td><a href="#LoadAllSounds">LoadAllSounds</a></td></tr>
+<tr><td><a href="#LoadSample">LoadSample</a></td></tr>
+<tr><td><a href="#LoadStreamSample">LoadStreamSample</a></td></tr>
+<tr><td><a href="#PlaySample">PlaySample</a></td></tr>
+<tr><td><a href="#StopSample">StopSample</a></td></tr>
+<tr><td><a href="#PlayStreamSample">PlayStreamSample</a></td></tr>
+<tr><td><a href="#StopStreamSample">StopStreamSample</a></td></tr>
+<tr><td><a href="#VolumeIncrease">VolumeIncrease</a></td></tr>
+<tr><td><a href="#VolumeDecrease">VolumeDecrease</a></td></tr>
+</table>
+
+<p><a href="#przyklad">Przykład</a></p>
+
+<p><a name="konstruktor"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::CSoundFMOD</h3>
+<p>[public] <b>CSoundFMOD(const CGameControl *</b><i>objGameCtrl</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>objGameCtrl</i></td></tr>
+<tr><td></td><td>Wskaźnik na obiekt klasy <a href="cgamecontrol.html">CGameControl</a>.
+Należy wykorzystać globalny <a href="cgamecontrol.html">CGameControl</a> *g_objGameCtrl.</td></tr>
+</table>
+</p>
+
+<p><a name="LoadAllSounds"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::LoadAllSounds</h3>
+<p>[public] <b>GLboolean LoadAllSounds();</b></p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenie wczytania plików.</p>
+
+<p><b>Uwagi</b></p>
+<p>Funkcja ta jest już wywoływana w
+<a href="cgamecontrol.html#Initialization">CGameControl::Initialization</a> a my
+tylko musimy wewnątrz jej dopisać odpowiednie instrukcje wczytujące
+pojedyncze pliki dźwiękowe. Dokonamy tego za pomocą funkcji
+<a href="#LoadSample">LoadSample</a> oraz
+<a href="#LoadStreamSample">LoadStreamSample</a>.</p>
+
+<p><a name="PlaySample"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::PlaySample</h3>
+<p>Funkcja odrywająca wcześniej wczytany dźwięk.</p>
+<p>[public] <b>GLvoid PlaySample(GLuint </b><i>uiIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>uiIndex</i></td></tr>
+<tr><td></td><td>Numer pliku dźwiękowego, licząc od zera. Kolejność plików
+ustalana jest wedle kolejności ich wczytywania przez metody
+<a href="#LoadSample">LoadSample</a> i
+<a href="#LoadStreamSample">LoadStreamSample</a>.</td></tr>
+</table>
+</p>
+
+<p><a name="StopSample"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::StopSample</h3>
+<p>Funkcja zatrzymująca odgrywanie wcześniej wczytanego dźwięku.</p>
+<p>[public] <b>GLvoid StopSample(GLuint </b><i>uiIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>uiIndex</i></td></tr>
+<tr><td></td><td>Numer pliku dźwiękowego, licząc od zera. Kolejność plików
+ustalana jest wedle kolejności ich wczytywania przez metody
+<a href="#LoadSample">LoadSample</a> i
+<a href="#LoadStreamSample">LoadStreamSample</a>.</td></tr>
+</table>
+</p>
+
+<p><a name="PlayStreamSample"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::PlayStreamSample</h3>
+<p>Funkcja odrywająca wcześniej wczytaną muzykę.</p>
+<p>[public] <b>GLvoid PlayStreamSample(GLuint </b><i>uiIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>uiIndex</i></td></tr>
+<tr><td></td><td>Numer pliku muzycznego, licząc od zera. Kolejność plików
+ustalana jest wedle kolejności ich wczytywania przez metody
+<a href="#LoadSample">LoadSample</a> i
+<a href="#LoadStreamSample">LoadStreamSample</a>.</td></tr>
+</table>
+</p>
+
+<p><a name="StopStreamSample"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::StopStreamSample</h3>
+<p>Funkcja zatrzymująca odgrywanie wcześniej wczytanej muzyki.</p>
+<p>[public] <b>GLvoid StopStreamSample(GLuint </b><i>uiIndex</i><b>);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>uiIndex</i></td></tr>
+<tr><td></td><td>Numer pliku muzycznego, licząc od zera. Kolejność plików
+ustalana jest wedle kolejności ich wczytywania przez metody
+<a href="#LoadSample">LoadSample</a> i
+<a href="#LoadStreamSample">LoadStreamSample</a>.</td></tr>
+</table>
+</p>
+
+<p><a name="LoadSample"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::LoadSample</h3>
+<p>Funkcja wczytująca plik dźwiękowy.</p>
+<p>[public] <b>GLboolean LoadSample(const char* </b><i>lpSample</i><b>, GLboolean </b><i>bLoopSound</i><b> = GL_FALSE);</b></p>
+<p><b>Parametry</b></p>
+<p>
+
+<table border="0">
+<tr><td><i>lpSample</i></td></tr>
+<tr><td></td><td>Nazwa pliku dźwiękowego wraz ze ścieżką.</td></tr>
+<tr><td><i>bLoopSound</i></td></tr>
+<tr><td></td><td>Jeżeli ustawimy na GL_TRUE to wówczas dźwięk odrywany
+będzie w pętli aż do wyłączenia. Jeżeli ustawimy na GL_FALSE (wartość
+domyślna) to dźwięk zostanie odegrany tylko jeden raz.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia wczytania pliku.</p>
+
+<p><a name="LoadStreamSample"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::LoadStreamSample</h3>
+<p>Funkcja wczytująca plik muzyczny.</p>
+<p>[public] <b>GLboolean LoadStreamSample(const char* </b><i>lpSample</i><b>, GLboolean </b><i>bLoopSound</i><b> = GL_FALSE);</b></p>
+<p><b>Parametry</b></p>
+<p>
+
+<table border="0">
+<tr><td><i>lpSample</i></td></tr>
+<tr><td></td><td>Nazwa pliku muzycznego wraz ze ścieżką.</td></tr>
+<tr><td><i>bLoopSound</i></td></tr>
+<tr><td></td><td>Jeżeli ustawimy na GL_TRUE to wówczas muzyka odrywana
+będzie w pętli aż do wyłączenia. Jeżeli ustawimy na GL_FALSE (wartość
+domyślna) to muzyka zostanie odegrana tylko jeden raz.</td></tr>
+</table>
+</p>
+<p><b>Wartość zwracana</b></p>
+<p>GL_TRUE w przypadku powodzenia wczytania pliku.</p>
+
+<p><a name="VolumeIncrease"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::VolumeIncrease</h3>
+<p>Funkcja umożliwia zwiększenie głośności.</p>
+<p>[public] <b>GLvoid VolumeIncrease(GLint </b><i>iValue</i><b> = 10);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>iValue</i></td></tr>
+<tr><td></td><td>Wartość o jaką zwiększona zostanie głośność. Wartość maksymalna to 256.</td></tr>
+</table>
+</p>
+
+<p><a name="VolumeDecrease"></a></p>
+
+<hr/>
+
+<h3>CSoundFMOD::VolumeDecrease</h3>
+<p>Funkcja umożliwia zmniejszenie głośności.</p>
+<p>[public] <b>GLvoid VolumeDecrease(GLint </b><i>iValue</i><b> = 10);</b></p>
+<p><b>Parametry</b></p>
+<p>
+<table border="0">
+<tr><td><i>iValue</i></td></tr>
+<tr><td></td><td>Wartość o jaką zostanie zmniejszona głośność. Wartość maksymalna to 256.</td></tr>
+</table>
+</p>
+
+<p><a name="przyklad"></a></p>
+
+<hr/>
+
+<h3>Przykład</h3>
+<p><font face="Courier New" size="2">
+GLboolean CSoundFMOD::LoadAllSounds()<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;LoadSample("sounds/sample1.wav");		// index 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;LoadSample("sounds/sample2.wav");		// index 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;LoadStreamSample("sounds/music.mp3");	// index 2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;return GL_TRUE;<br />
+}<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;// gdzieś w kodzie odgrywamy sample2.wav:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;m_objGameCtrl->GetSoundFMOD()->PlaySample(1);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;// gdzieś w kodzie odgrywamy music.mp3:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;m_objGameCtrl->GetSoundFMOD()->PlayStreamSample(2);
+</font></p>
+
+<hr />
+</BODY>
+</HTML>

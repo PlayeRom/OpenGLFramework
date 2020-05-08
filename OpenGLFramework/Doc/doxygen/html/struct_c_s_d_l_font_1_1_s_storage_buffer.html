@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja struktury CSDLFont::SStorageBuffer</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+    <li><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<div class="tabs">
+  <ul>
+    <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+    <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+    <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+  </ul>
+</div>
+<div class="nav">
+<a class="el" href="class_c_s_d_l_font.html">CSDLFont</a>::<a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html">SStorageBuffer</a></div>
+<h1>Dokumentacja struktury CSDLFont::SStorageBuffer</h1><!-- doxytag: class="CSDLFont::SStorageBuffer" -->
+<p>
+<a href="struct_c_s_d_l_font_1_1_s_storage_buffer-members.html">Lista wszystkich składowych.</a><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Struktura StorageBuffer wspomagająca rysowanie tekstu za pomocą klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>. 
+<p>
+Aby zoptymalizować rendering tekstu, każdy obiekt klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a> zwiera zmienną <a class="el" href="class_c_s_d_l_font.html#4cfc9afc7c0bcfd55fdbd93a223f160a" title="Flaga wskazująca czy StorageBuffer jest używany.">CSDLFont::m_bUseStorageBuffer</a> (ustawianą przez konstruktor <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a>) mówiącą o tym czy należy zapamiętywać wcześniej wyrenderowane teksty. Jeżeli StorageBuffer jest w użyciu to przy każdym wywołaniu metod <a class="el" href="class_c_s_d_l_font.html#f763b4129280be3da17a0055f01f8118" title="Metoda rysująca tekst.">CSDLFont::DrawText</a> czy <a class="el" href="class_c_s_d_l_font.html#99374970b88ac91342a713f67e62585d" title="Metoda rysująca tekst z możliwością formatowania.">CSDLFont::DrawTextFormat</a>, najpierw sprawdzane jest czy podany tekst nie został już wcześniej wyrenderowany (sprawdzany jest tekst i jego kolor). Jeżeli nie, to podany tekst zostanie wyrenderowany na nowo oraz zapisany do bufora. Czyli następnym razem przy kolejnym wywołaniu <a class="el" href="class_c_s_d_l_font.html#f763b4129280be3da17a0055f01f8118" title="Metoda rysująca tekst.">CSDLFont::DrawText</a> tekst (o ile jest identyczny) nie będzie musiał być renderowany od nowa tylko użyta zostanie wcześniej przygotowana i buforowana tekstura. <br>
+ Jeżeli StorageBuffer nie jest używany to każde wywołanie metod rysujących tekst powoduje renderowanie tekstu od nowa co trwa znacznie dłużej. <br>
+ Aby zminimalizować zużycie pamięci, podczas używania StorageBuffer, każdemu buforowanemu tekstowi przypisywany jest czas ostatniego odwołania się do niego. Następnie co dany kwartał czasu (domyślnie co 30 sekund) usuwane są z bufora stare teksty, których czas ostatniego wykorzystania przekracza określony limit (domyślnie 30 sekund). <br>
+ Dodatkowo, każdy obiekt klasy <a class="el" href="class_c_s_d_l_font.html" title="Klasa renderująca tekst.">CSDLFont</a> zawiera limit na buforowanie tekstów – domyślnie obiekt może buforować maksymalnie 200 tekstów. <table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Atrybuty publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="76f6234d37856309bc5bdd1bbd22ab99"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::lpText" ref="76f6234d37856309bc5bdd1bbd22ab99" args="" -->
+TCHAR *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#76f6234d37856309bc5bdd1bbd22ab99">lpText</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Renderowany tekst. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1a59eef550609f9ce9bb10e378400e21"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::uiTexture" ref="1a59eef550609f9ce9bb10e378400e21" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#1a59eef550609f9ce9bb10e378400e21">uiTexture</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gotowa tekstura z wyrenderowanym tekstem. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="bd7a5b659d5128e81d6833632af8965b"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::iWidthPowOfTwo" ref="bd7a5b659d5128e81d6833632af8965b" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#bd7a5b659d5128e81d6833632af8965b">iWidthPowOfTwo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Szerokość tekstury (w piselach) będąca potęgą dwójki. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="cd739f741a13711bc4247e8a9db8bb2d"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::iHeightPowOfTwo" ref="cd739f741a13711bc4247e8a9db8bb2d" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#cd739f741a13711bc4247e8a9db8bb2d">iHeightPowOfTwo</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wysokość tekstury (w piselach) będąca potęgą dwójki. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="033537da46ee420e002d6f5fc42d9c99"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::iOriginalWidth" ref="033537da46ee420e002d6f5fc42d9c99" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#033537da46ee420e002d6f5fc42d9c99">iOriginalWidth</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Szerokość tekstu w pikselach. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4edd531c6bfbbf0d0de9e65fc63fdd57"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::iOriginalHeight" ref="4edd531c6bfbbf0d0de9e65fc63fdd57" args="" -->
+GLint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#4edd531c6bfbbf0d0de9e65fc63fdd57">iOriginalHeight</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wysokość tekstu w pikselach. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a17516404b7b71dad3be8ae59a6cc754"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::sdlColor" ref="a17516404b7b71dad3be8ae59a6cc754" args="" -->
+SDL_Color&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#a17516404b7b71dad3be8ae59a6cc754">sdlColor</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Struktura przechowująca kolor tekstu. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="865fa8619dc774063ae833dea7127fbf"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::bMidScreen" ref="865fa8619dc774063ae833dea7127fbf" args="" -->
+GLboolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#865fa8619dc774063ae833dea7127fbf">bMidScreen</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flaga określająca czy tekst ma być pozycjonowany na środku ekranu. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c33677d3dca6891f97f278634dd93c49"></a><!-- doxytag: member="CSDLFont::SStorageBuffer::uiRefTime" ref="c33677d3dca6891f97f278634dd93c49" args="" -->
+GLuint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_s_d_l_font_1_1_s_storage_buffer.html#c33677d3dca6891f97f278634dd93c49">uiRefTime</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Czas ostatniego użycia (w sekundach) od uruchomienia programu. <br></td></tr>
+</table>
+<hr>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li>Fonts/<a class="el" href="_s_d_l_font_8h-source.html">SDLFont.h</a></ul>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:31 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

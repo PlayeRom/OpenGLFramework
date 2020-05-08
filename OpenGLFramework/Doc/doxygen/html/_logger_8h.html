@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Dokumentacja pliku Logger/Logger.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Dokumentacja pliku Logger/Logger.h</h1><hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Plik nagłówkowy dla klasy <a class="el" href="class_c_logger.html" title="Klasa loggera.">CLogger</a>. 
+<p>
+
+<p>
+
+<p>
+<div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dynsection">
+<p><center><img src="_logger_8h__dep__incl.png" border="0" usemap="#Logger/Logger.hdep_map" alt=""></center>
+<map name="Logger/Logger.hdep_map">
+<area shape="rect" href="_draw_2stdafx_8h&#45;source.html" title="Draw/stdafx.h" alt="" coords="5,80,109,107"><area shape="rect" href="_extensions_2stdafx_8h&#45;source.html" title="Extensions/stdafx.h" alt="" coords="133,80,272,107"><area shape="rect" href="_open_g_l_framework_2stdafx_8h&#45;source.html" title="OpenGLFramework/stdafx.h" alt="" coords="296,80,485,107"><area shape="rect" href="_sound_2stdafx_8h&#45;source.html" title="Sound/stdafx.h" alt="" coords="509,80,621,107"><area shape="rect" href="_framework_8cpp.html" title="Moduł szkieletu (framework)." alt="" coords="273,155,508,181"></map>
+</div>
+
+<p>
+<a href="_logger_8h-source.html">Idź do kodu źródłowego tego pliku.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_logger.html">CLogger</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Klasa loggera.  <a href="class_c_logger.html#_details">Więcej...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Definicje</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6f6e0a7a87048fb100a02f5c9d8660d6"></a><!-- doxytag: member="Logger.h::LOG_FILE_NAME" ref="6f6e0a7a87048fb100a02f5c9d8660d6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_logger_8h.html#6f6e0a7a87048fb100a02f5c9d8660d6">LOG_FILE_NAME</a>&nbsp;&nbsp;&nbsp;_T(&quot;Log&quot;)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Domyślny, pierwszy człon nazwy pliku logger'a - bez rozszerzenia. <br></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Makra ułatwiające używanie metod zapisu do pliku.</div></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_logger_8h.html#dfa51d3a439f487fe8d4d932d787872e">__LOG</a>(msg)&nbsp;&nbsp;&nbsp;CWindowData::GetInstance()-&gt;GetLogger()-&gt;LOG( msg )</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Makro ułatwiające dostęp do metody <a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801" title="Metoda zapisująca do pliku, linię tekstu (UNICODE), z możliwością formatowania...">CLogger::LOG</a>.  <a href="#dfa51d3a439f487fe8d4d932d787872e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_logger_8h.html#0ff236abc445e8bce311f2b13cb7339f">__LOGFormat</a>(fmt,...)&nbsp;&nbsp;&nbsp;CWindowData::GetInstance()-&gt;GetLogger()-&gt;LOG( fmt, __VA_ARGS__ )</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Makro ułatwiające dostęp do metody <a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801" title="Metoda zapisująca do pliku, linię tekstu (UNICODE), z możliwością formatowania...">CLogger::LOG</a>, z jednym, dodatkowym parametrem.  <a href="#0ff236abc445e8bce311f2b13cb7339f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_logger_8h.html#4848c10a83e222ec755cf221e625fce7">__LOGGetLastError</a>(msg)&nbsp;&nbsp;&nbsp;CWindowData::GetInstance()-&gt;GetLogger()-&gt;LOGGetLastError( msg )</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Makro ułatwiające dostęp do metody <a class="el" href="class_c_logger.html#5061c61652a4764aba1e84a165e05789" title="Metoda zapisująca do pliku, linię teksu, z ostatnio wywołanym błędem WinAPI...">CLogger::LOGGetLastError</a>.  <a href="#4848c10a83e222ec755cf221e625fce7"></a><br></td></tr>
+</table>
+<hr><h2>Dokumentacja definicji</h2>
+<a class="anchor" name="dfa51d3a439f487fe8d4d932d787872e"></a><!-- doxytag: member="Logger.h::__LOG" ref="dfa51d3a439f487fe8d4d932d787872e" args="(msg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __LOG          </td>
+          <td>(</td>
+          <td class="paramtype">msg&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;CWindowData::GetInstance()-&gt;GetLogger()-&gt;LOG( msg )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Makro ułatwiające dostęp do metody <a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801" title="Metoda zapisująca do pliku, linię tekstu (UNICODE), z możliwością formatowania...">CLogger::LOG</a>. 
+<p>
+Makro to możemy wywołać w dowolnym miejscu kodu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>msg</em>&nbsp;</td><td>Dowolny tekst jaki chcemy zapisać do pliku. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0ff236abc445e8bce311f2b13cb7339f"></a><!-- doxytag: member="Logger.h::__LOGFormat" ref="0ff236abc445e8bce311f2b13cb7339f" args="(fmt,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __LOGFormat          </td>
+          <td>(</td>
+          <td class="paramtype">fmt,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"> <em>...</em>&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;CWindowData::GetInstance()-&gt;GetLogger()-&gt;LOG( fmt, __VA_ARGS__ )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Makro ułatwiające dostęp do metody <a class="el" href="class_c_logger.html#32af70a7993ae22e1613ecbd6fc4c801" title="Metoda zapisująca do pliku, linię tekstu (UNICODE), z możliwością formatowania...">CLogger::LOG</a>, z jednym, dodatkowym parametrem. 
+<p>
+Makro to możemy wywołać w dowolnym miejscu kodu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>fmt</em>&nbsp;</td><td>Dowolny tekst jaki chcemy zapisać do pliku. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Dodatkowe parametry dla formatowania. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4848c10a83e222ec755cf221e625fce7"></a><!-- doxytag: member="Logger.h::__LOGGetLastError" ref="4848c10a83e222ec755cf221e625fce7" args="(msg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __LOGGetLastError          </td>
+          <td>(</td>
+          <td class="paramtype">msg&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;CWindowData::GetInstance()-&gt;GetLogger()-&gt;LOGGetLastError( msg )</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Makro ułatwiające dostęp do metody <a class="el" href="class_c_logger.html#5061c61652a4764aba1e84a165e05789" title="Metoda zapisująca do pliku, linię teksu, z ostatnio wywołanym błędem WinAPI...">CLogger::LOGGetLastError</a>. 
+<p>
+Makro to możemy wywołać w dowolnym miejscu kodu. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>msg</em>&nbsp;</td><td>Dowolny tekst dzięki, któremu będziemy wiedzieli co wywołało błąd. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:23 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>

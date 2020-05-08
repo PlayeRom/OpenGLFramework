@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>OpenGLFramework: Plik źródłowy Draw/StencilShadow.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.4 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Strona&nbsp;główna</span></a></li>
+    <li><a href="annotated.html"><span>Klasy</span></a></li>
+    <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+  </ul>
+</div>
+<h1>Draw/StencilShadow.h</h1><a href="_stencil_shadow_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00004"></a>00004 <span class="preprocessor">#pragma once</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="class_c_stencil_shadow.html">00008</a> <span class="keyword">class </span><a class="code" href="class_c_stencil_shadow.html" title="Klasa wspomagająca rysowanie dynamicznych cieni shadow volume.">CStencilShadow</a>
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010 <span class="keyword">public</span>:
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013         <a class="code" href="class_c_stencil_shadow.html#7ced061e50bc5e6aacc50efc03cf7ce4" title="Konstruktor.">CStencilShadow</a>();
+<a name="l00014"></a>00014 
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017         <a class="code" href="class_c_stencil_shadow.html#a53e702bc164f46a912eab46fc873f3b" title="Destruktor.">~CStencilShadow</a>();
+<a name="l00018"></a>00018 
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021         GLvoid <a class="code" href="class_c_stencil_shadow.html#f1118b5ced6532063ae70f4448f4c6e7" title="Metoda restartująca wszelkie niezbędne dane.">RestartObjects</a>();
+<a name="l00022"></a>00022         
+<a name="l00024"></a>00024 
+<a name="l00030"></a>00030         GLvoid <a class="code" href="class_c_stencil_shadow.html#8347c67991bcea29666262f9a38abcbf" title="Metoda obliczająca równanie płaszczyzny dla danego obiektu 3D bez indeksowania...">CreateFaceEquation</a>( GLint iIndexObj, GLint iFirstVertex, GLsizei iCountVertices );
+<a name="l00031"></a>00031 
+<a name="l00033"></a>00033 
+<a name="l00038"></a>00038         GLvoid <a class="code" href="class_c_stencil_shadow.html#54766deffed640e1d5a37a76ce2a9246" title="Metoda obliczająca równanie płaszczyzny dla danego obiektu 3D z indeksowaniem...">CreateFaceEquationElem</a>( GLint iIndexObj, GLsizei iCountVertices );
+<a name="l00039"></a>00039 
+<a name="l00041"></a>00041 
+<a name="l00045"></a>00045         <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> <a class="code" href="class_c_stencil_shadow.html#aa9c8b922769a28df87c1b0de87c360a" title="Metoda obliczajacą pozycję światła niezbędą dla narysowania cienia.">GetLightPos</a>( <span class="keyword">const</span> <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> &amp;in_cLightPos = <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a>( 0.0f, 0.0f, 0.0f, 1.0f ) );
+<a name="l00046"></a>00046 
+<a name="l00048"></a>00048 
+<a name="l00050"></a>00050         GLvoid <a class="code" href="class_c_stencil_shadow.html#8ecc682213a32643f03a497919a9a3b1" title="Metoda rysująca cień dla danego obiektu 3D.">DrawShadowForObj</a>( GLint iIndexObj, <span class="keyword">const</span> <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> &amp;in_cLightPos );
+<a name="l00051"></a>00051 
+<a name="l00053"></a>00053 
+<a name="l00055"></a>00055         GLvoid <a class="code" href="class_c_stencil_shadow.html#23a18e9f878b7d47b1a5f9622ca7d90b" title="Metoda rysująca cienie dla kilku obiektów na raz.">DrawShadowForObjects</a>();
+<a name="l00056"></a>00056 
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 
+<a name="l00061"></a>00061 
+<a name="l00063"></a>00063         GLvoid <a class="code" href="class_c_stencil_shadow.html#452724541f576128a4c26579f0928406" title="Metod inicjalizująca zbieranie informacji o przekształceniach macierzy widoku dla...">Begin_ObjTransfInfo</a>();
+<a name="l00064"></a>00064 
+<a name="l00066"></a>00066 
+<a name="l00070"></a>00070         GLvoid <a class="code" href="class_c_stencil_shadow.html#0f11a0059168b878e5cdc737610ee8bc" title="Metoda ustawiająca indeks obiektu 3D oraz pozycję światła.">Set_ObjTransfInfo</a>( GLint iIndexObj, <span class="keyword">const</span> <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> &amp;in_cLightPos );
+<a name="l00071"></a>00071 
+<a name="l00073"></a>00073 
+<a name="l00076"></a>00076         GLvoid <a class="code" href="class_c_stencil_shadow.html#a16fa8ed213be8a40eafba9736b24eab" title="Metoda zapamietująca pojedynczą oprację translacji.">Translate_ObjTransfInfo</a>( <span class="keyword">const</span> <a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a> &amp;in_cTranslate );
+<a name="l00077"></a>00077 
+<a name="l00079"></a>00079 
+<a name="l00084"></a>00084         GLvoid <a class="code" href="class_c_stencil_shadow.html#f6db18edde7f3473d7465aaeda524c1d" title="Metoda zapamietująca pojedynczą oprację rotacji.">Rotate_ObjTransfInfo</a>( GLfloat fAngle, <span class="keyword">const</span> <a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a> &amp;in_cAxesRot );
+<a name="l00085"></a>00085 
+<a name="l00087"></a>00087 
+<a name="l00090"></a>00090         GLvoid <a class="code" href="class_c_stencil_shadow.html#9d67d15b74bd11a9d591a531d72a86ae" title="Metoda zapamietująca pojedynczą oprację skalowania.">Scale_ObjTransfInfo</a>( <span class="keyword">const</span> <a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a> &amp;in_cScale );
+<a name="l00091"></a>00091 
+<a name="l00093"></a>00093 
+<a name="l00095"></a>00095         GLvoid <a class="code" href="class_c_stencil_shadow.html#7c6acdd3d26945a18974571deadcdf6b" title="Metod zamykajaca zbieranie informacji o przekształceniach macierzy widoku dla kilku...">End_ObjTransfInfo</a>();
+<a name="l00096"></a>00096 
+<a name="l00098"></a>00098         GLvoid <a class="code" href="class_c_stencil_shadow.html#e40ea2383979b6f5e2a3132097c66b36" title="Metoda czyszcząca wszelkie tablice związane ze zbieraniem informacji o przekształceniach...">ClearObjTransformInfo</a>();
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="keyword">private</span>:
+<a name="l00103"></a>00103 
+<a name="l00104"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html">00104</a>         <span class="keyword">struct </span><a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html" title="Struktura równania płaszczyzny.">SFaceEquation</a>
+<a name="l00105"></a>00105         {
+<a name="l00107"></a>00107 
+<a name="l00109"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#6d27e4305cab23f8ccd5c09284f4c699">00109</a>                 GLint <a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#6d27e4305cab23f8ccd5c09284f4c699" title="Tablica przechowująca indeksy trzech wierzchołków.">aIndexFace</a>[ 3 ];
+<a name="l00110"></a>00110 
+<a name="l00112"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#3a990496e2323e0f4dc3b3c4577dfde5">00112</a>                 <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> <a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#3a990496e2323e0f4dc3b3c4577dfde5" title="Dane dla rownania plaszczyzny ax + by + cz + d = 0.">cFaceEq</a>;
+<a name="l00113"></a>00113                 <span class="comment">//GLfloat a, b, c, d;</span>
+<a name="l00114"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#62f7c471e703b7e9edfd712edd8f7dad">00114</a>                 GLboolean <a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#62f7c471e703b7e9edfd712edd8f7dad" title="Flaga wskazująca czy trójkąt jest oświetlony.">bVisible</a>;             
+<a name="l00115"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#905b2fae0a71460e12fab8fde4c01457">00115</a>                 GLint <a class="code" href="struct_c_stencil_shadow_1_1_s_face_equation.html#905b2fae0a71460e12fab8fde4c01457" title="Indeksy innych trójkątów sąsiadujących z daną krawędzią trójkąta.">iNeighbour</a>[ 3 ];  
+<a name="l00116"></a>00116         };
+<a name="l00117"></a>00117 
+<a name="l00119"></a>00119 
+<a name="l00120"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_obj_faces.html">00120</a>         <span class="keyword">struct </span><a class="code" href="struct_c_stencil_shadow_1_1_s_obj_faces.html" title="Struktura trójkatów obiektu 3D.">SObjFaces</a>
+<a name="l00121"></a>00121         {
+<a name="l00122"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_obj_faces.html#0e3fe1dcbd10dbc3d9d25cff6ad2919b">00122</a>                 GLint iIndexObj;                
+<a name="l00123"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_obj_faces.html#b9021c8abb44d3ffd98ed528db3e8ab4">00123</a>                 GLboolean <a class="code" href="struct_c_stencil_shadow_1_1_s_obj_faces.html#b9021c8abb44d3ffd98ed528db3e8ab4" title="Flaga wskazująca czy dla danego obiektu 3D używane jest indeksowanie wierzchołków...">bIsElem</a>;              
+<a name="l00124"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_obj_faces.html#365b3a0fa001dfb261651384678a3af5">00124</a>                 std::vector&lt;SFaceEquation&gt; <a class="code" href="struct_c_stencil_shadow_1_1_s_obj_faces.html#365b3a0fa001dfb261651384678a3af5" title="Tablica wszystkich trójkatów z jakich skłąda się obiekt 3D.">aFaceArray</a>; 
+<a name="l00125"></a>00125         };
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127         <span class="comment">//idea jest taka aby wywolac operacje na stencil buforze tylko raz, i pomiedzy </span>
+<a name="l00128"></a>00128         <span class="comment">//DECR i INCR rysowac wszytskie obiekty na raz, ktore maja rzucic cien.</span>
+<a name="l00129"></a>00129         <span class="comment">//Dlatego potrzebujemy struktury, ktora przechowa wszelkie informacje o</span>
+<a name="l00130"></a>00130         <span class="comment">//przeksztalceniach dla danego obiektu</span>
+<a name="l00131"></a>00131 
+<a name="l00133"></a><a class="code" href="class_c_stencil_shadow.html#f47d3981b2b718dbde9f0b838b01ff9c">00133</a>         <span class="keyword">enum</span> <a class="code" href="class_c_stencil_shadow.html#f47d3981b2b718dbde9f0b838b01ff9c" title="Typ wyliczeniowy rodzajów przekształceń macierzy widoku.">ETrnasformMode</a>
+<a name="l00134"></a>00134         {
+<a name="l00135"></a>00135                 ETransfTranslate,
+<a name="l00136"></a>00136                 ETransfRotate,
+<a name="l00137"></a>00137                 ETransfScale
+<a name="l00138"></a>00138         };
+<a name="l00139"></a>00139 
+<a name="l00141"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html">00141</a>         <span class="keyword">struct </span><a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html" title="Struktura przechowująca pojedynczą informację o przekształceniach macierzy widoku...">STransform</a>
+<a name="l00142"></a>00142         {
+<a name="l00143"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html#b81e3fa97fdd61bda1fe04a284095460">00143</a>                 <a class="code" href="class_c_stencil_shadow.html#f47d3981b2b718dbde9f0b838b01ff9c" title="Typ wyliczeniowy rodzajów przekształceń macierzy widoku.">ETrnasformMode</a> <a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html#b81e3fa97fdd61bda1fe04a284095460" title="Rodzaj przekształcenia.">eTransfMode</a>;             
+<a name="l00144"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html#64ed2cc182cb67b441f338570e74da75">00144</a>                 <a class="code" href="class_c_vector3.html" title="Klasa reprezentująca wektor 3D typu float.">CVector3</a> <a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html#64ed2cc182cb67b441f338570e74da75" title="Wektor przesunięcia, osie obrotu lub wartości skalowania.">cTransform</a>;                    
+<a name="l00145"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html#b2260868b686cd397785e2c0e455d125">00145</a>                 GLfloat <a class="code" href="struct_c_stencil_shadow_1_1_s_transform.html#b2260868b686cd397785e2c0e455d125" title="Kąt obrotu, jeżeli eTransfMode = ETrnasformMode::ETransfRotate.">fAngleRot</a>;                              
+<a name="l00146"></a>00146         };
+<a name="l00147"></a>00147 
+<a name="l00149"></a>00149 
+<a name="l00150"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html">00150</a>         <span class="keyword">struct </span><a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku...">SObjectTransformInfo</a>
+<a name="l00151"></a>00151         {
+<a name="l00152"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#fcbc12ab73f1bceb7c8c329f641afc1f">00152</a>                 GLint iIndexObj;                
+<a name="l00153"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#f51dfad8e890be5ceae94a4d366ade2c">00153</a>                 <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> <a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#f51dfad8e890be5ceae94a4d366ade2c" title="Pozycja światła wyliczona przez CStencilShadow::GetLightPos.">cLightPos</a>;             
+<a name="l00154"></a><a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#31ed5f581e7d9fc1fe9d7e36a2ffd964">00154</a>                 std::vector&lt;STransform&gt; <a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html#31ed5f581e7d9fc1fe9d7e36a2ffd964" title="Tablica wszelkich przekształaceń macierzy widoku.">aTransform</a>;     
+<a name="l00155"></a>00155         };
+<a name="l00156"></a>00156 
+<a name="l00157"></a><a class="code" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028">00157</a>         std::vector&lt;SObjFaces&gt; <a class="code" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">m_aObjFaces</a>;             
+<a name="l00158"></a>00158 
+<a name="l00160"></a>00160 
+<a name="l00161"></a><a class="code" href="class_c_stencil_shadow.html#0e359e0b3e24453726d99f4d88a6a16a">00161</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_stencil_shadow.html#0e359e0b3e24453726d99f4d88a6a16a" title="Metoda zwracająca ilość elementów tablicy CStencilShadow::m_aObjFaces.">GetObjFacesSize</a>() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">m_aObjFaces</a>.size() ); }
+<a name="l00162"></a>00162 
+<a name="l00164"></a>00164 
+<a name="l00165"></a><a class="code" href="class_c_stencil_shadow.html#75772d56c446232428f2017b9ca2ec4f">00165</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_stencil_shadow.html#75772d56c446232428f2017b9ca2ec4f" title="Metoda pobierająca ilość trójkątów danego obiektu 3D.">GetFaceArraySize</a>( GLint iIndex )   { 
+<a name="l00166"></a>00166                 <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c_stencil_shadow.html#3875aabd86a86ed8d79c439c54018028" title="Tablica trójkątów dla danego obiektu 3D.">m_aObjFaces</a>[ iIndex ].aFaceArray.size() );
+<a name="l00167"></a>00167         }
+<a name="l00168"></a>00168 
+<a name="l00170"></a>00170         GLvoid <a class="code" href="class_c_stencil_shadow.html#34314997d811d1a32ddbbd706e9a4c55" title="Metoda czyszcząca tablicę CStencilShadow::m_aObjFaces i jego podtablice.">ClearObjFaces</a>();
+<a name="l00171"></a>00171 
+<a name="l00172"></a><a class="code" href="class_c_stencil_shadow.html#664c8f0b0cea8d3b300bd2b4e4c8f776">00172</a>         <a class="code" href="struct_c_stencil_shadow_1_1_s_object_transform_info.html" title="Struktura przechowująca wszelkie informacje o przekształceniach macierzy widoku...">SObjectTransformInfo</a> <a class="code" href="class_c_stencil_shadow.html#664c8f0b0cea8d3b300bd2b4e4c8f776" title="Obiekt struktury CStencilShadow::SObjectTransformInfo.">m_sObjTransfInfo</a>;  
+<a name="l00173"></a><a class="code" href="class_c_stencil_shadow.html#0dd662a583e757f2aa51bbdb09d69318">00173</a>         std::vector&lt;SObjectTransformInfo&gt; <a class="code" href="class_c_stencil_shadow.html#0dd662a583e757f2aa51bbdb09d69318" title="Tablica przechowująca informacje o wszelkch przekształceniach macierzy widoku.">m_aObjTransformInfo</a>; 
+<a name="l00174"></a>00174 
+<a name="l00176"></a>00176 
+<a name="l00177"></a><a class="code" href="class_c_stencil_shadow.html#d0707d33c322c89af4949f2ca45c6f91">00177</a>         <span class="keyword">inline</span> GLint <a class="code" href="class_c_stencil_shadow.html#d0707d33c322c89af4949f2ca45c6f91" title="Metoda zwracajaca wielkość tablicy CStencilShadow::m_aObjTransformInfo.">GetObjTransformInfoSize</a>() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GLint<span class="keyword">&gt;</span>( <a class="code" href="class_c_stencil_shadow.html#0dd662a583e757f2aa51bbdb09d69318" title="Tablica przechowująca informacje o wszelkch przekształceniach macierzy widoku.">m_aObjTransformInfo</a>.size() ); }
+<a name="l00178"></a>00178 
+<a name="l00180"></a>00180 
+<a name="l00182"></a>00182         GLvoid <a class="code" href="class_c_stencil_shadow.html#62f03a28d8e55949aab6ac45f48cc139" title="Metoda wyszująca sąsiadujące trójkaty.">CalculateNeighbours</a>( GLint iIndex );
+<a name="l00183"></a>00183 
+<a name="l00185"></a>00185 
+<a name="l00187"></a>00187         GLvoid <a class="code" href="class_c_stencil_shadow.html#4ffeada124fb4fa968230f43ad67d97e" title="Metoda rysująca cień dla obiektu 3D z indeksowaniem wierzchołków.">DoDrawShadowForObjElem</a>( GLint iIndexObj, <span class="keyword">const</span> <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> &amp;in_cLightPos );
+<a name="l00188"></a>00188 
+<a name="l00190"></a>00190 
+<a name="l00192"></a>00192         GLvoid <a class="code" href="class_c_stencil_shadow.html#f1e13bd967475fb70cc24fad0f072daa" title="Metoda rysująca cień dla obiektu 3D bez indeksowania wierzchołków.">DoDrawShadowForObjNoElem</a>( GLint iIndexObj, <span class="keyword">const</span> <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> &amp;in_cLightPos );
+<a name="l00193"></a>00193 
+<a name="l00195"></a>00195 
+<a name="l00197"></a>00197         GLvoid <a class="code" href="class_c_stencil_shadow.html#9733e8cc6f409b46af8f9b03621d0b80" title="Metoda mnożąca wektor pozycji światłą przez macierz.">VMatMult</a>( GLfloat M[ 16 ], <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> &amp;in_out_cLightPos );
+<a name="l00198"></a>00198 
+<a name="l00199"></a><a class="code" href="class_c_stencil_shadow.html#8b2c8e48e55ab8fecf25f43ab40dac62">00199</a>         GLboolean <a class="code" href="class_c_stencil_shadow.html#8b2c8e48e55ab8fecf25f43ab40dac62" title="Flaga wskazująca czy karta graficzna obsługuje rozszerzenie &amp;quot;GL_EXT_stencil_wrap&amp;quot;...">m_bIsGL_EXT_stencil_wrap</a>; 
+<a name="l00200"></a>00200 
+<a name="l00202"></a>00202 
+<a name="l00204"></a>00204         GLvoid <a class="code" href="class_c_stencil_shadow.html#6fe95d6da913aa5d226b3f82459ca6b2" title="Metoda wyznaczajaca czy dany trójką obiektu 3D jest oświetlony przez światło...">SetVisibleFaces</a>( GLint iIndexObj, <span class="keyword">const</span> <a class="code" href="class_c_vector4.html" title="Klasa reprezentująca wektor 4D.">CVector4</a> &amp;in_cLightPos );
+<a name="l00205"></a>00205 
+<a name="l00207"></a>00207         GLvoid <a class="code" href="class_c_stencil_shadow.html#b67ebf522ff154a3f2ba61bc4b71607e" title="Metoda aktywująca użycie bufora szablonowego.">StartStencil</a>();
+<a name="l00208"></a>00208 
+<a name="l00210"></a>00210         GLvoid <a class="code" href="class_c_stencil_shadow.html#02967b145d72ff26cc8d7ede296f114f" title="Metoda dezaktywująca użycie bufora szablonowego oraz ostatecznie rysująca prostokąt...">FinishStencil</a>();
+<a name="l00211"></a>00211 };
+</pre></div><hr size="1"><address style="text-align: right;"><small>Wygenerowano Sun Mar 16 15:48:19 2008 dla OpenGLFramework programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.4 </small></address>
+</body>
+</html>
